@@ -1,0 +1,161 @@
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_breath
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_heartbeat
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_vore
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_enn
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_footfloor
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_run
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_sign
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_scream
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}
+
+category = {
+    name = "Effects"
+    soundeffects = {
+        event_gts_water_drop
+    }
+
+    compressor =
+    {
+        enabled = yes
+        pregain = 2.0
+        postgain = 1.5
+        ratio = 10.0
+        threshold = -8.0
+        attacktime = 0.30
+        releasetime = 0.020
+    }
+}

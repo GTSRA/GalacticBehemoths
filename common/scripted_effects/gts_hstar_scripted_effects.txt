@@ -1,0 +1,42 @@
+create_hstar_custom_effect = {
+	if = {
+		limit = {
+			host_has_dlc = "Plantoids Species Pack"
+		}
+		create_species = {
+			name = "NAME_hstar_custom"
+			plural = "NAME_hstar_customs"
+			class = HUM
+			portrait = "human"
+			namelist = "HUM2"
+			extra_trait_points = 2
+			traits = {
+				trait = "trait_plantoid_radiotrophic"
+				trait = "trait_quick_learners"
+				trait = "trait_Normal"
+			}
+			homeworld = event_target:hstar_custom_joint_planet
+			effect = {
+				save_global_event_target_as = hstar_custom_species
+			}
+		}
+	}
+
+	else = {
+		create_species = {
+			name = "NAME_hstar_custom"
+			plural = "NAME_hstar_customs"
+			class = HUM
+			portrait = "human"
+			namelist = "HUM2"
+			traits = {
+				trait = "trait_quick_learners"
+				trait = "trait_Normal"
+			}
+			homeworld = event_target:hstar_custom_joint_planet
+			effect = {
+				save_global_event_target_as = hstar_custom_species
+			}
+		}
+	}
+}

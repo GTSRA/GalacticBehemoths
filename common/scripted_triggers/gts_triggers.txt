@@ -1,0 +1,290 @@
+##### 修改原代码
+# 为了让艾普露的奴隶可以上专家岗位
+can_fill_specialist_job_trigger = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_aplog }
+			has_slavery_type = { type = slavery_indentured }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		# Rule out Traits for servitude & lack of free will
+		NOR = {
+			has_trait = trait_syncretic_proles
+			has_trait = trait_zombie
+			has_trait = trait_nerve_stapled
+		}
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+		NOT = {
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+				country = owner
+			}
+		}
+		if = {
+			limit = {
+				divinity_right_to_work_job_check_trigger_exempt = no
+			}
+			divinity_right_to_work_job_check_trigger_specialist = yes
+		}
+	}
+}
+
+# 为了能够交换附庸的领袖
+has_specialist_subject_leader_trait = {
+	OR = {
+		has_trait = leader_trait_bulwark_watcher
+		has_trait = leader_trait_bulwark_retaliator
+		has_trait = leader_trait_bulwark_sentinel
+		has_trait = leader_trait_scholarium_investigator
+		has_trait = leader_trait_scholarium_explorer
+		has_trait = leader_trait_scholarium_observer
+		has_trait = leader_trait_prospectorium_extractor
+		has_trait = leader_trait_prospectorium_optimizer
+		has_trait = leader_trait_prospectorium_refiner
+		has_trait = leader_trait_tactical_algorithms
+		has_trait = leader_trait_ultracompany_asset
+	}
+}
+
+can_destroy_planet_with_PLANET_KILLER_GTS_SHRINK = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		OR = {
+			is_a_habitable_planet_megastructure = yes
+			is_planet_class = pc_ai
+			is_planet_class = pc_gts_kasa
+			is_planet_class = pc_gts_luanzi
+			is_planet_class = pc_gtsra_loli
+			is_planet_class = pc_gtsra_loli_slave
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	custom_tooltip = {
+		#success_text = "is at war with player"
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			planet_is_hostile = yes
+			is_planet_class = pc_ai
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+			AND = {
+				exists = owner
+				owner = {
+					is_same_value = from.owner
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = owner
+			owner = {
+				is_country_type = primitive
+			}
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_active_or_full_interference
+			from.owner = {
+				OR = {
+					has_policy_flag = interference_active
+					has_policy_flag = interference_aggressive
+					#		has_policy_flag = interference_full  #新版本取消了全面调查姿态，等出bug再修吧（
+				}
+			}
+		}
+	}
+	# target own colony
+	if = {
+		limit = {
+			owner = {
+				is_same_value = from.owner
+			}
+		}
+		custom_tooltip = {
+			text = not_owned_test_fire
+			exists = owner
+			owner = {
+				is_same_value = from.owner
+			}
+		}
+	}
+}
+
+#巨大娘第一次接触标记
+first_contact_gts_servitor_desc = {
+	#小人保护者
+	owner = {
+		has_valid_civic = civic_gts_servitor
+	}
+}
+
+first_contact_gts_terminator_desc = {
+	#小人清除者
+	owner = {
+		has_valid_civic = civic_gts_terminator
+	}
+}
+
+first_contact_gts_assimilator_desc = {
+	#小人观测者
+	owner = {
+		has_valid_civic = civic_gts_assimilator
+	}
+}
+
+first_contact_gts_desc = {
+	#判断是不是巨娘
+	OR = {
+		owner = {
+			OR = {
+				has_valid_civic = civic_gts_servitor
+				has_valid_civic = civic_gts_terminator
+				has_valid_civic = civic_gts_assimilator
+			}
+		}
+		owner = {
+			has_country_flag = gts_flag
+		}
+	}
+}
+is_gts_leader = {
+	OR = {
+		has_trait = leader_trait_Ultra
+		has_trait = leader_trait_Titan
+		has_trait = leader_trait_Giant
+		has_trait = leader_trait_Tall
+		has_trait = leader_trait_Titan_start
+		has_trait = leader_trait_Giant_start
+		has_trait = leader_trait_Tall_start
+	}
+}
+is_gts = {
+	OR = {
+		has_trait = trait_great_species
+		has_trait = trait_Ultra
+		has_trait = trait_Titan
+		has_trait = trait_Giant
+		has_trait = trait_Tall
+	}
+}
+is_tiny = {
+	OR = {
+		has_trait = trait_Normal
+		has_trait = trait_Small
+		has_trait = trait_Tiny
+		has_trait = trait_Micro
+		has_trait = trait_Nano
+	}
+}
+is_tiny_leader = {
+	OR = {
+		has_trait = leader_trait_Normal
+		has_trait = leader_trait_Small
+		has_trait = leader_trait_Tiny
+		has_trait = leader_trait_Micro
+		has_trait = leader_trait_Nano
+		has_trait = leader_trait_Normal_start
+		has_trait = leader_trait_Small_start
+		has_trait = leader_trait_Tiny_start
+		has_trait = leader_trait_Micro_start
+	}
+}
+
+gts_has_mil_ethic = {
+	OR = {
+		has_ethic = ethic_militarist
+		has_ethic = ethic_fanatic_militarist
+	}
+}
+gts_has_peace_ethic = {
+	OR = {
+		has_ethic = ethic_pacifist
+		has_ethic = ethic_fanatic_pacifist
+	}
+}
+gts_has_author_ethic = {
+	OR = {
+		has_ethic = ethic_authoritarian
+		has_ethic = ethic_fanatic_authoritarian
+	}
+}
+gts_has_equal_ethic = {
+	OR = {
+		has_ethic = ethic_egalitarian
+		has_ethic = ethic_fanatic_egalitarian
+	}
+}
+gts_has_mater_ethic = {
+	OR = {
+		has_ethic = ethic_materialist
+		has_ethic = ethic_fanatic_materialist
+	}
+}
+gts_has_mind_ethic = {
+	OR = {
+		has_ethic = ethic_spiritualist
+		has_ethic = ethic_fanatic_spiritualist
+	}
+}
+gts_has_xphile_ethic = {
+	OR = {
+		has_ethic = ethic_xenophile
+		has_ethic = ethic_fanatic_xenophile
+	}
+}
+gts_has_xphobe_ethic = {
+	OR = {
+		has_ethic = ethic_xenophobe
+		has_ethic = ethic_fanatic_xenophobe
+	}
+}
+gts_can_destory_planet = {
+	is_no_eat_planet = no
+	is_star = no
+	is_asteroid = no
+	is_colonizable = no
+	has_anomaly = no
+	NOR = {
+		is_planet_class = pc_gas_giant
+		is_planet_class = pc_shattered
+		is_planet_class = pc_shattered_ring_habitable
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_habitat
+
+	}
+}
+is_gts_reformed_planet = {
+	OR = {
+		is_planet_class = pc_gts_dirt0
+		is_planet_class = pc_gts_dirt1
+		is_planet_class = pc_gts_dirt2
+		is_planet_class = pc_gts_dirt3
+		is_planet_class = pc_gts_dirt4
+		is_planet_class = pc_gts_juice
+		is_planet_class = pc_gts_juice2
+		is_planet_class = pc_gts_juice3
+		is_planet_class = pc_gts_milk
+		is_planet_class = pc_gts_shit
+		is_planet_class = pc_gts_semen
+		is_planet_class = pc_gts_urine
+	}
+}

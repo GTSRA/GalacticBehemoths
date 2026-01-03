@@ -1,0 +1,83 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_gts_leader_colossus_bg"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_panel_bg"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_panel_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_drag"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_drag.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_mode"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_mode.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_focus"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_planet_target"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_planet_target.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_confirm"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_confirm.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_system_target"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_system_target.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_leader_colossus_quit"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_colossus_quit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_gts_bfbf_test1"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/3.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_bfbf_test2"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/GFX_gts_bfbf_test2.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_bfbf_bottoon_build"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_leader_bfbf_decorations_build_mode.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_bfbf_botton1"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_bfbf_test1.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_bfbf_botton2"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_bfbf_test2.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_bfbf_botton3"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_bfbf_test4.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_bfbf_botton4"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_bfbf_test5.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_bfbf_botton5"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_bfbf_test6.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_skill_botton1"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/GFX_gts_skill_botton1.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_skill_botton2"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/GFX_gts_skill_botton2.dds"
+	}
+	spriteType = {
+		name = "GFX_gts_skill_background"
+		texturefile = "gfx/interface/gts_leader_colossus_panel/gts_bfbf_test7.dds"
+	}
+}

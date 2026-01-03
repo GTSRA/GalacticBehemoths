@@ -1,0 +1,5 @@
+on_colony_5_years_old={
+    events = {
+        gts_icecream.4
+    }
+}

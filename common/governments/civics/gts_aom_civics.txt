@@ -1,0 +1,33 @@
+#八圣灵信仰
+#人皇之辉
+#骑士之国
+civic_panlon_knights = {
+	icon = "gfx/interface/icons/governments/civics/civic_panlon_knights.dds"
+	potential={
+		origin = {
+			value = origin_panlon
+		}
+	}
+	possible = {}
+	random_weight = { base = 0 }
+	modifier = {
+		army_damage_mult = 0.2
+		ship_weapon_damage = 0.1
+	}
+}
+
+#法师协会
+civic_panlon_Wizard  = {
+	icon = "gfx/interface/icons/governments/civics/civic_panlon_Wizard.dds"
+	potential={
+		origin = {
+			value = origin_panlon
+		}
+	}
+	possible = {}
+	random_weight = { base = 0 }
+	modifier = {
+		num_tech_alternatives_add = 1
+		all_technology_research_speed = 0.1
+	}
+}

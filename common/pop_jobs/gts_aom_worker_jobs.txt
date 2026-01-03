@@ -1,0 +1,215 @@
+######劳工阶级######
+
+
+#专卖店店员
+aom_store_clerk = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_aom_surrounding_stores
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_clerks
+	}
+
+	planet_modifier = {
+		trade_value_add = 4
+		planet_amenities_add = 400
+	}
+	weight = {
+		weight = 1000	
+	}
+}
+#娱乐中心服务员
+aom_recreation_center_attendant = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_aom_Entertainment_Center
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_clerks
+	}
+
+	planet_modifier = {
+		trade_value_add = 2
+		planet_amenities_add = 800
+	}
+	weight = {
+		weight = 1000	
+	}
+}
+#渔夫
+aom_fisherman = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_aom_fishing_grounds
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_farmers		#类型:农民（受到相关加成影响）
+		produces = {
+			food = 8
+			consumer_goods = 2
+		}
+	}
+	weight = {
+		weight = 1000	
+	}
+}
+#餐厅服务员
+aom_restaurant_waiter = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_aom_bottled_restaurant
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_clerks
+
+	}
+
+	planet_modifier = {
+		trade_value_add = 2
+		planet_amenities_add = 400
+	}
+	weight = {
+		weight = 1000	
+	}
+}
+aom_cook = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_aom_bottled_restaurant
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 12
+			consumer_goods = 3
+		}
+
+	}
+
+	planet_modifier = {
+		trade_value_add = 4
+		planet_amenities_add = 600
+	}
+	weight = {
+		weight = 1000	
+	}
+}
+#酒店服务员
+aom_hotel_waiter = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_warhammerfleet_Tap_Room_The_Empire
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_clerks
+	}
+
+	planet_modifier = {
+		trade_value_add = 2
+		planet_amenities_add = 400
+	}
+	weight = {
+		weight = 1000	
+	}
+}
+#酒店清洁员
+aom_hotel_cleaners = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_warhammerfleet_Tap_Room_The_Empire
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_sr_miners	
+		exotic_gases = 4
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 400
+	}
+	weight = {
+		weight = 1000	
+	}
+}
+#魔力矿工
+aom_magic_miner = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_aom_bottled_restaurant
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	resources = {
+		category = planet_miners		#类型:矿工（受到相关加成影响）
+		produces = {
+			minerals = 4
+			rare_crystals = 0.5 
+			sr_aom_magicstones = 0.5 
+		}
+	}
+	weight = {
+		weight = 1000	
+	}
+}

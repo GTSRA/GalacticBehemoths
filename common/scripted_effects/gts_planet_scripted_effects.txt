@@ -1,0 +1,111 @@
+pc_gts_juice_change_yarong = {
+    set_planet_flag = gts_reformed_planet
+    change_pc = pc_gts_juice
+    set_colony_type = col_gts_juice
+    validate_planet_buildings_and_districts = yes
+    if = {
+        limit = {
+            root = {
+                not = {
+                    has_technology = tech_gts_bfbf_habitability_juiceandsemen
+                }
+            }
+        }
+        while = {
+            count = 3
+            add_deposit = d_juice_ruin1
+            add_deposit = d_juice_ruin2
+            add_deposit = d_juice_ruin4
+            add_deposit = d_juice_ruin5
+            add_deposit = d_juice_ruin6
+        }
+    }
+    add_modifier = {
+        modifier = gts_juice_colony_1
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_juice_colony_2
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_juice_colony_3
+        days = -1
+    }
+    add_modifier = {
+        modifier = atmospheric_aphrodisiac
+        days = -1
+    }
+    add_deposit = d_juice_ruin3
+    hidden_effect = {
+        remove_building = building_colony_shelter
+        remove_building = building_capital
+        remove_building = building_major_capital
+        remove_building = building_system_capital
+        add_building = building_gts_juice_capital
+    }
+}
+pc_gts_urine_change = {
+    set_planet_flag = gts_reformed_planet
+    change_pc = pc_gts_urine
+    set_colony_type = col_gts_urine
+    validate_planet_buildings_and_districts = yes
+    add_modifier = {
+        modifier = gts_urine_colony_1
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_urine_colony_2
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_urine_colony_3
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_urine_colony_4
+        days = -1
+    }
+    add_deposit = d_urine_ruin1
+    add_deposit = d_urine_ruin2
+    add_deposit = d_urine_ruin4
+    hidden_effect = {
+        remove_building = building_colony_shelter
+        remove_building = building_capital
+        remove_building = building_major_capital
+        remove_building = building_system_capital
+        add_building = building_gts_urine_capital
+    }
+}
+pc_gts_urine_change_yarong = {
+    set_planet_flag = gts_reformed_planet
+    change_pc = pc_gts_urine2
+    set_colony_type = col_gts_urine
+    validate_planet_buildings_and_districts = yes
+    add_modifier = {
+        modifier = gts_urine_colony_1
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_urine_colony_2
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_urine_colony_3
+        days = -1
+    }
+    add_modifier = {
+        modifier = gts_urine_colony_4
+        days = -1
+    }
+    add_deposit = d_urine_ruin1
+    add_deposit = d_urine_ruin3
+    add_deposit = d_urine_ruin4
+    hidden_effect = {
+        remove_building = building_colony_shelter
+        remove_building = building_capital
+        remove_building = building_major_capital
+        remove_building = building_system_capital
+        add_building = building_gts_urine_capital
+    }
+}

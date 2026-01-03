@@ -1,0 +1,3334 @@
+@last_page_index = 10
+gts_default_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_panel_gif_effect = {
+	potential = {
+		from = {
+			NOR = {
+				has_country_flag = gts_intel_panel_show_penis
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_panel_gif_futa_effect = {
+	potential = {
+		from = {
+			has_country_flag = gts_intel_panel_show_penis
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_back_effect = {
+	# 向后翻页
+	potential = {
+		always = yes
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = gts_ui_intel_page
+					value > 1
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_ui_back.tooltip
+		from = {
+			hidden_effect = {
+				subtract_variable = {
+					which = gts_ui_intel_page
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+gts_intel_next_effect = {
+	# 向前翻页
+	potential = {
+		always = yes
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = gts_ui_intel_page
+					value < @last_page_index
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_ui_next.tooltip
+		from = {
+			hidden_effect = {
+				change_variable = {
+					which = gts_ui_intel_page
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+gts_intel_setting_effect = {
+	# 打开mod设定
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		custom_tooltip = gts_intel_setting.tooltip
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = gts_setting.0
+				}
+			}
+		}
+	}
+}
+
+gts_intel_page_1_effect = {
+	# 第一页
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_2_effect = {
+	# 第二页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 2
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_3_effect = {
+	# 第三页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 3
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_4_effect = {
+	# 第四页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 4
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_5_effect = {
+	# 第五页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 5
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_6_effect = {
+	# 第六页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 6
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_7_effect = {
+	# 第七页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 7
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_8_effect = {
+	# 第八页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 8
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_9_effect = {
+	# 第九页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 9
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_page_10_effect = {
+	# 第十页
+	potential = {
+		from = {
+			check_variable = {
+				which = gts_ui_intel_page
+				value = 10
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+### 第一页头像 ###
+gts_intel_avatar_Lottie_effect = {
+	# 洛蒂
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			OR = {
+				NOT = {
+					has_global_flag = gts_has_trigger_lottie
+				}
+				any_owned_leader = {
+					has_leader_flag = gts_luodi
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_Lottie.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_lottie
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_luodi
+					}
+				}
+				event_target:gts_luodi = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_aurora_effect = {
+	# 欧若拉
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = {
+					has_global_flag = gts_has_trigger_aurora
+				}
+				any_planet_within_border = {
+					has_anomaly = no
+					is_a_planet = yes
+					is_preventing_anomaly = no
+					solar_system = {
+						is_star_class = sc_f
+					}
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					OR = {
+						has_leader_flag = gts_aurora
+						has_leader_flag = gts_arlo
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_aurora.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_aurora
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_aurora
+					}
+				}
+				event_target:gts_aurora = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_arlo
+					}
+				}
+				event_target:gts_arlo = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_jifeng_effect = {
+	# 矶风
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_jifeng
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_jifeng
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_jifeng.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_jifeng
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_jifeng
+					}
+				}
+				event_target:gts_jifeng = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_yiyan_effect = {
+	# 亿盐
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			OR = {
+				NOT = {
+					has_global_flag = gts_has_trigger_yiyan
+				}
+				any_owned_leader = {
+					has_leader_flag = gts_yiyan
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_yiyan.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_yiyan
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_yiyan
+					}
+				}
+				event_target:gts_yiyan = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_aplog_effect = {
+	# 艾普露
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		custom_tooltip = gts_intel_avatar_archaeological.tooltip
+		hidden_trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						has_global_flag = gts_has_trigger_aplog
+					}
+					any_owned_planet = {
+						NOT = {
+							exists = archaeological_site
+						}
+						has_anomaly = no
+						is_preventing_anomaly = no
+					}
+				}
+				any_owned_leader = {
+					has_leader_flag = gts_aplog
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_aplog.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_aplog
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_aplog
+					}
+				}
+				event_target:gts_aplog = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_eyjafjalla_effect = {
+	# 艾雅法拉
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			OR = {
+				NOT = {
+					has_global_flag = gts_has_trigger_eyjafjalla
+				}
+				any_owned_leader = {
+					has_leader_flag = gts_eyjafjalla
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_eyjafjalla.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_eyjafjalla
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_eyjafjalla
+					}
+				}
+				event_target:gts_eyjafjalla = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_skadi_effect = {
+	# 斯卡蒂
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		custom_tooltip = gts_intel_avatar_archaeological.tooltip
+		hidden_trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						has_global_flag = gts_has_trigger_skadi
+					}
+					any_owned_planet = {
+						NOT = {
+							exists = archaeological_site
+						}
+					}
+				}
+				any_owned_leader = {
+					has_leader_flag = gts_skadi
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_skadi.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_skadi
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_skadi
+					}
+				}
+				event_target:gts_skadi = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_sonxi_effect = {
+	# 颂汐
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = {
+					has_global_flag = gts_has_trigger_sonxi
+				}
+				num_owned_planets > 2
+				any_owned_planet = {
+					NOR = {
+						is_planet_class = pc_shattered_ring_habitable
+						is_planet_class = pc_ringworld_habitable
+						is_planet_class = pc_habitat
+						is_no_eat_planet = yes
+					}
+
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_sonxi
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_sonxi.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_sonxi
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_sonxi
+					}
+				}
+				event_target:gts_sonxi = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_linglu_effect = {
+	# 铃鹿
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = {
+					has_global_flag = gts_has_trigger_linglu
+				}
+				any_planet_within_border = {
+					OR = {
+						uninhabitable_regular_planet = yes
+						habitable_planet_not_urban = yes
+					}
+					is_preventing_anomaly = no
+					has_anomaly = no
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_linglu
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_linglu.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_linglu
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_linglu
+					}
+				}
+				event_target:gts_linglu = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_aya_effect = {
+	# 丸山彩
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_aya_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_aya
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_aya.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_aya
+			}
+			event_target:aya_governor = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_archetto_effect = {
+	# 空弦
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_archetto_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_archetto
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_archetto.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_archetto
+			}
+			event_target:gts_archetto = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_blemishine_effect = {
+	# 瑕光
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_blemishine_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_blemishine
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_blemishine.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_blemishine
+			}
+			event_target:gts_blemishine = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_eliza_effect = {
+	# 机械女仆
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_eliza_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_eliza
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_eliza.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_eliza
+			}
+			event_target:gts_eliza = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_chenghui_effect = {
+	# 成惠
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_chenghui_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_chenghui
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_chenghui.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_chenghui
+			}
+			event_target:chenghui_governor = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_hanako_effect = {
+	# 花子
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_hanako_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_Hanako
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_hanako.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_hanako
+			}
+			event_target:gts_Hanako = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_koharu_effect = {
+	# 小春
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_koharu_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_Koharu
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_koharu.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_koharu
+			}
+			event_target:gts_Koharu = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_erika_effect = {
+	# 绘里香
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_erika
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_erika
+				}
+			}
+		}
+		has_country_flag = can_trigger_scat_content
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_erika.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_erika
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_erika
+					}
+				}
+				event_target:gts_erika = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_goldenglow_effect = {
+	# 澄闪
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_goldenglow
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_goldenglow
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_goldenglow.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_goldenglow
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_goldenglow
+					}
+				}
+				event_target:gts_goldenglow = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_huatian_effect = {
+	# 花田
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_huatian
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_huatian
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_huatian.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_huatian
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_huatian
+					}
+				}
+				event_target:gts_huatian = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_xiaomiao_effect = {
+	# 晓淼
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_xiaomiao
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_xiaomiao
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_xiaomiao.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_xiaomiao
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_xiaomiao
+					}
+				}
+				event_target:gts_xiaomiao = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_cys_effect = {
+	# 水晶兰
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		always = no #记得改
+		OR = {
+			AND = {
+				NOT = {
+					has_global_flag = gts_has_trigger_cys
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_cys
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_cys.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_cys
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_cys
+					}
+				}
+				event_target:gts_cys = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_teifuania_effect = {
+	# 精灵事件链
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		NOT = {
+			has_global_flag = gts_has_trigger_teifuania
+		}
+		any_system = {
+			any_system_planet = {
+				is_colonizable = yes
+				has_owner = no
+				is_colony = no
+				is_moon = no
+				habitable_planet = yes
+				has_anomaly = no
+				NOR = {
+					has_modifier = "holy_planet"
+					solar_system = {
+						has_star_flag = hostile_system
+					}
+				}
+				distance = {
+					source = root.owner.capital_scope
+					max_distance <= 1000
+					min_distance >= 50
+				}
+				solar_system = {
+					NOT = {
+						exists = starbase
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_teifuania.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_teifuania
+			}
+			country_event = {
+				id = gts_ui.6
+			}
+		}
+	}
+}
+
+gts_intel_avatar_xiankeyan_effect = {
+	# 先科研事件链
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		NOT = {
+			has_global_flag = gts_has_trigger_xiankeyan
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_xiankeyan.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_xiankeyan
+			}
+			country_event = {
+				id = gts_ui.6
+			}
+		}
+	}
+}
+
+gts_intel_avatar_qhai_effect = {
+	# 千海事件链
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOR = {
+				has_global_flag = gts_has_trigger_qhai
+				NOT = {
+					any_owned_leader = {
+						has_trait = leader_trait_Ultra
+						leader_class = scientist
+					}
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_qhai
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_qhai.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_qhai
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_qhai
+					}
+				}
+				event_target:gts_qhai = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_tensi_effect = {
+	# 安露事件链
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_tensi_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_tensi
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_tensi.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_tensi
+			}
+			event_target:gts_tensi = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_yarong_effect = {
+	#犽戎
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_yarong_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_yarong
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_yarong.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_yarong
+			}
+			event_target:gts_yarong = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_shentun_effect = {
+	#神吞
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_yarong_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_shentun
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_shentun.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_shentun
+			}
+			event_target:gts_shentun = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+
+gts_intel_avatar_satori_effect = {
+	#古明地觉
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = {
+					has_global_flag = gts_has_trigger_satori
+				}
+				any_planet_within_border = {
+					is_preventing_anomaly = no
+					has_anomaly = no
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_satori
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_satori.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_satori
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_satori
+					}
+				}
+				event_target:gts_satori = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_tiantiao_effect = {
+	# 天条
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_tiantiao
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_tiantiao
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_tiantiao.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_tiantiao
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_tiantiao
+					}
+				}
+				event_target:gts_tiantiao = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_doctor_effect = {
+	# 博士
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_doctor
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_doctor
+				}
+			}
+		}
+		has_country_flag = can_trigger_futa_content
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_doctor.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_doctor
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_doctor
+					}
+				}
+				event_target:gts_doctor = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_mari_effect = {
+	# 玛丽
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_mari
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_mari
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_mari.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_mari
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_mari
+					}
+				}
+				event_target:gts_mari = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_guya_effect = {
+	# 咕丫
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gts_has_trigger_guya }
+				any_owned_planet = {
+					NOT = {
+						is_planet_class = pc_habitat
+					}
+				}
+				any_owned_leader = {
+					leader_class = scientist
+					has_total_skill > 3
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_guya
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_guya.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_guya
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_guya
+					}
+				}
+				event_target:gts_guya = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_mizuki_effect = {
+	# 水月
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_mizuki_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_mizuki
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_mizuki.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_mizuki
+			}
+			event_target:gts_mizuki = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+gts_intel_avatar_sera_effect = {
+	# 塞拉
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gts_has_trigger_traptrix }
+				# 在这里写招募条件
+				has_country_flag = tiny_flag
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_sera
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_sera.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_sera
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_sera
+					}
+				}
+				event_target:gts_sera = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_allomerus_effect = {
+	# 阿洛美勒丝
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gts_has_trigger_traptrix }
+				# 在这里写招募条件
+				has_country_flag = tiny_flag
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_allomerus
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_allomerus.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_allomerus
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_allomerus
+					}
+				}
+				event_target:gts_allomerus = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_paopao_effect = {
+	# paopao
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_paopao_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_paopao
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_paopao.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_paopao
+			}
+			event_target:gts_paopao = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+gts_intel_avatar_saratoga_effect = {
+	# 萨拉托加
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_saratoga_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_saratoga
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_saratoga.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_saratoga
+			}
+			event_target:gts_saratoga = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+gts_intel_avatar_tlipoca_effect = {
+	# 特莉波卡
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gts_has_trigger_tlipoca }
+				# 在这里写招募条件
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_tlipoca
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_tlipoca.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_tlipoca
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_tlipoca
+					}
+				}
+				event_target:gts_tlipoca = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_firefly_effect = {
+	# 流萤
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_firefly
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_firefly
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_firefly.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_firefly
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_firefly
+					}
+				}
+				event_target:gts_firefly = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_xinuo_effect = {
+	#希诺
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_xinuo
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_xinuo
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_xinuo.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_xinuo
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_xinuo
+					}
+				}
+				event_target:gts_xinuo = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_carlotta_effect = {
+	#珂莱塔
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			NOT = {
+				has_global_flag = gts_has_trigger_carlotta
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_carlotta
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_carlotta.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_carlotta
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_carlotta
+					}
+				}
+				event_target:gts_carlotta = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+gts_intel_avatar_faralda_effect = {
+	# 法拉尔达
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_faralda_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_faralda
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_faralda.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_faralda
+			}
+			event_target:gts_faralda = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+gts_intel_avatar_illyasviel_effect = {
+	# 伊莉雅斯菲尔
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_illyasviel_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_illyasviel
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_illyasviel.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_illyasviel
+			}
+			event_target:gts_illyasviel = {
+				save_global_event_target_as = current_gts_leader
+			}
+			country_event = {
+				id = gts_ui.7
+			}
+		}
+	}
+}
+gts_intel_avatar_bruh_effect = {
+	# 大鹅
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		has_ascension_perk = ap_space_gts
+		NOT = {
+			has_global_flag = gts_has_trigger_bruh
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_bruh.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_bruh
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_bruh
+					}
+				}
+				event_target:gts_bruh = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_seele_effect = {
+	#希儿
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		or = {
+			AND = {
+				not = {
+					has_country_flag = seele
+					has_country_flag = bronya
+				}
+				any_system_within_border = {
+					has_planet_class = pc_black_hole
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_seele
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_seele.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_seele
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_seele
+					}
+				}
+				event_target:gts_seele = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_bronya_effect = {
+	#板鸭
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				num_owned_planets > 1
+				not = {
+					has_country_flag = seele
+					has_country_flag = bronya
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_bronya
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_seele.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_bronya
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_bronya
+					}
+				}
+				event_target:gts_bronya = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_seele_li_effect = {
+	#黑希
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		always = yes
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_seele_li.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_seele_li
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_seele_li
+					}
+				}
+				event_target:gts_seele_li = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+gts_intel_avatar_linfeng_effect = {
+	# 林凤
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 4
+		}
+	}
+	allow = {
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			AND = {
+				NOT = {
+					has_global_flag = gts_has_trigger_linfeng
+				}
+				any_owned_planet = {
+					pop_amount <= 400
+					has_anomaly = no
+					NOT = {
+						exists = archaeological_site
+					}
+					NOR = {
+						is_planet_class = pc_shielded
+						is_planet_class = pc_ringworld_shielded
+						is_planet_class = pc_habitat_shielded
+						is_no_eat_planet = yes
+					}
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_linfeng
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_linfeng.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_linfeng
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_linfeng
+					}
+				}
+				event_target:gts_linfeng = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
+# 没有领袖的effect:
+# xxx_effect = {
+# 	#
+# 	potential = {
+# 		gts_ui_intel_display = { PAGE =  }
+# 	}
+# 	allow = {
+# 		gts_ui_intel_panel_lock = yes
+# 		NOT = { has_global_flag = gts_has_trigger_??? }
+# 	}
+# 	effect = {
+# 		custom_tooltip = xxx.tooltip
+# 		hidden_effect = {
+# 			set_variable = {
+# 				which = gts_ui_intel_avatar
+# 				value = @gts_???
+# 			}
+# 			country_event = {
+# 				id = gts_ui.6
+# 			}
+# 		}
+# 	}
+# }
+# 有招募领袖（例如艾普露）和无招募领袖（例如空弦）是不同的
+# 有招募领袖的effect:
+# xxx_effect = {
+# 	#
+# 	potential = {
+# 		gts_ui_intel_display = { PAGE =  }
+# 	}
+# 	allow = {
+# 		gts_ui_intel_panel_lock = yes
+# 		OR = {
+# 			AND = {
+# 				NOT = { has_global_flag = gts_has_trigger_??? }
+# 				# 在这里写招募条件
+# 			}
+# 			hidden_trigger = {
+# 				any_owned_leader = {
+# 					has_leader_flag = gts_???
+# 				}
+# 			}
+# 		}
+# 	}
+# 	effect = {
+# 		custom_tooltip = xxx.tooltip
+# 		hidden_effect = {
+# 			set_variable = {
+# 				which = gts_ui_intel_avatar
+# 				value = @gts_???
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = gts_???
+# 					}
+# 				}
+# 				event_target:gts_??? = {
+# 					save_global_event_target_as = current_gts_leader
+# 				}
+# 				country_event = {
+# 					id = gts_ui.7
+# 				}
+# 			}else = {
+# 				country_event = {
+# 					id = gts_ui.6
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# 无招募领袖的effect:
+# xxx_effect = {
+# 	#
+# 	potential = {
+# 		gts_ui_intel_display = { PAGE =  }
+# 	}
+# 	allow = {
+# 		custom_tooltip = xxx_limit.tooltip
+# 		gts_ui_intel_panel_lock = yes
+# 		hidden_trigger = {
+# 			any_owned_leader = {
+# 				has_leader_flag = gts_???
+# 			}
+# 		}
+# 	}
+# 	effect = {
+# 		custom_tooltip = xxx.tooltip
+# 		hidden_effect = {
+# 			set_variable = {
+# 				which = gts_ui_intel_avatar
+# 				value = @gts_???
+# 			}
+# 			event_target:gts_??? = {
+# 				save_global_event_target_as = current_gts_leader
+# 			}
+# 			country_event = {
+# 				id = gts_ui.7
+# 			}
+# 		}
+# 	}
+# }
+### 第一页头像招募标记 ###
+gts_intel_avatar_Lottie_owned_effect = {
+	# 洛蒂
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_luodi
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_aurora_owned_effect = {
+	# 欧若拉
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			OR = {
+				has_leader_flag = gts_aurora
+				has_leader_flag = gts_arlo
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_jifeng_owned_effect = {
+	# 矶风
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_jifeng
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+
+gts_intel_avatar_yiyan_owned_effect = {
+	# 亿盐
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_yiyan
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_aplog_owned_effect = {
+	# 艾普露
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_aplog
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_eyjafjalla_owned_effect = {
+	# 艾雅法拉
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_eyjafjalla
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_skadi_owned_effect = {
+	# 斯卡蒂
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_skadi
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_sonxi_owned_effect = {
+	# 颂汐
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_sonxi
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_linglu_owned_effect = {
+	# 铃鹿
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_linglu
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_aya_owned_effect = {
+	# 彩
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_aya
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_archetto_owned_effect = {
+	# 空弦
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_archetto
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_blemishine_owned_effect = {
+	# 瑕光
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 1
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_blemishine
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_eliza_owned_effect = {
+	# 巨型蒸汽智械女仆
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_eliza
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_chenghui_owned_effect = {
+	# 成惠
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_chenghui
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_hanako_owned_effect = {
+	# 花子
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_Hanako
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_koharu_owned_effect = {
+	# 小春
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_Koharu
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_erika_owned_effect = {
+	# 绘里香
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_erika
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_goldenglow_owned_effect = {
+	# 澄闪
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_goldenglow
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_huatian_owned_effect = {
+	# 花田
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_huatian
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_xiaomiao_owned_effect = {
+	# 晓淼
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_xiaomiao
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_cys_owned_effect = {
+	# 水晶兰
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_cys
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_teifuania_owned_effect = {
+	# 精灵事件链
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		has_global_flag = gts_has_trigger_teifuania
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_xiankeyan_owned_effect = {
+	# 先科研事件链
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		has_global_flag = gts_has_trigger_xiankeyan
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_qhai_owned_effect = {
+	# 千海
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 2
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_qhai
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_tensi_owned_effect = {
+	# 安露
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_tensi
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_yarong_owned_effect = {
+	#犽戎
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_yarong
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_shentun_owned_effect = {
+	#神吞
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_shentun
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_satori_owned_effect = {
+	#古明地觉
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_satori
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_tiantiao_owned_effect = {
+	# 天条
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_tiantiao
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_doctor_owned_effect = {
+	# 博士
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_doctor
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_mari_owned_effect = {
+	# 玛丽
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 3
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_mari
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_guya_owned_effect = {
+	# 咕丫
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+		any_owned_leader = {
+			has_leader_flag = gts_guya
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_mizuki_owned_effect = {
+	# 水月
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+		any_owned_leader = {
+			has_leader_flag = gts_mizuki
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_sera_owned_effect = {
+	# 塞拉
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+		any_owned_leader = {
+			has_leader_flag = gts_sera
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_allomerus_owned_effect = {
+	# 阿洛美勒丝
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+		any_owned_leader = {
+			has_leader_flag = gts_allomerus
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_paopao_owned_effect = {
+	# paopao
+	potential = {
+		gts_ui_intel_display = { PAGE = 3 }
+		any_owned_leader = {
+			has_leader_flag = gts_paopao
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_saratoga_owned_effect = {
+	# 萨拉托加
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_saratoga
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_tlipoca_owned_effect = {
+	# 特莉波卡
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_tlipoca
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_firefly_owned_effect = {
+	# 流萤
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_firefly
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_xinuo_owned_effect = {
+	#希诺
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_xinuo
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_carlotta_owned_effect = {
+	#珂莱塔
+	potential = {
+		gts_ui_intel_display = { PAGE = 4}
+		any_owned_leader = {
+			has_leader_flag = gts_carlotta
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_faralda_owned_effect = {
+	#法拉尔达
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_faralda
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_illyasviel_owned_effect = {
+	#伊莉雅斯菲尔
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		hidden_trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_illyasviel
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_bruh_owned_effect = {
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_bruh
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_seele_owned_effect = {
+	# 希儿
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_seele
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_bronya_owned_effect = {
+	# 板鸭
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_bronya
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_seele_li_owned_effect = {
+	# 黑希
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_seele_li
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+gts_intel_avatar_linfeng_owned_effect = {
+	# 林凤
+	potential = {
+		gts_ui_intel_display = { PAGE = 4 }
+		any_owned_leader = {
+			has_leader_flag = gts_linfeng
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+# xxx_owned_effect = {
+# 	#
+# 	potential = {
+# 		gts_ui_intel_display = { PAGE =  }
+# 		any_owned_leader = {
+# 			has_leader_flag = gts_???
+# 		}
+# 	}
+# 	allow = {
+# 		always = yes
+# 	}
+# 	effect = {
+# 	}
+# }

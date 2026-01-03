@@ -1,0 +1,31 @@
+origin_panlon = {
+	is_origin = yes
+	icon = "gfx/event_pictures/origins/origin_sigmaempire_small.dds"
+	picture = GFX_origin_panlon
+
+	potential = {always = yes}
+
+	possible = {
+		authority = { 
+			OR = {
+				value = auth_hales_panlon
+			}
+		}
+	}
+
+	traits = {
+		trait = trait_aom_Belief
+	}
+
+	modifier = { 
+		ship_fire_rate_mult = 0.20
+		country_war_exhaustion_mult = -0.2
+		diplo_weight_naval_mult = 1.00
+	}
+	flags = {
+		panlon_start_screen
+	}
+	random_weight = { base = 100 }
+	description = "civic_tooltip_origin_panlon_effects"
+	advanced_start = yes
+}

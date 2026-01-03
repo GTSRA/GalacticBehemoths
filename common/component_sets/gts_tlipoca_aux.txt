@@ -1,0 +1,28 @@
+
+
+component_set = {
+	key = "TLIPOCA_ARMOR"
+	icon = "GFX_ship_part_enigmatic_disruption_field"
+	icon_frame = 1
+}
+component_set = {
+	key = "TLIPOCA_INFO_UNZIP"
+	icon = "GFX_ship_part_deluge"
+	icon_frame = 1
+}
+component_set = {
+	key = "TLIPOCA_TITAN_LASER"
+	icon = "GFX_ship_part_energy_lance_tli"
+	icon_frame = 1
+}
+component_set = {
+	key = "TLIPOCA_LASER_EX"
+	icon = "GFX_ship_part_energy_lance_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "TLIPOCA_LASER"
+	icon = "GFX_ship_part_laser_tli"
+	icon_frame = 1
+}
+

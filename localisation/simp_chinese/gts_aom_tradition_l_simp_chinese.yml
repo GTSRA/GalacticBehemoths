@@ -1,0 +1,37 @@
+﻿#传统
+# 人皇之嗣
+l_simp_chinese:
+
+ tradition_aom_panlon:"帝国"
+ tradition_aom_panlon_desc:0 "吾等乃人皇子嗣"
+
+ tr_aom_panlon_adopt:"帝国"
+ tr_aom_panlon_adopt_desc:0 " §Y领袖§!的§Y招募花费和维护费§!减少§G20%§。!\n§Y人口§!的§Y维护费§!减少§G20%§!。"
+
+ tr_aom_panlon_finish:0 "帝国传统已完成"
+ tr_aom_panlon_finish_desc:0 "飞升天赋已解锁§G+1§!。所有£job£ §Y人口岗位§!的§Y维护费§!减少§G10%§!。"
+ tr_aom_panlon_finish_delayed:0 "人皇所佑，帝国荣光永存。"
+
+ tr_aom_panlon_1:0 "人主吾母"
+ tr_aom_panlon_1_desc:6 "§Y建筑§!和§Y区划§!的§Y建筑花费§!减少§G20%§!§Y维护费§!减少§G20%§!，并且§Y建造速度§!增加§G+25%§!"
+ tr_aom_panlon_1_delayed:0 "我们的母亲，人类之主，她的智慧和力量始终指引着我们，同时保护我们的文明免受外星巨娘的侵害。"
+ 
+ tr_aom_panlon_2:0 "人皇赐福"
+ tr_aom_panlon_2_desc:6 "特质点§G+6§!可选特质数§G+2§!"
+ tr_aom_panlon_2_delayed:0 "人皇会为她的子嗣降下恩赐，每一样都是不可思议的奇迹。"
+
+ tr_aom_panlon_3:0 "皇家商业集团"
+ tr_aom_panlon_3_desc:6 "允许设立§Y皇家企业分部§!\n"
+ tr_aom_panlon_3_delayed:0 "母亲大人授权我们以她的名义开设民营产业，现在我们可以用她使用过的私人物品开发新的服务项目，比如鞋袜，帽子，书包等等，这些东西对小人文明有着莫大吸引力。"
+
+ tr_aom_panlon_4:0 "圣灵教会"
+ tr_aom_panlon_4_desc:6 "§Y$mod_station_researchers_produces_mult$§!增加§G30%§!。\n§Y$starbase_constructions_research_produces$§!增加§G30%§!。"
+ tr_aom_panlon_4_delayed:0 "原初时代八位圣灵分别执掌世界权柄，根据母亲所说，他们此时就在名为八大界域的遥远世界。建立圣灵教会与其沟通，这将成为强大的助力。"
+
+ tr_aom_panlon_5:0 "神魂一体"
+ tr_aom_panlon_5_desc:6 "来自人口的帝国规模减少§G20%§!"
+ tr_aom_panlon_5_delayed:0 "我将我的身体，心灵还有灵魂全部献给我主，我们的母亲和守护者，我们将以最虔诚的信仰回报她永恒的守护，并成为她力量的一部分。"
+
+ trait_aom_Belief:0 "人皇信仰"
+ trait_aom_Belief_desc:0 "这个种族是一位神秘存在的造物，他们虔诚的信仰着自己的造物主，从而达成某些超乎寻常的奇迹。"
+ TRAIT_AOM_BELIEF_EFFECT:0 "['concept_intelligent']的岗位效率：§G+20%§!\n每$pop_group_unit$作为奴隶或更高工作标准的£pop£§H人口§!每月生产0.01£sr_aom_Belie£§Y$sr_aom_Belie$§!。"

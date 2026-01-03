@@ -1,0 +1,496 @@
+namespace = gts_event_bruh
+
+country_event = {
+	id = gts_event_bruh.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = gts_bruh_has_overlord_pop_usage_1_flag
+		any_subject = {
+			has_country_flag = gts_bruh_has_subject_pop_usage_1_flag
+			NOT = {
+				has_modifier = gts_bruh_has_been_subject_pop_usage
+			}
+		}
+	}
+
+	immediate = {
+		random_subject = {
+			limit = {
+				has_country_flag = gts_bruh_has_subject_pop_usage_1_flag
+				NOT = {
+					has_modifier = gts_bruh_has_been_subject_pop_usage
+				}
+			}
+			save_event_target_as = gts_bruh_get_subject_pop_usage_1_country
+		}
+		event_target:gts_bruh_get_subject_pop_usage_1_country = {
+			random_owned_planet = {
+				save_event_target_as = gts_bruh_get_subject_pop_usage_1_planet
+			}
+		}
+		country_event = {
+			id = gts_event_bruh.11
+		}
+		event_target:gts_bruh_get_subject_pop_usage_1_country = {
+			country_event = {
+				id = gts_event_bruh.21
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.11
+	title = gts_event_bruh.11.name
+	desc = gts_event_bruh.11.desc
+	is_triggered_only = yes
+	show_sound = event_scanner
+	picture = GFX_evt_diplomatic_visit
+	location = event_target:gts_bruh_get_subject_pop_usage_1_country
+
+	immediate = {
+		event_target:gts_bruh_get_subject_pop_usage_1_planet = {
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_subject_planet_pop_count
+			}
+			divide_variable = {
+				which = gts_bruh_get_subject_planet_pop_count
+				value = 100
+			}
+			round_variable = gts_bruh_get_subject_planet_pop_count
+		}
+	}
+
+	option = {
+		name = gts_event_bruh.11.a
+		custom_tooltip = gts_event_bruh.11.a.custom_tooltip
+		add_resource = {
+			gts_micro = 1
+			mult = event_target:gts_bruh_get_subject_pop_usage_1_planet.gts_bruh_get_subject_planet_pop_count
+		}
+	}
+	option = {
+		name = gts_event_bruh.11.b
+		custom_tooltip = gts_event_bruh.11.b.custom_tooltip
+		add_resource = {
+			trade = 12
+			mult = event_target:gts_bruh_get_subject_pop_usage_1_planet.gts_bruh_get_subject_planet_pop_count
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:gts_bruh_get_subject_pop_usage_1_planet = {
+				clear_variable = gts_bruh_get_subject_planet_pop_count
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.21
+	title = gts_event_bruh.21.name
+	desc = gts_event_bruh.21.desc
+	is_triggered_only = yes
+	show_sound = event_scanner
+	picture = GFX_evt_diplomatic_visit
+	location = event_target:gts_bruh_get_subject_pop_usage_1_planet
+
+	option = {
+		name = gts_event_bruh.21.a
+		custom_tooltip = gts_event_bruh.21.a.custom_tooltip
+		event_target:gts_bruh_get_subject_pop_usage_1_planet = {
+			every_owned_pop_group = {
+				kill_pop_group = {
+					pop_group = this
+					percentage = 0.01
+				}
+			}
+		}
+		add_resource = {
+			energy = -1000
+		}
+		add_modifier = {
+			modifier = gts_bruh_has_been_subject_pop_usage
+			years = 10
+		}
+	}
+	option = {
+		name = gts_event_bruh.21.b
+		custom_tooltip = gts_event_bruh.21.b.custom_tooltip
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 3000
+			}
+		}
+		add_resource = {
+			# 250/10*12*10
+			energy = -3000
+		}
+		add_modifier = {
+			modifier = gts_bruh_has_been_subject_pop_usage
+			years = 10
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = gts_bruh_has_overlord_pop_usage_2_flag
+		any_subject = {
+			has_country_flag = gts_bruh_has_subject_pop_usage_2_flag
+			NOT = {
+				has_modifier = gts_bruh_has_been_subject_pop_usage
+			}
+		}
+	}
+
+	immediate = {
+		random_subject = {
+			limit = {
+				has_country_flag = gts_bruh_has_subject_pop_usage_2_flag
+				NOT = {
+					has_modifier = gts_bruh_has_been_subject_pop_usage
+				}
+			}
+			save_event_target_as = gts_bruh_get_subject_pop_usage_2_country
+		}
+		event_target:gts_bruh_get_subject_pop_usage_2_country = {
+			random_owned_planet = {
+				save_event_target_as = gts_bruh_get_subject_pop_usage_2_planet
+			}
+		}
+		country_event = {
+			id = gts_event_bruh.31
+		}
+		event_target:gts_bruh_get_subject_pop_usage_2_country = {
+			country_event = {
+				id = gts_event_bruh.41
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.31
+	title = gts_event_bruh.31.name
+	desc = gts_event_bruh.31.desc
+	is_triggered_only = yes
+	show_sound = event_scanner
+	picture = GFX_evt_diplomatic_visit
+	location = event_target:gts_bruh_get_subject_pop_usage_2_country
+
+	immediate = {
+		event_target:gts_bruh_get_subject_pop_usage_2_planet = {
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_subject_planet_pop_count
+			}
+			divide_variable = {
+				which = gts_bruh_get_subject_planet_pop_count
+				value = 20
+			}
+			round_variable = gts_bruh_get_subject_planet_pop_count
+		}
+	}
+
+	option = {
+		name = gts_event_bruh.31.a
+		custom_tooltip = gts_event_bruh.31.a.custom_tooltip
+		add_resource = {
+			gts_micro = 1
+			mult = event_target:gts_bruh_get_subject_pop_usage_2_planet.gts_bruh_get_subject_planet_pop_count
+		}
+		add_resource = {
+			trade = 8
+			mult = event_target:gts_bruh_get_subject_pop_usage_2_planet.gts_bruh_get_subject_planet_pop_count
+		}
+	}
+	option = {
+		name = gts_event_bruh.31.b
+		custom_tooltip = gts_event_bruh.31.b.custom_tooltip
+		add_resource = {
+			unity = 4
+			mult = event_target:gts_bruh_get_subject_pop_usage_1_planet.gts_bruh_get_subject_planet_pop_count
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:gts_bruh_get_subject_pop_usage_2_planet = {
+				clear_variable = gts_bruh_get_subject_planet_pop_count
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.41
+	title = gts_event_bruh.41.name
+	desc = gts_event_bruh.41.desc
+	is_triggered_only = yes
+	show_sound = event_scanner
+	picture = GFX_evt_diplomatic_visit
+	location = event_target:gts_bruh_get_subject_pop_usage_2_planet
+
+	option = {
+		name = gts_event_bruh.41.a
+		custom_tooltip = gts_event_bruh.41.a.custom_tooltip
+		event_target:gts_bruh_get_subject_pop_usage_2_planet = {
+			every_owned_pop_group = {
+				kill_pop_group = {
+					pop_group = this
+					percentage = 0.05
+				}
+			}
+		}
+		add_resource = {
+			influence = -100
+		}
+		add_modifier = {
+			modifier = gts_bruh_has_been_subject_pop_usage
+			years = 10
+		}
+	}
+	option = {
+		name = gts_event_bruh.41.b
+		custom_tooltip = gts_event_bruh.41.b.custom_tooltip
+		event_target:gts_bruh_get_subject_pop_usage_2_planet = {
+			every_owned_pop_group = {
+				kill_pop_group = {
+					pop_group = this
+					percentage = 0.10
+				}
+			}
+		}
+		add_resource = {
+			influence = 200
+		}
+		add_modifier = {
+			modifier = gts_bruh_has_been_subject_pop_usage
+			years = 10
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.50
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = gts_bruh_has_overlord_pop_usage_3_flag
+		any_subject = {
+			has_country_flag = gts_bruh_has_subject_pop_usage_3_flag
+			NOT = {
+				has_modifier = gts_bruh_has_been_subject_pop_usage
+			}
+		}
+	}
+
+	immediate = {
+		random_subject = {
+			limit = {
+				has_country_flag = gts_bruh_has_subject_pop_usage_3_flag
+				NOT = {
+					has_modifier = gts_bruh_has_been_subject_pop_usage
+				}
+			}
+			save_event_target_as = gts_bruh_get_subject_pop_usage_3_country
+		}
+		event_target:gts_bruh_get_subject_pop_usage_3_country = {
+			random_owned_planet = {
+				save_event_target_as = gts_bruh_get_subject_pop_usage_3_planet
+			}
+		}
+		country_event = {
+			id = gts_event_bruh.51
+		}
+		event_target:gts_bruh_get_subject_pop_usage_3_country = {
+			country_event = {
+				id = gts_event_bruh.61
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.51
+	title = gts_event_bruh.51.name
+	desc = gts_event_bruh.51.desc
+	is_triggered_only = yes
+	show_sound = event_scanner
+	picture = GFX_evt_diplomatic_visit
+	location = event_target:gts_bruh_get_subject_pop_usage_3_country
+
+	immediate = {
+		event_target:gts_bruh_get_subject_pop_usage_3_planet = {
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_subject_planet_pop_count
+			}
+			divide_variable = {
+				which = gts_bruh_get_subject_planet_pop_count
+				value = 10
+			}
+			round_variable = gts_bruh_get_subject_planet_pop_count
+		}
+	}
+
+	option = {
+		name = gts_event_bruh.51.a
+		custom_tooltip = gts_event_bruh.51.a.custom_tooltip
+		add_resource = {
+			gts_micro = 0.5
+			mult = event_target:gts_bruh_get_subject_pop_usage_3_planet.gts_bruh_get_subject_planet_pop_count
+		}
+		add_resource = {
+			trade = 4
+			mult = event_target:gts_bruh_get_subject_pop_usage_3_planet.gts_bruh_get_subject_planet_pop_count
+		}
+	}
+	option = {
+		name = gts_event_bruh.51.b
+		custom_tooltip = gts_event_bruh.51.b.custom_tooltip
+		add_resource = {
+			gts_micro = 0.5
+			mult = event_target:gts_bruh_get_subject_pop_usage_3_planet.gts_bruh_get_subject_planet_pop_count
+		}
+		add_resource = {
+			food = 4
+			mult = event_target:gts_bruh_get_subject_pop_usage_3_planet.gts_bruh_get_subject_planet_pop_count
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:gts_bruh_get_subject_pop_usage_3_planet = {
+				clear_variable = gts_bruh_get_subject_planet_pop_count
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_event_bruh.61
+	title = gts_event_bruh.61.name
+	desc = gts_event_bruh.61.desc
+	is_triggered_only = yes
+	show_sound = event_scanner
+	picture = GFX_evt_diplomatic_visit
+	location = event_target:gts_bruh_get_subject_pop_usage_3_planet
+
+	option = {
+		name = gts_event_bruh.61.a
+		custom_tooltip = gts_event_bruh.61.a.custom_tooltip
+		event_target:gts_bruh_get_subject_pop_usage_3_planet = {
+			every_owned_pop_group = {
+				kill_pop_group = {
+					pop_group = this
+					percentage = 0.10
+				}
+			}
+		}
+		add_modifier = {
+			modifier = gts_bruh_has_been_subject_pop_usage
+			years = 10
+		}
+	}
+	option = {
+		name = gts_event_bruh.61.b
+		custom_tooltip = gts_event_bruh.61.b.custom_tooltip
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 9000
+			}
+		}
+		event_target:gts_bruh_get_subject_pop_usage_3_planet = {
+			every_owned_pop_group = {
+				kill_pop_group = {
+					pop_group = this
+					percentage = 0.25
+				}
+			}
+		}
+		add_resource = {
+			# 250/10*12*30
+			energy = -9000
+		}
+		add_modifier = {
+			modifier = gts_bruh_has_been_subject_pop_usage
+			years = 30
+		}
+	}
+}
+
+# 生成子宮星系
+
+#event = {
+#	id = gts_event_bruh.71
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		no_scope = {
+#			spawn_system = {
+#				min_distance >= 3000
+#				max_distance <= 3000
+#				min_orientation_angle = 270
+#				max_orientation_angle = 270
+#				initializer = gts_bruh_womb_system
+#				hyperlane = no
+#			}
+#		}
+#		#spawn_planet = {
+#		#	generate_random_name = yes
+#		#	class = pc_crystal_asteroid
+#		#	orbit_distance = { min = 1 max = 260 }
+#		#	orbit_angle = { min = 0 max = 360 }
+#		#	flags = { asteroid_triplet }
+#		#	init_effect = {
+#		#		clear_deposits = yes
+#		#	}
+#		#}
+#	}
+#}
+
+event = {
+	id = gts_event_bruh.81
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+        # 只针对有人口的国家
+        pop_amount > 0
+    }
+	immediate = {
+		every_country = {
+			limit = {
+				owner_main_species = {
+					OR = {
+						has_trait = trait_Titan
+						has_trait = trait_Giant
+					}
+				}
+				capital_scope = {
+					NOT = {
+						has_building = building_gts_bruh_administrative_tower
+					}
+				}
+			}
+			capital_scope = {
+				add_building = building_gts_bruh_administrative_tower
+			}
+		}
+	}
+}
+

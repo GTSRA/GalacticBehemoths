@@ -1,0 +1,141 @@
+ship_design = {
+	#萨拉托加泰坦形态
+	name = "NAME_gts_saratoga_titan"
+	ship_size = gts_saratoga_titan
+	section = {
+	    #萨拉托加甲板
+        template = "gts_saratoga_titan_bow"
+    	slot = "bow"
+        component = {
+			slot = "gts_saratoga_strike_craft_01"
+			template = "gts_saratoga_strike_craft_hangar_1"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_02"
+			template = "gts_saratoga_strike_craft_hangar_1"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_03"
+			template = "gts_saratoga_strike_craft_hangar_1"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_04"
+			template = "gts_saratoga_strike_craft_hangar_1"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_05"
+			template = "gts_saratoga_strike_craft_hangar_1"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_06"
+			template = "gts_saratoga_strike_craft_hangar_2"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_07"
+			template = "gts_saratoga_strike_craft_hangar_2"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_08"
+			template = "gts_saratoga_strike_craft_hangar_2"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_09"
+			template = "gts_saratoga_strike_craft_hangar_2"
+		}
+		component = {
+			slot = "gts_saratoga_strike_craft_10"
+			template = "gts_saratoga_strike_craft_hangar_2"
+		}
+        component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "GTS_BRUH_MEDIUM_ARMOR_3"
+		}
+        component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "GTS_BRUH_MEDIUM_SHIELD_3"
+		}
+    }
+    section = {
+        #萨拉托加舰炮
+        template = "gts_saratoga_titan_stern"
+    	slot = "stern"
+        component = {
+    		slot = "gts_saratoga_medium_turret_01"
+    		template = "gts_saratoga_secondary_gun_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_medium_turret_02"
+    		template = "gts_saratoga_secondary_gun_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_medium_turret_03"
+    		template = "gts_saratoga_secondary_gun_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_medium_turret_04"
+    		template = "gts_saratoga_secondary_gun_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_01"
+    		template = "gts_saratoga_energy_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_02"
+    		template = "gts_saratoga_energy_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_03"
+    		template = "gts_saratoga_energy_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_04"
+    		template = "gts_saratoga_energy_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_05"
+    		template = "gts_saratoga_energy_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_06"
+    		template = "gts_saratoga_energy_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_07"
+    		template = "gts_saratoga_kinetic_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_08"
+    		template = "gts_saratoga_kinetic_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_09"
+    		template = "gts_saratoga_kinetic_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_10"
+    		template = "gts_saratoga_kinetic_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_11"
+    		template = "gts_saratoga_kinetic_point_defence_medium"
+    	}
+    	component = {
+    		slot = "gts_saratoga_point_defence_turret_12"
+    		template = "gts_saratoga_kinetic_point_defence_medium"
+    	}
+    	component = {
+    		slot = "AUX_UTILITY_1"
+    		template = "GTS_BRUH_AUTO_REPAIR_1"
+    	}
+        component = {
+        	slot = "AUX_UTILITY_2"
+        	template = "GTS_BRUH_AUTO_REPAIR_2"
+        }
+    }
+	required_component = "GTS_BRUH_REACTOR_BATTLESHIP_2"
+    required_component = "GTS_BRUH_HYPER_DRIVE_1"
+	required_component = "GTS_BRUH_SHIP_THRUSTER_2"
+	required_component = "GTS_BRUH_SENSOR_1"
+	required_component = "GTS_BRUH_COMBAT_COMPUTER_CARRIER"
+	required_component = "SHIP_AURA_GTS_QUANTUM_DESTABILIZER"
+}

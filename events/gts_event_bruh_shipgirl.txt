@@ -1,0 +1,297 @@
+namespace = gts_event_bruh_shipgirl
+
+planet_event = {
+	id = gts_event_bruh_shipgirl.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+
+		# 天災相關
+
+		# Contingency Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				NOT = { has_planet_flag = machine_lair }
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			planet_event = { id = crisis.2040 }
+		}
+
+		# Contingency Final Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				has_planet_flag = machine_lair
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			from.owner = { save_event_target_as = final_machine_world_destroyer }
+			stop_crisis_sound = yes
+			planet_event = { id = crisis.2046 }
+		}
+
+		# Swarm Situation Log counter
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = swarm }
+			}
+			every_country = {
+				limit = { has_event_chain = "prethoryn_scourge_chain" }
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds"
+					amount = -1
+				}
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds_cleansed"
+					amount = 1
+				}
+			}
+		}
+
+		# 產生威脅度
+
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			if = {
+				limit = {
+					is_colony = yes
+				}
+				add_threat = { who = from.owner amount = 3 }
+				# modifier for allies + those upset by genocide
+				every_country = {
+					limit = {
+						NOR = {
+							is_same_value = from.owner
+							is_same_value = root.owner
+							AND = {
+								has_federation = yes
+								is_in_federation_with = from.owner
+							}
+						}
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							AND = {
+								has_federation = yes
+								is_in_federation_with = root.owner
+							}
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								OR = {
+									is_egalitarian = yes
+									is_xenophile = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				add_threat = { who = from.owner amount = 1 }
+			}
+		}
+
+		# 產生倦怠度
+
+		# Add war exhaustion to planet owner
+		if = {
+			limit = {
+				exists = owner
+			}
+			owner = {
+				if = {
+					limit = { #isn't the case when the crisis bombards planets, for instance
+						is_at_war_with = from.fleet.owner
+					}
+					add_static_war_exhaustion = {
+						attacker = from.fleet.owner
+						location = root
+						value_for_planet_destruction = 1.0
+					}
+				}
+			}
+		}
+
+		# 人口消除
+
+		every_owned_pop_group = {
+			kill_all_pop = yes
+		}
+
+		# 摧毀軌道站
+
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			destroy_fleet = orbital_defence
+		}
+
+		# 拆特殊星球
+
+		# destroy habitats and ringworlds
+		if = {
+			limit = {
+				is_planet_class = pc_habitat
+			}
+			spawn_habitat_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_planet_class = pc_cosmogenesis_world
+			}
+			spawn_lathe_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_ringworld = yes
+			}
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_habitable_damaged
+		}
+
+		# 轉變成愛液星球
+
+		else = {
+			gts_bruh_clear_planet_effect = yes
+			pc_gts_juice_change = yes
+			destroy_colony = yes
+		}
+
+		# 拆觀測站
+
+		if = {
+			limit = {
+				has_observation_outpost = yes
+			}
+			observation_outpost = {
+				dismantle = yes
+			}
+		}
+
+		# 添加冷卻時間
+
+		from.fleet.owner = {
+			set_timed_country_flag = {
+				flag = gts_bruh_colossus_destroy_planet_effect_cool_down
+				years = 1
+			}
+		}
+
+		# 別人的球
+
+		#if = {
+		#	limit = {
+		#		exists = owner
+		#		owner = { NOT = { is_same_value = from.owner } }
+		#	}
+		#
+		#	gts_set_count_kill_pop_effect = yes
+		#
+		#	root = {
+		#		# 計算人口數量
+		#		export_trigger_value_to_variable = {
+		#			trigger = pop_amount
+		#			variable = gts_bruh_get_planet_killed_pop_count
+		#		}
+		#		divide_variable = {
+		#			which = gts_bruh_get_planet_killed_pop_count
+		#			value = 10000
+		#		}
+		#		floor_variable = gts_bruh_get_planet_killed_pop_count
+		#	}
+		#
+		#	from.owner = {
+		#		change_variable = {
+		#			which = gts_bruh_shipgirl_kills_logs
+		#			value = root.gts_bruh_get_planet_killed_pop_count
+		#		}
+		#		#country_event = { id = gts_event_bruh_shipgirl.2 }
+		#	}
+		#}
+
+		# 自己的球
+
+		#if = {
+		#	limit = {
+		#		exists = owner
+		#		owner = { is_same_value = from.owner }
+		#	}
+		#
+		#	root = {
+		#		# 計算人口數量
+		#		export_trigger_value_to_variable = {
+		#			trigger = pop_amount
+		#			variable = gts_bruh_get_planet_killed_pop_count
+		#		}
+		#		divide_variable = {
+		#			which = gts_bruh_get_planet_killed_pop_count
+		#			value = 10000
+		#		}
+		#		floor_variable = gts_bruh_get_planet_killed_pop_count
+		#	}
+		#
+		#	from.owner = {
+		#		change_variable = {
+		#			which = gts_bruh_shipgirl_kills_logs
+		#			value = root.gts_bruh_get_planet_killed_pop_count
+		#		}
+		#		#country_event = { id = gts_event_bruh_shipgirl.2 }
+		#	}
+		#}
+	}
+}
+
+# 炸球后弹出事件
+# 不幸的是沒文本
+#country_event = {
+#	id = gts_event_bruh_shipgirl.999
+#	title = gts_event_bruh_shipgirl.999.name
+#	desc = gts_event_bruh_shipgirl.999.desc
+#	picture =
+#	show_sound = event_mystic_reveal
+#	location = from
+#
+#	is_triggered_only = yes
+#
+#	trigger = {
+#
+#	}
+#	option = {
+#		name = gts_event_bruh_shipgirl.999.a
+#	}
+#	option = {
+#		name = gts_event_bruh_shipgirl.999.b
+#		trigger = {
+#			OR = {
+#
+#			}
+#		}
+#	}
+#	option = {
+#		name = gts_event_bruh_shipgirl.999.c
+#		root = {
+#
+#		}
+#	}
+#}

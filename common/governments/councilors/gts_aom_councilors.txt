@@ -1,0 +1,48 @@
+# Councilor Documentation
+#
+# councilor_name_key = {
+#    civic = civic_imperial_cult		Civic that is required for this council position. Also used by UI. Default = none.
+#    leader_class = { }					Which leader classes can have this council position. Currently only used for the Recruit new Leader buttons. Default = none.
+#    is_leader_possible = { }			Can a leader have this council position. Used to filter leaders. Scope: THIS = Leader.
+#    modifier = { }						Country Modifier, that is multiplied by assigned Leader's level.
+#	 custom_tooltip = "LOC_KEY"			Custom tooltip text shown for the modifier of the council position.
+#	 conditional_tooltip = "LOC_KEY"	Custom tooltip text shown for the requirements of the council position.
+# }
+
+
+
+#首席法师
+councilor_panlon_Wizard = {
+	leader_class = { scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+		}
+	}
+
+	civic = civic_panlon_Wizard
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.03
+		ship_anomaly_research_speed_mult = 0.03
+		science_ship_survey_speed = 0.03
+	}
+	icon = "GFX_icon_councilor_research"
+}
+
+#骑士大团长
+councilor_kancolle_knights  = {
+	leader_class = { admiral general }
+	is_leader_possible = {
+		leader_class = admiral
+		leader_class = general
+	}
+
+	civic = civic_panlon_knights
+	modifier = {
+		ship_starting_experience_add = 50
+		army_starting_experience_add = 50
+		admiral_exp_gain = 0.05
+		general_exp_gain = 0.05
+	}
+	icon = "GFX_icon_councilor_defense"
+}

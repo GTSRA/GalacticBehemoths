@@ -1,0 +1,1584 @@
+@hit2 = 5
+@hit3 = 10
+@hit4 = 15
+@cost1 = 2
+@cost2 = 4
+@cost3 = 6
+@cost4 = 8
+@power1 = -5
+@power2 = -10
+@power3 = -15
+@power4 = -20
+@sensor1 = 1
+@sensor2 = 2
+@sensor3 = 3
+@sensor4 = 4
+@hyperlane1 = 2
+@hyperlane2 = 3
+@hyperlane3 = 4
+@hyperlane4 = 5
+@destroyer_power_1 = 140
+@destroyer_power_2 = 180
+@destroyer_power_3 = 240
+@destroyer_power_4 = 320
+@destroyer_power_5 = 430
+@destroyer_power_6 = 550
+@battleship_power_1 = 550
+@battleship_power_2 = 720
+@battleship_power_3 = 950
+@battleship_power_4 = 1250
+@battleship_power_5 = 1550
+@battleship_power_6 = 2000
+@titan_power_1 = 1100
+@titan_power_2 = 1450
+@titan_power_3 = 1900
+@titan_power_4 = 2500
+@titan_power_5 = 3200
+@titan_power_6 = 4200
+@destroyer_cost_1 = 20
+@destroyer_cost_2 = 26
+@destroyer_cost_3 = 34
+@destroyer_cost_4 = 44
+@destroyer_cost_5 = 56
+@destroyer_cost_6 = 74
+@battleship_cost_1 = 80
+@battleship_cost_2 = 104
+@battleship_cost_3 = 136
+@battleship_cost_4 = 176
+@battleship_cost_5 = 224
+@battleship_cost_6 = 296
+@titan_cost_1 = 160
+@titan_cost_2 = 208
+@titan_cost_3 = 272
+@titan_cost_4 = 352
+@titan_cost_5 = 448
+@titan_cost_6 = 592
+@missile_speed = 5
+###点防御000
+weapon_component_template = {
+	#虔诚信仰点防御
+	key = "POINT_DEFENCE_GTS"
+	size = point_defence
+	icon = "GFX_tech_point_defence_gts_1"
+	icon_frame = 1
+	power = -10	#花费能源
+	damage = {
+		#伤害浮动
+		min = 550
+		max = 600
+	}
+	windup = {
+		#开火准备时间
+		min = 0.45
+		max = 0.5
+	}
+	total_fire_time = 25
+	range = 300	#射程
+	accuracy = 1	#命中100%
+	tracking = 0.9	#追踪100%
+	hull_damage = 1	#破船 1=正常
+	shield_damage = 1	#破盾
+	armor_damage = 0.25	#破甲
+	shield_penetration = 0	#穿甲 1=+100%
+	armor_penetration = 0.75
+	prerequisites = {
+		"tech_point_defence_gts_1"
+	}
+	component_set = "POINT_DEFENCE_GTS"
+	type = point_defence
+	projectile_gfx = "white_laser_pd"
+	tags = {
+		weapon_type_point_defense
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_point_defense
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 13
+		}
+		upkeep = {
+			energy = 0.13
+			alloys = 0.013
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+}
+
+weapon_component_template = {
+	#重型目力防空炮
+	type = point_defence
+	key = "FLAK_BATTERY_GTS"
+	size = point_defence
+	icon = "GFX_tech_flak_battery_gts_2"
+	icon_frame = 1
+	power = -10	#花费能源
+	damage = {
+		#伤害浮动
+		min = 550
+		max = 600
+	}
+	windup = {
+		#开火准备时间
+		min = 0.45
+		max = 0.5
+	}
+	total_fire_time = 25
+	range = 300	#射程
+	accuracy = 1	#命中100%
+	tracking = 0.9	#追踪100%
+	hull_damage = 1	#破船 1=正常
+	shield_damage = 1	#破盾
+	armor_damage = 0.25	#破甲
+	shield_penetration = 0	#穿甲 1=+100%
+	armor_penetration = 0.75
+	prerequisites = {
+		"tech_flak_battery_gts_2"
+	}
+	component_set = "FLAK_BATTERY_GTS"
+	projectile_gfx = "flak_pd_3"
+	tags = {
+		weapon_type_point_defense
+		weapon_type_kinetic
+	}
+	ai_tags = {
+		weapon_role_point_defense
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 13
+		}
+		upkeep = {
+			energy = 0.13
+			alloys = 0.013
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+}
+
+###舰载机（舰载机似乎是在这里就能改？）
+strike_craft_component_template = {
+	#星海轰炸机
+	key = "STRIKE_CRAFT_GTS_1"
+	size = LARGE
+	entity = "bomber_entity"
+	weapon_type = point_defence
+	projectile_gfx = "strike_craft_laser_3"
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+		}
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+	count = 10
+	regeneration_per_day = 0.5
+	launch_time = 1
+	damage = {
+		min = 200
+		max = 350
+	}
+	cooldown = 2.3
+	range = 100
+	engagement_range = 200
+	accuracy = 1
+	tracking = 1
+	health = 550
+	armor = 100
+	shield = 300
+	evasion = 0.8
+	speed = 1400
+	rotation_speed = 0.8
+	acceleration = 1
+	shield_penetration = 1.5
+	armor_damage = 1.5
+	ship_behavior = "fighters_behavior"
+	icon = "GFX_tech_amoeba_strike_craft_gts_1"
+	icon_frame = 1
+	component_set = "STRIKE_CRAFT_GTS_1"
+	prerequisites = {
+		"tech_amoeba_strike_craft_gts_1"
+	}
+	tags = {
+		weapon_type_strike_craft
+	}
+	ai_tags = {
+		weapon_role_point_defense
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+}
+
+strike_craft_component_template = {
+	#流星战斗机
+	key = "STRIKE_CRAFT_GTS_2"
+	size = LARGE
+	entity = "fighter_entity"
+	weapon_type = point_defence
+	projectile_gfx = "scout_laser_1"
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t1_cost
+		}
+		upkeep = {
+			energy = @l_t1_upkeep_energy
+			alloys = @l_t1_upkeep_alloys
+		}
+	}
+	count = 10
+	regeneration_per_day = 2
+	launch_time = 1
+	damage = {
+		min = 100
+		max = 180
+	}
+	cooldown = 2
+	range = 100
+	engagement_range = 300
+	accuracy = 1
+	tracking = 0.7
+	health = 300
+	armor = 500
+	shield = 0
+	evasion = 0.9
+	speed = 2000
+	rotation_speed = 0.8
+	acceleration = 1
+	shield_penetration = 1.2
+	armor_damage = 1.2
+	ship_behavior = "fighters_behavior"
+	icon = "GFX_tech_amoeba_strike_craft_gts_2"
+	icon_frame = 1
+	component_set = "STRIKE_CRAFT_GTS_2"
+	prerequisites = {
+		"tech_amoeba_strike_craft_gts_2"
+	}
+	tags = {
+		weapon_type_strike_craft
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+}
+
+###导弹
+weapon_component_template = {
+	#刺雷导弹
+	key = "TORPEDO_GTS"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	icon = "GFX_tech_torpedoes_gts"
+	icon_frame = 1
+	type = missile
+	power = -40	#花费能源
+	damage = {
+		#伤害浮动
+		min = 5750
+		max = 6550
+	}
+	windup = {
+		#开火准备时间
+		min = 0.1
+		max = 1.5
+	}
+	total_fire_time = 25
+	range = 1500	#射程
+	accuracy = 1	#命中100%
+	tracking = 0.3	#追踪100%
+	hull_damage = 1.25	#破船 1=正常
+	shield_damage = 1.75	#破盾
+	armor_damage = 1	#破甲
+	shield_penetration = 0	#穿甲 1=+100%
+	armor_penetration = 1.5	#穿盾
+	prerequisites = {
+		"tech_torpedoes_gts"
+	}
+	component_set = "TORPEDO_GTS"
+	projectile_gfx = "large_torpedo_03"
+	tags = {
+		weapon_type_explosive
+	}
+	ai_tags = {
+		weapon_role_anti_shield
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+		}
+		upkeep = {
+			energy = @m_t3_upkeep_energy
+			alloys = @m_t3_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = volatile_motes
+			}
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+}
+
+###动能武器
+weapon_component_template = {
+	#舰娘轨道巨炮
+	type = instant
+	key = "MASS_ACCELERATOR_GTS"
+	size = extra_large
+	icon = "GFX_tech_kinetic_artillery_gts_3"
+	icon_frame = 1
+	power = -1000	#花费能源
+	damage = {
+		#伤害浮动
+		min = 15000
+		max = 40000
+	}
+	windup = {
+		#开火准备时间
+		min = 20
+		max = 40
+	}
+	total_fire_time = 25
+	range = 1500	#射程
+	accuracy = 0.75	#命中100%
+	tracking = 0	#追踪100%
+	hull_damage = 1.5	#破船 1=正常
+	shield_damage = 1	#破盾
+	armor_damage = 0.25	#破甲
+	armor_penetration = 0.5	#穿盾
+	firing_arc = 25
+	min_range = 10
+	use_ship_kill_target = no
+	prerequisites = {
+		"tech_kinetic_artillery_gts_3"
+	}
+	component_set = "MASS_ACCELERATOR_GTS"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = {
+		weapon_type_kinetic
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	#舰体动能主炮
+	type = instant
+	key = "KINETIC_ARTILLERY_GTS"
+	size = large
+	icon = "GFX_tech_kinetic_artillery_gts_4"
+	icon_frame = 1
+	power = -500	#花费能源
+	damage = {
+		#伤害浮动
+		min = 2000
+		max = 7000
+	}
+	windup = {
+		#开火准备时间
+		min = 0.3
+		max = 2.5
+	}
+	total_fire_time = 25
+	range = 750	#射程
+	accuracy = 0.85	#命中100%
+	tracking = 0.75	#追踪100%
+	hull_damage = 1.25	#破船 1=正常
+	shield_damage = 1	#破盾
+	armor_damage = 0.25	#破甲
+	armor_penetration = 1.5	#穿盾
+	prerequisites = {
+		"tech_kinetic_artillery_gts_4"
+	}
+	component_set = "KINETIC_ARTILLERY_GTS"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = {
+		weapon_type_kinetic
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+		}
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = volatile_motes
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	#舰体动能副炮
+	type = instant
+	key = "AUTOCANNON_GTS"
+	size = medium
+	icon = "GFX_tech_kinetic_artillery_gts_5"
+	icon_frame = 1
+	power = -100	#花费能源
+	damage = {
+		#伤害浮动
+		min = 700
+		max = 900
+	}
+	windup = {
+		#开火准备时间
+		min = 0.2
+		max = 1.4
+	}
+	total_fire_time = 25
+	range = 350	#射程
+	accuracy = 0.85	#命中100%
+	tracking = 0.75	#追踪100%
+	hull_damage = 1.25	#破船 1=正常
+	shield_damage = 1	#破盾
+	armor_damage = 0.25	#破甲
+	armor_penetration = 1.5	#穿盾
+	prerequisites = {
+		"tech_kinetic_artillery_gts_5"
+	}
+	component_set = "AUTOCANNON_GTS"
+	projectile_gfx = "stormfire_auto_cannons_s"
+	tags = {
+		weapon_type_kinetic
+	}
+	ai_tags = {
+		weapon_role_anti_shield
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = volatile_motes
+			}
+		}
+	}
+}
+
+###激光武器
+weapon_component_template = {
+	#能量汲取模块
+	key = "PLASMA_GTS"
+	size = small
+	type = instant
+	icon = "GFX_tech_scourge_missile_gts_2"
+	icon_frame = 1
+	power = -200	#花费能源
+	damage = {
+		#伤害浮动
+		min = 4000
+		max = 9000
+	}
+	windup = {
+		#开火准备时间
+		min = 0.2
+		max = 2
+	}
+	total_fire_time = 25
+	range = 750	#射程
+	accuracy = 0.75	#命中100%
+	tracking = 0.05	#追踪100%
+	hull_damage = 1	#破船 1=正常
+	shield_damage = 2	#破盾 基准为1
+	armor_damage = 0.25	#破甲 基准为1
+	shield_penetration = 0.5	#穿甲 1=+100%
+	prerequisites = {
+		"tech_plasma_gts"
+	}
+	component_set = "PLASMA_GTS"
+	projectile_gfx = "space_whale_weapon"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_anti_shield
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+}
+
+weapon_component_template = {
+	#人造激光发射器
+	key = "SMALL_LASER_GTS"
+	size = small
+	type = instant
+	icon = "GFX_tech_scourge_missile_gts_2"
+	icon_frame = 1
+	power = -200	#花费能源
+	damage = {
+		#伤害浮动
+		min = 6500
+		max = 8000
+	}
+	windup = {
+		#开火准备时间
+		min = 0.2
+		max = 2
+	}
+	total_fire_time = 25
+	range = 1000	#射程
+	accuracy = 0.9	#命中100%
+	tracking = 0.05	#追踪100%
+	hull_damage = 1.5	#破船 1=正常
+	shield_damage = 0.25	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 0.5	#穿甲 1=+100%
+	prerequisites = {
+		"tech_lasers_gts"
+	}
+	component_set = "LASER_GTS"
+	projectile_gfx = "gamma_laser_s"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = rare_crystals
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LASER_GTS"
+	size = medium
+	type = instant
+	icon = "GFX_tech_scourge_missile_gts_2"
+	icon_frame = 1
+	power = -250	#花费能源
+	damage = {
+		#伤害浮动
+		min = 5500
+		max = 9000
+	}
+	windup = {
+		#开火准备时间
+		min = 0.2
+		max = 2
+	}
+	total_fire_time = 25
+	range = 1000	#射程
+	accuracy = 0.9	#命中100%
+	tracking = 0.05	#追踪100%
+	hull_damage = 1.5	#破船 1=正常
+	shield_damage = 0.25	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 0.5	#穿盾 1=+100%
+	prerequisites = {
+		"tech_lasers_gts"
+	}
+	component_set = "LASER_GTS"
+	projectile_gfx = "gamma_laser_m"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+		}
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = rare_crystals
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LASER_GTS"
+	size = large
+	type = instant
+	icon = "GFX_tech_scourge_missile_gts_2"
+	icon_frame = 1
+	power = -300	#花费能源
+	damage = {
+		#伤害浮动
+		min = 5000
+		max = 10000
+	}
+	windup = {
+		#开火准备时间
+		min = 0.2
+		max = 2
+	}
+	total_fire_time = 25
+	range = 1000	#射程
+	accuracy = 0.9	#命中100%
+	tracking = 0.05	#追踪100%
+	hull_damage = 1.5	#破船 1=正常
+	shield_damage = 0.25	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 0.5	#穿盾 1=+100%
+	prerequisites = {
+		"tech_lasers_gts"
+	}
+	component_set = "LASER_GTS"
+	projectile_gfx = "gamma_laser_l"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+		}
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = rare_crystals
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	#生物电弧发射器
+	key = "SCOURGE_MISSILE_GTS_2"
+	size = extra_large
+	type = instant
+	icon = "GFX_tech_scourge_missile_gts_2"
+	icon_frame = 1
+	power = -400	#花费能源
+	damage = {
+		#伤害浮动
+		min = 10
+		max = 50000
+	}
+	windup = {
+		#开火准备时间
+		min = 0.1
+		max = 1.9
+	}
+	total_fire_time = 25
+	range = 1200	#射程
+	accuracy = 1	#命中100%
+	tracking = 0	#追踪100%
+	shield_damage = 1.5	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 1.5	#穿甲 1=+100%
+	armor_penetration = 1.5	#穿盾
+	firing_arc = 35
+	firing_arc = 35
+	min_range = 10
+	use_ship_kill_target = no
+	prerequisites = {
+		"tech_scourge_missile_gts_2"
+	}
+	component_set = "SCOURGE_MISSILE_GTS_2"
+	projectile_gfx = "focused_arc_emitter"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	#生物腐蚀性战剂
+	key = "SMALL_SCOURGE_MISSILE_GTS_1"
+	size = small
+	type = instant
+	icon = "GFX_tech_scourge_missile_gts_1"
+	icon_frame = 1
+	power = -300	#花费能源
+	damage = {
+		#伤害浮动
+		min = 8000
+		max = 8500
+	}
+	windup = {
+		#开火准备时间
+		min = 10
+		max = 20
+	}
+	total_fire_time = 25
+	range = 300	#射程
+	accuracy = 1	#命中100%
+	tracking = 0.45	#追踪100%
+	shield_damage = 1.5	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 1.5	#穿甲 1=+100%
+	armor_penetration = 1.5	#穿盾
+	prerequisites = {
+		"tech_scourge_missile_gts_1"
+	}
+	component_set = "SCOURGE_MISSILE_GTS_1"
+	projectile_gfx = "disruptor_3_small"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = rare_crystals
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SCOURGE_MISSILE_GTS_1"
+	size = medium
+	type = instant
+	icon = "GFX_tech_scourge_missile_gts_1"
+	icon_frame = 1
+	power = -700	#花费能源
+	damage = {
+		#伤害浮动
+		min = 15000
+		max = 17500
+	}
+	windup = {
+		#开火准备时间
+		min = 10
+		max = 20
+	}
+	total_fire_time = 25
+	range = 300	#射程
+	accuracy = 1	#命中100%
+	tracking = 0.45	#追踪100%
+	shield_damage = 1.5	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 1.5	#穿甲 1=+100%
+	armor_penetration = 1.5	#穿盾
+	prerequisites = {
+		"tech_scourge_missile_gts_1"
+	}
+	component_set = "SCOURGE_MISSILE_GTS_1"
+	projectile_gfx = "disruptor_3_medium"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+		}
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = rare_crystals
+			}
+		}
+	}
+}
+
+#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------- 開始 ----------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------- 這東西是能量炮? ------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------- 結束 ----------------------------------------------------------------------------------------------------
+
+weapon_component_template = {
+	#中子手雷
+	key = "ENERGY_LANCE_GTS_2"
+	size = large
+	entity = "turret_energy_torpedo_entity"
+	type = instant
+	icon = "GFX_ENERGY_LANCE_GTS_2"
+	icon_frame = 1
+	power = -300	#花费能源
+	damage = {
+		#伤害浮动
+		min = 12000
+		max = 35000
+	}
+	windup = {
+		#开火准备时间
+		min = 5
+		max = 10
+	}
+	total_fire_time = 16
+	range = 1500	#射程
+	accuracy = 0.75	#命中100%
+	tracking = 0	#追踪100%
+	hull_damage = 1.5	#破船 1=正常
+	shield_damage = 0.5	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 0.5	#穿盾 1=+100%
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	prerequisites = {
+		"tech_energy_lance_gts_2"
+	}
+	component_set = "ENERGY_LANCE_GTS_2"
+	projectile_gfx = "neutron_torpedoes"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+		}
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = {
+				RESOURCE = exotic_gases
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	#快子薙刀
+	key = "ENERGY_LANCE_GTS_1"
+	size = extra_large
+	type = instant
+	icon = "GFX_ENERGY_LANCE_GTS_1"
+	icon_frame = 1
+	power = -250	#花费能源
+	damage = {
+		#伤害浮动
+		min = 20000
+		max = 40000
+	}
+	windup = {
+		#开火准备时间
+		min = 0.1
+		max = 1.9
+	}
+	total_fire_time = 25
+	range = 1000	#射程
+	accuracy = 0.95	#命中100%
+	tracking = 0	#追踪100%
+	hull_damage = 1.5	#破船 1=正常
+	shield_damage = 0.5	#破盾
+	armor_damage = 1.5	#破甲
+	shield_penetration = 0.5	#穿甲 1=+100%
+	firing_arc = 25
+	min_range = 10
+	use_ship_kill_target = no
+	prerequisites = {
+		"tech_energy_lance_gts_1"
+	}
+	component_set = "ENERGY_LANCE_GTS_1"
+	projectile_gfx = "tachyon_lance"
+	tags = {
+		weapon_type_energy
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	ai_tag_weight = 0
+	size_restriction = {
+		gts_destroyer_ship
+		gts_battleship_ship
+		gts_titan_ship
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------- 開始 ----------------------------------------------------------------------------------------------------
+
+#给你一拳！
+weapon_component_template = {
+	key = "GTS_FIST"
+	size = titanic
+	
+	icon = "GFX_tech_gts_fist"
+	icon_frame = 1
+	type = instant
+	
+	power = 0
+	
+	damage = 999999
+	
+	#---------------------------------------------------------------------------------------------------- 準備時間 ------------------------------------------------------------------------------------------------
+	#---------------------------------------------------------------------------------------------------- 每 10 ticks 為 1 天 -------------------------------------------------------------------------------------
+	
+	windup = { min = 10.0 max = 10.0 }
+	
+	#---------------------------------------------------------------------------------------------------- 下次發射所需的時間 --------------------------------------------------------------------------------------
+	#---------------------------------------------------------------------------------------------------- 要加上準備時間 ------------------------------------------------------------------------------------------
+	#---------------------------------------------------------------------------------------------------- 20 天揍一拳 ---------------------------------------------------------------------------------------------
+	
+	total_fire_time = 190
+	accuracy = 0.8
+	tracking = 0
+	range = 100
+	firing_arc = 25
+	
+	#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+	#---------------------------------------------------------------------------------------------------- 開始 ----------------------------------------------------------------------------------------------------
+	
+	# 這是舊的
+	
+	#use_ship_kill_target = no
+	use_ship_main_target = no
+	
+	#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+	#---------------------------------------------------------------------------------------------------- 結束 ----------------------------------------------------------------------------------------------------
+	
+	prerequisites = {
+		"tech_gts_fist"
+	}
+	component_set = "GTS_FIST"
+	prio_projectile = yes
+	projectile_gfx = "ion_cannon"
+	
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	
+	resources = {
+		category = ship_components
+		upkeep = {
+			#energy = 8
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	size_restriction = {
+		gts_titan_ship
+		
+		#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+		#---------------------------------------------------------------------------------------------------- 開始 ----------------------------------------------------------------------------------------------------
+		
+		gts_bruh_titan_ship
+		
+		#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+		#---------------------------------------------------------------------------------------------------- 結束 ----------------------------------------------------------------------------------------------------
+		
+	}
+}
+
+#---------------------------------------------------------------------------------------------------- Bruh ----------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------- 結束 ----------------------------------------------------------------------------------------------------
+
+weapon_component_template = {
+	key = "PLANET_KILLER_GTS_SHRINK"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+	prerequisites = {
+		"tech_pk_gts_shrink"
+	}
+	icon = GFX_ship_part_nanobot_diffuser
+	icon_frame = 1
+	#size_restriction = { colossus }
+	component_set = "PLANET_KILLER_BACK_IN_TIME"
+	planet_destruction_gfx = "global_pacifier_gfx"
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 主人以及先科研
+weapon_component_template = { #刺雷导弹
+	key = "TORPEDO_MASTER"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+
+	icon = "GFX_ship_part_torpedo_3"
+	icon_frame = 1
+	type = missile
+
+	power = -50 #花费能源
+    damage = {    #伤害浮动
+		min = 6000
+		max = 7000
+	}
+	windup = {    #开火准备时间
+		min = 0.15
+		max = 1.5
+	}
+	total_fire_time = 25
+	range = 1500  #射程
+	accuracy = 1 #命中100%
+	tracking = 0.30 #追踪100%
+	hull_damage = 1.25 #破船 1=正常
+	shield_damage = 1.75 #破盾
+	armor_damage = 1 #破甲
+	shield_penetration = 0 #穿甲 1=+100%
+	armor_penetration = 1.5 #穿盾
+
+	
+	component_set = "TORPEDO_MASTER"
+	projectile_gfx = "large_torpedo_03"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+		}
+		upkeep = {
+			energy = @m_t3_upkeep_energy
+			alloys = @m_t3_upkeep_alloys
+		}
+	}
+	size_restriction = { master }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+weapon_component_template = { #虔诚信仰点防御
+	key = "POINT_DEFENCE_MASTER"
+	size = point_defence
+
+	icon = "GFX_ship_part_point_defense_3"
+	icon_frame = 1
+
+	power = -10 #花费能源
+    damage = {    #伤害浮动
+		min = 600
+		max = 750
+	}
+	windup = {    #开火准备时间
+		min = 0.2
+		max = 0.5
+	}
+	total_fire_time = 25
+	range = 1800  #射程
+	accuracy = 1 #命中100%
+	tracking = 0.90 #追踪100%
+	hull_damage = 1 #破船 1=正常
+	shield_damage = 1 #破盾
+	armor_damage = 0.25 #破甲
+	shield_penetration = 0 #穿甲 1=+100%
+	armor_penetration = 0.75
+
+	component_set = "POINT_DEFENCE_MASTER"
+	type = point_defence
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 13
+		}
+		upkeep = {
+			energy = 0.13
+			alloys = 0.013
+		}
+	}
+	size_restriction = { master }
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+weapon_component_template = { #快子薙刀
+	key = "ENERGY_LANCE_MASTER"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_energy_lance_2"
+	icon_frame = 1
+
+	power = -250 #花费能源
+    damage = {    #伤害浮动
+		min = 5000
+		max = 10000
+	}
+	windup = {    #开火准备时间
+		min = 0.1
+		max = 1.25
+	}
+	total_fire_time = 25
+	range = 1000  #射程
+	accuracy = 0.95 #命中100%
+	tracking = 0 #追踪100%
+	hull_damage = 1.5 #破船 1=正常
+	shield_damage = 0.5 #破盾
+	armor_damage = 1.5 #破甲
+	shield_penetration = 0.5 #穿甲 1=+100%
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	component_set = "ENERGY_LANCE_MASTER"
+	projectile_gfx = "tachyon_lance"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	size_restriction = { master }
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+weapon_component_template = { #生物电弧发射器
+	key = "SCOURGE_MISSILE_MASTER"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_arc_emitter_2"
+	icon_frame = 1
+
+	power = -400 #花费能源
+    damage = {    #伤害浮动
+		min = 10000
+		max = 50000
+	}
+	windup = {    #开火准备时间
+		min = 0.2
+		max = 1.3
+	}
+	total_fire_time = 25
+	range = 1200  #射程
+	accuracy = 1 #命中100%
+	tracking = 0 #追踪100%
+	shield_damage = 1.5 #破盾
+	armor_damage = 1.5 #破甲
+	shield_penetration = 1.5 #穿甲 1=+100%
+	armor_penetration = 1.5 #穿盾
+	firing_arc = 35.0
+
+	firing_arc = 35.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	component_set = "SCOURGE_MISSILE_MASTER"
+	projectile_gfx = "focused_arc_emitter"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+	size_restriction = { master }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+weapon_component_template = { #能量汲取模块
+	key = "PLASMA_MASTER"
+	size = small
+	type = instant
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+
+	power = -200 #花费能源
+    damage = {    #伤害浮动
+		min = 6000
+		max = 9000
+	}
+	windup = {    #开火准备时间
+		min = 0.2
+		max = 1.5
+	}
+	total_fire_time = 25
+	range = 1500  #射程
+	accuracy = 0.75 #命中100%
+	tracking = 0.05 #追踪100%
+	hull_damage = 1 #破船 1=正常
+	shield_damage = 2 #破盾 基准为1
+	armor_damage = 0.25 #破甲 基准为1
+	shield_penetration = 0.5 #穿甲 1=+100%
+
+	component_set = "PLASMA_MASTER"
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}
+	}
+	size_restriction = { master }
+
+	ai_weight = {
+		factor = 100
+	}
+
+}
+
+weapon_component_template = { #舰体动能副炮
+	type = instant
+
+	key = "AUTOCANNON_MASTER"
+	size = small
+
+	icon = "GFX_ship_part_autocannon_3"
+	icon_frame = 1
+
+	power = -100 #花费能源
+    damage = {    #伤害浮动
+		min = 7000
+		max = 9000
+	}
+	windup = {    #开火准备时间
+		min = 0.2
+		max = 0.2
+	}
+	total_fire_time = 25
+	range = 1400  #射程
+	accuracy = 0.85 #命中100%
+	tracking = 0.75 #追踪100%
+	hull_damage = 1.25 #破船 1=正常
+	shield_damage = 1.0 #破盾
+	armor_damage = 0.25 #破甲
+	armor_penetration = 1.5 #穿盾
+
+	
+	component_set = "AUTOCANNON_MASTER"
+	projectile_gfx = "stormfire_auto_cannons_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	size_restriction = { master }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+weapon_component_template = { #舰体动能主炮
+	type = instant
+
+	key = "KINETIC_ARTILLERY_MASTER"
+	size = medium
+
+	icon = "GFX_ship_part_kinetic_artillery_2"
+	icon_frame = 1
+
+	power = -500 #花费能源
+    damage = {    #伤害浮动
+		min = 20000
+		max = 70000
+	}
+	windup = {    #开火准备时间
+		min = 0.3
+		max = 2
+	}
+	total_fire_time = 25
+	range = 1500  #射程
+	accuracy = 0.85 #命中100%
+	tracking = 0.75 #追踪100%
+	hull_damage = 1.25 #破船 1=正常
+	shield_damage = 1.0 #破盾
+	armor_damage = 0.25 #破甲
+	armor_penetration = 1.5 #穿盾
+
+	component_set = "KINETIC_ARTILLERY_MASTER"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+		}
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+	size_restriction = { master }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+#先科研
+weapon_component_template = { #会长之足
+	type = instant
+
+	key = "FOOT_OF_KAIJIANG"
+	size = small
+
+	icon = "GFX_ship_part_foot_of_kaijiang"
+	icon_frame = 1
+
+	power = -0 #花费能源
+    damage = {    #伤害浮动
+		min = 700
+		max = 900
+	}
+	windup = {    #开火准备时间
+		min = 1
+		max = 2
+	}
+	total_fire_time = 25
+	range = 25  #射程
+	accuracy = 1 #命中100%
+	tracking = 1 #追踪100%
+	hull_damage = 1 #破船 1=正常
+	shield_damage = 1 #破盾
+	armor_damage = 1 #破甲
+	armor_penetration = 0.5 #穿盾
+
+	
+	component_set = "FOOT_OF_KAIJIANG"
+	projectile_gfx = "stormfire_auto_cannons_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	size_restriction = { Kaijiang }
+
+	ai_weight = {
+		weight = 1
+	}
+}

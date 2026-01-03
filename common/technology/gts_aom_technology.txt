@@ -1,0 +1,17 @@
+#建筑
+#能量石合成厂
+tech_magicstones_factory = {
+	cost = 6000
+	area = engineering
+	tier = 3
+	category = { materials }
+	is_rare = yes
+	weight = 60
+	ai_update_type = all
+	potential = {
+        has_origin = origin_sigmaempire
+	}
+	ai_weight = {
+		factor = 0
+	}
+}

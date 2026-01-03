@@ -1,0 +1,735 @@
+subclass_commander_sadsong = {#涌潮悲歌纯粹的数值
+
+	# 湧潮悲歌
+
+	leader_trait_type = subclass
+
+	custom_subtitle = commander_subclass
+
+	opposites = {
+		subclass_commander_admiral
+		subclass_commander_general
+		subclass_commander_governor
+		#subclass_commander_councilor内阁特质不会顶掉
+	}
+
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_general
+		COUNCIL = no
+	}
+
+	fleet_modifier = {
+		ship_weapon_damage = 0.15
+		ship_fire_rate_mult = 0.15
+	}
+
+	custom_tooltip_with_modifiers = sadsong_subclass
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+	background_icon = "GFX_leader_subclass_commander_general_background"
+}
+
+trait_ruler_skadi_trait1 = { #同归殊途之吟
+
+	# 同歸殊途之吟
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_ruler_hive_mind" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+	}
+
+	councilor_modifier = {
+		ships_upkeep_mult = -0.10
+	}
+
+	fleet_modifier = {
+		command_limit_add = 120
+		fleet_mia_time_mult = -0.05
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+trait_ruler_skadi_trait2 = { #同葬无光之愿
+
+	# 同葬無光之願
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_armorer" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	fleet_modifier = {
+		ship_hull_mult = 0.10
+		ship_armor_mult = 0.10
+		ship_hull_regen_add_perc = 0.005
+		ship_armor_regen_add_perc = 0.005
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+trait_ruler_skadi_trait3 = { #潮涌，潮枯
+
+	# 潮湧，潮枯
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_aquatic_admiral" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	councilor_modifier = {
+		country_naval_cap_add = 200
+		ship_starting_experience_add = 200
+		starbase_shipyard_build_speed_mult = 0.10
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+trait_ruler_skadi_trait4 = {
+
+	# 捕食習性
+
+    leader_trait_type = negative
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_dragonslayer"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	inline_script = {
+		script = paragon/leader_resource_upkeep_mult
+		RESOURCE = food
+		AMOUNT = 10
+		MULT = trigger:has_total_skill
+	}
+
+	self_modifier = {
+		#negative_traits_leader = 5
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+# 能自己点的技能点
+
+# byd蠢驴写的这么抽象
+
+skadi_leader_trait_hunt = { #自行狩猎
+
+	# 獨自狩獵
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_gullible" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+
+
+	triggered_self_modifier = {
+		leader_commanders_energy_produces_add = 5
+		leader_commanders_food_produces_add = 5
+		leader_commanders_minerals_produces_add = 5
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_hunt_2 = {
+
+	# 獨自狩獵-2
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_gullible" 
+		RARITY = paragon 
+		COUNCIL = no
+		TIER = 2
+	}
+
+	triggered_self_modifier = {
+		leader_commanders_energy_produces_add = 10
+		leader_commanders_food_produces_add = 10
+		leader_commanders_minerals_produces_add = 10
+		leader_commanders_alloys_produces_add = 5
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	replace_traits = { "skadi_leader_trait_hunt" }
+
+	selectable_weight = {
+		weight = 10000
+	}
+}
+
+skadi_leader_trait_hunt_3 = {
+
+	# 獨自狩獵-3
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_gullible" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 3
+	}
+
+	triggered_self_modifier = {
+		leader_commanders_energy_produces_add = 15
+		leader_commanders_food_produces_add = 15
+		leader_commanders_minerals_produces_add = 15
+		leader_commanders_alloys_produces_add = 7.5
+		leader_commanders_consumer_goods_produces_add = 7.5
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	replace_traits = { "skadi_leader_trait_hunt_2" }
+
+	selectable_weight = {
+		weight = 10000
+	}
+}
+
+skadi_leader_trait_iceaxe = { #冰镐超人
+
+	# 冰鎬獵人
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_mining_focus" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+    councilor_modifier = {
+		country_unity_produces_mult = 0.10
+		spiritualist_attraction = 0.25
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_colossus = { #迫不及待
+
+	# 波濤福音
+
+	leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_eater_chosen" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	fleet_modifier = {
+		ship_speed_mult = 0.15
+		ship_weapon_damage = 0.20
+		ship_fire_rate_mult = 0.20
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_ERA = { #爆反
+
+	# 虛境爆炸反應裝甲
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_bulwark_sentinel" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+    fleet_modifier = {
+		ship_armor_hardening_add = 0.2
+		ship_shield_hardening_add = 0.2
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_cute = { #绝好调
+
+	# 這是蒂蒂，她很可愛
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_charismatic" 
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+
+    councilor_modifier = {
+		pop_happiness = 0.03
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_cute_2 = {
+
+	# 這是蒂蒂，她很可愛-2
+
+	leader_trait_type = veteran
+
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_charismatic" 
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+    councilor_modifier = {
+        pop_happiness = 0.05
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	replace_traits = { "skadi_leader_trait_cute" }
+
+	selectable_weight = {
+		weight = 10000
+	}
+}
+
+skadi_leader_trait_cute_3 = {
+
+	# 這是蒂蒂，她很可愛-3
+
+	leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_charismatic" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 3
+	}
+
+    councilor_modifier = {
+        pop_happiness = 0.10
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	replace_traits = { "skadi_leader_trait_cute_2" }
+
+	selectable_weight = {
+		weight = 10000
+	}
+}
+
+skadi_leader_trait_fleetsing = { #黄金舰队的小曲
+
+	# 愚人曲
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_irenic" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 1
+	}
+
+    councilor_modifier = {
+		leader_commanders_cost_mult = -0.05
+		commander_exp_gain = 0.05
+		ship_experience_gain_mult = 0.05
+		country_naval_cap_add = 100
+		country_power_projection_influence_produces_add = 1
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_fleetsing_2 = { #黄金舰队的小曲
+
+	# 愚人曲-2
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_irenic" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 2
+	}
+
+	councilor_modifier = {
+		leader_commanders_cost_mult = -0.10
+		commander_exp_gain = 0.10
+		ship_experience_gain_mult = 0.10
+		country_naval_cap_add = 200
+		country_power_projection_influence_produces_add = 2
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	replace_traits = { "skadi_leader_trait_fleetsing" }
+
+	selectable_weight = {
+		weight = 10000
+	}
+}
+skadi_leader_trait_fleetsing_3 = { #黄金舰队的小曲
+
+	# 愚人曲-3
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_irenic" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 3
+	}
+
+	councilor_modifier = {
+		leader_commanders_cost_mult = -0.15
+		commander_exp_gain = 0.15
+		ship_experience_gain_mult = 0.15
+		country_naval_cap_add = 300
+		country_power_projection_influence_produces_add = 3
+	}
+
+	leader_class = { commander }
+
+	leader_potential_add = {
+		has_trait = trait_ruler_skadi_trait3
+	}
+
+	replace_traits = { "skadi_leader_trait_fleetsing_2" }
+
+	selectable_weight = {
+		weight = 10000
+	}
+}
+
+# 3.10版本后写的
+
+skadi_leader_train = { #与斯卡蒂受训
+
+	leader_trait_type = destiny
+
+    inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_arrested_development"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	triggered_army_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		army_attack_health_mult = 0.10
+		army_disengage_chance_mult = 0.20
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		fleet_mia_time_mult = -0.50
+		ship_armor_mult = 0.05
+		ship_disengage_chance_mult = 0.20
+		ship_accuracy_mult = 0.10
+	}
+
+	triggered_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		fleet_mia_time_mult = -0.50
+		ship_speed_mult = 0.10
+		ship_disengage_chance_mult = 0.40
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = official
+		}
+		army_defense_health_mult = 0.10
+		army_disengage_chance_mult = 0.20
+		planet_orbital_bombardment_damage = -0.25
+	}
+
+	leader_class = all
+
+	triggered_desc = {
+		text = isharmla_can_not_caught
+		trigger = {
+			owner = {
+				has_country_flag = isharmla_comfirmed
+			}
+		}
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_cat = { #猫耳朵，凯爹事件前提
+
+	# 奇怪的貓耳
+
+    leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_aggressive" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	self_modifier = {
+		species_leader_exp_gain = -0.25
+	}
+
+	councilor_modifier = {
+		pop_amenities_usage_mult = -0.10
+		all_technology_research_speed = 0.25
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_corrupting = { #腐化之心
+
+	# 腐化之心
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_composer_chosen" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	councilor_modifier = {
+		spiritualist_attraction = 1.0
+		psionic_pop_bonus_workforce_mult = 0.30
+		all_technology_research_speed = 0.25
+		logistic_growth_mult = 0.20
+		bonus_pop_growth_mult = 0.20
+		BIOLOGICAL_species_trait_points_add = 1
+		BIOLOGICAL_species_trait_picks_add = 1
+	}
+
+	leader_class = all
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+skadi_leader_trait_variation = { #血肉畸变
+
+	# 血肉畸變
+
+    leader_trait_type = negative
+	inline_script = {
+		script = trait/icon_negative
+		ICON = "GFX_leader_trait_reclusive"
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leader_lifespan_add = -50
+		species_leader_exp_gain = -10
+		leaders_cost_mult = -10
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = consumer_goods
+		AMOUNT = -20
+	}
+	leader_class = all
+	initial = no
+	randomized = no
+}
+skadi_leader_trait_horror = { #恐慌
+    leader_trait_type = negative
+	inline_script = {
+		script = trait/icon_negative
+		ICON = "GFX_leader_trait_melancholic"
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leader_lifespan_add = -20
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = consumer_goods
+		AMOUNT = -10
+	}
+	leader_class = all
+	initial = no
+	randomized = no
+}

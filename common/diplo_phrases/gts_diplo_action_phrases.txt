@@ -1,0 +1,36 @@
+action_declare_war = {
+	opinion = {
+		WAR_DECLEAR_01 = {
+			trigger = {
+				owner_main_species = {
+					OR = {
+						has_trait = trait_Tall
+						has_trait = trait_Giant
+						has_trait = trait_Titan
+						has_trait = trait_Ultra
+					}
+				}
+				FROM = {
+					has_origin = origin_hstar
+				}
+
+			}
+		}
+		WAR_DECLEAR_02 = {
+			trigger = {
+				owner_main_species = {
+					OR = {
+						has_trait = trait_Normal
+						has_trait = trait_Small
+						has_trait = trait_Tiny
+						has_trait = trait_Micro
+						has_trait = trait_Nano
+					}
+				}
+				FROM = {
+					has_country_flag = giantess_crisis
+				}
+			}
+		}
+	}
+}

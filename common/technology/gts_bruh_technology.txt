@@ -1,0 +1,101 @@
+tech_gts_bruh_destroyer_ship = {
+	cost = @guardiantechcost
+	area = engineering
+	tier = @guardiantechtier
+	category = { materials }
+	weight = 0
+	is_rare = yes
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_gts_bruh_battleship_ship = {
+	cost = @guardiantechcost
+	area = engineering
+	tier = @guardiantechtier
+	category = { materials }
+	weight = 0
+	is_rare = yes
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_gts_bruh_titan_ship = {
+	cost = @guardiantechcost
+	area = engineering
+	tier = @guardiantechtier
+	category = { materials }
+	weight = 0
+	is_rare = yes
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_gts_bruh_gts_planet_adaption = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { new_worlds }
+	#prerequisites = { "tech_colonization_3" }
+	weight = @tier2weight3
+	is_rare = yes
+
+	icon = "tech_dense_jungle"
+
+	modifier = {
+		pc_gts_semen_habitability = 0.2
+		pc_gts_milk_habitability = 0.2
+		pc_gts_juice_habitability = 0.2
+		pc_gts_juice2_habitability = 0.2
+		pc_gts_juice3_habitability = 0.2
+		pc_gts_shit_habitability = 0.2
+		pc_gts_dirt0_habitability = 0.2
+		pc_gts_dirt1_habitability = 0.2
+		pc_gts_dirt2_habitability = 0.2
+		pc_gts_dirt3_habitability = 0.2
+		pc_gts_dirt4_habitability = 0.2
+		pc_gts_urine_habitability = 0.2
+		pc_gts_urine2_habitability = 0.2
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.20
+			NOR = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_planet = {
+				OR = {
+					is_planet_class = pc_gts_semen
+					is_planet_class = pc_gts_milk
+					is_planet_class = pc_gts_juice
+					is_planet_class = pc_gts_juice2
+					is_planet_class = pc_gts_juice3
+					is_planet_class = pc_gts_shit
+					is_planet_class = pc_gts_dirt0
+					is_planet_class = pc_gts_dirt1
+					is_planet_class = pc_gts_dirt2
+					is_planet_class = pc_gts_dirt3
+					is_planet_class = pc_gts_dirt4
+					is_planet_class = pc_gts_urine
+					is_planet_class = pc_gts_urine2
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}

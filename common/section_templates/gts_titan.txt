@@ -1,0 +1,383 @@
+ship_section_template = {
+	key = "TITAN_MID_GTS1"
+	ship_size = gts_titan_ship
+	fits_on_slot = mid
+	should_draw_components = no
+	entity = "GTS_titannuns_entity"
+	icon = "GFX_ship_part_core_mid"
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_01"
+	}
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_02"
+	}
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_03"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_03"
+	}
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_04"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_04"
+	}
+	component_slot = {
+		name = "GTS_large_turret_01"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_01"
+	}
+	component_slot = {
+		name = "GTS_large_turret_02"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_02"
+	}
+	component_slot = {
+		name = "GTS_large_turret_03"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_03"
+	}
+	component_slot = {
+		name = "GTS_large_turret_04"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_04"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_03"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_03"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_04"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_04"
+	}
+	large_utility_slots = 1
+	resources = {
+		category = ship_sections
+		cost = {
+			food = 150000
+			alloys = 50000
+			consumer_goods = 25000
+		}
+	}
+}
+ship_section_template = {
+	key = "TITAN_MID_GTS2"
+	ship_size = gts_titan_ship
+	fits_on_slot = mid
+	should_draw_components = no
+	entity = "GTS_titannuns_entity"
+	icon = "GFX_ship_part_core_mid"
+	component_slot = {
+		name = "GTS_large_strike_craft_01"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_01"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_02"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_02"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_03"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_03"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_04"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_04"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_05"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_05"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_06"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_06"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_07"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_07"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_08"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_08"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_01"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_01"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_02"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_02"
+	}
+	large_utility_slots = 1
+	resources = {
+		category = ship_sections
+		cost = {
+			food = 150000
+			alloys = 50000
+			consumer_goods = 25000
+		}
+	}
+}
+
+ship_section_template = {
+	key = "TITAN_BOW_GTS1"
+	ship_size = gts_titan_ship
+	fits_on_slot = bow
+	should_draw_components = no
+	entity = "GTS_void_entity"
+	icon = "GFX_ship_part_core_bow"
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_01"
+	}
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_02"
+	}
+	component_slot = {
+		name = "GTS_large_turret_01"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_01"
+	}
+	component_slot = {
+		name = "GTS_large_turret_02"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_02"
+	}
+	component_slot = {
+		name = "GTS_large_turret_03"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_03"
+	}
+	component_slot = {
+		name = "GTS_large_turret_04"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_04"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_03"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_03"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_04"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_04"
+	}
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+	large_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "TITAN_BOW_GTS2"
+	ship_size = gts_titan_ship
+	fits_on_slot = bow
+	should_draw_components = no
+	entity = "GTS_void_entity"
+	icon = "GFX_ship_part_core_bow"
+	component_slot = {
+		name = "GTS_large_strike_craft_01"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_01"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_02"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_02"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_03"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_03"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_04"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_04"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_05"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_05"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_06"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_06"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_01"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_01"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_02"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_02"
+	}
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+	large_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "TITAN_STERN_GTS1"
+	ship_size = gts_titan_ship
+	fits_on_slot = stern
+	should_draw_components = no
+	entity = "GTS_void_entity"
+	icon = "GFX_ship_part_core_stern"
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_01"
+	}
+	component_slot = {
+		name = "GTS_invisible_extra_large_fixed_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "GTS_invisible_extra_large_fixed_02"
+	}
+	component_slot = {
+		name = "GTS_large_turret_02"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_02"
+	}
+	component_slot = {
+		name = "GTS_large_turret_03"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_03"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_03"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_03"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_04"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_04"
+	}
+	aux_utility_slots = 3
+}
+ship_section_template = {
+	key = "TITAN_STERN_GTS2"
+	ship_size = gts_titan_ship
+	fits_on_slot = stern
+	should_draw_components = no
+	entity = "GTS_void_entity"
+	icon = "GFX_ship_part_core_stern"
+	component_slot = {
+		name = "GTS_large_strike_craft_01"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_01"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_02"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_02"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_03"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_03"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_04"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_04"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_01"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_01"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_02"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_02"
+	}
+	aux_utility_slots = 3
+}

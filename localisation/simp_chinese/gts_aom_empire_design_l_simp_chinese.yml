@@ -1,0 +1,35 @@
+﻿l_simp_chinese:
+#国家政体
+auth_hales_panlon:0 "神圣帝国制"
+auth_hales_panlon_desc:0 "神圣帝国由圣皇作为最高统治者，拥有绝对的权威，但同样这个体制要求皇帝是一位开明且从谏如流的明君，皇帝是国家的第一公仆，向全体国民负责。"
+
+gov_panlon_commission_federal:0 "普世帝国"
+gov_panlon_commission_federal_desc:0 "一个开放且繁荣的庞大帝国，任何智慧生命，无论来自何方，无论是何种族，只要愿意为之献身，为了共同的信仰而奋斗，都可以享有平等的地位，获得帝国公民的身份，帝国的疆域将会不断扩张，直到世界尽头。"
+
+#国家理念
+civic_panlon_knights:0"骑士之国"
+civic_panlon_knights_desc:0"这里是骑士的国度，无论时代更迭，亘古不变的骑士精神是贯彻其中，这一古老的群体一直在发挥着至关重要的作用。\n\n解锁特殊建筑§H骑士堡§!"
+
+civic_panlon_Wizard:0"法师协会"
+civic_panlon_Wizard_desc:0"探索未知是法师们永恒的追求，而协会的存在可以更好的帮助他们相互交流。\n\n解锁特殊建筑§H法师塔§!"
+
+#起源
+origin_panlon:0 "人皇之嗣"
+origin_panlon_desc:0 "这个文明乃至星球的诞生都是由于某位被冠以人皇之名的神秘少女一时兴起所为，她用母亲般的温柔精心照料，指引并庇护着她的子嗣，直至步入星空，无论过去多么漫长时光，这位强大的存在将会是这个文明最坚实的后盾。"
+civic_tooltip_origin_panlon_effects:0 "—$HOME_SYSTEM$你的文明受到一位强大存在 §I人皇§! 的保护，可以通过通讯面板向她寻求帮助"
+
+#开局介绍
+START_SCREEN_PANLON:0 "自诞生起，我们的文明就在母亲的怀抱中成长，那看似年幼而柔弱的身躯却拥有着超乎我们想象的庞大力量，无论何等危机的处境，只要有母亲在，一切都将迎刃而解，也许整个世界，乃至宇宙都不过是她的玩物。但她却将温柔赐予了我们，可以自豪的说，也许我们就是宇宙中最幸运的文明。科技与魔法的交织，缔造了这个奇迹般的国度，再漫长的过去，我们的父辈倾听着母亲对星空的描绘，母亲的话语中总是饱含着对我们未来的期待，而现在，是时候回应这份期待，我们将亲手揭开那神秘的面纱。"
+#母星系
+Altdorf_system_initializer_NAME:"阿尔道夫"
+Altdorf_system_initializer_DESC:0"舰娘们所守护的家园，不朽的荣耀之城。"
+
+#内阁
+councilor_ruler_kanlon:0 "圣皇"
+councilor_ruler_kanlon_desc:0 "圣皇是帝国唯一的统治者，"
+
+councilor_panlon_Wizard:0 "首席法师"
+councilor_panlon_Wizard_desc:0 "法师协会的领袖，往往由最渊博的智者担任"
+
+councilor_kancolle_knights:0 "大团长"
+councilor_kancolle_knights_desc:0 "帝国骑士团大团长，只有最优秀的骑士能够胜任这份职务"

@@ -1,0 +1,99 @@
+#特殊岗位
+event_stocking_crushed_purge = {
+	category = purge
+	is_capped_by_modifier = no
+	ignores_sapience = yes
+	purge = purge_stocking_crushed
+	swappable_data = {
+		default = {
+			
+		}
+	}
+	tags = { }
+	demotion = {
+		time = 0
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = purge
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+	possible = {
+		exists = owner
+		has_pop_group_flag = event_stocking_crushed_purge
+	}
+	resources = {
+		category = planet_jobs
+		produces = {
+			unity = 10
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 1000
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	weight = {
+		weight = 1000
+	}
+}
+
+job_godness_power_worker = {
+    category = job_godness_power_worker_slave
+    purge = purge_godness_power
+    is_capped_by_modifier = no
+ 
+	swappable_data = {
+		default = {
+			building_icon = building_gts_115tiny_lathe_capital
+			icon = job_godness_power_worker
+		}
+	}
+	tags = { }
+	demotion = {
+		time = 0
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = purge
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+
+    possible_pre_triggers = {
+        has_owner = yes
+        has_planet = yes
+        is_sapient = yes
+    }
+    possible = {
+        owner = { has_ascension_perk = ap_gts_115tiny_crisis }
+        planet = { has_designation = col_godness_power_world }
+        has_virtual_species_trait = no
+        is_gts= yes#判定是不是巨娘
+        not = { has_trait = trait_godness_power_finish }
+    }
+
+    resources = {
+        category = planet_godness_power_worker
+        produces = {
+            gts_giantess_fluid = 1
+            gts_giantess_underwear = 0.1
+            gts_giantess_human = 0.05
+            gts_focus = 0.025
+            mult = value:num_godness_power_worker_slave
+        }
+        upkeep = {
+            energy = 8
+            mult = value:num_godness_power_worker_slave_halved
+        }
+    }
+
+    weight = {
+        weight = 99999
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+}

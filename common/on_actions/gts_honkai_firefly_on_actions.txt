@@ -1,0 +1,23 @@
+on_custom_diplomacy = {
+    events = {
+        gts_firefly.301
+    }
+}
+
+on_fleet_destroyed_perp = {
+    events = {
+        gts_firefly_reform.1
+        gts_firefly_reform.4
+    }
+}
+
+on_army_killed_in_combat = {
+    events = {
+        gts_firefly_reform.4
+    }
+}
+# on_entering_battle = {
+#     events = {
+#         gts_firefly.302 #陆军遭遇攻击时消灭敌人
+#     }
+# }

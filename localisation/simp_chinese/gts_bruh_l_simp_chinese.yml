@@ -1,0 +1,259 @@
+﻿l_simp_chinese:
+    
+    ################################################################################
+    ######################                综合                ######################
+    ################################################################################
+    
+    # 没特别分类的都在这
+
+    edict_gts_bruh_edict_1: "开启人口转化事件 - (实验功能)"
+    edict_gts_bruh_edict_1_desc: "§G此法令可开启人口转化事件，每个月有40%概率§R消耗小人人口§!转变成巨娘人口§Y(需要有UB狂热)§!，需要1个月后才能关闭§!"
+
+    edict_gts_bruh_edict_2: "关闭人口转化事件"
+    edict_gts_bruh_edict_2_desc: "§G此法令可关闭人口转化事件§Y(第一次开启事件前这个法令没效果)§!，需要1个月后才能开启§!"
+
+    gts_bruh_sperm_army: "超巨型精子"
+    gts_bruh_sperm_army_desc: "这些由扶她巨娘精液孕育而生的庞然巨物，体长可达200公里以上，形似放大亿万倍的蝌蚪状精子，通体覆盖着粘稠的乳白色精浆。它们依靠尾部鞭毛剧烈的摆动在陆地或海洋中蠕动前行，并可通过荷尔蒙诱导剂控制行动，无差别碾压路径上所有建筑与单位，用沉重的躯体碾碎城市、压垮军队。离开精液环境后，48-72小时后会因能量耗尽而死亡，化作一座散发腥臭的胶状山脉。"
+
+    #decision_gts_ultra_pop_grow: "繁衍天体级巨娘"
+    #decision_gts_ultra_pop_grow_desc: ""
+    #decision_gts_ultra_pop_grow_effects_custom: "§R该星球会被摧毁§!"
+    #
+    #gts_event_ultra_pop_grow.1.name: "破壳"
+    #gts_event_ultra_pop_grow.1.desc: "还没想到的叙述"
+    #gts_event_ultra_pop_grow.1.a: "§R敲开它！§!"
+
+    ################################################################################
+    ######################                星球                ######################
+    ################################################################################
+
+    pc_gts_juice_uncolonizable: "爱液星球"
+    pc_gts_juice_uncolonizable_desc: "被巨娘塞进爱巢的可怜星球，汹涌的浪涛不断冲刷着其上的文明\n其大气中充满了催情气体，一切生活在其中的生物都处于24小时发情的状态。"
+
+    pc_white_hole: "白洞"
+    pc_white_hole_desc: "据说如果能穿过白洞就能到达§R巨娘居住的世界§!，但直到现在似乎也没有人能做到完整地进入白洞。因为§Y$NAME_gts_eyjafjalla$§!瞬间注入的巨量乳汁，使得白洞的质量大增，发出的引力波比一般黑洞还强，更加干扰超光速引擎的工作，使战舰难以紧急脱离战斗。"
+
+    sc_gts_bruh_white_hole: "白洞"
+    sc_gts_bruh_white_hole_desc: "据说如果能穿过白洞就能到达§R巨娘居住的世界§!，但直到现在似乎也没有人能做到完整地进入白洞。因为§Y$NAME_gts_eyjafjalla$§!瞬间注入的巨量乳汁，使得白洞的质量大增，发出的引力波比一般黑洞还强，更加干扰超光速引擎的工作，使战舰难以紧急脱离战斗。"
+
+    sc_gts_bruh_aurora: "欧若拉"
+    sc_gts_bruh_aurora_desc: ""
+
+    ################################################################################
+    ######################                科技                ######################
+    ################################################################################
+
+    tech_gts_bruh_gts_planet_adaption: "巨娘星球适应"
+    tech_gts_bruh_gts_planet_adaption_desc: "进一步研究其他行星上发现的危险环境有助于纾解殖民者在其他星球的日常生活中遇到的困难"
+
+    ################################################################################
+    ####################                建筑与岗位                ####################
+    ################################################################################
+
+    building_gts_bruh_administrative_tower: "星河行政策略巨塔"
+    building_gts_bruh_administrative_tower_desc: "这座直入云霄的巨塔是整个帝国的行政核心，承载着层层叠叠的部门。巨娘官僚用她们比山还高的身躯在此处展开繁琐的文书工作，一份文件可能就与一座小人图书馆一样厚重，但对巨娘来说，只是拆阅一页的日常工作"
+
+    job_gts_bruh_megaclerk: "巨塔官僚"
+    job_gts_bruh_megaclerk_plural: "$job_gts_bruh_megaclerk$"
+    job_gts_bruh_megaclerk_desc: "这些巨娘官僚日以继夜地处理帝国的文书与政令。虽然她们的工作重复冗长，但庞大的个体却能在不知疲倦的状态下处理巨量资讯，使帝国政务得以在数万星系间流转无碍\n\n该职位仅限§Y正常§!及以上特质的人口就职，§Y高大§!及以上特质的人口会有更高的就职权重"
+    job_gts_bruh_megaclerk_effect_desc: "$job_gts_bruh_megaclerk$是巨娘岗位，消耗§Y$r_energy$§!、§Y$r_consumer_goods$§!产出\n§Y$r_unity$§!"
+    mod_job_gts_bruh_megaclerk_add: "$job_gts_bruh_megaclerk$岗位"
+
+    ################################################################################
+    ######################                事件                ######################
+    ################################################################################
+    
+    gts_intel_avatar_bruh: "是否交换有关§Y鹅§!的情报？"
+    gts_intel_avatar_bruh.tooltip: "一个未知来历的生物"
+    gts_ui.134.desc: "我们的情报部门在我国的境内发现了一个奇怪的讯号\n\n似乎一段时间后，这个东西自己会找上门？"
+    gts_bruh_ship_leader_desc: "如你所见，这是一只鹅。"
+    
+    gts_leader_bruh.2.desc: "Colin很懒，这里什么都没有（如果你有什么文案想法就连络Colin吧）\n\n总而言之你可以在这里购买Bruh舰娘的坐标\n\n提醒你，虽然鹅总是会把影响力还你，但每次使用通讯面板所花费的影响力还是会增加\n\n§R所以别没事打扰鹅§!"
+
+    gts_leader_bruh.2.a: "Bruh舰娘 - 驱逐"
+    gts_leader_bruh.2.b: "Bruh舰娘 - 战列"
+    gts_leader_bruh.2.c: "Bruh舰娘 - 泰坦"
+    gts_leader_bruh.2.d: "玩到后期游戏速度慢怎么办?"
+    
+    gts_leader_bruh.2.hire: "关闭通讯"
+    gts_leader_bruh.2.close: "关闭通讯"
+    
+    gts_leader_bruh.3.name: "神秘讯号"
+    gts_leader_bruh.3.desc: "在支付了款项后，地图上显示了一个星系，附近一个未连接到任何超空间通道，名为§Y[event_target:gts_bruh_random_spawn_system.GetName]§!的脉冲星被标记了出来。"
+    gts_leader_bruh.3.a: "确定"
+    
+    gts_leader_bruh.4.name: "神秘讯号"
+    gts_leader_bruh.4.desc: "Colin很懒，这里什么都没有（如果你有什么文案想法就连络Colin吧）\n\n总之你现在可以建造§MBruh舰娘驱逐舰§!了"
+    gts_leader_bruh.4.a: "确定"
+    
+    gts_leader_bruh.5.name: "神秘讯号"
+    gts_leader_bruh.5.desc: "Colin很懒，这里什么都没有（如果你有什么文案想法就连络Colin吧）\n\n总之你现在可以建造§MBruh舰娘战列舰§!了"
+    gts_leader_bruh.5.a: "确定"
+    
+    gts_leader_bruh.6.name: "神秘讯号"
+    gts_leader_bruh.6.desc: "Colin很懒，这里什么都没有（如果你有什么文案想法就连络Colin吧）\n\n总之你现在可以建造§MBruh舰娘泰坦舰§!了"
+    gts_leader_bruh.6.a: "确定"
+
+    gts_leader_bruh.7.desc: "我这有两个能提升速度的选项§R（想好了再用，非必要别用）§!\n\n§R摧毁所有普通帝国大部分的军用船只，不包含民用船只§Y（小幅提升游戏速度）§!§!\n\n§R摧毁所有普通帝国几乎所有的船只，包含开采站及星港§Y（大幅提升游戏速度，但会失去除了殖民地以外的星系）§!§!"
+    gts_leader_bruh.7.a: "§R摧毁所有普通帝国大部分的军用船只，不包含民用船只"
+    gts_leader_bruh.7.b: "§R摧毁所有普通帝国几乎所有的船只，包含开采站及星港"
+    gts_leader_bruh.7.hire: "回到上一页"
+    gts_leader_bruh.7.close: "还是算了"
+
+    gts_leader_bruh.41.desc: "Colin很懒，这里什么都没有（如果你有什么文案想法就连络Colin吧）\n\n总之有小人被巨娘UB并被转化成巨娘了"
+
+    gts_leader_bruh.41.a: "§R好哦§!"
+    gts_leader_bruh.41.b: "§G好哦§!"
+    gts_leader_bruh.41.c: "§Y好哦§!"
+    gts_leader_bruh.41.d: "这是测试用的选项§R(你不应该看得到这个的)§!"
+
+
+
+    gts_event_bruh.11.name: "§Y宠物征收§!"
+    gts_event_bruh.11.desc: "§Y[event_target:gts_bruh_get_subject_pop_usage_1_country.GetName]§!的大使带着一队精心挑选的小人来到了您的宫殿。这些小人被训练得彬彬有礼，穿着华丽的服饰，眼神中混杂着恐惧与一丝被选中的荣耀。根据我们签订的"宠物条款"，这是它们应尽的义务。大使恭敬地呈上名单，并向您解释道，这些是本届最"优质"的宠物候选者，他们经过健康筛选和严苛训练，旨在为您提供最好的服务。现在，是时候决定如何「使用」这批活体贡品了。"
+    gts_event_bruh.11.a: "视为宠物"
+    gts_event_bruh.11.a.custom_tooltip: "它们不是消耗品，而是宠物。应当给予它们尊重与关怀，让它们成为宫殿中一道亮丽的风景线"
+    gts_event_bruh.11.b: "投入红灯区"
+    gts_event_bruh.11.b.custom_tooltip: "宠物？不过是高级玩具罢了。把它们送到红灯区去，物尽其用，让大家开心开心，还能赚点外快"
+
+    gts_event_bruh.21.name: "§Y宠物征收§!"
+    gts_event_bruh.21.desc: "一道冰冷的指令从§Y[from.GetName]§!传来。根据那份屈辱的「宠物条款」，他们要求我们提供一批公民，以满足其巨娘公民对「宠物」的需求。征召令上附带著名单，上面是我们的人民、工程师、艺术家、劳工，它们现在仅仅被视为可供挑选的商品。我们该如何回应？"
+    gts_event_bruh.21.a: "含泪执行"
+    gts_event_bruh.21.a.custom_tooltip: "遵守命令，交出名单上的人民。动用宣传机器，宣称这是「为国奉献」，并为其家属提供补偿\n§Y交出[event_target:gts_bruh_get_subject_pop_usage_1_planet.GetName]1%的人口§!"
+    gts_event_bruh.21.b: "讨价还价"
+    gts_event_bruh.21.b.custom_tooltip: "向宗主国发出请求，表示愿意上缴双倍的资源来「赎回」这些公民的自由，强调这样对§Y[from.GetName]§!更有利可图"
+
+    gts_event_bruh.31.name: "§Y奴隶征收§!"
+    gts_event_bruh.31.desc: "根据我们与§Y[event_target:gts_bruh_get_subject_pop_usage_2_country.GetName]§!签订的附庸条约中的『人口取用』条款，帝国商务部例行公事地签发了一份征用令，要求该附庸国提供一批小人劳动力。货物，或者说小人，已经准时送达指定的集散中心。他们被分类装在透明的强化玻璃箱内，每个箱子容纳了数以万计的小人。他们中的大多数面露恐惧，紧紧靠在一起，仰望着对他们而言如同苍穹般巨大的仓库顶棚和前来验收的帝国官员。有些箱子里的『货物』似乎因为运送途中的颠簸而出现了损耗，箱底沾染着不易察觉的暗红色污渍。一份电子清单已经上传至您的终端，列出了这批『货物』的数量、性别和大致健康状况。现在，需要您对这批资源的最终用途进行批示。"
+    gts_event_bruh.31.a: "筛选一下，健壮的送去劳动，孱弱的送去娱乐中心"
+    gts_event_bruh.31.a.custom_tooltip: "将部分小人用于高强度的劳动消耗，另一部分则作为巨娘的玩物"
+    gts_event_bruh.31.b: "赏赐给有功的将领和官员"
+    gts_event_bruh.31.b.custom_tooltip: "将这些小人作为奖赏分发给她们，无论是用作私人奴仆、脚底按摩还是别的什么"用途"都能极大地鼓舞士气"
+
+    gts_event_bruh.41.name: "§Y奴隶征收§!"
+    gts_event_bruh.41.desc: "一份来自巨人国度的指令抵达了§Y[event_target:gts_bruh_get_subject_pop_usage_2_country.GetName]§!。根据那份我们无法拒绝的条约，宗主国§Y[from.GetName]§!要求我们立即提供人口，作为『特殊劳务输出』。运输船队已经停靠在近地轨道，巨大的阴影投射在城市上空，如同末日降临。国内的新闻媒体被强制噤声，但恐慌仍透过口耳相传蔓延开来。人们躲在家中，祈祷厄运不会降临在自己头上。军队在街上巡逻，强制征召适龄人口，哭喊声和呵斥声在街上回荡。我们深知这些同胞一旦被送走，将面临的命运绝非简单的『劳务』。我们必须立刻决定如何面对这道冰冷的命令。"
+    gts_event_bruh.41.a: "履行条款"
+    gts_event_bruh.41.a.custom_tooltip: "反抗即是毁灭。为了种族的存续，我们必须忍受这份屈辱。至少...这能换来短暂的和平\n§Y交出[event_target:gts_bruh_get_subject_pop_usage_1_planet.GetName]5%的人口§!"
+    gts_event_bruh.41.b: "谄媚讨好"
+    gts_event_bruh.41.b.custom_tooltip: "既然无法反抗，那就竭力讨好。不仅如数上交，还要额外献上我们『最优秀』、『最自愿』的同胞，并附上谄媚的颂词。或许极致的顺从能换来一丝怜悯，甚至是一点残羹冷炙般的赏赐\n§Y交出[event_target:gts_bruh_get_subject_pop_usage_1_planet.GetName]10%的人口§!"
+
+    gts_event_bruh.51.name: "§Y消耗品征收§!"
+    gts_event_bruh.51.desc: "根据我们与§Y[event_target:gts_bruh_get_subject_pop_usage_2_country.GetName]§!签订的消耗品条款，新一批的"资源"已经准备就绪，正等待您的指示进行输送。一批数量可观的小人正被集中看管在他们的星球上，对我们而言，那不过是脚边的一个小笼子。是时候决定如何最大限度地利用这些渺小的生命，来满足帝国公民的需求与欲望了。"
+    gts_event_bruh.51.a: "分配至巨娘红灯区"
+    gts_event_bruh.51.a.custom_tooltip: "将这些小人分送到帝国的娱乐设施。用于满足巨娘的性欲需求，在巨大的手指、舌尖或性器下体验极致的渺小感与绝望感，直至被碾碎，为帝国的娱乐产业贡献其微不足道的价值"
+    gts_event_bruh.51.b: "输送至食品加工链"
+    gts_event_bruh.51.b.custom_tooltip: "将这些小人归类为食品资源。它们将被批次处理，成为巨娘餐桌上的活点心、调味品或零食，在巨大的口腔和胃袋中结束其微不足道的存在"
+
+    gts_event_bruh.61.name: "§Y消耗品征收§!"
+    gts_event_bruh.61.desc: "巨型通告画面照亮了整个首都的天空，冰冷的机械女声宣读着来自巨娘母星的指令。§Y[from.GetName]§!的指令如同其体型一般沉重且无可抗拒。根据那份将我们定义为『消耗品』的屈辱条款，新一批的征收令已经送达。我们必须立即上缴又一批我们的同胞，他们将永远离开我们的城市，也就是那些在巨娘眼中不过是鞋印缝隙里沙砾般的聚集点。政府的抽签系统已经开始残酷地运转，无数家庭在恐惧中等待着结果。街上弥漫着绝望的气氛，所有人都清楚被选中的命运意味着什么。身为附庸国的领导人，您需要对此作出回应，以稳定（或利用）这沸腾的民意。"
+    gts_event_bruh.61.a: "履行条款"
+    gts_event_bruh.61.a.custom_tooltip: "尽管心如刀割，但反抗意味着整个文明可能被一只巨足轻易抹去。出动治安部队镇压任何形式的反抗，确保『货物』能准时、足量地送达。并向它们保证，它们的牺牲将被铭记（尽管无人会记得)\n§Y交出[event_target:gts_bruh_get_subject_pop_usage_1_planet.GetName]10%的人口§!"
+    gts_event_bruh.61.b: "谄媚讨好"
+    gts_event_bruh.61.b.custom_tooltip: "既然无法反抗，不如极尽谄媚之能事。我们不仅足额上交，还额外交出双倍的资源，并请求巨娘在享用贡品时，偶尔能想起我们的忠诚，以期换取未来配额可能的减少或微不足道的赏赐\n§Y交出[event_target:gts_bruh_get_subject_pop_usage_1_planet.GetName]25%的人口§!\n§Y下次征收改为30年后§!"
+
+    ################################################################################
+    ######################                显示                ######################
+    ################################################################################
+
+    gts_vore_kills_logs: "吃掉的小人数量"
+    gts_ub_kills_logs: "UB的小人数量"
+    gts_feet_kills_logs: "踩死的小人数量"
+    gts_bread_logs: "饲养的小人数量"
+    gts_city_kills_logs: "毁灭的城市数量"
+    gts_planet_kills_logs: "毁灭的星球数量"
+
+    eated_pop: "§B伊莎玛拉已经吞噬的人口§!"
+
+    gts_has_trigger_bruh: "启动后冷却"
+
+    REMOVE_PLANET_EFFECT: "§R移除星球§!"
+
+    gts_bruh_has_been_subject_pop_usage: "下次征收的日期倒数"
+
+    gts_bruh_specialist_misc_1_modifier: "小人附庸惩罚"
+
+    gts_has_trigger_bruh_destroyer: "已经购买过驱逐舰娘地图"
+    gts_has_trigger_bruh_battleship: "已经购买过战列舰娘地图"
+    gts_has_trigger_bruh_titan: "已经购买过泰坦舰娘地图"
+
+    mod_leader_officials_gts_micro_upkeep_add: "每月缩小人£gts_micro£使用"
+    mod_pop_gts_dirt4_bonus_workforce_mult: "[gts_dirt4.GetNamePlural]$BONUS_WORKFORCE_FOR$"
+    mod_leader_officials_trade_produces_add: "每月£trade£ $trade$"
+    mod_leader_commanders_trade_produces_add: "每月£trade£ $trade$"
+    mod_leader_scientists_trade_produces_add: "每月£trade£ $trade$"
+    mod_country_base_trade_produces_add: "每月£trade£ $trade$"
+
+    mod_district_bfbf_foot_1_max_add: "最大圣足崇拜区"
+
+    mod_district_milk_2_max_add: "最大乳垢晾晒区"
+    mod_district_milk_3_max_add: "最大乳汁发电区"
+    mod_district_milk_4_max_add: "最大深海回收区"
+
+    mod_district_bfbf_shit_2_max_add: "最大巨娘粪便考古区"
+    mod_district_bfbf_shit_3_max_add: "最大巨娘粪便分拣区"
+    mod_district_bfbf_shit_4_max_add: "最大巨娘粪便催化区"
+
+    gts_bruh_casualties_50_50.tooltip: "§Y50%£gts_micro£人口死亡§!"
+    gts_bruh_casualties_75_50.tooltip: "§Y75%£gts_micro£人口死亡§!"
+    gts_bruh_casualties_100_0.tooltip: "§Y100%£gts_micro£人口死亡§!"
+
+    gts_bruh_casualties_100.tooltip: "§Y100£gts_micro£人口死亡§!"
+    gts_bruh_casualties_300.tooltip: "§Y300£gts_micro£人口死亡§!"
+    gts_bruh_casualties_500.tooltip: "§Y500£gts_micro£人口死亡§!"
+    gts_bruh_casualties_1000.tooltip: "§Y1000£gts_micro£人口死亡§!"
+    gts_bruh_casualties_3000.tooltip: "§Y3000£gts_micro£人口死亡§!"
+
+    citizenship_inside_body_assimilation: "缩小同化"
+    citizenship_inside_body_assimilation_tooltip: "该物种的体型会逐渐缩小直到变成§Y"微生物"§!，并获得§Y"巨娘宜居偏好"§!特质\n\n§H每月缩小人口§!：§Y100§!"
+    citizenship_inside_body_assimilation_tooltip_delayed: "我们会利用从这些小人得到的科学发现帮助这些小人完成在我们体内生存的前期准备，比如进一步缩小，或者培养对我们体内环境的生理耐受性。虽然会让他们变得极度依赖我们的体液，但那不是更好吗？"
+
+    MUST_NOT_BE_TINY_SPECIES: "$TRIGGER_FAIL$物种必须是是小人物种"
+
+    gts_bruh_yarong_upkeep_exemption: "犽戎的50年维护费减免"
+    gts_bruh_yarong_upkeep_exemption_display: "犽戎的50年维护费减免"
+    gts_bruh_yarong_upkeep_exemption_display_desc: "§R建议在期限前达到每月£food£ $food$产量3K以上§!"
+    
+    ################################################################################
+    ######################                特质                ######################
+    ################################################################################
+
+    leader_trait_gts_bruh_empty: "占位符"
+    leader_trait_gts_bruh_empty_desc: "防止bug用的，会自动移除"
+
+    leader_trait_gts_futa: "扶她"
+    leader_trait_gts_futa_desc: "[root.GetName]的身上长有通常认为只有雄性才有的性器官"
+
+    trait_pc_gts_shoes_preference: "鞋内偏好"
+    trait_pc_gts_shoes_preference_desc: "这个物种能够适应鞋内潮湿阴暗的环境，并且进化出了一套鞋内生存之道"
+
+    # 未实装
+    
+    #gts_trait_leader_bruh_kill_count_01: "恶名值"
+    #gts_trait_leader_bruh_kill_count_01_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_02: "恶名值"
+    #gts_trait_leader_bruh_kill_count_02_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_03: "恶名值"
+    #gts_trait_leader_bruh_kill_count_03_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_04: "恶名值"
+    #gts_trait_leader_bruh_kill_count_04_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_05: "恶名值"
+    #gts_trait_leader_bruh_kill_count_05_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_06: "恶名值"
+    #gts_trait_leader_bruh_kill_count_06_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_07: "恶名值"
+    #gts_trait_leader_bruh_kill_count_07_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_08: "恶名值"
+    #gts_trait_leader_bruh_kill_count_08_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_09: "恶名值"
+    #gts_trait_leader_bruh_kill_count_09_desc: "(需要一个带感的叙述)"
+    #
+    #gts_trait_leader_bruh_kill_count_10: "恶名值"
+    #gts_trait_leader_bruh_kill_count_10_desc: "(需要一个带感的叙述)"

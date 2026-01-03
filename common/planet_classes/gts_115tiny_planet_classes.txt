@@ -1,0 +1,40 @@
+pc_godness_power_world = {
+    synaptic_lathe = no
+    entity = "orbital_habitat"
+    icon = GFX_planet_type_synaptic_lathe
+    entity_scale = 5.0
+    enable_tilt = no
+    fixed_entity_scale = yes
+    place_entity_on_planet_plane = yes
+    entity_face_object = no #disable rotation towards sun or planet we orbit around
+    atmosphere_color		= hsv { 0.0 0.0 1.0 }		#DONE
+    atmosphere_intensity	= 1.0
+    atmosphere_width		= 0.5
+    show_city = no
+    city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0.0
+    planet_size = 6
+    moon_size = 1
+    colonizable = yes
+    district_set = godness_power_world
+    starting_district = district_godness_power_world_goverment
+    #holdings = no
+    #ideal = yes
+    starting_planet = no
+    orbit_lines = no
+    has_colonization_influence_cost = no			# applies when within own borders
+    is_artificial_planet = yes
+    default_planet_selection = yes
+    inherit_country_building_modifiers = no
+
+    modifier = {
+        pop_environment_tolerance = 0.9
+        planet_crime_mult = -1
+        pop_purge_speed = -5.0
+    }
+
+    carry_cap_per_free_district = @carry_cap_low
+    can_be_invaded = no
+}

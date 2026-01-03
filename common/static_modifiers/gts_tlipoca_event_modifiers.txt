@@ -1,0 +1,172 @@
+
+gts_tlipoca_event_cooldown = { #年度事件冷却
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+}
+
+#血红之夜
+gts_tlipoca_buff_the_great_death = { #罪孽的分量
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_buff_the_great_death.dds"
+	ship_weapon_damage = 1.0
+	ship_armor_penetration_add = 0.25
+	ship_shield_penetration_add = 0.25
+	ship_hull_regen_add_perc = 0.05
+	ship_armor_regen_add_perc = 0.05
+	ship_shield_regen_add_perc = 0.05
+	ship_shield_hardening_add = 0.15
+	ship_armor_hardening_add = 0.15
+	ship_speed_mult = 0.5
+	armies_upkeep_mult = -0.25
+	planet_army_build_speed_mult = 1
+	planet_defense_armies_add = 3
+	army_defense_damage_mult = 0.3
+	army_attack_damage_mult = 0.3
+	army_defense_morale_mult = 0.25
+	army_attack_morale_mult = 0.25
+	army_damage_taken_mult = -0.5
+	army_damage_empire_sprawl_penalty_mult = -1
+}
+
+#夜星之祈
+gts_tlipoca_buff_oracle_1 = { #远方的回音(莉耶芙的笑声)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	pop_government_ethic_attraction = -0.5
+	planet_jobs_upkeep_mult = -0.10
+	planet_jobs_produces_mult = -0.05
+}
+gts_tlipoca_buff_oracle_2 = { #修洛特尔的引渡幡(罗丽娜的敕令)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	ship_weapon_damage = 0.2
+	army_damage_mult = 0.5
+	army_morale = 0.5
+	planet_jobs_produces_mult = 0.10
+	planet_pops_upkeep_mult = 0.25
+}
+gts_tlipoca_buff_oracle_3 = { #真视万物之眼(班达斯奈奇的怒吼)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	ship_fire_rate_mult = 0.15
+	army_damage_mult = 0.5
+	ships_upkeep_mult = 0.5
+	armies_upkeep_mult = 0.5
+	planet_stability_add = -5
+}
+gts_tlipoca_buff_oracle_4 = { #万千子嗣之狂热(贾布加布的歌声)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	logistic_growth_mult = 1
+	bonus_pop_growth_mult = 1
+	planet_stability_add = -10
+	planet_crime_add = 20
+}
+gts_tlipoca_buff_oracle_5 = { #西瓦特尔的灵魂宴(贾巴沃克的轻语)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	country_produces_mult = 0.20
+	logistic_growth_mult = -0.2
+	bonus_pop_growth_mult = -0.2
+}
+gts_tlipoca_buff_oracle_6 = { #耶布之重塑(克缇的低泣)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	logistic_growth_mult = 0.2
+	bonus_pop_growth_mult = 0.2
+	leader_lifespan_add = 20
+	pop_happiness = -0.2
+}
+gts_tlipoca_buff_oracle_7 = { #加塔诺托娅的狂乱视线(梅莉菲利亚的嘶哑)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	ship_hull_regen_add_perc = 0.1
+	ship_armor_regen_add_perc = 0.1
+	ship_shield_regen_add_perc = 0.1
+	ship_sensor_range_add = -2
+	ship_hyperlane_range_add = -1
+}
+gts_tlipoca_buff_oracle_8 = { #缇匹尤蕾特回声环(诺登的相诉)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	logistic_growth_mult = 0.05
+	bonus_pop_growth_mult = 0.05
+	starbase_shipyard_build_speed_mult = 0.50
+	planet_army_build_speed_mult = 0.50
+	planet_building_build_speed_mult = 0.50
+	intel_decryption_add = 2
+	planet_buildings_cost_mult = -0.25
+	planet_districts_cost_mult = -0.25
+	planet_buildings_upkeep_mult = -0.25
+	planet_districts_upkeep_mult = -0.25
+	ship_cloaking_detection_add = 5
+	country_unity_produces_mult = -0.15
+}
+gts_tlipoca_buff_oracle_9 = { #特莉波卡的匿隐雾(梅贝尔的神秘)
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	all_technology_research_speed = 0.50
+	planet_jobs_physics_research_produces_mult = 0.2
+	planet_jobs_society_research_produces_mult = 0.2
+	planet_jobs_engineering_research_produces_mult = 0.2
+	ship_cloaking_strength_add = 5
+	country_influence_produces_mult = 0.15
+	logistic_growth_mult = -0.2
+	bonus_pop_growth_mult = -0.2
+	planet_jobs_unity_produces_mult = -0.2
+	country_unity_produces_mult = -0.25
+}
+
+#绽心之祀
+gts_tlipoca_buff_sacrifice_1 = { #屠戮之怖
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	planet_jobs_unity_produces_mult = -0.2
+}
+gts_tlipoca_buff_sacrifice_2 = { #死神狂热
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	planet_jobs_unity_produces_mult = 0.2
+}
+gts_tlipoca_buff_sacrifice_3 = { #惊惧之瘴
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	pop_happiness = -0.2
+	planet_crime_add = -15
+	planet_stability_add = 10
+}
+gts_tlipoca_buff_sacrifice_4 = { #扩散的不安
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	planet_pops_upkeep_mult = 0.2
+}
+gts_tlipoca_buff_sacrifice_5 = { #迫近之日
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	planet_stability_add = -10
+	planet_jobs_produces_mult = 0.1
+}
+gts_tlipoca_buff_sacrifice_6 = { #夜空的庇佑
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	pop_happiness = 0.2
+}
+gts_tlipoca_buff_sacrifice_7 = { #失控仪祭
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	logistic_growth_mult = -0.15
+	bonus_pop_growth_mult = -0.15
+}
+gts_tlipoca_buff_sacrifice_8 = { #梦幻游行
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	planet_pops_upkeep_mult = 0.2
+	pop_happiness = 0.2
+}
+gts_tlipoca_buff_sacrifice_9 = { #虚无游行
+	icon = "gfx/interface/icons/modifiers/gts_tlipoca_event_cooldown.dds"
+	pop_happiness = 0.2
+	planet_jobs_produces_mult = -0.1
+}
+
+gts_tlipoca_debuff_swallowed_1 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_2 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_3 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_4 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_5 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_6 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_7 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_8 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_9 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_10 = { ship_hull_regen_add_perc = -0.01 }
+gts_tlipoca_debuff_swallowed_20 = { ship_hull_regen_add_perc = -0.1 }
+gts_tlipoca_debuff_swallowed_30 = { ship_hull_regen_add_perc = -0.1 }
+gts_tlipoca_debuff_swallowed_40 = { ship_hull_regen_add_perc = -0.1 }
+gts_tlipoca_debuff_swallowed_50 = { ship_hull_regen_add_perc = -0.1 }
+gts_tlipoca_debuff_swallowed_100 = { ship_hull_regen_add_perc = -0.5 }
+gts_tlipoca_debuff_swallowed_200 = { ship_hull_regen_add_perc = -1 }
+gts_tlipoca_debuff_swallowed_300 = { ship_hull_regen_add_perc = -1 }
+gts_tlipoca_debuff_swallowed_400 = { ship_hull_regen_add_perc = -1 }
+gts_tlipoca_debuff_swallowed_500 = { ship_hull_regen_add_perc = -1 }
+gts_tlipoca_debuff_swallowed_1000 = { ship_hull_regen_add_perc = -5 }

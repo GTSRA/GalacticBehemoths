@@ -1,0 +1,404 @@
+# 一键移除领袖所有体型特质
+# this = leader
+remove_gts_leader_size_trait = {
+    remove_trait = leader_trait_Galaxy
+    remove_trait = leader_trait_Ultra
+    remove_trait = leader_trait_Titan
+    remove_trait = leader_trait_Giant
+    remove_trait = leader_trait_Tall
+    remove_trait = leader_trait_Normal
+    remove_trait = leader_trait_Small
+    remove_trait = leader_trait_Micro
+    remove_trait = leader_trait_Nano
+}
+
+# 一键移除人口所有体型特质
+# this = pop
+remove_gts_pop_size_trait = {
+    modify_species = {
+        remove_trait = trait_Ultra
+        remove_trait = trait_Titan
+        remove_trait = trait_Giant
+        remove_trait = trait_Tall
+        remove_trait = trait_Normal
+        remove_trait = trait_Small
+        remove_trait = trait_Micro
+        remove_trait = trait_Nano
+        add_traits_at_start_of_list = yes
+        change_scoped_species = yes
+    }
+}
+
+# 一键移除种族所有体型特质
+# this = speices
+remove_gts_species_size_trait = {
+    change_species_characteristics = {
+        remove_trait = trait_Ultra
+        remove_trait = trait_Titan
+        remove_trait = trait_Giant
+        remove_trait = trait_Tall
+        remove_trait = trait_Normal
+        remove_trait = trait_Small
+        remove_trait = trait_Micro
+        remove_trait = trait_Nano
+    }
+}
+
+# 增大领袖体型一个级别 最大为天体
+# this = leader
+increase_gts_size_trait = {
+    switch = {
+        trigger = has_trait
+        leader_trait_Nano = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Micro
+				show_message = no
+			}
+        }
+        leader_trait_Micro = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Small
+				show_message = no
+			}
+        }
+        leader_trait_Small = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Normal
+				show_message = no
+			}
+        }
+        leader_trait_Normal = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Tall
+				show_message = no
+			}
+        }
+        leader_trait_Tall = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Giant
+				show_message = no
+			} 
+        }
+        leader_trait_Giant = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Titan
+				show_message = no
+			} 
+        }
+        leader_trait_Titan = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Ultra
+				show_message = no
+			}
+        }
+    }
+}
+
+# 减小领袖体型一个级别 最小为纳米
+# this = leader
+reduce_gts_size_trait = {
+    switch = {
+        trigger = has_trait
+        leader_trait_Ultra = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Titan
+				show_message = no
+			}
+        }
+        leader_trait_Titan = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Giant
+				show_message = no
+			}
+        }
+        leader_trait_Giant = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Tall
+				show_message = no
+			}
+        }
+        leader_trait_Tall = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Normal
+				show_message = no
+			}
+        }
+        leader_trait_Normal = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Small
+				show_message = no
+			}
+        }
+        leader_trait_Small = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Micro
+				show_message = no
+			}
+        }
+        leader_trait_Micro = {
+            remove_gts_leader_size_trait = yes
+            add_trait = {
+				trait = leader_trait_Nano
+				show_message = no
+			}
+        }
+    }
+}
+
+# 增加人口体型一个级别 最大为天体
+# this = pop
+increase_gts_pop_size_trait = {
+    switch = {
+        trigger = has_trait
+        trait_Nano = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Micro
+            }
+        }
+        trait_Micro = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Small
+            }
+        }
+        trait_Small = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Normal
+            }
+        }
+        trait_Normal = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Tall
+            }
+        }
+        trait_Tall = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Giant
+            }
+        }
+        trait_Giant = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Titan
+            }
+        }
+        trait_Titan = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Ultra
+            }
+        }
+    }
+}
+
+# 减小人口体型一个级别 最小为纳米
+# this = pop
+reduce_gts_pop_size_trait = {
+    switch = {
+        trigger = has_trait
+        trait_Ultra = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Titan
+            }
+        }
+        trait_Titan = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Giant
+            }
+        }
+        trait_Giant = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Tall
+            }
+        }
+        trait_Tall = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Normal
+            }
+        }
+        trait_Normal = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Small
+            }
+        }
+        trait_Small = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Micro
+            }
+        }
+        trait_Micro = {
+            remove_gts_pop_size_trait = yes
+            modify_species = {
+                add_trait = trait_Nano
+            }
+        }
+    }
+}
+
+# 增大国家主要种族体型一个级别 最大为天体
+# this = country
+increase_gts_species_size_trait = {
+    switch = {
+        trigger = has_trait
+        trait_Nano = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Nano
+                    add_trait = trait_Micro
+                }
+            }
+        }
+        trait_Micro = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Micro
+                    add_trait = trait_Small
+                }
+            }
+        }
+       trait_Small = {
+           owner_main_species = {
+               change_species_characteristics = {
+                   remove_trait = trait_Small
+                   add_trait = trait_Normal
+               }
+           }
+           # remove_country_flag = tiny_flag
+           # set_country_flag = gts_flag
+        }
+        trait_Normal = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Normal
+                    add_trait = trait_Tall
+                }
+            }
+        }
+        trait_Tall = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Tall
+                    add_trait = trait_Giant
+                }
+            }
+        }
+        trait_Giant = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Giant
+                    add_trait = trait_Titan
+                }
+            }
+        }
+        trait_Titan = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Titan
+                    add_trait = trait_Ultra
+                }
+            }
+        }
+    }
+}
+
+# 减小国家主要种族体型一个级别 最小为纳米
+# this = country
+reduce_gts_species_size_trait = {
+    switch = {
+        trigger = has_trait
+        trait_Ultra = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Ultra
+                    add_trait = trait_Titan
+                }
+            }
+        }
+        trait_Titan = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Titan
+                    add_trait = trait_Giant
+                }
+            }
+        }
+        trait_Giant = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Giant
+                    add_trait = trait_Tall
+                }
+            }
+        }
+        trait_Tall = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Tall
+                    add_trait = trait_Normal
+                }
+            }
+            # remove_country_flag = gts_flag
+            # set_country_flag = tiny_flag
+        }
+        trait_Normal = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Normal
+                    add_trait = trait_Small
+                }
+            }
+        }
+        trait_Small = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Small
+                    add_trait = trait_Micro
+                }
+            }
+        }
+        trait_Micro = {
+            owner_main_species = {
+                change_species_characteristics = {
+                    remove_trait = trait_Micro
+                    add_trait = trait_Nano
+                }
+            }
+        }
+    }
+}
+
+# 仅用于千海事件链中
+# this = country
+remove_gts_qhai_conflag = {
+    remove_country_flag = gts_leader_qhai_con
+    remove_country_flag = gts_leader_qhai_con2
+    remove_country_flag = gts_leader_qhai_con3
+}
+
+
+gts_planet_job_add = {
+
+}

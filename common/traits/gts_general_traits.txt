@@ -1,0 +1,16 @@
+leader_trait_blemishine_general = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/gts_blemishine_icon.dds"
+	councilor_modifier = {
+		army_morale = 1.5
+		army_morale_damage_mult = 1.5
+		army_disengage_chance_mult = 0.3
+		armies_upkeep_mult = -0.5
+	}
+
+	leader_class = {
+		commander
+	}
+	initial = no
+	randomized = no
+}

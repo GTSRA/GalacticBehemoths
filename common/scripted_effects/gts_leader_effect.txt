@@ -1,0 +1,520 @@
+#传说巨娘与小人领袖创建
+legendary_gts_leader_creator = {
+	create_country = {
+		name = "NAME_leader_country"
+		type = faction
+		auto_delete = yes
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"red"
+				"red"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			save_event_target_as = leader_country
+		}
+	}
+	event_target:leader_country = {
+		create_species = {
+			name = GTS_LEADER_SPECIES
+			class = MAM
+			portrait = $LEADER_PORTRAIT$
+			traits = {
+				trait = "trait_enduring"
+			}
+			allow_negative_traits = no
+			effect = {
+				save_event_target_as = gts_leader_species
+			}
+			gender = female
+		}
+		create_leader = {
+			class = $CLASS$
+			species = event_target:gts_leader_species
+			name = $NAME$
+			skill = $LEVEL$
+			gender = $GENDER$
+			event_leader = $EVENT_LEADER$ # Leader is allowed to lead factions and win elections
+			background_ethic = ethic_$ETHIC$
+			skip_background_generation = yes
+			custom_description = $DESC$
+			custom_catch_phrase = $CATCH_PHRASE$
+			immortal = $IMMORTAL$
+			hide_age = no
+			set_age = $AGE$
+			randomize_traits = $RANDOMIZE_TRAITS$
+			effect = {
+				set_skill = $LEVEL$
+				save_event_target_as = gts_leader
+				set_leader_flag = legendary_leader
+				set_leader_flag = leader_death_events_blocked
+				save_global_event_target_as = $TARGET$
+				set_leader_flag = $TARGET$
+				add_trait = {
+			        trait = $TRAIT1$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT2$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT3$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT4$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT5$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT6$
+			        show_message = no
+		        }
+			}
+		}
+	}
+	event_target:gts_leader = {
+		set_owner = root
+		# This is a hack to make the leader not be added to player country.
+		# We must call ethic_leader_hire on the hire event
+		# We must call ethic_leader_kill on the dismiss event
+		exile_leader_as = ethic_leader_exile
+	}
+}
+legendary_tiny_leader_creator = {
+	create_country = {
+		name = "NAME_leader_country"
+		type = faction
+		auto_delete = yes
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"red"
+				"red"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			save_event_target_as = leader_country
+		}
+	}
+	event_target:leader_country = {
+		create_species = {
+			name = TINY_LEADER_SPECIES
+			class = MAM
+			portrait = $LEADER_PORTRAIT$
+			traits = {
+				trait = "trait_enduring"
+			}
+			allow_negative_traits = no
+			effect = {
+				save_event_target_as = gts_leader_species
+			}
+			gender = female
+		}
+		create_leader = {
+			class = $CLASS$
+			species = event_target:gts_leader_species
+			name = $NAME$
+			skill = $LEVEL$
+			gender = $GENDER$
+			event_leader = no # Leader is allowed to lead factions and win elections
+			background_ethic = ethic_$ETHIC$
+			skip_background_generation = yes
+			custom_description = $DESC$
+			custom_catch_phrase = $CATCH_PHRASE$
+			immortal = $IMMORTAL$
+			hide_age = no
+			set_age = $AGE$
+			randomize_traits = $RANDOMIZE_TRAITS$
+			effect = {
+				set_skill = $LEVEL$
+				save_event_target_as = gts_leader
+				set_leader_flag = legendary_leader
+				set_leader_flag = leader_death_events_blocked
+				save_global_event_target_as = $TARGET$
+				set_leader_flag = $TARGET$
+				add_trait = {
+			        trait = $TRAIT1$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT2$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT3$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT4$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT5$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT6$
+			        show_message = no
+		        }
+			}
+		}		
+	}
+	event_target:gts_leader = {
+		set_owner = root
+		# This is a hack to make the leader not be added to player country.
+		# We must call ethic_leader_hire on the hire event
+		# We must call ethic_leader_kill on the dismiss event
+		exile_leader_as = ethic_leader_exile
+	}
+}
+legendary_gts_leader_hire_effect = {
+	add_modifier = {
+		modifier = gts_leader_upkeep_add
+	}
+	event_target:gts_leader = {
+		set_leader_flag = hired_gts_leader
+		set_owner = root
+		add_trait = {
+			trait = gts_leader_item_i_all
+			show_message = no
+		}
+		gts_ui_leader_init = yes
+	}
+	create_message = {
+		type = MESSAGE_RECRUITED_LEADER
+		localization =  MESSAGE_RECRUITED_LEADER_DESC
+		days = @toast_message_days
+		target = event_target:gts_leader
+		variable = {
+			type = name
+			localization = LEADER
+			scope = event_target:gts_leader
+		}
+		variable = {
+			key = "border"
+			value = "GFX_border_legendary" #"GFX_border_veteran"
+		}
+	}
+}
+
+#杰出巨娘与小人领袖创建
+renowned_gts_leader_creator = {
+	create_country = {
+		name = "NAME_leader_country"
+		type = faction
+		auto_delete = yes
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"red"
+				"red"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			save_event_target_as = leader_country
+		}
+	}
+	event_target:leader_country = {
+		create_species = {
+			name = GTS_LEADER_SPECIES
+			class = MAM
+			portrait = $LEADER_PORTRAIT$
+			traits = {
+				trait = "trait_enduring"
+			}
+			allow_negative_traits = no
+			effect = {
+				save_event_target_as = gts_leader_species
+			}
+			gender = female
+		}
+		create_leader = {
+			class = $CLASS$
+			species = event_target:gts_leader_species
+			name = $NAME$
+			skill = $LEVEL$
+			gender = $GENDER$
+			event_leader = $EVENT_LEADER$ # Leader is allowed to lead factions and win elections
+			background_ethic = ethic_$ETHIC$
+			skip_background_generation = yes
+			custom_description = $DESC$
+			custom_catch_phrase = $CATCH_PHRASE$
+			immortal = $IMMORTAL$
+			hide_age = no
+			set_age = $AGE$
+			randomize_traits = $RANDOMIZE_TRAITS$
+			effect = {
+				set_skill = $LEVEL$
+				save_event_target_as = gts_leader
+				set_leader_flag = renowned_leader
+				set_leader_flag = leader_death_events_blocked
+				save_global_event_target_as = $TARGET$
+				set_leader_flag = $TARGET$
+				add_trait = {
+			        trait = $TRAIT1$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT2$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT3$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT4$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT5$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT6$
+			        show_message = no
+		        }
+			}
+		}		
+	}
+	event_target:gts_leader = {
+		set_owner = root
+		# This is a hack to make the leader not be added to player country.
+		# We must call ethic_leader_hire on the hire event
+		# We must call ethic_leader_kill on the dismiss event
+		exile_leader_as = ethic_leader_exile
+	}
+}
+renowned_tiny_leader_creator = {
+	create_country = {
+		name = "NAME_leader_country"
+		type = faction
+		auto_delete = yes
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"red"
+				"red"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			save_event_target_as = leader_country
+		}
+	}
+	event_target:leader_country = {
+		create_species = {
+			name = TINY_LEADER_SPECIES
+			class = MAM
+			portrait = $LEADER_PORTRAIT$
+			traits = {
+				trait = "trait_enduring"
+			}
+			allow_negative_traits = no
+			effect = {
+				save_event_target_as = gts_leader_species
+			}
+			gender = female
+		}
+		create_leader = {
+			class = $CLASS$
+			species = event_target:gts_leader_species
+			name = $NAME$
+			skill = $LEVEL$
+			gender = $GENDER$
+			event_leader = $EVENT_LEADER$ # Leader is allowed to lead factions and win elections
+			background_ethic = ethic_$ETHIC$
+			skip_background_generation = yes
+			custom_description = $DESC$
+			custom_catch_phrase = $CATCH_PHRASE$
+			immortal = $IMMORTAL$
+			hide_age = no
+			set_age = $AGE$
+			randomize_traits = $RANDOMIZE_TRAITS$
+			effect = {
+				set_skill = $LEVEL$
+				save_event_target_as = gts_leader
+				set_leader_flag = renowned_leader
+				set_leader_flag = leader_death_events_blocked
+				save_global_event_target_as = $TARGET$
+				set_leader_flag = $TARGET$
+				add_trait = {
+			        trait = $TRAIT1$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT2$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT3$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT4$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT5$
+			        show_message = no
+		        }
+				add_trait = {
+			        trait = $TRAIT6$
+			        show_message = no
+		        }
+			}
+		}		
+	}
+	event_target:gts_leader = {
+		set_owner = root
+		# This is a hack to make the leader not be added to player country.
+		# We must call ethic_leader_hire on the hire event
+		# We must call ethic_leader_kill on the dismiss event
+		exile_leader_as = ethic_leader_exile
+	}
+}
+renowned_gts_leader_hire_effect = {
+	add_modifier = {
+		modifier = gts_leader_upkeep_add
+	}
+	event_target:gts_leader = {
+		set_leader_flag = hired_gts_leader
+		set_owner = root
+		add_trait = {
+			trait = gts_leader_item_i_all
+			show_message = no
+		}
+		gts_ui_leader_init = yes
+	}
+	create_message = {
+		type = MESSAGE_RECRUITED_LEADER
+		localization =  MESSAGE_RECRUITED_LEADER_DESC
+		days = @toast_message_days
+		target = event_target:gts_leader
+		variable = {
+			type = name
+			localization = LEADER
+			scope = event_target:gts_leader
+		}
+		variable = {
+			key = "border"
+			value = "GFX_border_veteran"
+		}
+	}
+}
+
+#给附庸的领袖上特质
+add_ultracompany_leader_trait = {
+	random_list = {
+		1 = { 
+			add_trait = {
+				trait = leader_trait_ultracompany_asset 
+				show_message = no
+			} 
+		}
+	}
+}
+seele_random_event = {
+	random_list = {
+		1 = {
+			country_event = {
+				id = gts_seele.74
+			}
+		}
+		1 = {
+			country_event = {
+				id = gts_seele.75
+			}
+		}
+		1 = {
+			country_event = {
+				id = gts_seele.76
+			}
+		}
+		1= {
+			country_event = {
+				id = gts_seele.77
+			}
+		}
+		1= {
+			country_event = {
+				id = gts_seele.92
+			}
+		}
+		1= {
+			random_list = {
+				1 = {
+					if = {
+						limit = {
+							has_country_flag = seele_fenkai
+						}
+					}
+					country_event = {
+						id =gts_seele.95
+					}
+				}
+				0 = {
+					country_event = {
+						id = gts_seele.93#没有
+					}
+				}
+				1 = {
+					if = {
+						limit = {
+							has_country_flag = hire_bronya
+						}
+					}
+					country_event = {
+						id =gts_seele.96
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+
+

@@ -1,0 +1,38 @@
+namespace = gts_hstar_origin
+
+country_event = { #起源
+	id = gts_hstar_origin.1
+    hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+	    country_event = { id = gts_hstar.1  days = 1 }
+	}
+}
+
+
+country_event = { #起源起源buff
+	id = gts_hstar_origin.2 #ID
+	hide_window = yes #隐藏界面
+	is_triggered_only = yes #只能触发
+	trigger = { #触发器：有起源
+		has_origin = origin_hstar
+	}
+	fire_only_once = yes
+	
+	immediate = { 
+		set_country_flag = custom_start_screen
+		random_owned_planet  = { #随机拥有的星球
+			limit = { 
+				is_a_planet = yes
+				is_capital = yes
+				owner = {
+					has_origin = origin_hstar
+				}
+			}
+			hstar_origin_effect = yes #提供起源buff
+		}
+	}
+}
+
+

@@ -1,0 +1,20 @@
+#保险合约国
+leader_trait_ultracompany_asset = {
+	cost = 0
+	inline_script = {
+		script = trait/icon_specialist
+		CLASS = all
+		ICON = "GFX_leader_trait_bureaucratic"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leaders_upkeep_mult = -1
+		leader_lifespan_add = 20
+	}
+
+	leader_class = all
+	initial = no
+	randomized = no
+}

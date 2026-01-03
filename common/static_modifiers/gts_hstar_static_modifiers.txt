@@ -1,0 +1,10 @@
+baonuezhe_cooldown = {
+	army_attack_damage_mult = -0.2
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_irradiated.dds"
+	icon_frame = 1
+}
+
+sentinel_anti_goddess_data = {
+	damage_vs_country_type_giantess_crisis_mult = 0.2
+}

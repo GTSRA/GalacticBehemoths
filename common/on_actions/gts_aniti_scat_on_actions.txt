@@ -1,0 +1,3 @@
+on_colony_3_years_old={
+    events = { gts_anti_scat.1 }
+}

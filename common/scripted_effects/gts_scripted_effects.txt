@@ -1,0 +1,676 @@
+gts_ra_set_country_flag = {
+
+	#這玩意沒這麼複雜到要用這個
+	#optimize_memory
+
+	# 為小人保護者添加國家標記
+	if = {
+		limit = {
+			has_valid_civic = civic_gts_servitor
+		}
+		set_country_flag = gts_servitor_flag
+	}
+
+	# 為小人清除者新增國家標記
+	else_if = {
+		limit = {
+			has_valid_civic = civic_gts_terminator
+		}
+		set_country_flag = gts_terminator_flag
+	}
+
+	# 為小人觀測者加上國家標記
+	else_if = {
+		limit = {
+			has_valid_civic = civic_gts_assimilator
+		}
+		set_country_flag = gts_assimilator_flag
+	}
+
+	# 為巨娘\墮落添加國家標記
+	if = {
+		limit = {
+			OR = {
+				has_valid_civic = civic_gts_servitor
+				has_valid_civic = civic_gts_terminator
+				has_valid_civic = civic_gts_assimilator
+				owner_main_species = {
+					OR = {
+						is_gts = yes
+						has_trait = trait_gts_begin
+					}
+				}
+			}
+		}
+		set_country_flag = gts_flag
+	}
+
+	# 為小人添加國家標記
+	else = {
+		set_country_flag = tiny_flag
+	}
+}
+
+add_leader_trait_gts = {
+
+	# 將新生成的領袖設定為與來源種族相同的大小特質
+
+	if = {
+		limit = {
+			species = {
+				OR = {
+					has_trait = trait_Ultra
+					has_trait = trait_great_species
+				}
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Micro
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Ultra
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Titan
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Micro
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Titan
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Giant
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Micro
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Giant
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Tall
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Micro
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Tall
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Normal
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Micro
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Normal
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Small
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Micro
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Small
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Tiny
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Micro
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Tiny
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Micro
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Nano
+		add_trait = {
+			trait = leader_trait_Micro
+			show_message = no
+		}
+	}
+	else_if = {
+		limit = {
+			species = {
+				has_trait = trait_Nano
+			}
+		}
+		remove_trait = leader_trait_Ultra
+		remove_trait = leader_trait_Titan
+		remove_trait = leader_trait_Giant
+		remove_trait = leader_trait_Tall
+		remove_trait = leader_trait_Normal
+		remove_trait = leader_trait_Small
+		remove_trait = leader_trait_Tiny
+		remove_trait = leader_trait_Micro
+		add_trait = {
+			trait = leader_trait_Nano
+			show_message = no
+		}
+	}
+}
+
+gts_assimilation_pop_effect = {
+	# Research demands sacrifice (kills 1 pop in capital if possible)
+	if = {
+		limit = {
+			owner = {
+				has_valid_civic = civic_gts_assimilator
+			}
+		}
+		while = {
+			count = 1
+			random_owned_pop_group ={
+				limit = {
+					OR = {
+						has_trait = trait_Titan
+						has_trait = trait_Giant
+					}
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_gts_inside_world
+					add_traits_at_start_of_list = yes
+				}
+			}
+		}
+	}
+}
+
+gts_assimilation_pop_effect_A = {
+	if = {
+		limit = {
+			owner = {
+				has_valid_civic = civic_gts_assimilator
+			}
+		}
+		while = {
+			count = 10
+			random_owned_pop_group ={
+				limit = {
+					has_trait = trait_Micro
+				}
+				kill_all_pop = yes
+			}
+		}
+	}
+}
+# gts_eat_planet = {
+# 	# 可以加一个新的星球类型？
+# 	remove_planet = yes
+# }
+gts_destroy_planet = {
+	clear_deposits = yes
+	clear_planet_modifiers = yes
+	change_pc = pc_shattered
+}
+gts_change_nuked = {
+	clear_deposits = yes
+	clear_planet_modifiers = yes
+	change_pc = pc_nuked
+	reroll_deposits = yes
+}
+gts_destroy_colony = {
+	destroy_colony = yes
+	add_planet_devastation = 75
+	# add_deposit = d_bomb_crater
+}
+# 取消卡萨贸易协定(蠢驴就是这么写的)
+remove_kasa_trades = {
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_1 }
+		remove_modifier = gts_kasa_trade_micro_1
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_2 }
+		remove_modifier = gts_kasa_trade_micro_2
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_3 }
+		remove_modifier = gts_kasa_trade_micro_3
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_4 }
+		remove_modifier = gts_kasa_trade_micro_4
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_5 }
+		remove_modifier = gts_kasa_trade_micro_5
+	}
+
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_city_1 }
+		remove_modifier = gts_kasa_trade_micro_city_1
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_city_2 }
+		remove_modifier = gts_kasa_trade_micro_city_2
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_city_3 }
+		remove_modifier = gts_kasa_trade_micro_city_3
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_city_4 }
+		remove_modifier = gts_kasa_trade_micro_city_4
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_city_5 }
+		remove_modifier = gts_kasa_trade_micro_city_5
+	}
+
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_planet_1 }
+		remove_modifier = gts_kasa_trade_micro_planet_1
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_planet_2 }
+		remove_modifier = gts_kasa_trade_micro_planet_2
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_planet_3 }
+		remove_modifier = gts_kasa_trade_micro_planet_3
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_planet_4 }
+		remove_modifier = gts_kasa_trade_micro_planet_4
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_micro_planet_5 }
+		remove_modifier = gts_kasa_trade_micro_planet_5
+	}
+	
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_fluid_1 }
+		remove_modifier = gts_kasa_trade_giantess_fluid_1
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_fluid_2 }
+		remove_modifier = gts_kasa_trade_giantess_fluid_2
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_fluid_3 }
+		remove_modifier = gts_kasa_trade_giantess_fluid_3
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_fluid_4 }
+		remove_modifier = gts_kasa_trade_giantess_fluid_4
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_fluid_5 }
+		remove_modifier = gts_kasa_trade_giantess_fluid_5
+	}
+
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_underwear_1 }
+		remove_modifier = gts_kasa_trade_giantess_underwear_1
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_underwear_2 }
+		remove_modifier = gts_kasa_trade_giantess_underwear_2
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_underwear_3 }
+		remove_modifier = gts_kasa_trade_giantess_underwear_3
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_underwear_4 }
+		remove_modifier = gts_kasa_trade_giantess_underwear_4
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_underwear_5 }
+		remove_modifier = gts_kasa_trade_giantess_underwear_5
+	}
+
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_human_1 }
+		remove_modifier = gts_kasa_trade_giantess_human_1
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_human_2 }
+		remove_modifier = gts_kasa_trade_giantess_human_2
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_human_3 }
+		remove_modifier = gts_kasa_trade_giantess_human_3
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_human_4 }
+		remove_modifier = gts_kasa_trade_giantess_human_4
+	}
+	if = {
+		limit = { has_modifier = gts_kasa_trade_giantess_human_5 }
+		remove_modifier = gts_kasa_trade_giantess_human_5
+	}
+}
+gts_create_ship = {
+	#创建舰娘
+	create_fleet = {
+		name = $name$
+		effect = {
+			set_owner = root
+			create_ship = {
+				name = $name$
+				design = $design$
+			}
+			set_location = {
+				target = root.capital_scope
+				distance = 10
+				angle = 90
+				direction = in_system
+			}
+			# set_fleet_stance = passive
+			# set_aggro_range_measure_from = self
+			# set_aggro_range = 350
+		}
+	}
+}
+give_allow_play_effect = {
+	if = {
+		limit = { NOT = { has_technology = tech_exotic_gases } }
+		add_tech_progress = {
+			tech = tech_exotic_gases
+			progress = 1
+		} 
+	}
+
+	if = {
+		limit = { NOT = { has_technology = tech_rare_crystals } }
+		add_tech_progress = {
+			tech = tech_rare_crystals
+			progress = 1
+		} 
+	}
+
+	if = {
+		limit = { NOT = { has_technology = tech_volatile_motes } }
+		add_tech_progress = {
+			tech = tech_volatile_motes
+			progress = 1
+		} 
+	}
+
+	if = {
+		limit = { NOT = { has_technology = tech_mine_rare_crystals } }
+		add_tech_progress = {
+			tech = tech_mine_rare_crystals
+			progress = 1
+		} 
+	}
+
+	if = {
+		limit = { NOT = { has_technology = tech_mine_exotic_gases } }
+		add_tech_progress = {
+			tech = tech_mine_exotic_gases
+			progress = 1
+		} 
+	}
+
+	if = {
+		limit = { NOT = { has_technology = tech_mine_volatile_motes } }
+		add_tech_progress = {
+			tech = tech_mine_volatile_motes
+			progress = 1
+		} 
+	}
+}
+# 主人的享乐体
+origin_annihilator_gts_leftfoot_effect = { #左足
+	change_pc = pc_gaia
+}
+
+origin_annihilator_gts_rightfoot_effect = { #右足
+	change_pc = pc_gaia
+}
+
+origin_annihilator_gts_tummy_effect = { #胃
+	change_pc = pc_gaia
+}
+
+origin_annihilator_gts_anal_effect = { #菊
+	change_pc = pc_gaia
+}
+
+origin_annihilator_gts_pussy_effect = { #阴
+	change_pc = pc_gaia
+}
+
+
+origin_annihilator_gts_leftarm_effect = { #左足
+	change_pc = pc_gaia
+}
+
+origin_annihilator_gts_rightarm_effect = { #左足
+	change_pc = pc_gaia
+}
+
+origin_annihilator_gts_head_effect = { #头
+	change_pc = pc_gaia
+}
+
+create_master_ship = {
+	create_fleet = {
+		name = "MASTER_body"
+		settings = {
+			can_upgrade = yes
+			can_change_composition = no
+			can_change_leader = no
+			uses_naval_capacity = no
+			spawn_debris = no
+		}
+		effect = {
+			set_owner = root
+			save_global_event_target_as = master_warship
+			create_ship = {
+				name = "master"
+				design = "MASTER_body" 
+				prefix = no
+				upgradable = yes
+			}
+		}
+	}
+}
+create_elf_empire_starting_navy = {
+	create_elf_empire_fleet = yes
+	create_elf_empire_fleet = yes
+	random = {
+		chance = 33
+		create_elf_empire_fleet = yes
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 60
+				angle = random
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 80
+				angle = random
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 100
+				angle = random
+			}
+		}
+	}
+}
+
+
+create_elf_empire_fleet = {
+	owner = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 10
+			leader_age_min = 25
+			leader_age_max = 45
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			while = {
+				count = 8
+				create_elf_empire_large_ship = yes
+			}
+			while = {
+				count = 18
+				create_elf_empire_small_ship = yes
+			}
+			random_list = {
+				25 = {
+					set_location = {
+						target = prev
+						distance = 30
+						angle = random
+					}
+				}
+				25 = {
+					set_location = {
+						target = prev
+						distance = 45
+						angle = random
+					}
+				}
+				25 = {
+					set_location = {
+						target = prev
+						distance = 60
+						angle = random
+					}
+				}
+				25 = {
+					set_location = {
+						target = prev
+						distance = 75
+						angle = random
+					}
+				}
+			}
+		}
+	}
+	last_created_fleet = { assign_leader = last_created_leader }
+}
+
+create_elf_empire_large_ship = {
+	create_ship = {
+		name = random
+		design = "NAME_Supremacy"
+	}
+}
+
+create_elf_empire_small_ship = {
+	create_ship = {
+		name = random
+		design = "NAME_Glory"
+	}
+}
+
+gts_yarong_rebirth_effect = {
+	while = {
+		count = 10
+		random_owned_pop_group ={
+			kill_all_pop = yes
+		}
+	}
+}

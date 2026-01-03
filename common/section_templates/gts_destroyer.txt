@@ -1,0 +1,245 @@
+ship_section_template = {
+	key = "DESTROYER_BOW_GTS_1"
+	ship_size = gts_destroyer_ship
+	fits_on_slot = bow
+	should_draw_components = no
+	entity = "GTS_destroyer_uniform_entity"
+	icon = "GFX_ship_part_core_bow"
+	component_slot = {
+		name = "GTS_large_turret_01"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_01"
+	}
+	component_slot = {
+		name = "GTS_large_turret_02"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_missile_turret_01"
+		template = "medium_missile_turret"
+		locatorname = "GTS_medium_missile_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_missile_turret_02"
+		template = "medium_missile_turret"
+		locatorname = "GTS_medium_missile_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_03"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_03"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_04"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_04"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_01"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_01"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_02"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_02"
+	}
+	small_utility_slots = 2
+	resources = {
+		category = ship_sections
+		cost = {
+			food = 37500
+			alloys = 12500
+			consumer_goods = 6250
+		}
+	}
+}
+
+ship_section_template = {
+	key = "DESTROYER_BOW_GTS_2"
+	ship_size = gts_destroyer_ship
+	fits_on_slot = bow
+	should_draw_components = no
+	entity = "GTS_destroyer_sportwear_entity"
+	icon = "GFX_ship_part_core_bow"
+	ai_weight = {
+		modifier = {
+			factor = 10
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = 0.1
+			has_technology = tech_battleships
+		}
+		modifier = {
+			factor = 0.1
+			NOT = {
+				is_preferred_weapons = weapon_type_explosive
+			}
+		}
+	}
+	component_slot = {
+		name = "GTS_large_turret_01"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_01"
+	}
+	component_slot = {
+		name = "GTS_large_turret_02"
+		template = "large_turret"
+		locatorname = "GTS_large_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_missile_turret_01"
+		template = "medium_missile_turret"
+		locatorname = "GTS_medium_missile_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_missile_turret_02"
+		template = "medium_missile_turret"
+		locatorname = "GTS_medium_missile_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_01"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_01"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_02"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_02"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_03"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_03"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_04"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_04"
+	}
+	small_utility_slots = 2
+	resources = {
+		category = ship_sections
+		cost = {
+			food = 37500
+			alloys = 12500
+			consumer_goods = 6250
+		}
+	}
+}
+ship_section_template = {
+	key = "DESTROYER_STERN_GTS_1"
+	ship_size = gts_destroyer_ship
+	fits_on_slot = stern
+	should_draw_components = no
+	entity = "GTS_void_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_weight = {
+		modifier = {
+			factor = 10
+			NOR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = slaving_despots
+				has_ai_personality = migrating_flock
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hive_mind
+			}
+		}
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_01"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_01"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_02"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_01"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_01"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_02"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_02"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_03"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_03"
+	}
+	component_slot = {
+		name = "GTS_medium_turret_04"
+		template = "medium_turret"
+		locatorname = "GTS_medium_turret_04"
+	}
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = "DESTROYER_STERN_GTS_2"
+	ship_size = gts_destroyer_ship
+	fits_on_slot = stern
+	should_draw_components = no
+	entity = "GTS_void_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_weight = {
+		factor = 100
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_01"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_01"
+	}
+	component_slot = {
+		name = "GTS_large_strike_craft_02"
+		template = "large_strike_craft"
+		locatorname = "GTS_large_strike_craft_02"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_01"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_01"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_02"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_02"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_03"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_03"
+	}
+	component_slot = {
+		name = "GTS_point_defence_turret_04"
+		template = "point_defence_turret"
+		locatorname = "GTS_point_defence_turret_04"
+	}
+	aux_utility_slots = 3
+}

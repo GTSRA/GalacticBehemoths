@@ -1,0 +1,38 @@
+planet_godness_power_worker = {
+    icon = "job_godness_power_worker"
+    parent = planet_jobs_productive
+    generate_add_modifiers = {
+        produces
+    }
+    generate_mult_modifiers = {
+        upkeep
+    }
+    modifier_category = pop_job
+}
+
+# Base income of country
+planet_panlon_knights = {
+    icon = "job_empireknights"
+    parent = planet_jobs
+    generate_mult_modifiers = {
+        produces
+        upkeep
+    }
+    generate_add_modifiers = {
+        produces
+        upkeep
+    }
+}
+planet_panlon_Wizard = {
+    icon = "job_empire_Battle_Wizard"
+    parent = planet_jobs_productive
+    generate_mult_modifiers = {
+        produces
+        upkeep
+    }
+    generate_add_modifiers = {
+        produces
+        upkeep
+    }
+    modifier_category = pop
+}

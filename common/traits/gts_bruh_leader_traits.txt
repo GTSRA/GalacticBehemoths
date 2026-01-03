@@ -1,0 +1,19 @@
+leader_trait_gts_bruh_empty = {
+
+	initial = no
+	randomized = no
+
+	leader_class = { commander scientist official }
+
+	icon = "gfx/interface/icons/traits/leader_traits/trait_stargazer.dds"
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

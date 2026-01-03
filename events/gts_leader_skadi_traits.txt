@@ -1,0 +1,996 @@
+namespace = gts_skadi_traits
+namespace = gts_skadi_events
+
+country_event = {
+	#啥也没有吃完就跑
+	id = gts_skadi_traits.00
+	is_triggered_only = yes
+	title = "gts_skadi_traits.00.name"
+	desc = "gts_skadi_traits.00.desc"
+	picture = skadi_eatship
+	show_sound = event_space_battle
+	option = {
+		name = gts_skadi_traits.00a
+		add_modifier = {
+			modifier = skadi_penalty
+			days = 180
+		}
+	}
+	option = {
+		name = gts_skadi_traits.00b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		add_modifier = {
+			modifier = skadi_penalty
+			days = 180
+		}
+	}
+}
+
+country_event = {
+	#合金事件
+	id = gts_skadi_traits.99
+	is_triggered_only = yes
+	title = "gts_skadi_traits.99.name"
+	desc = "gts_skadi_traits.99.desc"
+	diplomatic = yes
+	custom_gui = "gts_horizontal_event_window"
+	custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = skadi_foot1_room
+		portrait = shroud1
+	}
+	show_sound = event_space_battle
+	option = {
+		name = gts_skadi_traits.99a
+		add_resource = {
+			alloys = 1000
+		}
+	}
+	option = {
+		name = gts_skadi_traits.99b
+		add_resource = {
+			rare_crystals = 100
+			exotic_gases = 100
+			volatile_motes = 100
+		}
+	}
+	option = {
+		name = gts_skadi_traits.99c
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = gts_flag
+			}
+			add_resource = {
+				gts_micro = 1000
+				gts_micro_city = 250
+			}
+		}
+		else = {
+			add_resource = {
+				alloys = 500
+				rare_crystals = 50
+				exotic_gases = 50
+				volatile_motes = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	#拿狩猎
+	id = gts_skadi_traits.01
+	is_triggered_only = yes
+	title = "gts_skadi_traits.01.name"
+	desc = "gts_skadi_traits.01.desc"
+	picture = skadi_fish
+	show_sound = event_space_cloud
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				OR = {
+					has_trait = skadi_leader_trait_hunt
+					has_trait = skadi_leader_trait_hunt_2
+					has_trait = skadi_leader_trait_hunt_3
+				}
+			}
+		}
+	}
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				add_trait = {
+					trait = skadi_leader_trait_hunt
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_traits.01a
+	}
+	option = {
+		name = gts_skadi_traits.01b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+country_event = {
+	#拿冰镐
+	id = gts_skadi_traits.02
+	is_triggered_only = yes
+	title = "gts_skadi_traits.02.name"
+	desc = "gts_skadi_traits.02.desc"
+	picture = skadi_binggao
+	show_sound = event_planetary_riot
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				OR = {
+					has_trait = skadi_leader_trait_iceaxe
+				}
+			}
+		}
+	}
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				add_trait = {
+					trait = skadi_leader_trait_iceaxe
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_traits.02a
+	}
+	option = {
+		name = gts_skadi_traits.02b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+country_event = {
+
+	# 拿浪潮
+
+	id = gts_skadi_traits.03
+
+	title = "gts_skadi_traits.03.name"
+	desc = "gts_skadi_traits.03.desc"
+	diplomatic = yes
+	custom_gui = "gts_horizontal_event_window"
+	custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = skadi_event_1_room
+	}
+	# 舊的
+	#picture = skadi_ubplanet2
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	location = event_target:gts_bruh_get_skadi_juice_planet
+
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				OR = {
+					has_trait = skadi_leader_trait_colossus
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				add_trait = {
+					trait = skadi_leader_trait_colossus
+				}
+			}
+		}
+		random_planet_within_border = {
+			limit = {
+				is_ringworld = no
+				owner = {
+					is_primitive = yes
+				}
+			}
+			gts_bruh_clear_planet_effect = yes
+			save_event_target_as = gts_bruh_get_skadi_juice_planet
+		}
+		event_target:gts_bruh_get_skadi_juice_planet = {
+
+			# 計算人口數量
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_planet_killed_pop_count
+			}
+
+			# 計算城市數量
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_planet_destroyed_city_count
+			}
+			divide_variable = {
+				which = gts_bruh_get_planet_destroyed_city_count
+				value = 100
+			}
+			round_variable = gts_bruh_get_planet_destroyed_city_count
+
+			# 計算經驗獲取
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_experience_count
+			}
+			divide_variable = {
+				which = gts_bruh_get_experience_count
+				value = 100
+			}
+			round_variable = gts_bruh_get_experience_count
+		}
+	}
+
+	option = {
+		name = gts_skadi_traits.03a
+
+		# 顯示數值變化
+
+		event_target:gts_skadi = {
+			change_variable = {
+				which = gts_ub_kills_logs
+				value = event_target:gts_bruh_get_skadi_juice_planet.gts_bruh_get_planet_killed_pop_count
+			}
+			change_variable = {
+				which = gts_city_kills_logs
+				value = event_target:gts_bruh_get_skadi_juice_planet.gts_bruh_get_planet_destroyed_city_count
+			}
+			change_variable = {
+				which = gts_planet_kills_logs
+				value = 1
+			}
+			hidden_effect = {
+				# 根據kd獲取經驗
+				change_variable = {
+					which = gts_bruh_get_experience_count
+					value = event_target:gts_bruh_get_skadi_juice_planet.gts_bruh_get_experience_count
+				}
+				add_experience = gts_bruh_get_experience_count
+			}
+		}
+	}
+
+	option = {
+		name = gts_skadi_traits.03b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		event_target:gts_skadi = {
+			change_variable = {
+				which = gts_ub_kills_logs
+				value = event_target:gts_bruh_get_skadi_juice_planet.gts_bruh_get_planet_killed_pop_count
+			}
+			change_variable = {
+				which = gts_city_kills_logs
+				value = event_target:gts_bruh_get_skadi_juice_planet.gts_bruh_get_planet_destroyed_city_count
+			}
+			change_variable = {
+				which = gts_planet_kills_logs
+				value = 1
+			}
+			hidden_effect = {
+				# 根據kd獲取經驗
+				change_variable = {
+					which = gts_bruh_get_experience_count
+					value = event_target:gts_bruh_get_skadi_juice_planet.gts_bruh_get_experience_count
+				}
+				add_experience = gts_bruh_get_experience_count
+			}
+		}
+	}
+
+	after = {
+		event_target:gts_bruh_get_skadi_juice_planet = {
+			if = {
+				# 拆除觀測站
+				limit = {
+					has_observation_outpost = yes
+				}
+				observation_outpost = {
+					dismantle = yes
+				}
+				# 被UB了
+				hidden_effect = {
+					remove_planet = yes
+					destroy_colony = yes
+				}
+			}
+			else = {
+				# 被UB了
+				hidden_effect = {
+					remove_planet = yes
+					destroy_colony = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	#拿爆反
+	id = gts_skadi_traits.04
+	is_triggered_only = yes
+	title = "gts_skadi_traits.04.name"
+	desc = "gts_skadi_traits.04.desc"
+	picture = skadi_baofan
+	show_sound = event_dyson_sphere_build_complete
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				OR = {
+					has_trait = skadi_leader_trait_ERA
+				}
+			}
+		}
+	}
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				add_trait = {
+					trait = skadi_leader_trait_ERA
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_traits.04a
+	}
+	option = {
+		name = gts_skadi_traits.04b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+country_event = {
+	#拿小曲
+	id = gts_skadi_traits.05
+	is_triggered_only = yes
+	title = "gts_skadi_traits.05.name"
+	desc = "gts_skadi_traits.05.desc"
+	picture = skadi_song
+	show_sound = event_celebration
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				OR = {
+					has_trait = skadi_leader_trait_fleetsing
+					has_trait = skadi_leader_trait_fleetsing_2
+					has_trait = skadi_leader_trait_fleetsing_3
+				}
+			}
+		}
+	}
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				add_trait = {
+					trait = skadi_leader_trait_fleetsing
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_traits.05a
+	}
+	option = {
+		name = gts_skadi_traits.05b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+country_event = {
+	#懒惰
+	id = gts_skadi_traits.06
+	is_triggered_only = yes
+	title = "gts_skadi_traits.06.name"
+	desc = "gts_skadi_traits.06.desc"
+	picture = skadi_drug
+	show_sound = event_factions
+	trigger = {
+		event_target:gts_skadi = {
+			NOR = {
+				has_trait = leader_trait_lethargic
+				has_trait = leader_trait_gale_speed
+				has_trait = leader_trait_gale_speed_2
+			}
+		}
+	}
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				add_trait = {
+					trait = leader_trait_lethargic
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_traits.06a
+	}
+	option = {
+		name = gts_skadi_traits.06b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+country_event = {
+	#菲林耳朵
+	id = gts_skadi_traits.07
+	is_triggered_only = yes
+	title = "gts_skadi_traits.07.name"
+	desc = "gts_skadi_traits.07.desc"
+	picture = skadi_comfort
+	#show_sound = 
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				AND = {
+					has_leader_flag = gts_skadi
+					has_trait = skadi_leader_trait_cat
+				}
+			}
+		}
+	}
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				add_trait = {
+					trait = skadi_leader_trait_cat
+				}
+				change_leader_portrait = skadi04
+			}
+		}
+		set_global_flag = kaidie_intro		#凯尔希事件
+	}
+	option = {
+		name = gts_skadi_traits.07a
+	}
+	option = {
+		name = gts_skadi_traits.07b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+country_event = {
+	#陪练先判定再分开弹事件
+	id = gts_skadi_events.0100
+	hide_window = yes
+	is_triggered_only = yes
+	#title = "gts_skadi_events.0100.name"
+	immediate = {
+		random_owned_leader = {
+			#挑一个没有被训练过的领袖
+			limit = {
+				is_ruler = no
+				is_heir = no
+				NOR = {
+					has_leader_flag = gts_skadi
+					has_leader_flag = skadi_trained
+					has_leader_flag = skadi_Titantrained
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = leader_trait_Ultra
+						has_trait = leader_trait_Titan
+					}
+				}
+				leader_event = {
+					id = gts_skadi_events.0101
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_ruler = no
+						has_trait = leader_trait_Giant
+						has_trait = leader_trait_Tall
+						has_trait = leader_trait_Normal
+						has_trait = leader_trait_Small
+						has_trait = leader_trait_Tiny
+						has_trait = leader_trait_Micro
+						has_trait = leader_trait_Nano
+					}
+				}
+				leader_event = {
+					id = gts_skadi_events.0102
+				}
+			}
+			else = {
+				owner = {
+					country_event = {
+						id = gts_skadi_traits.00
+					}
+				}
+			}
+		}
+	}
+}
+
+leader_event = {
+	#跟泰坦
+	id = gts_skadi_events.0101
+	is_triggered_only = yes
+	title = "gts_skadi_events.0101.name"
+	desc = "gts_skadi_events.0101.desc"
+	picture = skadi_corrupt
+	show_sound = event_super_explosion
+	immediate = {
+		add_trait = {
+			trait = skadi_leader_train
+		}
+		add_experience = 2500
+		set_leader_flag = skadi_Titantrained		#这个泰坦领袖已经被训练过了
+	}
+	option = {
+		name = gts_skadi_events.0101a
+	}
+	option = {
+		name = gts_skadi_events.0101b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+leader_event = {
+	#跟小人
+	id = gts_skadi_events.0102
+	is_triggered_only = yes
+	title = "gts_skadi_events.0102.name"
+	desc = "gts_skadi_events.0102.desc"
+	picture = skadi_dogfight
+	show_sound = event_space_battle
+	immediate = {
+		add_trait = {
+			trait = skadi_leader_train
+		}
+		add_experience = 2500
+		set_leader_flag = skadi_trained		#这个领袖已经被训练过了
+	}
+	option = {
+		name = gts_skadi_events.0102a
+	}
+	option = {
+		name = gts_skadi_events.0102b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+}
+
+country_event = {
+	#联系一个小贩
+	is_triggered_only = yes
+	id = gts_skadi_events.02
+	title = "gts_skadi_events.02.name"
+	desc = "gts_skadi_events.02.desc"
+	picture = gts_skadi_shroud
+	show_sound = event_psionic
+	option = {
+		name = gts_skadi_events.02.a
+		country_event = {
+			id = utopia.3304
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = whisperers_covenant_confirmed
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.02.b
+		country_event = {
+			id = utopia.3305
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = composer_covenant_confirmed
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.02.c
+		country_event = {
+			id = utopia.3306
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = eater_covenant_confirmed
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.02.d
+		country_event = {
+			id = utopia.3307
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = instrument_covenant_confirmed
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.02.e
+		country_event = {
+			id = utopia.3308
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = covenant_end_of_the_cycle
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.02.f
+		default_hide_option = yes
+	}
+	option = {
+		name = gts_skadi_events.02.g
+		country_event = {
+			id = gts_skadi_shroud.0100
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = isharmla_comfirmed				#和玛玛签订契约
+				has_country_flag = skadi_comfirmed
+				has_country_flag = isharmla_finished
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.02.h
+		trigger = {
+			has_country_flag = isharmla_comfirmed
+		}
+		custom_tooltip = isharmla_like.tooltip
+		hidden_effect = {
+			change_variable = {
+				which = isharmla_satisfy
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.02.i
+		trigger = {
+			has_country_flag = skadi_comfirmed
+		}
+		custom_tooltip = isharmla_like.tooltip
+		hidden_effect = {
+			change_variable = {
+				which = isharmla_satisfy
+				value = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	#斯卡蒂要饭事件
+	id = gts_skadi_events.00
+	title = "gts_skadi_events.00.name"
+	desc = "gts_skadi_events.00.desc"
+	is_triggered_only = yes
+	auto_opens = no
+	diplomatic = yes
+	notification_event_icon = "message_leader_recruitment_skadi"
+	picture_event_data = {
+		portrait = event_target:gts_skadi
+		room = ocean_room
+	}
+	trigger = {
+		any_owned_leader = {
+			has_leader_flag = gts_skadi
+		}
+	}
+	option = {
+		name = gts_skadi_events.00a
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 1000
+			}
+		}
+		add_resource = {
+			food = -1000
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					#抽个特质
+					random_list = {
+						10 = {
+							#狩猎
+							if = {
+								limit = {
+									NOT = {
+										any_owned_leader = {
+											OR = {
+												has_trait = skadi_leader_trait_hunt
+												has_trait = skadi_leader_trait_hunt_2
+												has_trait = skadi_leader_trait_hunt_3
+											}
+										}
+									}
+								}
+								country_event = {
+									id = gts_skadi_traits.01
+								}
+							}
+							else = {
+								skadi_traits_random_event = yes
+							}
+						}
+						10 = {
+							#冰镐
+							if = {
+								limit = {
+									NOT = {
+										any_owned_leader = {
+											OR = {
+												has_trait = skadi_leader_trait_iceaxe
+											}
+										}
+									}
+								}
+								country_event = {
+									id = gts_skadi_traits.02
+								}
+							}
+							else = {
+								skadi_traits_random_event = yes
+							}
+						}
+						10 = {
+							#浪潮
+							if = {
+								limit = {
+									NOT = {
+										any_owned_leader = {
+											OR = {
+												has_trait = skadi_leader_trait_colossus
+											}
+										}
+									}
+								}
+								country_event = {
+									id = gts_skadi_traits.03
+								}
+							}
+							else = {
+								skadi_traits_random_event = yes
+							}
+						}
+						10 = {
+							#爆反
+							if = {
+								limit = {
+									NOT = {
+										any_owned_leader = {
+											OR = {
+												has_trait = skadi_leader_trait_ERA
+											}
+										}
+									}
+								}
+								country_event = {
+									id = gts_skadi_traits.04
+								}
+							}
+							else = {
+								skadi_traits_random_event = yes
+							}
+						}
+						10 = {
+							#小曲
+							if = {
+								limit = {
+									NOT = {
+										any_owned_leader = {
+											OR = {
+												has_trait = skadi_leader_trait_fleetsing
+												has_trait = skadi_leader_trait_fleetsing_2
+												has_trait = skadi_leader_trait_fleetsing_3
+											}
+										}
+									}
+								}
+								country_event = {
+									id = gts_skadi_traits.05
+								}
+							}
+							else = {
+								skadi_traits_random_event = yes
+							}
+						}
+						10 = {
+							#懒惰
+							if = {
+								limit = {
+									event_target:gts_skadi = {
+										NOR = {
+											has_trait = leader_trait_lethargic
+											has_trait = leader_trait_gale_speed
+											has_trait = leader_trait_gale_speed_2
+										}
+									}
+								}
+								country_event = {
+									id = gts_skadi_traits.06
+								}
+							}
+							else = {
+								skadi_traits_random_event = yes
+							}
+						}
+						10 = {
+							#菲林耳朵
+							if = {
+								limit = {
+									NOT = {
+										any_owned_leader = {
+											OR = {
+												has_trait = skadi_leader_trait_cat
+											}
+										}
+									}
+								}
+								country_event = {
+									id = gts_skadi_traits.07
+								}
+							}
+							else = {
+								skadi_traits_random_event = yes
+							}
+						}
+					}
+				}
+				10 = {
+					#训练领袖
+					if = {
+						limit = {
+							any_owned_leader = {
+								is_ruler = no								#统治者给不上特质
+								is_heir = no
+								NOR = {
+									has_leader_flag = gts_skadi
+									has_trait = skadi_leader_train
+								}
+							}
+						}
+						country_event = {
+							id = gts_skadi_events.0100
+						}
+					}
+					else = {
+						skadi_traits_random_event = yes
+					}
+				}
+				1 = {
+					#签契约
+					if = {
+						limit = {
+							OR = {
+								NOT = {
+									has_country_flag = whisperers_covenant_confirmed
+								}
+								NOT = {
+									has_country_flag = composer_covenant_confirmed
+								}
+								NOT = {
+									has_country_flag = eater_covenant_confirmed
+								}
+								NOT = {
+									has_country_flag = instrument_covenant_confirmed
+								}
+								NOT = {
+									has_country_flag = covenant_end_of_the_cycle
+								}
+							}
+						}
+						country_event = {
+							id = gts_skadi_events.02
+						}
+					}
+					else = {
+						skadi_traits_random_event = yes
+					}
+				}
+			}
+			set_timed_global_flag = {
+				flag = skadi_eating				#正在干饭，不触发事件
+				days = 180
+			}
+			country_event = {
+				id = gts_skadi_events.00
+				days = 180
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_events.00b
+		custom_tooltip = "gts_skadi_events.00b.tip"
+		default_hide_option = yes
+	}
+}

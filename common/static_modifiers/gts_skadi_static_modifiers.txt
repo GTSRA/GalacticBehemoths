@@ -1,0 +1,425 @@
+psionics_stone_monuments = {#灵能石碑
+    icon = "gfx/interface/icons/modifiers/mod_job_calculator_add.dds"
+	all_technology_research_speed = 0.10
+}
+final_city_resist = {#最后的抵抗
+    icon = "gfx/interface/icons/modifiers/mod_unity_gain_mult.dds"
+	country_unity_produces_mult = 0.15
+}
+skadi_penalty = {#劳改犯
+    icon = "gfx/interface/icons/modifiers/mod_job_angler_add.dds"
+	country_food_produces_mult = 0.05
+	country_unity_produces_mult = 0.05
+	planet_farmers_food_produces_add = 1
+}
+
+skadi_shroud_marked = { #虚境标记
+	icon = "gfx/interface/icons/planet_modifiers/skadi_shroud_marked.dds"
+	icon_frame = 3
+}
+skadi_shroud_unmarked = { #驱散标记
+	icon = "gfx/interface/icons/planet_modifiers/skadi_shroud_marked.dds"
+	icon_frame = 2
+}
+skadi_satisfy_marked = { #虚境标记计数用
+	icon = "gfx/interface/icons/planet_modifiers/skadi_shroud_marked.dds"
+	icon_frame = 1
+}
+
+skadi_buildfast = { #造的快
+
+	# 靈能加速已部署
+
+	icon = "gfx/interface/icons/planet_modifiers/skadi_shroud_marked.dds"
+	icon_frame = 1
+
+	planet_army_build_time_mult = -0.5
+	building_time_mult = -0.5
+	planet_building_build_speed_mult = 10
+    planet_clear_blocker_time_mult = -0.5
+	planet_clear_blocker_speed_mult = 10
+}
+
+isharmla_awaken = {#觉醒
+
+	# 伊莎瑪拉的覺醒
+
+	icon = gfx\interface\icons\modifiers\mod_country_subject_acceptance_add.dds
+	icon_frame = 1
+
+	all_technology_research_speed = 1.0
+    stations_produces_mult = 1.0
+    planet_jobs_produces_mult = 1.0
+	country_naval_cap_add = 2500
+	logistic_growth_mult = 0.25
+	bonus_pop_growth_mult = 0.25
+}
+
+isharmla_tease = { #嘲弄
+
+	# 伊莎瑪拉的嘲弄
+
+	icon = gfx\interface\icons\modifiers\mod_planet_crime_add.dds
+	icon_frame = 1
+
+    pop_amenities_usage_mult = 0.5
+	pop_happiness = -1
+	ship_speed_mult = -0.35
+	planet_crime_add = 50
+}
+
+elf_gift = {
+
+	# 樹妖精的禮物
+
+	icon = gfx\interface\icons\modifiers\mod_country_diplomacy_influence_cost.dds
+	icon_frame = 1
+
+	monthly_trades_energy_produces_add = 30
+    monthly_trades_rare_crystals_produces_add = 15
+    monthly_trades_exotic_gases_produces_add = 15
+	monthly_trades_volatile_motes_produces_add = 15
+}
+
+hehuanpai_destroyed = { #合欢派的震荡
+	planet_stability_add = -5
+	logistic_growth_mult = 0.05
+	bonus_pop_growth_mult = 0.05
+}
+hehuanpai_flourish = { #合欢派的复兴
+	pop_job_amenities_mult = 0.05
+	pop_government_ethic_attraction = -0.05
+}
+hehuanpai_win = { #合欢派胜利
+	pop_happiness = 1
+}
+linglu_governor_planet = { #铃鹿的星球修正
+	icon = "gfx/interface/icons/planet_modifiers/linglu_governor_planet.dds"
+	icon_frame = 1
+	planet_jobs_specialist_produces_mult = 0.2
+	planet_researchers_produces_mult = 0.1
+}
+
+# 靴居開的宗教聖象
+
+religious_icons_black1 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_black1.dds"
+    icon_frame = 2
+
+	army_defense_health_mult = 0.05
+	army_defense_damage_mult = 0.05
+	army_defense_morale_mult = 0.10
+	planet_army_build_speed_mult = 0.10
+	planet_orbital_bombardment_damage = -0.20
+}
+
+religious_icons_black2 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_black2.dds"
+    icon_frame = 2
+
+	planet_bureaucrats_unity_produces_add = 0.05
+	planet_bureaucrats_produces_mult = 0.20
+}
+
+religious_icons_black3 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_black3.dds"
+    icon_frame = 2
+
+	planet_jobs_physics_research_produces_mult = 0.10
+	planet_jobs_society_research_produces_mult = 0.10
+	planet_jobs_engineering_research_produces_mult = 0.10
+}
+
+religious_icons_black4 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_black4.dds"
+    icon_frame = 2
+
+	planet_technician_energy_produces_add = 0.10
+	planet_technician_produces_mult = 0.20
+}
+
+religious_icons_black5 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_black5.dds"
+    icon_frame = 2
+
+	planet_metallurgists_alloys_produces_add = 0.05
+	planet_metallurgists_produces_mult = 0.20
+}
+
+religious_icons_white1 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_white1.dds"
+    icon_frame = 2
+
+	army_defense_health_mult = 0.05
+	army_defense_damage_mult = 0.05
+	army_defense_morale_mult = 0.10
+	planet_army_build_speed_mult = 0.10
+	planet_orbital_bombardment_damage = -0.20
+}
+
+religious_icons_white2 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_white2.dds"
+    icon_frame = 2
+
+	pop_amenities_usage_mult = -0.10
+	planet_entertainers_produces_mult = 0.20
+}
+
+religious_icons_white3 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_white3.dds"
+    icon_frame = 2
+
+	planet_bureaucrats_unity_produces_add = 0.05
+	planet_bureaucrats_produces_mult = 0.20
+}
+
+religious_icons_white4 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_white4.dds"
+    icon_frame = 2
+
+	planet_traders_trade_produces_add = 0.10
+	planet_traders_produces_mult = 0.20
+}
+
+religious_icons_white5 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_white5.dds"
+    icon_frame = 2
+
+	planet_farmers_food_produces_add = 0.10
+	planet_farmers_produces_mult = 0.20
+}
+
+religious_icons_stocking1 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_stocking1.dds"
+    icon_frame = 2
+
+	army_defense_health_mult = 0.05
+	army_defense_damage_mult = 0.05
+	army_defense_morale_mult = 0.10
+	planet_army_build_speed_mult = 0.10
+	planet_orbital_bombardment_damage = -0.20
+}
+
+religious_icons_stocking2 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_stocking2.dds"
+    icon_frame = 2
+
+	planet_bureaucrats_unity_produces_add = 0.05
+	planet_bureaucrats_produces_mult = 0.20
+}
+
+religious_icons_stocking3 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_stocking3.dds"
+    icon_frame = 2
+
+	deposit_blockers_cost_mult = -0.15
+	planet_clear_blocker_speed_mult = 0.15
+}
+
+religious_icons_stocking4 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_stocking4.dds"
+    icon_frame = 2
+
+	pop_amenities_usage_mult = -0.10
+	planet_entertainers_produces_mult = 0.20
+}
+
+religious_icons_stocking5 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_stocking5.dds"
+    icon_frame = 2
+
+	planet_farmers_food_produces_add = 0.10
+	planet_farmers_produces_mult = 0.20
+}
+
+religious_icons_bare1 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_bare1.dds"
+    icon_frame = 2
+
+	logistic_growth_mult = 0.15
+	planet_pops_upkeep_mult = -0.15
+}
+
+religious_icons_bare2 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_bare2.dds"
+    icon_frame = 2
+
+	planet_miners_minerals_produces_add = 0.10
+	planet_miners_produces_mult = 0.20
+}
+
+religious_icons_bare3 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_bare3.dds"
+    icon_frame = 2
+
+	terraforming_cost_mult = -0.15
+	terraform_speed_mult = 0.15
+}
+
+religious_icons_bare4 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_bare4.dds"
+    icon_frame = 2
+
+	pop_environment_tolerance = 0.30
+}
+
+religious_icons_bare5 = {
+
+    icon = "gfx/interface/icons/planet_modifiers/religious_icons_bare5.dds"
+    icon_frame = 2
+
+	planet_farmers_food_produces_add = 0.10
+	planet_farmers_produces_mult = 0.20
+}
+
+# 寰海極宇
+
+modifier_gts_ultra_insurance_tongue = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_chthonian_planet.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_foot= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_breast= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_breast.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_virgin= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_virgin.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_flood= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_flood.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_toy= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_toy.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_toxic= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_fart.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_scat= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_scat.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_exhale= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_exhale.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+modifier_gts_ultra_insurance_futa= {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_futa.dds"
+	icon_frame = 1
+	logistic_growth_mult = -0.10
+	bonus_pop_growth = -0.10
+	planet_jobs_trade_produces_mult = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+}
+
+modifier_gts_worship_gender_shoe = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_gts_shoe2.dds"
+	icon_frame = 1
+	planet_jobs_energy_produces_mult = -0.5
+	planet_jobs_minerals_produces_mult = -0.5
+	planet_jobs_food_produces_mult = -0.5
+	planet_jobs_alloys_produces_mult = -0.5
+	planet_jobs_consumer_goods_upkeep_mult = 0.5
+	planet_jobs_unity_produces_mult = 10
+	planet_jobs_gts_giantess_fluid_produces_mult = 10
+}
+modifier_pc_gts_oscillator = {
+	pop_happiness = 0.5
+	logistic_growth_mult = 0.5
+	bonus_pop_growth_mult = 0.5
+}
+modifier_saratoga_planet_exercise = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
+	icon_frame = 1
+	planet_orbital_bombardment_damage = -0.5
+	army_health = 1
+}
+
+modifier_doctor_originium = {
+
+	# 博士的源石禮物
+
+	icon = gfx/interface/icons/modifiers/mod_static_resource_minerals_add.dds
+
+	megastructure_build_speed_mult = 1
+	megastructures_cost_mult = -0.25
+}
+
+gts_god_keeper_buff1 = {
+	army_attack_damage_mult = 1
+	army_attack_health_mult = 1
+	army_attack_morale_mult = 1
+}
+gts_god_keeper_buff2 = {
+	planet_jobs_alloys_produces_mult = -1
+}
+gts_god_keeper_buff3 = {
+	planet_jobs_produces_mult = 0.05
+}
+gts_cys_buff1 = {
+	country_base_physics_research_produces_add = 100
+	country_base_society_research_produces_add = 100
+	country_base_engineering_research_produces_add = 100
+}

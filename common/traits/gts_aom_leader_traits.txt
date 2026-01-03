@@ -1,0 +1,467 @@
+
+##################领袖特质##################
+
+#英灵
+leader_trait_servant1 = {
+	cost = 1
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/Servant.dds"
+
+	leader_trait_type = paragon
+	sorting_priority = 1000
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant1_commander_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.05
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant1_commander_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.05
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_scientist_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.05
+	}
+	triggered_planet_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.1
+		planet_jobs_consumer_goods_produces_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.1
+		planet_jobs_consumer_goods_produces_mult = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.05
+	}
+	leader_class = { official scientist commander }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+
+leader_trait_servant2 = {
+	cost = 1
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/Servant.dds"
+
+	leader_trait_type = paragon
+	sorting_priority = 1000
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant2_commander_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.1
+		ship_weapon_range_mult = 0.1
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant2_commander_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.1
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_scientist_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.1
+	}
+	triggered_planet_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.2
+		planet_jobs_consumer_goods_produces_mult = 0.2
+	}
+	triggered_sector_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.2
+		planet_jobs_consumer_goods_produces_mult = 0.2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.05
+	}
+	leader_class = { official scientist commander }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+
+leader_trait_servant3 = {
+	cost = 1
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/Servant.dds"
+
+	leader_trait_type = paragon
+	sorting_priority = 1000
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant3_commander_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.15
+		ship_weapon_range_mult = 0.15
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant3_commander_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.15
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_scientist_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.15
+	}
+	triggered_planet_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.3
+		planet_jobs_consumer_goods_produces_mult = 0.3
+	}
+	triggered_sector_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.3
+		planet_jobs_consumer_goods_produces_mult = 0.3
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		planet_jobs_produces_mult = 0.15
+		planet_jobs_unity_produces_mult = 0.15
+	}
+	leader_class = { official scientist commander }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+
+leader_trait_servant4 = {
+	cost = 1
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/Servant.dds"
+
+	leader_trait_type = paragon
+	sorting_priority = 1000
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant4_commander_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant4_commander_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.2
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_scientist_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.2
+	}
+	triggered_planet_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.4
+		planet_jobs_consumer_goods_produces_mult = 0.4
+	}
+	triggered_sector_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.4
+		planet_jobs_consumer_goods_produces_mult = 0.4
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		planet_jobs_produces_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.2
+	}
+	leader_class = { official scientist commander }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+
+leader_trait_servant5 = {
+	cost = 1
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/Servant.dds"
+
+	leader_trait_type = paragon
+	sorting_priority = 1000
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant5_commander_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.25
+		ship_weapon_range_mult = 0.25
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant5_commander_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.25
+	}
+	triggered_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_scientist_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.25
+	}
+	triggered_planet_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_1_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.5
+		planet_jobs_consumer_goods_produces_mult = 0.5
+	}
+	triggered_sector_modifier = {
+		custom_tooltip = leader_trait_no_ruler_servant_official_2_effect
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_alloys_produces_mult = 0.5
+		planet_jobs_consumer_goods_produces_mult = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		planet_jobs_produces_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.25
+	}
+	leader_class = { official scientist commander }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+
+
+#皇帝
+leader_trait_ruler_emperor = {
+	cost = 0
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/emperor.dds"
+	is_councilor_trait_for_ruler = yes
+	modifier = {
+		Army_damage_mult = 0.1
+		army_morale_mult = 0.08
+		ship_weapon_damage = 0.1
+		ships_upkeep_mult = -0.35
+		armies_upkeep_mult = -0.35
+		ship_speed_mult = 0.05
+		ship_hull_mult = 0.25
+		army_health = 0.25
+
+	}
+	leader_class = { governor scientist admiral general }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+#人皇
+leader_trait_fara_A = {
+	cost = 0
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/fara_A.dds"
+	is_councilor_trait_for_ruler = yes
+
+	triggered_councilor_modifier = {
+		energy_produces_mult = 0.2
+		minerals_produces_mult = 0.2
+		food_produces_mult = 0.2
+		physics_research_produces_mult = 0.2
+		engineering_research_produces_mult = 0.2
+		society_research_produces_mult = 0.2
+		num_tech_alternatives_add = 2
+		all_technology_research_speed = 0.15
+		trade_value_mult = 0.2
+		ships_upkeep_mult = -0.5
+		armies_upkeep_mult = -0.5
+		planet_crime_add = -30	
+		planet_stability_add = 10
+	}
+	leader_class = { governor scientist admiral general }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+#火焰化身
+leader_trait_fara_B = {
+	cost = 0
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/fara_B.dds"
+	is_councilor_trait_for_ruler = yes
+	modifier = {
+		ship_hull_mult = 1
+	}
+	triggered_councilor_modifier = {
+		alloys_produces_mult = 0.2
+		consumer_goods_produces_mult = 0.2
+		ship_hull_mult = 0.25
+		ship_shield_mult = 0.25
+		army_health = 0.25
+	}
+	leader_class = { governor scientist admiral general }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+#欧德洛之刃
+leader_trait_fara_C = {
+	cost = 0
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/fara_C.dds"
+	is_councilor_trait_for_ruler = yes
+	modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_weapon_range_mult = 0.5
+		ship_weapon_damage = 0.5
+		ship_speed_mult = 0.5
+	}
+	triggered_councilor_modifier = {
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+		ship_weapon_damage = 0.2
+		ship_speed_mult = 0.2
+		amy_damage_mult = 0.2
+		army_morale_mult = 0.2
+		army_collateral_damage_mult = 0.2
+		army_experience_gain_mult = 0.2
+		army_disengage_chance_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_starting_experience_mult = 0.2
+	}
+	leader_class = { governor scientist admiral general }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+
+#梦幻召唤
+leader_trait_illya_A = {
+	cost = 0
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/illya_A.dds"
+	is_councilor_trait_for_ruler = yes
+	triggered_councilor_modifier = {
+		amy_damage_mult = 0.2
+		army_morale_mult = 0.2
+		army_collateral_damage_mult = 0.2
+		army_experience_gain_mult = 0.2
+		army_disengage_chance_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_starting_experience_mult = 0.2
+	}
+	leader_class = { governor scientist admiral general }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}
+#红宝石
+leader_trait_illya_B = {
+	cost = 0
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/illya_B.dds"
+	is_councilor_trait_for_ruler = yes
+	modifier = {
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+		ship_weapon_damage = 0.2
+		ship_speed_mult = 0.2
+		ship_hull_mult = 0.25
+	}
+	triggered_councilor_modifier = {
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+		ship_weapon_damage = 0.2
+		ship_speed_mult = 0.2
+		ship_hull_mult = 0.25
+		ship_shield_mult = 0.25
+	}
+	leader_class = { governor scientist admiral general }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+}

@@ -1,0 +1,23 @@
+#开局地块
+
+#迦勒底亚斯
+d_caldea = {
+	
+	icon = d_caldea
+	
+	planet_modifier = { 
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
+	}
+	resources = {
+	    category = planet_deposits
+		produces = {
+				sr_aom_saint_uartz = 20
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

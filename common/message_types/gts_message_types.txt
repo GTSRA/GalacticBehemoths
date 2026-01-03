@@ -1,0 +1,13 @@
+message_type = {
+	key = "MESSAGE_skadi_give_psionic"
+	icon = "GFX_toast_positive_trait_gained"
+	icon_frame = 1
+    
+	name = "MESSAGE_skadi_give_psionic_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	default_toast = yes
+
+	category = leaders
+}

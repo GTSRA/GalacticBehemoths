@@ -1,0 +1,1850 @@
+# 無聲鈴鹿
+
+subclass_scientist_spacetraveller = {
+
+	# 星際旅者
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_frontier_adventurer" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = consumer_goods
+		AMOUNT = 10
+	}
+
+	self_modifier = {
+		leaders_upkeep_mult = -0.5
+	}
+
+	modifier = {
+		science_ship_survey_speed = 0.2
+		ship_anomaly_research_speed_mult = 0.2
+		ship_anomaly_generation_chance_mult = 0.05
+		ship_archaeological_site_clues_add = 3
+    }
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+linglu_leader_trait_horsegirl = {
+
+	# 賽馬娘
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_enclave_trader" 
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = consumer_goods
+		AMOUNT = 10
+	}
+
+	modifier = {
+		ship_speed_mult = 0.3
+	}
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+linglu_leader_trait_coach = {
+
+	# 身上某處的訓練
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_hardy"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	self_modifier = {
+		species_leader_exp_gain = 0.3
+	}
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+linglu_leader_trait_science = {
+
+	# 科研與民生
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_inspired"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+    councilor_modifier = {
+		all_technology_research_speed = 0.10
+		country_unity_produces_mult = 0.10
+		logistic_growth_mult = 0.10
+	}
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+# 黎凪
+
+subclass_commander_lizhi = {
+
+	# xwx
+
+	leader_trait_type = subclass
+
+	custom_subtitle = commander_subclass
+
+	opposites = {
+		subclass_commander_admiral
+		subclass_commander_general
+		subclass_commander_governor
+	}
+
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_general
+		COUNCIL = no
+	}
+
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.2
+		ship_weapon_damage = 0.2
+	}
+
+	custom_tooltip_with_modifiers = lizhi_subclass
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+
+	background_icon = "GFX_leader_subclass_commander_general_background"
+}
+
+lizhi_leader_trait_fort = {
+
+	# 移動星壘
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_warden" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	fleet_modifier = {
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.1
+		ship_shield_regen_add_perc = 0.1
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+lizhi_leader_trait_shipgirl = {
+
+	# 艦娘專精
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_fleet_organizer" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	fleet_modifier = {
+        command_limit_add = 120
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+lizhi_leader_trait_swarm = {
+
+	# 蜂群專精
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_bulwark_retaliator" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	fleet_modifier = {
+		weapon_type_explosive_weapon_fire_rate_mult = 0.2
+        weapon_type_explosive_weapon_damage_mult = 0.2
+		s_slot_weapon_damage_mult = 0.2
+		s_slot_weapon_fire_rate_mult = 0.2
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+lizhi_leader_trait_stareater = {
+
+	# 噬星
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_eater_chosen" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	fleet_modifier = {
+		ship_orbital_bombardment_army_damage_mult = 10
+		ship_orbital_bombardment_mult = 10
+		ship_orbital_bombardment_pop_damage_mult = 10
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+lizhi_leader_trait_negative1 = {
+
+	# 被加密的系統
+
+    leader_trait_type = negative
+
+	inline_script = {
+		script = trait/icon_negative
+		#CLASS = leader
+		ICON = "GFX_leader_trait_narrow_minded"
+		#RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+lizhi_leader_trait_negative2 = {
+
+	# 被封鎖的系統
+
+    leader_trait_type = negative
+
+	inline_script = {
+		script = trait/icon_negative
+		#CLASS = leader
+		ICON = "GFX_leader_trait_cybrex_databases"
+		#RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+lizhi_leader_trait_negative3 = {
+
+	# 被刪除的系統
+
+    leader_trait_type = negative
+
+	inline_script = {
+		script = trait/icon_negative
+		#CLASS = leader
+		ICON = "GFX_leader_trait_magnifying_glass"
+		#RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+elf_leader_trait_bigbreast = {
+
+	# 巨乳
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_food" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_officials_food_produces_add = 30
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+elf_leader_trait_elf = {
+
+	# 樹妖精
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_terraformation_nuclei" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	triggered_planet_modifier = {
+		planet_pops_upkeep_mult = -0.25
+		pop_amenities_usage_mult = -0.25
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+# 下江小春
+
+leader_trait_Koharu = {
+
+	# 下江小春
+
+	leader_trait_type = destiny
+
+	icon = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_Koharu.dds"
+
+	triggered_planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.30
+		planet_jobs_gts_micro_produces_mult = 0.30
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_flatbreast = {
+
+	# 貧乳
+
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_crusader" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_officials_unity_produces_add = 30
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_horny = {
+
+	# 性慾旺盛
+
+	initial = no
+	randomized = no
+
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_gifted" 
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	self_modifier = {
+		species_leader_exp_gain = -0.10
+		leaders_upkeep_mult = 0.10
+	}
+
+	planet_modifier = {
+		logistic_growth_mult = 0.10
+		bonus_pop_growth = 0.10
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+# 浦和花子
+
+leader_trait_Hanako = {
+
+	# 浦和花子
+
+	leader_trait_type = destiny
+
+	icon = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_Hanako.dds"
+
+	planet_modifier = {
+		planet_jobs_gts_micro_produces_mult = 0.30
+		planet_jobs_gts_micro_city_produces_mult = 0.20
+		planet_jobs_gts_micro_planet_produces_mult = 0.10
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+# 古明地覺
+
+satori_leader_trait_penetration = {
+
+	# 超然的讀心者
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_whisperers_chosen
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	self_modifier = {
+		leader_officials_influence_produces_add = 3
+	}
+
+	planet_modifier = {
+		planet_crime_add = -50
+		planet_jobs_unity_produces_mult = -0.10
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+satori_leader_trait_meikong = {
+
+	# 巨大妹控
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_scholarium_explorer
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	councilor_modifier = {
+		science_ship_survey_speed = 0.20
+		ship_anomaly_research_speed_mult = 0.20
+		ship_archaeological_site_excavation_speed_mult = 0.20
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+satori_leader_trait_lord = {
+
+	# 地靈殿之主
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_legendary_leader
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	self_modifier = {
+		leader_officials_gts_micro_city_produces_add = 10
+		leader_officials_gts_micro_produces_add = 50
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+satori_leader_trait_sandals = {
+
+	# 毛毛拖！
+
+	icon = gfx/interface/icons/traits/leader_trait_icons/satori_leader_trait_sandals.dds
+
+	planet_modifier = {
+		pop_happiness = 0.1
+		pop_environment_tolerance = 0.1
+	}
+
+	galcom_modifier = {
+		pop_happiness = 0.1
+		pop_environment_tolerance = 0.1
+	}
+
+	leader_class = { official }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+# 犽戎
+yarong_leader_trait1 = { #帝国公主
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_enclave_trader
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		country_unity_produces_mult = 0.18
+		all_technology_research_speed = 0.15
+		army_health = 0.5
+	    army_damage_mult = 0.5
+	    army_morale = 0.5
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait2 = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_home_in_the_sky
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		country_alloys_produces_mult = 0.35
+		ship_armor_hardening_add = 0.35
+		ship_shield_hardening_add = 0.35
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait3 = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_dreaded
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		damage_vs_country_type_awakened_fallen_empire_mult = 0.5
+		damage_vs_country_type_fallen_empire_mult = 0.5
+		country_naval_cap_mult = 0.25
+		ship_weapon_damage = 0.15
+		ships_upkeep_mult = -0.1
+	}
+	triggered_desc = {
+		text = military_gts_level
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_2
+		}
+		ship_weapon_damage = 1
+	    ship_hull_mult = 1
+	    ship_armor_mult = 1
+	    ship_hull_regen_add_perc = 0.05
+	    ship_armor_regen_add_perc = 0.05
+	}
+
+    triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_3
+		}
+		ship_weapon_damage = 2
+	    ship_hull_mult = 2
+	    ship_armor_mult = 2
+	    ship_hull_regen_add_perc = 0.1
+	    ship_armor_regen_add_perc = 0.1
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_4
+		}
+		ship_weapon_damage = 10
+	    ship_hull_mult = 10
+	    ship_armor_mult = 10
+	    ship_hull_regen_add_perc = 0.15
+	    ship_armor_regen_add_perc = 0.15
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_5
+		}
+		ship_weapon_damage = 20
+	    ship_hull_mult = 20
+	    ship_armor_mult = 20
+	    ship_hull_regen_add_perc = 1
+	    ship_armor_regen_add_perc = 1
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait4 = { #龙
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_dragonslayer
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+
+	triggered_fleet_modifier = {
+		ship_disengage_chance_mult = 10
+		ship_emergency_ftl_mult = -10
+		fleet_mia_time_mult = -10
+		ship_engagement_range_mult = -0.8
+	}
+
+    triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				NOR = { has_country_flag = gts_yarong_adult_ceremony }
+			}
+		}
+		ship_weapon_damage = -0.20
+		ships_upkeep_mult = -0.5
+		ship_shield_mult = -0.25
+		ship_hull_add = -250000
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				NOR = { has_country_flag = gts_yarong_adult_play }
+			}
+		}
+		ship_weapon_damage = -0.20
+		ship_speed_mult = -1
+		ships_upkeep_mult = -0.5
+		ship_shield_mult = -0.25
+		ship_hull_add = -500000
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				NOR = { has_country_flag = gts_yarong_adult_play2 }
+			}
+		}
+		ship_weapon_damage = -0.20
+		ships_upkeep_mult = -0.5
+		ship_shield_mult = -0.25
+		# ship_hull_add = -1000000
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				NOR = { has_country_flag = gts_yarong_adult_play3 }
+			}
+		}
+		ship_weapon_damage = -0.20
+		ships_upkeep_mult = -0.5
+		ship_hull_add = -1000000
+		ship_armor_mult = -0.5
+		ship_shield_mult = -0.25
+	}
+
+	triggered_councilor_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_queen_done
+			}
+		}
+		logistic_growth_mult = 0.1
+	    bonus_pop_growth_mult = 0.1
+		pop_environment_tolerance = 0.15
+		planet_crime_mult = -0.15
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait5 = { #体表殖民，修改了原特质产出的资源数量，更加平衡，整合时替换原特质
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_sociologist
+		COUNCIL = no
+		TIER = none
+	}
+
+	triggered_desc = {
+		text = yarong_leader_trait5.tooltip
+	}
+
+	triggered_self_modifier = { #变量增加产量
+		leader_commanders_food_produces_add = 0.1
+		leader_commanders_gts_micro_produces_add = 0.05
+		leader_commanders_gts_micro_city_produces_add = 0.005
+		multiplier = root.gts_bread_logs
+	}
+	triggered_self_modifier = { #变量增加产量
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_spawn_join
+			}
+		}
+		leader_commanders_gts_giantess_human_produces_add = 0.001
+		multiplier = root.gts_bread_logs
+	}
+
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait6 = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_chosen
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes # 不朽
+
+
+	# 第一作默认
+	triggered_fleet_modifier = {
+		ship_winddown_mult = -0.3 # 飞船超空间跳跃CD
+		ship_base_speed_mult = 0.5 # 基础飞船速度
+	}
+
+	# 第二作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_twelve_level2
+			}
+		}
+		ship_hull_mult = 1 # 船体值
+	}
+
+	# 第三作触发
+
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = gts_yarong_twelve_level3
+			}
+		}
+	}
+
+	# 第四作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				 has_country_flag = gts_yarong_twelve_level4
+			}
+		}
+		ship_hull_regen_add_perc = 0.5 #每日船体值恢复 百分比加成
+		ship_shield_regen_add_perc = 0.5 #每日护盾值恢复 百分比加成
+	}
+
+	# 第五作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				 has_country_flag = gts_yarong_twelve_level5
+			}
+		}
+		ship_hull_damage_mult = 0.3 # 对船体值伤害
+		ship_shield_damage_mult = 0.3  # 对护盾伤害
+		ship_armor_damage_mult = 0.3 #对装甲伤害
+	}
+
+	# 第六作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_twelve_level6
+			}
+		}
+		ship_speed_mult = 0.5 # 亚空间航速
+	}
+
+	# 第七作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_twelve_level7
+			}
+		}
+		ship_armor_regen_add_perc = 0.5 #每日船体值恢复 百分比加成
+	}
+
+	# 第八作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_twelve_level8
+			}
+		}
+		ship_shield_mult = 0.5 # 护盾承受值
+	}
+
+	# 第九作触发
+	triggered_self_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_twelve_level9
+			}
+		}
+		# 活体金属
+		leader_commanders_sr_living_metal_produces_add = 10
+		# 纳米机器人
+		leader_commanders_nanites_produces_add = 10
+	}
+
+	# 第十作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_twelve_level10
+			}
+		}
+		ship_cloaking_detection_add = 30 #探知强度
+	}
+
+	# 第十一作触发
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				has_country_flag = gts_yarong_twelve_level11
+			}
+		}
+		ship_hull_regen_add_static = 100000 #每日船体值恢复 固定加成
+	}
+
+	# 无第十二作buff
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait7 = { #寰宇主宰
+	leader_trait_type = destiny
+	# starting_ruler_trait = yes
+	force_councilor_trait = yes
+	initial = no
+	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		RARITY = paragon
+		ICON = GFX_leader_trait_enclave_trader
+		COUNCIL = yes
+		TIER = none
+	}
+
+	councilor_modifier = {
+		planet_stability_mult = 0.5
+		planet_crime_mult = -0.7
+		planet_jobs_unity_produces_mult = 0.5
+		pop_government_ethic_attraction = 0.2
+		country_government_civic_points_add = 1
+		all_technology_research_speed = 0.2
+	}
+	leader_class = { official }
+}
+yarong_leader_trait8 = { #物质解析生产
+	leader_trait_type = destiny
+	# starting_ruler_trait = yes
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		RARITY = paragon
+		ICON = GFX_leader_trait_logistic_understanding
+		COUNCIL = yes
+		TIER = none
+	}
+
+	triggered_councilor_modifier = {
+		planet_jobs_food_produces_mult = 0.25
+		planet_jobs_energy_produces_mult = 0.25
+		planet_jobs_minerals_produces_mult = 0.25
+		planet_jobs_alloys_produces_mult = 0.15
+		planet_jobs_consumer_goods_produces_mult = 0.15
+		planet_jobs_rare_crystals_produces_mult = 0.15
+		planet_jobs_exotic_gases_produces_mult = 0.15
+		all_technology_research_speed = 0.15
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait9 = { #终极工程计划
+	leader_trait_type = destiny
+	# starting_ruler_trait = yes
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		RARITY = paragon
+		ICON = GFX_leader_trait_engineering_focus
+		COUNCIL = yes
+		TIER = none
+	}
+
+	triggered_councilor_modifier = {
+		megastructure_build_speed_mult = 0.3
+		megastructures_cost_mult = -0.5
+		planet_districts_cost_mult = -0.3
+		planet_buildings_cost_mult = -0.3
+		planet_clear_blocker_time_mult = -0.8
+
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait10 = { #帝国公主
+	leader_trait_type = destiny
+	# starting_ruler_trait = yes
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		RARITY = paragon
+		ICON = GFX_leader_trait_legendary_bloody
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		ship_weapon_range_mult = 0.3
+		SHIP_FIRE_RATE_MULT = 0.3
+		ship_base_speed_mult = 0.2
+		fleet_mia_time_mult = -0.5
+		official_exp_gain = 1
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+yarong_leader_trait11 = { #完全生命体
+	leader_trait_type = destiny
+	# starting_ruler_trait = yes
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		RARITY = paragon
+		ICON = GFX_leader_trait_legendary_authoritarian_two
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		leader_officials_engineering_research_produces_add = 400
+		leader_officials_physics_research_produces_add = 400
+		leader_officials_society_research_produces_add = 400
+	}
+	triggered_councilor_modifier = {
+		all_technology_research_speed = 0.15
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+# 犽戎 额外
+god_keeper_ruler_trait1 = { #人间之神/尘世主宰
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_enclave_trader
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		planet_jobs_produces_mult = 0.3
+		all_technology_research_speed = 0.15
+	}
+
+	leader_class = all
+	initial = no
+	randomized = no
+}
+god_keeper_ruler_trait2 = { #帝国女皇
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_enclave_trader
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		country_unity_produces_mult = 0.35
+		all_technology_research_speed = 0.35
+		army_health = 0.7
+		army_damage_mult = 0.7
+		army_morale = 0.7
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+god_keeper_ruler_trait3 = { #审判之舞
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_mercenary_warrior
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		planet_stability_add = 30
+		planet_crime_add = -50
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+# 紫宸
+shentun_leader_trait1 = { #前朝领主
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_academic_astral_rift_expert
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		country_unity_produces_mult = 0.4
+		all_technology_research_speed = 0.35
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+shentun_leader_trait2 = { #丰饶祈愿
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_fertility_preacher
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_food_produces_mult = 0.15
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+shentun_leader_trait3 = { #寰宇之蛇
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		RARITY = paragon
+		ICON = GFX_leader_trait_dragonslayer
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+
+	triggered_councilor_modifier = {
+		country_resource_max_add = 999999
+		ship_military_speed_mult = 0.25
+		ship_fire_rate_mult = 0.25
+		ship_hull_mult = 0.25
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+shentun_leader_trait4 = { #永世血亲
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_deep_connections
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_fleet_modifier = {
+		ship_weapon_damage = 1
+		ship_speed_mult = 1
+		#ship_hull_add = 5000000
+		#ship_armor_add = 5000000
+		#ship_shield_add = 5000000
+		ship_disengage_chance_mult = 10
+		ship_emergency_ftl_mult = -10
+		fleet_mia_time_mult = -10
+	}
+	triggered_desc = {
+		text = military_gts_level
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_2
+		}
+		ship_weapon_damage = 1
+	    ship_hull_mult = 1
+	    ship_armor_mult = 1
+	    ship_hull_regen_add_perc = 0.05
+	    ship_armor_regen_add_perc = 0.05
+	}
+
+    triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_3
+		}
+		ship_weapon_damage = 2
+	    ship_hull_mult = 2
+	    ship_armor_mult = 2
+	    ship_hull_regen_add_perc = 0.1
+	    ship_armor_regen_add_perc = 0.1
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_4
+		}
+		ship_weapon_damage = 10
+	    ship_hull_mult = 10
+	    ship_armor_mult = 10
+	    ship_hull_regen_add_perc = 0.15
+	    ship_armor_regen_add_perc = 0.15
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			has_global_flag = gts_level_5
+		}
+		ship_weapon_damage = 50
+	    ship_hull_mult = 50
+	    ship_armor_mult = 50
+	    ship_hull_regen_add_perc = 1
+	    ship_armor_regen_add_perc = 1
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+shentun_leader_trait5 = { #桎梏
+    leader_trait_type = negative
+	inline_script = {
+		script = trait/icon_negative
+		#CLASS = leader
+		ICON = "GFX_leader_trait_iron_fist"
+		#RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		starbases_upkeep_mult = 0.3
+		ship_military_upkeep_mult = 0.15
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#
+gts_cys_trait1 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_resolution_category_rulesofwar_focus"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		planet_stability_mult = 0.05
+		pop_happiness = 0.05
+		planet_jobs_upkeep_mult = -0.1
+		planet_pops_upkeep_mult = -0.1
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+gts_cys_trait2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_principled"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		planet_jobs_gts_micro_produces_mult = 0.1
+		planet_jobs_gts_micro_city_produces_mult = 0.1
+		planet_jobs_gts_micro_planet_produces_mult = 0.1
+		planet_jobs_trade_produces_mult = 0.3
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+gts_cys_trait3 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_academic_astral_rift_expert"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		starbase_building_build_speed_mult = 0.5
+		starbase_module_build_speed_mult = 0.5
+		starbase_shipyard_build_speed_mult = 0.5
+		planet_miners_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = 0.15
+		planet_jobs_alloys_produces_mult = 0.05
+		pop_category_specialists_consumer_goods_upkeep_add = -0.5
+	}
+	immortal_leaders = yes
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+gts_cys_trait4 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_dreaded"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		ship_weapon_damage = 0.5
+		ship_fire_rate_mult = 0.25
+		ship_military_speed_mult = -0.25
+		ship_armor_penetration_mult = 0.25
+		ship_shield_penetration_mult = 0.25
+		fleet_mia_time_mult = -0.15
+		ship_ftl_jumpdrive_range_mult = 3
+		jump_drive_cooldown = 0.05
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+gts_cys_trait5 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_imperial_heir"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	triggered_self_modifier = {
+		leaders_upkeep_mult = 1
+	}
+	triggered_councilor_modifier = {
+		science_ship_survey_speed = 0.25
+		ship_anomaly_research_speed_mult = 0.25
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+# 希諾
+
+xinuo_leader_trait_fire = {
+
+	# 蒼白的冥界之火（偽）
+
+	leader_trait_type = destiny
+
+	icon = "gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_fire.dds"
+
+	fleet_modifier = {
+		ship_weapon_damage = 0.25
+		ship_fire_rate_mult = 0.25
+	}
+
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.2
+	}
+
+	sector_modifier = {
+		planet_jobs_energy_produces_mult = 0.1
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+xinuo_leader_trait_project = {
+
+	# 基因工程
+
+	initial = no
+	randomized = no
+	leader_trait_type = veteran
+
+	icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_project.dds
+
+	fleet_modifier = {
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.1
+		ship_speed_mult = 0.25
+		ship_damage_against_space_fauna_mult = 0.25
+		ship_disengage_chance_mult = 0.5
+		fleet_mia_time_mult = -0.5
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+xinuo_leader_trait_spring = {
+
+	# 地脈噴湧
+
+	initial = no
+	randomized = no
+	leader_trait_type = veteran
+
+	icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_spring.dds
+
+	army_modifier = {
+		army_damage_mult = 0.5
+		army_collateral_damage_mult = 0.5
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+xinuo_leader_trait_king = {
+
+	# 古龍之王（偽）
+
+	leader_trait_type = destiny
+
+	icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_king.dds
+
+	self_modifier = {
+		species_leader_exp_gain = 0.5
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+xinuo_leader_trait_revenge = {
+
+	# 天災復仇者
+
+	initial = no
+	randomized = no
+	force_councilor_trait = yes
+	leader_trait_type = veteran
+
+	icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_revenge.dds
+
+	triggered_councilor_modifier = {
+		damage_vs_country_type_fallen_empire_mult = 0.25
+		damage_vs_country_type_awakened_fallen_empire_mult = 0.25
+
+		damage_vs_country_type_synth_queen_mult = 0.5
+		damage_vs_country_type_awakened_synth_queen_mult = 0.5
+		damage_vs_country_type_synth_queen_convoys_mult = 0.5
+		damage_vs_country_type_synth_queen_outposts_mult = 0.5
+		damage_vs_country_type_swarm_mult = 0.5
+		damage_vs_country_type_extradimensional_mult = 0.5
+		damage_vs_country_type_extradimensional_2_mult = 0.5
+		damage_vs_country_type_extradimensional_3_mult = 0.5
+		damage_vs_country_type_ai_empire_mult = 0.5
+		damage_vs_country_type_gray_goo_mult = 0.5
+		damage_vs_player_crisis_mult = 0.5
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+xinuo_leader_trait_kingblood = {
+
+    #苍蓝之王的血脉
+
+    initial = no
+    randomized = no
+    immortal_leaders = yes
+    leader_trait_type = destiny
+
+    icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_kingblood.dds
+
+    triggered_self_modifier = {
+        species_leader_exp_gain = 1
+        leaders_upkeep_mult = -0.5
+    }
+
+    triggered_planet_modifier = {
+        planet_jobs_produces_mult = 0.6
+        planet_districts_cost_mult = -0.4
+        planet_building_build_speed_mult = 1
+        planet_buildings_cost_mult = -0.4
+        deposit_blockers_cost_mult = -0.5
+        planet_clear_blocker_speed_mult = 0.5
+        planet_army_build_speed_mult = 0.6
+        army_starting_experience_add = 500
+        planet_orbital_bombardment_damage = -0.8
+        army_defense_damage_mult = 1
+        planet_defense_armies_add = 20
+        planet_crime_add = -50
+    }
+    triggered_sector_modifier = {
+        army_starting_experience_add = 300
+        planet_orbital_bombardment_damage = -0.4
+        army_defense_damage_mult = 0.6
+        planet_defense_armies_add = 12
+        planet_crime_add = -30
+    }
+
+    leader_class = { commander }
+
+    selectable_weight = {
+        weight = 0
+    }
+}
+
+xinuo_leader_trait_heart = {
+
+    #龙之心
+
+    initial = no
+    randomized = no
+    force_councilor_trait = no
+    leader_trait_type = destiny
+
+    icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_heart.dds
+
+    triggered_fleet_modifier = {
+        ship_weapon_damage = 1
+        owned_ship_fire_rate_mult = 0.5
+        ship_weapon_range_mult = 0.3
+        ships_upkeep_mult = -0.8
+        ship_speed_mult = 0.5
+        ship_damage_against_starbases_mult = 1
+        ship_hull_regen_add_perc = 10
+        ship_armor_regen_add_perc = 10
+        fleet_mia_time_mult = -1
+        ship_disengage_chance_mult = -1
+        ship_emergency_ftl_mult = -1
+    }
+
+    triggered_army_modifier = {
+        armies_upkeep_mult = -0.5
+        army_morale = 1
+        army_damage_mult = 0.3
+        army_disengage_chance_mult = -1
+    }
+
+    leader_class = { commander }
+
+    selectable_weight = {
+        weight = 0
+    }
+}
+
+xinuo_leader_trait_twin = {
+
+    #善恶双生
+
+    initial = no
+    randomized = no
+    force_councilor_trait = yes
+    leader_trait_type = destiny
+
+    icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_twin.dds
+
+    triggered_councilor_modifier = {
+        monthly_loyalty_from_subjects = 10
+        country_power_projection_influence_produces_add = 5
+        ship_starting_experience_add = 700
+        shipclass_military_build_speed_mult = 0.25
+        shipclass_military_station_damage_mult = 0.25
+        shipclass_military_station_hull_mult = 0.03
+        shipsize_military_station_small_build_speed_mult = 1
+        shipclass_starbase_damage_mult = 0.7
+        shipclass_starbase_hull_mult = 0.7
+        starbase_upgrade_cost_mult = -0.5
+        diplo_weight_mult = 1
+        intel_decryption_add = 2
+        intel_encryption_add = 2
+        country_trust_cap_add = 75
+        pop_happiness = 0.05
+        pop_government_ethic_attraction = 0.5
+        planet_crime_add = -50
+        pop_ethic_pacifist_attraction_mult = -1
+    }
+
+    leader_class = { commander official }
+
+    selectable_weight = {
+        weight = 0
+    }
+}
+
+xinuo_leader_trait_greedy = {
+
+    #贪欲之龙
+
+    initial = no
+    randomized = no
+    force_councilor_trait = no
+    leader_trait_type = destiny
+
+    icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_greedy.dds
+
+    triggered_fleet_modifier = {
+        ship_weapon_damage = 5
+        owned_ship_fire_rate_mult = 5
+        ship_weapon_range_mult = 0.1
+        ship_orbital_bombardment_mult = 8
+        ship_orbital_bombardment_army_damage_mult = 2
+        ship_orbital_bombardment_pop_damage_mult = 2
+        ships_upkeep_mult = 3
+    }
+
+    leader_class = { commander }
+
+    custom_tooltip = xinuo_leader_trait_greedy_effect
+
+    selectable_weight = {
+        weight = 0
+    }
+}
+
+xinuo_leader_trait_feather = {
+
+    #轻灵之羽
+
+    initial = no
+    randomized = no
+    immortal_leaders = yes
+    leader_trait_type = destiny
+
+    icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_feather.dds
+
+    inline_script = {
+        script = gts_leader_resource_produces
+        RESOURCE = influence
+        AMOUNT = 1
+        MULT = 1
+    }
+    triggered_self_modifier = {
+        leaders_upkeep_mult = -1
+    }
+
+
+    triggered_planet_modifier = {
+        terraform_speed_mult = 1
+        planet_jobs_food_produces_mult = 1
+        pop_job_trade_mult = 1
+        deposit_blockers_cost_mult = -1
+        planet_clear_blocker_speed_mult = 0.5
+        army_defense_damage_mult = 0.25
+    }
+
+
+    leader_class = { commander }
+
+    selectable_weight = {
+        weight = 0
+    }
+}
+
+xinuo_leader_trait_full = {
+
+    #饱啦
+
+    initial = no
+    randomized = no
+    force_councilor_trait = no
+    leader_trait_type = basic
+
+    icon = gfx/interface/icons/traits/leader_trait_icons/xinuo_leader_trait_full.dds
+
+    triggered_fleet_modifier = {
+        ships_upkeep_mult = -10
+    }
+
+    leader_class = { commander }
+
+    selectable_weight = {
+        weight = 0
+    }
+}
+
+# 博士
+
+doctor_trait_originium = {
+
+	# 源石技藝
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_legendary_pacifist_one
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	councilor_modifier = {
+		all_technology_research_speed = 0.15
+	}
+
+	modifier = {
+		ship_archaeological_site_clues_add = 3
+		ship_astral_rift_clues_add = 3
+		ship_archaeological_site_excavation_speed_mult = 0.25
+		ship_astral_rift_speed_mult = 0.25
+	}
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+doctor_trait_futa = {
+
+	# 扶她體質
+
+	icon = "gfx/interface/icons/traits/traits/trait_tiny_futa.dds"
+
+	self_modifier = {
+		species_leader_exp_gain = -0.25
+		leaders_upkeep_mult = 1
+	}
+
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.2
+	}
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+doctor_trait_blackstock = {
+
+	# 黑色絲襪
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_percussive_maintenance
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	modifier = {
+		ship_speed_mult = 0.2
+		find_arc_site_on_survey_chance_mult = 0.25
+	}
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+

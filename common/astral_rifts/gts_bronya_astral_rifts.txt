@@ -1,0 +1,9 @@
+gts_bronya_astral_rifts = {
+	name = "gts_bronya_astral_rifts"
+	randomized = no
+	#flags = { foo_astral }
+	event = gts_bronya.1
+	on_roll_failed = {
+		standard_astral_rift_on_roll_failed = yes
+	}
+}

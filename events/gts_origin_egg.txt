@@ -1,0 +1,183 @@
+namespace = gts_egg
+
+country_event = {
+	id = gts_egg.0	#卵开
+	hide_window = yes	#隐藏界面
+	is_triggered_only = yes	#只能触发
+	trigger = {
+		#触发器：有起源
+		has_origin = origin_Luanzi
+	}
+	immediate = {
+		# 很快啊
+		set_country_flag = Luanzi_country
+		set_country_flag = starting_event
+		capital_scope = {
+			set_planet_flag = gts_hometown_planet
+			clear_deposits = yes
+			remove_all_districts = yes
+			remove_all_buildings = yes
+			while = {
+				count = 2
+				add_district = district_body_1
+				add_district = district_body_2
+				add_district = district_body_3
+				add_district = district_body_4
+				add_district = district_body_6
+				add_district = district_body_5
+				add_district = district_body_7
+			}
+			remove_building = building_precinct_house
+			add_building = building_capital
+			add_building = building_planet_jiansheshu
+			add_building = building_active_weihuxitong
+			add_building = building_holo_theatres
+			luanzi_origin_effect = yes # 提供起源buff
+			save_global_event_target_as = gts_luanzi_planet
+		}
+		# 舊的
+		#random_owned_planet = {
+		#	limit = {
+		#		has_planet_flag = origin_Luanzi_on_start # 限制：需为母星
+		#	}
+		#}
+		owner_main_species = {
+			change_species_characteristics = {
+				remove_trait = trait_pc_savannah_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_arid_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_desert_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_continental_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_tropical_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_ocean_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_arctic_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_tundra_preference
+			}
+			change_species_characteristics = {
+				remove_trait = trait_pc_alpine_preference
+			}
+			change_species_characteristics = {
+				add_trait = trait_pc_gts_luanzi_preference
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = gts_egg.1	#正常
+	title = "gts_egg.1.name"
+	desc = "gts_egg.1.desc"
+	picture = GFX_evt_wormhole
+	location = ROOT
+	is_triggered_only = yes
+
+	option = {
+		name = gts_egg.1.a
+		owner = {
+			add_resource = {
+				minor_artifacts = 100
+			}
+			add_resource = {
+				unity = 2500
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = gts_egg.2	#正面
+	title = "gts_egg.2.name"
+	desc = "gts_egg.2.desc"
+	picture = GFX_evt_wormhole
+	location = ROOT
+	is_triggered_only = yes
+
+	option = {
+		name = gts_egg.2.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 12
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 12
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 12
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = gts_egg.3	#负面
+	title = "gts_egg.3.name"
+	desc = "gts_egg.3.desc"
+	picture = GFX_evt_wormhole
+	location = ROOT
+	is_triggered_only = yes
+
+	option = {
+		name = gts_egg.3.a
+		add_planet_devastation = 10
+		while = {
+			count = 3
+			random_owned_pop_group = {
+				kill_single_pop = yes
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = gts_egg.4	#结束
+	title = "gts_egg.4.name"
+	desc = "gts_egg.4.desc"
+	picture = GFX_evt_wormhole
+	location = ROOT
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = gts_egg.4.a
+		add_modifier = {
+			modifier = Luanzi_end
+		}
+		add_deposit = d_Egg_core
+	}
+}
+
+country_event = {# 卵子星球吞食星系
+	id = gts_egg.10
+	title = gts_egg.10.name
+	desc = gts_egg.10.desc
+	picture = GFX_gts_eyjafjalla_10
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			event_target:gts_nutrition_planet = {
+				destroy_colony = yes
+				remove_planet = yes
+			}
+		}
+	}
+	
+	option = {
+		name = gts_terror
+	}
+}

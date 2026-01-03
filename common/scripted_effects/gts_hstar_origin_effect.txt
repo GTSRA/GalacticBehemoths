@@ -1,0 +1,4 @@
+hstar_origin_effect = {
+	add_deposit = d_hstar_develop
+	add_building = building_hstar_lingruzhe_factory
+}

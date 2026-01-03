@@ -1,0 +1,241 @@
+namespace = gts_mizuki
+# 水月
+country_event = {
+	id = gts_mizuki.1
+	title = gts_mizuki.1.name
+	desc = gts_mizuki.1.desc
+	picture = GFX_gts_mizuki_1
+	is_triggered_only = yes
+	show_sound = event_default
+	option = {
+		name = gts_mizuki.1.a
+		enable_special_project = {
+			name = "gts_mizuki_special_project_1"
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	# 深溟褪散
+	id = gts_mizuki.2
+	title = "gts_mizuki.2.name"
+	desc = gts_mizuki.2.desc
+	picture = GFX_gts_mizuki_2
+	show_sound = event_dig_site
+	is_triggered_only = yes
+	option = {
+		name = gts_mizuki.2.a
+		enable_special_project = {
+			name = "gts_mizuki_special_project_2"
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	# 深溟褪散
+	id = gts_mizuki.3
+	title = "gts_mizuki.3.name"
+	desc = gts_mizuki.3.desc
+	picture = GFX_gts_mizuki_3
+	show_sound = event_dig_site
+	is_triggered_only = yes
+	option = {
+		name = gts_mizuki.3.a
+		root.owner = {
+			country_event = {
+				id = gts_mizuki.4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_mizuki.4
+	title = gts_mizuki.4.name
+	desc = gts_mizuki.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	picture_event_data = {
+		portrait = gts_portrait_mizuki
+		room = gts_goldenglow_3_room
+	}
+	option = {
+		name = gts_mizuki.4.a
+		hidden_effect = {
+			country_event = {
+				id = gts_mizuki.5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_mizuki.5
+	title = gts_mizuki.5.name
+	desc = gts_mizuki.5.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	picture_event_data = {
+		portrait = gts_portrait_mizuki
+		room = gts_goldenglow_3_room
+	}
+	option = {
+		name = gts_mizuki.5.a
+		hidden_effect = {
+			country_event = {
+				id = gts_mizuki.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_mizuki.6
+	title = gts_mizuki.6.name
+	desc = gts_mizuki.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	picture_event_data = {
+		portrait = gts_portrait_mizuki
+		room = gts_goldenglow_3_room
+	}
+	option = {
+		name = gts_mizuki.6.a
+		hidden_effect = {
+			country_event = {
+				id = gts_mizuki.7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_mizuki.7
+	title = gts_mizuki.7.name
+	desc = gts_mizuki.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	picture_event_data = {
+		portrait = gts_portrait_mizuki
+		room = gts_goldenglow_3_room
+	}
+	option = {
+		name = gts_mizuki.7.a
+		hidden_effect = {
+			country_event = {
+				id = gts_mizuki.8
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_mizuki.8
+	title = gts_mizuki.8.name
+	desc = gts_mizuki.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	picture_event_data = {
+		portrait = gts_portrait_mizuki
+		room = gts_goldenglow_3_room
+	}
+	option = {
+		name = gts_mizuki.8.a
+		custom_tooltip = gts_mizuki.8.a.tooltip
+		hidden_effect = {
+			country_event = {
+				id = gts_mizuki.999
+			}
+		}
+	}
+	option = {
+		name = gts_mizuki.8.b
+		custom_tooltip = gts_mizuki.8.b.tooltip
+		hidden_effect = {
+			event_target:gts_goldenglow = {
+				add_trait = {
+					trait = gts_trait_leader_goldenglow_f
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# 水月
+	id = gts_mizuki.999
+	title = "gts_mizuki.999.name"
+	desc = "gts_mizuki.999.desc"
+	show_sound = event_celebration
+	is_triggered_only = yes
+	picture = GFX_leader_recruitment_bg_renowned
+	auto_opens = yes
+	event_window_type = leader_recruit
+	immediate = {
+		renowned_tiny_leader_creator = {
+			LEADER_PORTRAIT = gts_portrait_mizuki
+			CLASS = commander
+			NAME = NAME_gts_mizuki
+			LEVEL = 8
+			AGE = 16
+			EVENT_LEADER = no
+			GENDER = female
+			ETHIC = egalitarian
+			DESC = DESC_gts_mizuki
+			CATCH_PHRASE = gts_mizuki_catch_phrase
+			RANDOMIZE_TRAITS = no
+			TARGET = gts_mizuki
+			TRAIT1 = leader_trait_Normal
+			TRAIT2 = gts_trait_leader_mizuki_a
+			TRAIT3 = gts_trait_leader_mizuki_b
+			TRAIT4 = gts_trait_leader_mizuki_c
+			TRAIT5 = gts_trait_leader_mizuki_d
+			#TRAIT6 =
+		}
+		last_created_leader = {
+		}
+	}
+	picture_event_data = {
+		portrait = event_target:gts_leader
+		room = ethic_spaceship_room
+	}
+	option = {
+		name = gts_mizuki.999.a
+		response_text = gts_mizuki.999.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = gts_mizuki.999.b
+		response_text = gts_mizuki.999.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = gts_mizuki.999.c
+		response_text = gts_mizuki.999.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = gts_mizuki.999.hire_custom_tooltip
+		hidden_effect = {
+			renowned_gts_leader_hire_effect = yes
+		}
+	}
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			country_event = {
+				id = gts_mizuki.999
+			}
+		}
+	}
+}

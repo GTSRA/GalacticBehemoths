@@ -1,0 +1,37 @@
+#分子級 - 想都別想
+#微生物 - 1000000000,00000000 - 17
+#微小級 - 1000000,00000000 - 14
+#矮小級 - 1000,00000000 - 11
+#正常級 - 5,00000000 - 8
+#
+#高大級 - 0.01 - 6
+#巨大級 - 0.00001 - 3
+#泰坦級 - 0.00000001 - 1
+#天體級 - 你認真?
+
+
+
+is_gts_Titan = {
+	has_trait = trait_Titan
+}
+is_gts_Giant = {
+	has_trait = trait_Giant
+}
+is_gts_Tall = {
+	has_trait = trait_Tall
+}
+
+
+
+is_tiny_Normal = {
+	has_trait = trait_Normal
+}
+is_tiny_Small = {
+	has_trait = trait_Small
+}
+is_tiny_Tiny = {
+	has_trait = trait_Tiny
+}
+is_tiny_Micro = {
+	has_trait = trait_Micro
+}

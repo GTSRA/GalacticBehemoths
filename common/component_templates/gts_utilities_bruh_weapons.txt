@@ -1,0 +1,1143 @@
+############################################################################################################################################
+##################################################                  魚雷                  ##################################################
+############################################################################################################################################
+
+# 舰娘魚雷 - 驅逐
+weapon_component_template = {
+	key = "GTS_BRUH_TORPEDO_SMALL"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	icon = "GFX_gts_bruh_torpedo_ship_part_1"
+	icon_frame = 1
+	type = missile
+	
+	power = -1000
+	
+	damage = { min = 6000.0 max = 9000.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 20.0 max = 20.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 20 天射一次
+	
+	total_fire_time = 180
+	
+	accuracy = 1
+	tracking = 0.1
+	
+	min_range = 30
+	range = 300
+	
+	firing_arc = 15.0
+	
+	shield_penetration = 1
+	armor_damage = 1.5
+	hull_damage = 1.5
+	
+	# 魚雷數值
+	
+	missile_health = 100
+	missile_armor = 100
+	missile_evasion = 0
+	missile_speed = 25
+	missile_retarget_range = 30
+	
+	#prerequisites = {
+	#	"tech_torpedoes_gts"
+	#}
+	component_set = "GTS_BRUH_TORPEDO_1"
+	projectile_gfx = "gts_bruh_destroyer_torpedo_projectile"
+	tags = { weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+			volatile_motes = 2
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.25
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_destroyer_ship
+	}
+}
+
+# 舰娘魚雷 - 戰列
+weapon_component_template = {
+	key = "GTS_BRUH_TORPEDO_MEDIUM"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	icon = "GFX_gts_bruh_torpedo_ship_part_1"
+	icon_frame = 1
+	type = missile
+	
+	power = -1000
+	
+	damage = { min = 6000.0 max = 9000.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 20.0 max = 20.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 20 天射一次
+	
+	total_fire_time = 180
+	
+	accuracy = 1
+	tracking = 0.1
+	
+	min_range = 45
+	range = 300
+	
+	firing_arc = 15.0
+	
+	shield_penetration = 1
+	armor_damage = 1.5
+	hull_damage = 1.5
+	
+	# 魚雷數值
+	
+	missile_health = 100
+	missile_armor = 100
+	missile_evasion = 0
+	missile_speed = 25
+	missile_retarget_range = 30
+	
+	#prerequisites = {
+	#	"tech_torpedoes_gts"
+	#}
+	component_set = "GTS_BRUH_TORPEDO_1"
+	projectile_gfx = "gts_bruh_battleship_torpedo_projectile"
+	tags = { weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+			volatile_motes = 2
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.25
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_battleship_ship
+	}
+}
+
+# 舰娘魚雷 - 泰坦
+weapon_component_template = {
+	key = "GTS_BRUH_TORPEDO_LARGE"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	icon = "GFX_gts_bruh_torpedo_ship_part_1"
+	icon_frame = 1
+	type = missile
+	
+	power = -1000
+	
+	damage = { min = 6000.0 max = 9000.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 20.0 max = 20.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 20 天射一次
+	
+	total_fire_time = 180
+	
+	accuracy = 1
+	tracking = 0.1
+	
+	min_range = 60
+	range = 300
+	
+	firing_arc = 15.0
+	
+	shield_penetration = 1
+	armor_damage = 1.5
+	hull_damage = 1.5
+	
+	# 魚雷數值
+	
+	missile_health = 100
+	missile_armor = 100
+	missile_evasion = 0
+	missile_speed = 25
+	missile_retarget_range = 30
+	
+	#prerequisites = {
+	#	"tech_torpedoes_gts"
+	#}
+	component_set = "GTS_BRUH_TORPEDO_1"
+	projectile_gfx = "gts_bruh_titan_torpedo_projectile"
+	tags = { weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+			volatile_motes = 2
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.25
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_titan_ship
+	}
+}
+
+############################################################################################################################################
+##################################################                  動能                  ##################################################
+############################################################################################################################################
+
+# 舰娘動能副炮 - S
+weapon_component_template = {
+	key = "GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_SMALL"
+	size = small
+
+	icon = "GFX_gts_bruh_secondary_kinetic_artillery_ship_part"
+	icon_frame = 1
+	type = instant
+	
+	power = -300
+	
+	damage = { min = 2250.0 max = 4500.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 10.0 max = 10.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 2.5 天射一次
+	
+	total_fire_time = 15
+	
+	accuracy = 0.75
+	tracking = 0.50
+	
+	range = 175
+	
+	shield_damage = 1.25
+	armor_damage = 0.25
+	
+	#prerequisites = {
+	#	"tech_kinetic_artillery_gts_5"
+	#}
+	component_set = "GTS_BRUH_SECONDARY_KINETIC_ARTILLERY"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+			volatile_motes = 1.75
+		}
+		upkeep = {
+			energy = 1.25
+			alloys = 0.25
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# 舰娘動能副炮 - M
+weapon_component_template = {
+	key = "GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_MEDIUM"
+	size = medium
+
+	icon = "GFX_gts_bruh_secondary_kinetic_artillery_ship_part"
+	icon_frame = 1
+	type = instant
+	
+	power = -750
+	
+	damage = { min = 6250.0 max = 12500.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 10.0 max = 10.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 5 天射一次
+	
+	total_fire_time = 40
+	
+	accuracy = 0.75
+	tracking = 0.30
+	
+	min_range = 10
+	
+	range = 200
+	
+	shield_damage = 1.5
+	armor_damage = 0.5
+	
+	#prerequisites = {
+	#	"tech_kinetic_artillery_gts_5"
+	#}
+	component_set = "GTS_BRUH_SECONDARY_KINETIC_ARTILLERY"
+	projectile_gfx = "gts_bruh_adv_kinetic_artillery_projectile"
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield gunship }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 375
+			volatile_motes = 5.25
+		}
+		upkeep = {
+			energy = 3.75
+			alloys = 0.75
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# 舰娘動能副炮 - L
+weapon_component_template = {
+	key = "GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_LARGE"
+	size = large
+
+	icon = "GFX_gts_bruh_secondary_kinetic_artillery_ship_part"
+	icon_frame = 1
+	type = instant
+	
+	power = -1875
+	
+	damage = { min = 15000.0 max = 30000.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 10.0 max = 10.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 10 天射一次
+	
+	total_fire_time = 90
+	
+	accuracy = 0.75
+	tracking = 0.10
+	
+	min_range = 20
+	
+	range = 250
+	
+	shield_damage = 1.75
+	armor_damage = 0.75
+	
+	#prerequisites = {
+	#	"tech_kinetic_artillery_gts_5"
+	#}
+	component_set = "GTS_BRUH_SECONDARY_KINETIC_ARTILLERY"
+	projectile_gfx = "gts_bruh_large_adv_kinetic_artillery_projectile"
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield gunship }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1125
+			volatile_motes = 15.75
+		}
+		upkeep = {
+			energy = 11.25
+			alloys = 2.25
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_titan_ship
+	}
+}
+
+# 舰娘動能主炮
+weapon_component_template = {
+	
+	# 强化的大型動能副炮
+	
+	# 驅逐專用
+	
+	key = "GTS_BRUH_DESTROYER_KINETIC_ARTILLERY_LARGE"
+	size = large
+	
+	icon = "GFX_gts_bruh_destroyer_kinetic_artillery_large_ship_part"
+	icon_frame = 1
+	type = instant
+	
+	power = -2000
+	
+	damage = { min = 18750.0 max = 37500.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 10.0 max = 10.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 12.5 天射一次
+	
+	total_fire_time = 115
+	
+	accuracy = 0.75
+	tracking = 0.10
+	
+	min_range = 20
+	range = 200
+	
+	min_range = 15
+	
+	range = 250
+	
+	firing_arc = 25.0
+	
+	shield_damage = 1.75
+	armor_damage = 0.8
+	
+	#prerequisites = {
+	#	"tech_kinetic_artillery_gts_4"
+	#}
+	component_set = "GTS_BRUH_DESTROYER_KINETIC_ARTILLERY_LARGE"
+	projectile_gfx = "gts_bruh_large_adv_kinetic_artillery_projectile"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1125
+			volatile_motes = 15.75
+		}
+		upkeep = {
+			energy = 11.25
+			alloys = 2.25
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_destroyer_ship
+	}
+}
+
+# 舰娘動能巨炮
+weapon_component_template = {
+	key = "GTS_BRUH_KINETIC_ARTILLERY_EXTRA_LARGE_1"
+	size = extra_large
+	
+	icon = "GFX_gts_bruh_kinetic_artillery_extra_large_ship_part_1"
+	icon_frame = 1
+	type = instant
+	
+	power = -11250
+	
+	damage = { min = 75000.0 max = 100000.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 10.0 max = 10.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 20 天射一次
+	
+	total_fire_time = 190
+	
+	accuracy = 0.75
+	tracking = 0
+	
+	min_range = 45
+	
+	range = 300
+	
+	firing_arc = 25.0
+	
+	shield_damage = 2
+	
+	# 這是舊的
+	
+	#use_ship_kill_target = no
+	use_ship_main_target = no
+	
+	#prerequisites = {
+	#	"tech_kinetic_artillery_gts_3"
+	#}
+	component_set = "GTS_BRUH_KINETIC_ARTILLERY_EXTRA_LARGE_1"
+	projectile_gfx = "gts_bruh_xl_adv_kinetic_artillery_projectile"
+	tags = { weapon_type_kinetic weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 9375
+			volatile_motes = 131.25
+		}
+		upkeep = {
+			energy = 93.75
+			alloys = 18.75
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+############################################################################################################################################
+#################################################                  斬艦刀                  #################################################
+############################################################################################################################################
+
+# 舰娘斬艦刀
+weapon_component_template = {
+	key = "GTS_BRUH_KINETIC_SWORD_TITANIC_1"
+	size = titanic
+	entity = "turret_torpedo_entity"
+	
+	icon = "GFX_gts_bruh_kinetic_sword_titanic_ship_part_1"
+	icon_frame = 1
+	type = instant
+	
+	power = 0
+	
+	damage = 1000000
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 50.0 max = 50.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 30 天射一次
+	
+	total_fire_time = 200
+	
+	accuracy = 1.0
+	tracking = 0
+	
+	min_range = 75
+	range = 300
+	
+	firing_arc = 25.0
+	
+	component_set = "GTS_BRUH_KINETIC_SWORD_TITANIC_1"
+	projectile_gfx = "gts_bruh_titanic_kinetic_sword_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery artillery }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100000
+		}
+		upkeep = {
+			energy = 1000
+			alloys = 200
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_titan_ship
+	}
+}
+
+############################################################################################################################################
+##################################################                  防空                  ##################################################
+############################################################################################################################################
+
+# 三連裝防空炮(動能防空炮) - 驅逐
+weapon_component_template = {
+	key = "GTS_BRUH_KINETIC_POINT_DEFENCE_SMALL"
+	size = point_defence
+
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+	type = point_defence
+	
+	power = -200
+	
+	damage = { min = 15.0 max = 30.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 0.0 max = 0.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 0.5 天射一次
+	
+	total_fire_time = 5
+	
+	accuracy = 0.75
+	tracking = 0.80
+	
+	range = 50
+	
+	shield_damage = 2
+	shield_penetration = 0.25
+	armor_damage = 0.5
+	
+	#prerequisites = {
+	#	"tech_point_defence_gts_1"
+	#}
+	component_set = "GTS_BRUH_KINETIC_POINT_DEFENCE_1"
+	projectile_gfx = "gts_bruh_destroyer_stormfire_auto_cannons_projectile"
+	
+	tags = { weapon_type_point_defense weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.15
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_destroyer_ship
+	}
+}
+
+# 三連裝防空炮(動能防空炮) - 戰列
+weapon_component_template = {
+	key = "GTS_BRUH_KINETIC_POINT_DEFENCE_MEDIUM"
+	size = point_defence
+
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+	type = point_defence
+	
+	power = -200
+	
+	damage = { min = 30.0 max = 60.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 0.0 max = 0.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 0.5 天射一次
+	
+	total_fire_time = 5
+	
+	accuracy = 0.75
+	tracking = 0.80
+	
+	range = 100
+	
+	shield_damage = 2
+	shield_penetration = 0.25
+	armor_damage = 0.5
+	
+	#prerequisites = {
+	#	"tech_point_defence_gts_1"
+	#}
+	component_set = "GTS_BRUH_KINETIC_POINT_DEFENCE_1"
+	projectile_gfx = "gts_bruh_battleship_stormfire_auto_cannons_projectile"
+	
+	tags = { weapon_type_point_defense weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.15
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_battleship_ship
+	}
+}
+
+# 三連裝防空炮(動能防空炮) - 泰坦
+weapon_component_template = {
+	key = "GTS_BRUH_KINETIC_POINT_DEFENCE_LARGE"
+	size = point_defence
+
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+	type = point_defence
+	
+	power = -200
+	
+	damage = { min = 60.0 max = 120.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 0.0 max = 0.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 0.5 天射一次
+	
+	total_fire_time = 5
+	
+	accuracy = 0.75
+	tracking = 0.80
+	
+	range = 150
+	
+	shield_damage = 2
+	shield_penetration = 0.25
+	armor_damage = 0.5
+	
+	#prerequisites = {
+	#	"tech_point_defence_gts_1"
+	#}
+	component_set = "GTS_BRUH_KINETIC_POINT_DEFENCE_1"
+	projectile_gfx = "gts_bruh_titan_stormfire_auto_cannons_projectile"
+	
+	tags = { weapon_type_point_defense weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.15
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_titan_ship
+	}
+}
+
+# 三連裝防空炮(能量防空炮) - 驅逐
+weapon_component_template = {
+	key = "GTS_BRUH_ENERGY_POINT_DEFENCE_SMALL"
+	size = point_defence
+
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+	type = point_defence
+	
+	power = -200
+	
+	damage = { min = 15.0 max = 30.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 0.0 max = 0.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 0.75 天射一次
+	
+	total_fire_time = 7.5
+	
+	accuracy = 0.75
+	tracking = 0.30
+	
+	range = 50
+	
+	shield_damage = 0.25
+	armor_penetration = 0.25
+	armor_damage = 2
+	
+	#prerequisites = {
+	#	"tech_point_defence_gts_1"
+	#}
+	component_set = "GTS_BRUH_ENERGY_POINT_DEFENCE_1"
+	projectile_gfx = "gts_bruh_destroyer_stormfire_auto_cannons_projectile"
+	
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.15
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_destroyer_ship
+	}
+}
+
+# 三連裝防空炮(能量防空炮) - 戰列
+weapon_component_template = {
+	key = "GTS_BRUH_ENERGY_POINT_DEFENCE_MEDIUM"
+	size = point_defence
+
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+	type = point_defence
+	
+	power = -200
+	
+	damage = { min = 30.0 max = 60.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 0.0 max = 0.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 0.75 天射一次
+	
+	total_fire_time = 7.5
+	
+	accuracy = 0.75
+	tracking = 0.30
+	
+	range = 100
+	
+	shield_damage = 0.25
+	armor_penetration = 0.25
+	armor_damage = 2
+	
+	#prerequisites = {
+	#	"tech_point_defence_gts_1"
+	#}
+	component_set = "GTS_BRUH_ENERGY_POINT_DEFENCE_1"
+	projectile_gfx = "gts_bruh_battleship_stormfire_auto_cannons_projectile"
+	
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.15
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_battleship_ship
+	}
+}
+
+# 三連裝防空炮(能量防空炮) - 泰坦
+weapon_component_template = {
+	key = "GTS_BRUH_ENERGY_POINT_DEFENCE_LARGE"
+	size = point_defence
+
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+	type = point_defence
+	
+	power = -200
+	
+	damage = { min = 60.0 max = 120.0 }
+	
+	# 準備時間
+	# 每 10 ticks 為 1 天
+	
+	windup = { min = 0.0 max = 0.0 }
+	
+	# 下次發射所需的時間
+	# 要加上準備時間
+	# 0.75 天射一次
+	
+	total_fire_time = 7.5
+	
+	accuracy = 0.75
+	tracking = 0.30
+	
+	range = 150
+	
+	shield_damage = 0.25
+	armor_penetration = 0.25
+	armor_damage = 2
+	
+	#prerequisites = {
+	#	"tech_point_defence_gts_1"
+	#}
+	component_set = "GTS_BRUH_ENERGY_POINT_DEFENCE_1"
+	projectile_gfx = "gts_bruh_titan_stormfire_auto_cannons_projectile"
+	
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.15
+		}
+	}
+	
+	size_restriction = {
+		gts_bruh_titan_ship
+	}
+}
+
+############################################################################################################################################
+##################################################                 艦載機                 ##################################################
+############################################################################################################################################
+
+# 海火
+strike_craft_component_template = {
+	key = "GTS_BRUH_STRIKE_CRAFT_HANGAR_1"
+	size = LARGE
+	
+	icon = "GFX_gts_bruh_strike_craft_ship_part_1"
+	icon_frame = 1
+	weapon_type = point_defence
+	
+	power = -600
+	
+	entity = "GTS_Seafire_body_entity"
+	ship_behavior = "fighters_behavior"
+
+	count = 20
+	regeneration_per_day = 1
+	launch_time = 1
+	
+	damage = { min = 10 max = 20 }
+	cooldown = 2.0
+	accuracy = 1.0
+	tracking = 0.8
+	range = 10
+	engagement_range = 300
+	
+	health = 30
+	shield = 5
+	armor = 0
+	evasion = 0.7
+
+	speed = 700
+	rotation_speed = 0.8
+	acceleration = 1
+	
+	shield_penetration = 1.0
+	armor_damage = 1.5
+	
+	#prerequisites = {
+	#	"tech_amoeba_strike_craft_gts_1"
+	#}
+	
+	component_set = "GTS_BRUH_STRIKE_CRAFT_HANGAR_1"
+	projectile_gfx = "auto_cannons_s"
+	
+	# "遠古科技"
+	
+	tags = { weapon_type_strike_craft weapon_archaeotech }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 900
+		}
+		upkeep = {
+			energy = 9
+			alloys = 2
+		}
+	}
+
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# F6F
+strike_craft_component_template = {
+	key = "GTS_BRUH_STRIKE_CRAFT_HANGAR_2"
+	size = LARGE
+	
+	icon = "GFX_gts_bruh_strike_craft_ship_part_2"
+	icon_frame = 1
+	weapon_type = instant
+	
+	power = -600
+	
+	entity = "GTS_F6F_Fighters_body_entity"
+	ship_behavior = "bombers_behavior"
+
+	count = 10
+	regeneration_per_day = 1
+	launch_time = 1
+	
+	damage = { min = 75 max = 150 }
+	cooldown = 5.0
+	accuracy = 1.0
+	tracking = 0.7
+	range = 10
+	engagement_range = 300
+	
+	health = 20
+	shield = 5
+	armor = 0
+	evasion = 0.5
+
+	speed = 550
+	rotation_speed = 0.7
+	acceleration = 1
+	
+	shield_penetration = 1.0
+	armor_damage = 1.5
+	hull_damage = 1.5
+	
+	#prerequisites = {
+	#	"tech_amoeba_strike_craft_gts_1"
+	#}
+	
+	component_set = "GTS_BRUH_STRIKE_CRAFT_HANGAR_2"
+	projectile_gfx = "neutron_torpedoes"
+	
+	# "遠古科技"
+	
+	tags = { weapon_type_strike_craft weapon_archaeotech }
+	ai_tags = { weapon_role_point_defense carrier }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 900
+		}
+		upkeep = {
+			energy = 9
+			alloys = 2
+		}
+	}
+
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# PE8
+strike_craft_component_template = {
+	key = "GTS_BRUH_STRIKE_CRAFT_HANGAR_3"
+	size = LARGE
+	
+	icon = "GFX_gts_bruh_strike_craft_ship_part_3"
+	icon_frame = 1
+	weapon_type = instant
+	
+	power = -600
+	
+	entity = "GTS_Pe8_body_entity"
+	ship_behavior = "bombers_behavior"
+
+	count = 1
+	regeneration_per_day = 1
+	launch_time = 2
+	
+	damage = { min = 2000 max = 5000 }
+	cooldown = 7.5
+	accuracy = 1.0
+	tracking = 0.6
+	range = 10
+	engagement_range = 300
+	
+	health = 200
+	shield = 50
+	armor = 50
+	evasion = 0.3
+
+	speed = 350
+	rotation_speed = 0.6
+	acceleration = 1
+	
+	shield_penetration = 1.0
+	armor_damage = 2.0
+	hull_damage = 2.0
+	
+	component_set = "GTS_BRUH_STRIKE_CRAFT_HANGAR_3"
+	projectile_gfx = "neutron_torpedoes"
+	
+	# "遠古科技"
+	
+	tags = { weapon_type_strike_craft weapon_archaeotech }
+	ai_tags = { weapon_role_point_defense carrier }
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 900
+		}
+		upkeep = {
+			energy = 9
+			alloys = 2
+		}
+	}
+
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}

@@ -1,0 +1,147 @@
+namespace = gts_spiritualist
+
+country_event = {
+
+	# 戰鬥失敗
+
+	id = gts_spiritualist.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_Qianxin
+	}
+
+	immediate = {
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 1
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 6
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 6
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 6
+			}
+		}
+	}
+}
+
+country_event = {
+
+	# 戰鬥成功
+
+	id = gts_spiritualist.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_Qianxin
+	}
+
+	immediate = {
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 3
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 12
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 12
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	#起源
+	id = gts_spiritualist.3
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		country_event = {
+			id = gts_spiritualist.4
+		}
+	}
+}
+
+country_event = {
+	# 空弦
+	id = gts_spiritualist.4
+	title = gts_spiritualist.4.name
+	desc = gts_spiritualist.4.desc
+	picture = GFX_gts_archetto_2
+	is_triggered_only = yes
+
+	immediate = {
+		renowned_gts_leader_creator = {
+			LEADER_PORTRAIT = gts_Archetto_governer
+			CLASS = official
+			NAME = NAME_Archetto
+			LEVEL = 1
+			AGE = 18
+			GENDER = female
+			ETHIC = spiritualist
+			IMMORTAL = yes
+			EVENT_LEADER = no
+			DESC = spiritualist1
+			CATCH_PHRASE = spiritualist1_catch_phrase
+			RANDOMIZE_TRAITS = no
+			TARGET = gts_archetto
+			TRAIT1 = leader_trait_governor_archetto
+			TRAIT2 = leader_trait_chosen
+			TRAIT3 = leader_trait_Giant
+			TRAIT4 = leader_trait_gts_bruh_empty
+			TRAIT5 = leader_trait_gts_bruh_empty
+			TRAIT6 = leader_trait_gts_bruh_empty
+		}
+	}
+
+	option = {
+		name = gts_spiritualist.4.a
+		custom_tooltip = gts_spiritualist.4.a.tooltip
+		hidden_effect = {
+			event_target:gts_archetto = {
+				set_owner = root
+				gts_ui_leader_init = yes
+			}
+		}
+	}
+	option = {
+		name = gts_spiritualist.4.b
+		custom_tooltip = gts_spiritualist.4.b.tooltip
+		hidden_effect = {
+			event_target:gts_archetto = {
+				set_owner = root
+				gts_ui_leader_init = yes
+			}
+			set_leader = last_created_leader
+		}
+	}
+
+	after = {
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = gts_archetto
+			}
+			add_skill_without_trait_selection = 4
+		}
+	}
+}
+

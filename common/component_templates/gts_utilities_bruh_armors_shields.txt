@@ -1,0 +1,569 @@
+############################################################################################################################################
+####################################################                護盾                ####################################################
+############################################################################################################################################
+
+# 藍白胖次
+
+utility_component_template = {
+	key = "GTS_BRUH_SMALL_SHIELD_1"
+	size = small
+	icon = "GFX_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3125
+			consumer_goods = 12500
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 50000
+		ship_shield_regen_add_static = 350
+	}
+	
+	prerequisites = {
+		"tech_armor_gts"
+	}
+	component_set = "GTS_BRUH_SHIELD_1"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_MEDIUM_SHIELD_1"
+	size = medium
+	icon = "GFX_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 6250
+			consumer_goods = 25000
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 100000
+		ship_shield_regen_add_static = 650
+	}
+	
+	prerequisites = {
+		"tech_armor_gts"
+	}
+	component_set = "GTS_BRUH_SHIELD_1"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_LARGE_SHIELD_1"
+	size = large
+	icon = "GFX_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 12500
+			consumer_goods = 50000
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 200000
+		ship_shield_regen_add_static = 1250
+	}
+	
+	prerequisites = {
+		"tech_armor_gts"
+	}
+	component_set = "GTS_BRUH_SHIELD_1"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# 安全裤
+
+utility_component_template = {
+	key = "GTS_BRUH_SMALL_SHIELD_2"
+	size = small
+	icon = "GFX_DRAGON_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3125
+			consumer_goods = 12500
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 75000
+		ship_shield_regen_add_static = 525
+	}
+	
+	prerequisites = {
+		"tech_armor_gts_2"
+	}
+	component_set = "GTS_BRUH_SHIELD_2"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_MEDIUM_SHIELD_2"
+	size = medium
+	icon = "GFX_DRAGON_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 6250
+			consumer_goods = 25000
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 150000
+		ship_shield_regen_add_static = 975
+	}
+	
+	prerequisites = {
+		"tech_armor_gts_2"
+	}
+	component_set = "GTS_BRUH_SHIELD_2"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_LARGE_SHIELD_2"
+	size = large
+	icon = "GFX_DRAGON_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 12500
+			consumer_goods = 50000
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 300000
+		ship_shield_regen_add_static = 1875
+	}
+	
+	prerequisites = {
+		"tech_armor_gts_2"
+	}
+	component_set = "GTS_BRUH_SHIELD_2"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# 蕾絲胖次
+
+utility_component_template = {
+	key = "GTS_BRUH_SMALL_SHIELD_3"
+	size = small
+	icon = "GFX_CRYSTAL_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3125
+			consumer_goods = 12500
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 100000
+		ship_shield_regen_add_static = 700
+	}
+	
+	prerequisites = {
+		"tech_armor_gts_3"
+	}
+	component_set = "GTS_BRUH_SHIELD_3"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_MEDIUM_SHIELD_3"
+	size = medium
+	icon = "GFX_CRYSTAL_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 6250
+			consumer_goods = 25000
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 200000
+		ship_shield_regen_add_static = 1300
+	}
+	
+	prerequisites = {
+		"tech_armor_gts_3"
+	}
+	component_set = "GTS_BRUH_SHIELD_3"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_LARGE_SHIELD_3"
+	size = large
+	icon = "GFX_CRYSTAL_ARMOR_GTS"
+	icon_frame = 1
+	power = -10000
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 12500
+			consumer_goods = 50000
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = 400000
+		ship_shield_regen_add_static = 2500
+	}
+	
+	prerequisites = {
+		"tech_armor_gts_3"
+	}
+	component_set = "GTS_BRUH_SHIELD_3"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+############################################################################################################################################
+####################################################                裝甲                ####################################################
+############################################################################################################################################
+
+# 水手服
+
+utility_component_template = {
+	key = "GTS_BRUH_SMALL_ARMOR_1"
+	size = small
+	icon = "GFX_tech_shields_gts_1"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 12500
+			consumer_goods = 3125
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 50000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_1"
+	}
+	component_set = "GTS_BRUH_ARMOR_1"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_MEDIUM_ARMOR_1"
+	size = medium
+	icon = "GFX_tech_shields_gts_1"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25000
+			consumer_goods = 6250
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 100000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_1"
+	}
+	component_set = "GTS_BRUH_ARMOR_1"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_LARGE_ARMOR_1"
+	size = large
+	icon = "GFX_tech_shields_gts_1"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50000
+			consumer_goods = 12500
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 200000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_1"
+	}
+	component_set = "GTS_BRUH_ARMOR_1"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# 礼服
+
+utility_component_template = {
+	key = "GTS_BRUH_SMALL_ARMOR_2"
+	size = small
+	icon = "GFX_tech_shields_gts_2"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 12500
+			consumer_goods = 3125
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 75000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_2"
+	}
+	component_set = "GTS_BRUH_ARMOR_2"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_MEDIUM_ARMOR_2"
+	size = medium
+	icon = "GFX_tech_shields_gts_2"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25000
+			consumer_goods = 6250
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 150000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_2"
+	}
+	component_set = "GTS_BRUH_ARMOR_2"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_LARGE_ARMOR_2"
+	size = large
+	icon = "GFX_tech_shields_gts_2"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50000
+			consumer_goods = 12500
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 300000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_2"
+	}
+	component_set = "GTS_BRUH_ARMOR_2"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+# 婚纱
+
+utility_component_template = {
+	key = "GTS_BRUH_SMALL_ARMOR_3"
+	size = small
+	icon = "GFX_tech_shields_gts_3"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 12500
+			consumer_goods = 3125
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 100000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_3"
+	}
+	component_set = "GTS_BRUH_ARMOR_3"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+		
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_MEDIUM_ARMOR_3"
+	size = medium
+	icon = "GFX_tech_shields_gts_3"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25000
+			consumer_goods = 6250
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 200000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_3"
+	}
+	component_set = "GTS_BRUH_ARMOR_3"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}
+
+utility_component_template = {
+	key = "GTS_BRUH_LARGE_ARMOR_3"
+	size = large
+	icon = "GFX_tech_shields_gts_3"
+	icon_frame = 1
+	power = 0
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50000
+			consumer_goods = 12500
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = 400000
+	}
+	
+	prerequisites = {
+		"tech_shields_gts_3"
+	}
+	component_set = "GTS_BRUH_ARMOR_3"
+	size_restriction = {
+		gts_bruh_destroyer_ship
+		gts_bruh_battleship_ship
+		gts_bruh_titan_ship
+	}
+}

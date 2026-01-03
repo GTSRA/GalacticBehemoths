@@ -1,0 +1,5 @@
+can_build_gts_115tiny_crisis_star_eater = {
+    set_country_flag = can_build_crisis_star_eater
+    create_ship_design = { design = "NAME_gts_115tiny_Crisis_Star_Eater" }
+    add_ship_design = last_created_design
+}

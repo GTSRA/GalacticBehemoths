@@ -1,0 +1,327 @@
+leader_trait_Ultra_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Ultra.dds"
+
+	self_modifier = {
+		leaders_cost_mult = 4.0
+		leaders_upkeep_mult = 4.0
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = 4
+		empire_size_penalty_mult = 0.08
+		diplo_weight_naval_mult = 0.08
+		diplo_weight_pops_mult = -0.08
+	}
+
+	opposites = {
+		leader_trait_Titan_start
+		leader_trait_Giant_start
+		leader_trait_Tall_start
+		leader_trait_Normal_start
+		leader_trait_Small_start
+		leader_trait_Tiny_start
+		leader_trait_Micro_start
+		leader_trait_Nano_start
+		leader_trait_Ultra
+	}
+
+	leader_class = all
+}
+
+leader_trait_Titan_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Titan.dds"
+
+	self_modifier = {
+		leaders_cost_mult = 2.0
+		leaders_upkeep_mult = 2.0
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = 3
+		empire_size_penalty_mult = 0.06
+		diplo_weight_naval_mult = 0.06
+		diplo_weight_pops_mult = -0.06
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Giant_start
+		leader_trait_Tall_start
+		leader_trait_Normal_start
+		leader_trait_Small_start
+		leader_trait_Tiny_start
+		leader_trait_Micro_start
+		leader_trait_Nano_start
+		leader_trait_Titan
+	}
+
+	leader_class = all
+}
+
+leader_trait_Giant_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Giant.dds"
+
+	self_modifier = {
+		leaders_cost_mult = 1.0
+		leaders_upkeep_mult = 1.0
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = 2
+		empire_size_penalty_mult = 0.04
+		diplo_weight_naval_mult = 0.04
+		diplo_weight_pops_mult = -0.04
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Titan_start
+		leader_trait_Tall_start
+		leader_trait_Normal_start
+		leader_trait_Small_start
+		leader_trait_Tiny_start
+		leader_trait_Micro_start
+		leader_trait_Nano_start
+		leader_trait_Giant
+	}
+
+	leader_class = all
+}
+
+leader_trait_Tall_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Tall.dds"
+
+	self_modifier = {
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = 1
+		empire_size_penalty_mult = 0.02
+		diplo_weight_naval_mult = 0.02
+		diplo_weight_pops_mult = -0.02
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Titan_start
+		leader_trait_Giant_start
+		leader_trait_Normal_start
+		leader_trait_Small_start
+		leader_trait_Tiny_start
+		leader_trait_Micro_start
+		leader_trait_Nano_start
+		leader_trait_Tall
+	}
+
+	leader_class = all
+}
+
+leader_trait_Normal_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Normal.dds"
+
+	self_modifier = {
+		leader_trait_selection_options_add = 3
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Titan_start
+		leader_trait_Giant_start
+		leader_trait_Small_start
+		leader_trait_Tiny_start
+		leader_trait_Micro_start
+		leader_trait_Nano_start
+		leader_trait_Normal
+	}
+
+	leader_class = all
+}
+
+leader_trait_Small_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Small.dds"
+
+	self_modifier = {
+		leaders_cost_mult = -0.2
+		leaders_upkeep_mult = -0.2
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = -1
+		empire_size_penalty_mult = -0.02
+		diplo_weight_naval_mult = -0.02
+		diplo_weight_pops_mult = 0.02
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Titan_start
+		leader_trait_Giant_start
+		leader_trait_Normal_start
+		leader_trait_Tiny_start
+		leader_trait_Micro_start
+		leader_trait_Nano_start
+		leader_trait_Small
+	}
+
+	leader_class = all
+}
+
+leader_trait_Tiny_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Tiny.dds"
+
+	self_modifier = {
+		leaders_cost_mult = -0.4
+		leaders_upkeep_mult = -0.4
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = -2
+		empire_size_penalty_mult = -0.04
+		diplo_weight_naval_mult = -0.04
+		diplo_weight_pops_mult = 0.04
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Titan_start
+		leader_trait_Giant_start
+		leader_trait_Normal_start
+		leader_trait_Small_start
+		leader_trait_Micro_start
+		leader_trait_Nano_start
+		leader_trait_Tiny
+	}
+
+	leader_class = all
+}
+
+leader_trait_Micro_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_Micro.dds"
+
+	self_modifier = {
+		leaders_cost_mult = -0.6
+		leaders_upkeep_mult = -0.6
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = -3
+		empire_size_penalty_mult = -0.06
+		diplo_weight_naval_mult = -0.06
+		diplo_weight_pops_mult = 0.06
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Titan_start
+		leader_trait_Giant_start
+		leader_trait_Normal_start
+		leader_trait_Small_start
+		leader_trait_Tiny_start
+		leader_trait_Nano_start
+		leader_trait_Micro
+	}
+
+	leader_class = all
+}
+
+leader_trait_Nano_start = {
+
+	cost = 1
+
+	randomized = no
+	starting_ruler_trait = yes
+	force_councilor_trait = yes
+
+	icon = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_Nano.dds"
+
+	self_modifier = {
+		leaders_cost_mult = -0.8
+		leaders_upkeep_mult = -0.8
+		leader_trait_selection_options_add = 3
+	}
+
+	councilor_modifier = {
+		country_base_influence_produces_add = -4
+		empire_size_penalty_mult = -0.08
+		diplo_weight_naval_mult = -0.08
+		diplo_weight_pops_mult = 0.08
+	}
+
+	opposites = {
+		leader_trait_Ultra_start
+		leader_trait_Titan_start
+		leader_trait_Giant_start
+		leader_trait_Normal_start
+		leader_trait_Small_start
+		leader_trait_Tiny_start
+		leader_trait_Nano
+	}
+
+	leader_class = all
+}
+

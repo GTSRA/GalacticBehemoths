@@ -1,0 +1,305 @@
+﻿l_simp_chinese:
+    
+    ############################################################################################################################################
+    ##################################################                舰娘相关                ##################################################
+    ############################################################################################################################################
+    
+    # 修正
+    
+    gts_bruh_god_keeper_country_modifiers_2:0 "破产保护"
+    gts_bruh_god_keeper_country_modifiers_2_desc:0 "§M(龙开专用)§!\n鹅的友情赞助\n减少犽戎的维护费50年(建议每月产量达到5000食物+600矿)\n§R(别再讨价还价了)§!"
+    
+    # 事件船只的命名
+    
+    NAME_gts_bruh_shipgirl_destroyer: "Bruh"
+    NAME_gts_bruh_shipgirl_battleship: "Bruh"
+    NAME_gts_bruh_shipgirl_titan: "Bruh"
+    
+    # 科技
+    
+    tech_gts_bruh_destroyer_ship: "Bruh舰娘 - 驱逐"
+    tech_gts_bruh_battleship_ship: "Bruh舰娘 - 战列"
+    tech_gts_bruh_titan_ship: "Bruh舰娘 - 泰坦"
+    
+    tech_gts_bruh_destroyer_ship_desc: "Bruh舰娘驱逐舰可以有效拦截地方的小型舰艇，机动性良好"
+    tech_gts_bruh_battleship_ship_desc: "Bruh舰娘战列舰火力强大，是舰队的中坚力量"
+    tech_gts_bruh_titan_ship_desc: "Bruh舰娘泰坦是移动的堡垒，拥有最强的火力，但是移动缓慢"
+    
+    tech_armor_gts_2: "舰娘内衣工艺 - 安全裤"
+    tech_armor_gts_3: "舰娘内衣工艺 - 蕾丝胖次"
+    
+    tech_armor_gts_2_desc: "如何为如此巨大的舰娘稳定供应舒适、耐用又便于后勤小队清洁维护的内衣一直是我国军需部门的钻研课题。"
+    tech_armor_gts_3_desc: "如何为如此巨大的舰娘稳定供应舒适、耐用又便于后勤小队清洁维护的内衣一直是我国军需部门的钻研课题。"
+
+    ############################################################################################################################################
+    ##################################################                歼星相关                ##################################################
+    ############################################################################################################################################
+
+    GTS_BRUH_PLANET_KILLER_UB: "塞入小穴"
+    GTS_BRUH_PLANET_KILLER_UB_ACTION: "塞入"
+    GTS_BRUH_PLANET_KILLER_UB_DESC: "将目标星球塞入小穴转变成爱液星球§R(将会摧毁殖民地)§!"
+    FLEETORDER_DESTROY_PLANET_WITH_GTS_BRUH_PLANET_KILLER_UB: "正在前往目标"
+    MESSAGE_DESC_FOR_GTS_BRUH_PLANET_KILLER_UB: "§W成为了爱液星球§!"
+
+    #GTS_BRUH_PLANET_KILLER_KICK: "踹它一脚"
+    #GTS_BRUH_PLANET_KILLER_MILK: "乳汁喷射"
+
+    gts_bruh_is_gts_mod_planet: "§Y这颗星球是特殊星球§!"
+
+    gts_bruh_colossus_destroy_planet_cool_down: "§Y用歼星武器转变星球的一年冷却还未到§!"
+    
+    ############################################################################################################################################
+    ##################################################               舰娘驱逐舰               ##################################################
+    ############################################################################################################################################
+    
+    gts_bruh_destroyer_ship: "Bruh舰娘驱逐舰"
+    gts_bruh_destroyer_ship_plural: "Bruh舰娘驱逐舰"
+    gts_bruh_destroyer_ship_cap: "Bruh舰娘驱逐舰"
+    
+    GTS_AKATSUKI_DESTROYER_BOW: "晓"
+    GTS_HIBIKI_DESTROYER_BOW: "响"
+    GTS_AKATSUKI_DESTROYER_STERN: "晓防空组件"
+    GTS_HIBIKI_DESTROYER_STERN: "响防空组件"
+    
+    ############################################################################################################################################
+    ##################################################               舰娘战列舰               ##################################################
+    ############################################################################################################################################
+    
+    gts_bruh_battleship_ship: "Bruh舰娘战列舰"
+    gts_bruh_battleship_ship_plural: "Bruh舰娘战列舰"
+    gts_bruh_battleship_ship_cap: "Bruh舰娘战列舰"
+    
+    GTS_BELFAST_BATTLESHIP_MID: "贝尔法斯特"
+    GTS_YAMASHIRO_BATTLESHIP_MID: "山城"
+    
+    GTS_BELFAST_BATTLESHIP_BOW: "贝尔法斯特炮击组件"
+    GTS_BELFAST_BATTLESHIP_STERN: "贝尔法斯特防空组件"
+    
+    GTS_YAMASHIRO_BATTLESHIP_BOW: "山城航母组件"
+    GTS_YAMASHIRO_BATTLESHIP_STERN: "山城防空组件"
+    
+    ############################################################################################################################################
+    ##################################################                舰娘泰坦                ##################################################
+    ############################################################################################################################################
+    
+    gts_bruh_titan_ship: "Bruh舰娘泰坦"
+    gts_bruh_titan_ship_plural: "Bruh舰娘泰坦"
+    gts_bruh_titan_ship_cap: "Bruh舰娘泰坦"
+    
+    GTS_BISMARCK_TITAN_MID: "俾斯麦"
+    GTS_HOOD_TITAN_MID: "胡德"
+    GTS_KAKO_TITAN_MID: "加古"
+    
+    GTS_BISMARCK_TITAN_BOW: "俾斯麦防空组件"
+    GTS_BISMARCK_TITAN_STERN: "俾斯麦炮击组件"
+    
+    GTS_HOOD_TITAN_BOW: "胡德防空组件"
+    GTS_HOOD_TITAN_STERN: "胡德炮击组件"
+    
+    GTS_KAKO_TITAN_STERN: "加古防空组件"
+    GTS_KAKO_TITAN_BOW: "加古航母组件"
+    
+    ############################################################################################################################################
+    ##################################################                  鱼雷                  ##################################################
+    ############################################################################################################################################
+    
+    GTS_BRUH_TORPEDO_1: "舰娘鱼雷"
+    GTS_BRUH_TORPEDO_1_DESC: "§M(Bruh系列武器)§!§R\n大根的。§!"
+    
+    GTS_BRUH_TORPEDO_SMALL: "舰娘鱼雷"
+    GTS_BRUH_TORPEDO_SMALL_DESC: "§M(Bruh系列武器)§!§R\n大根的。§!\n驱逐尺寸"
+    
+    GTS_BRUH_TORPEDO_MEDIUM: "舰娘鱼雷"
+    GTS_BRUH_TORPEDO_MEDIUM_DESC: "§M(Bruh系列武器)§!§R\n大根的。§!\n战列尺寸"
+    
+    GTS_BRUH_TORPEDO_LARGE: "舰娘鱼雷"
+    GTS_BRUH_TORPEDO_LARGE_DESC: "§M(Bruh系列武器)§!§R\n大根的。§!\n泰坦尺寸"
+    
+    ############################################################################################################################################
+    ##################################################                  动能                  ##################################################
+    ############################################################################################################################################
+    
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY: "舰娘动能副炮"
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_DESC: "§M(Bruh系列武器)§!\n"
+    
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_SMALL: "小型舰娘动能副炮"
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_SMALL_DESC: "§M(Bruh系列武器)§!\n"
+    
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_MEDIUM: "中型舰娘动能副炮"
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_MEDIUM_DESC: "§M(Bruh系列武器)§!\n"
+    
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_LARGE: "大型舰娘动能副炮"
+    GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_LARGE_DESC: "§M(Bruh系列武器)§!\n泰坦尺寸"
+    
+    GTS_BRUH_DESTROYER_KINETIC_ARTILLERY_LARGE: "舰娘动能主炮"
+    GTS_BRUH_DESTROYER_KINETIC_ARTILLERY_LARGE_DESC: "§M(Bruh系列武器)§!\n驱逐尺寸"
+    
+    GTS_BRUH_KINETIC_ARTILLERY_EXTRA_LARGE_1: "舰娘动能巨炮"
+    GTS_BRUH_KINETIC_ARTILLERY_EXTRA_LARGE_1_DESC: "§M(Bruh系列武器)§!\n"
+    
+    ############################################################################################################################################
+    #################################################                  斩舰刀                  #################################################
+    ############################################################################################################################################
+    
+    GTS_BRUH_KINETIC_SWORD_TITANIC_1: "舰娘斩舰刀"
+    GTS_BRUH_KINETIC_SWORD_TITANIC_1_DESC: "§M(Bruh系列武器)§!\n"
+    
+    ############################################################################################################################################
+    ##################################################                  防空                  ##################################################
+    ############################################################################################################################################
+    
+    GTS_BRUH_KINETIC_POINT_DEFENCE_1: "三连装高射炮"
+    GTS_BRUH_KINETIC_POINT_DEFENCE_1_DESC: "§M(Bruh系列武器)"
+    
+    GTS_BRUH_KINETIC_POINT_DEFENCE_SMALL: "小型三连装高射炮"
+    GTS_BRUH_KINETIC_POINT_DEFENCE_SMALL_DESC: "§M(Bruh系列武器)"
+    
+    GTS_BRUH_KINETIC_POINT_DEFENCE_MEDIUM: "中型三连装高射炮"
+    GTS_BRUH_KINETIC_POINT_DEFENCE_MEDIUM_DESC: "§M(Bruh系列武器)"
+    
+    GTS_BRUH_KINETIC_POINT_DEFENCE_LARGE: "大型三连装高射炮"
+    GTS_BRUH_KINETIC_POINT_DEFENCE_LARGE_DESC: "§M(Bruh系列武器)"
+    
+    GTS_BRUH_ENERGY_POINT_DEFENCE_1: "三连装点防御"
+    GTS_BRUH_ENERGY_POINT_DEFENCE_1_DESC: "§M(Bruh系列武器)"
+    
+    GTS_BRUH_ENERGY_POINT_DEFENCE_SMALL: "小型三连装点防御"
+    GTS_BRUH_ENERGY_POINT_DEFENCE_SMALL_DESC: "§M(Bruh系列武器)"
+    
+    GTS_BRUH_ENERGY_POINT_DEFENCE_MEDIUM: "中型三连装点防御"
+    GTS_BRUH_ENERGY_POINT_DEFENCE_MEDIUM_DESC: "§M(Bruh系列武器)"
+    
+    GTS_BRUH_ENERGY_POINT_DEFENCE_LARGE: "大型三连装点防御"
+    GTS_BRUH_ENERGY_POINT_DEFENCE_LARGE_DESC: "§M(Bruh系列武器)"
+    
+    ############################################################################################################################################
+    ################################################                  装甲护盾                  ################################################
+    ############################################################################################################################################
+    
+    GTS_BRUH_SHIELD_1: "蓝白胖次"
+    GTS_BRUH_SHIELD_1_DESC: "§M(Bruh系列武器)§!\n大部分舰娘所选择的最为经典的内裤类型，在出击时舰娘们常常会准备多条以在战斗结束后及时更换变脏或破损的胖次。"
+    GTS_BRUH_SMALL_SHIELD_1: "小号蓝白胖次"
+    GTS_BRUH_MEDIUM_SHIELD_1: "中号蓝白胖次"
+    GTS_BRUH_LARGE_SHIELD_1: "大号蓝白胖次"
+    
+    GTS_BRUH_SHIELD_2: "安全裤"
+    GTS_BRUH_SHIELD_2_DESC: "§M(Bruh系列武器)§!\n一些害羞或重视礼节的舰娘们会准备安全裤替代胖次以避免在海战中走光（虽然理论上小人的舰船可以钻进她们身体的任何地方就是了）。"
+    GTS_BRUH_SMALL_SHIELD_2: "小号安全裤"
+    GTS_BRUH_MEDIUM_SHIELD_2: "中号安全裤"
+    GTS_BRUH_LARGE_SHIELD_2: "大号安全裤"
+    
+    GTS_BRUH_SHIELD_3: "蕾丝内裤"
+    GTS_BRUH_SHIELD_3_DESC: "§M(Bruh系列武器)§!\n一些欲望旺盛或心大的舰娘会选择更加激进的方案，比如蕾丝胖次，传说会有舰娘会把自己俘获的敌舰和船员塞进胖次里寻求刺激。"
+    GTS_BRUH_SMALL_SHIELD_3: "小号蕾丝内裤"
+    GTS_BRUH_MEDIUM_SHIELD_3: "中号蕾丝内裤"
+    GTS_BRUH_LARGE_SHIELD_3: "大号蕾丝内裤"
+    
+    GTS_BRUH_ARMOR_1: "学校水手服"
+    GTS_BRUH_ARMOR_1_DESC: "§M(Bruh系列武器)§!\n刚刚从海军学校毕业的舰娘们所穿的学校制服，从里到外都透着少女的芬芳。"
+    GTS_BRUH_SMALL_ARMOR_1: "小号水手服"
+    GTS_BRUH_MEDIUM_ARMOR_1: "中号水手服"
+    GTS_BRUH_LARGE_ARMOR_1: "大号水手服"
+    
+    GTS_BRUH_ARMOR_2: "军官礼服"
+    GTS_BRUH_ARMOR_2_DESC: "§M(Bruh系列武器)§!\n舰娘们在庆功晚宴上所穿的礼服，在胸前挂着（或粘着）代表其战功的敌舰残骸。"
+    GTS_BRUH_SMALL_ARMOR_2: "小号礼服"
+    GTS_BRUH_MEDIUM_ARMOR_2: "中号礼服"
+    GTS_BRUH_LARGE_ARMOR_2: "大号礼服"
+    
+    GTS_BRUH_ARMOR_3: "誓约婚纱"
+    GTS_BRUH_ARMOR_3_DESC: "§M(Bruh系列武器)§!\n舰娘们在与她们心仪之人誓约时所穿的婚纱，体型和种族的差距不是阻拦爱情的理由，在这一刻她们与普通的少女无异。"
+    GTS_BRUH_SMALL_ARMOR_3: "小号婚纱"
+    GTS_BRUH_MEDIUM_ARMOR_3: "中号婚纱"
+    GTS_BRUH_LARGE_ARMOR_3: "大号婚纱"
+    
+    
+    ############################################################################################################################################
+    ####################################################                配件                ####################################################
+    ############################################################################################################################################
+    
+    GTS_BRUH_SENSOR_1: "肉体侦测系统"
+    GTS_BRUH_SENSOR_1_DESC: "§M(Bruh系列武器)§!\n舰娘们可以眼观六路，耳听八方。哪怕是数星系外舰队的调动都能被舰娘们近乎恐怖般的直觉察觉到。"
+    GTS_BRUH_SENSOR_2: "辅助侦查机组"
+    GTS_BRUH_SENSOR_2_DESC: "§M(Bruh系列武器)§!\n给舰娘们加装了通讯系统后，舰娘们可以和身上的辅助侦查机组即时交换侦查资讯，提高对敌舰的探测效率(注：禁止舰娘利用通讯系统调戏舰上人员)"
+    
+    GTS_BRUH_REACTOR_DESTROYER_1: "生物反应堆"
+    GTS_BRUH_REACTOR_DESTROYER_1_DESC: "§M(Bruh系列武器)§!\n有哪个反应堆能比舰娘的肠胃更加安全可靠？"
+    GTS_BRUH_REACTOR_DESTROYER_2: "强化生物反应堆"
+    GTS_BRUH_REACTOR_DESTROYER_2_DESC: "§M(Bruh系列武器)§!\n通过基因强化和改进训练计划，舰娘们的胃酸已经可以轻松消化掉零素材料，舰娘们饿了只要随手抓一把小行星就能充饥。"
+    
+    GTS_BRUH_REACTOR_BATTLESHIP_1: "生物反应堆"
+    GTS_BRUH_REACTOR_BATTLESHIP_1_DESC: "§M(Bruh系列武器)§!\n有哪个反应堆能比舰娘的肠胃更加安全可靠？"
+    GTS_BRUH_REACTOR_BATTLESHIP_2: "强化生物反应堆"
+    GTS_BRUH_REACTOR_BATTLESHIP_2_DESC: "§M(Bruh系列武器)§!\n通过基因强化和改进训练计划，舰娘们的胃酸已经可以轻松消化掉零素材料，舰娘们饿了只要随手抓一把小行星就能充饥。"
+    
+    GTS_BRUH_REACTOR_TITAN_1: "生物反应堆"
+    GTS_BRUH_REACTOR_TITAN_1_DESC: "§M(Bruh系列武器)§!\n有哪个反应堆能比舰娘的肠胃更加安全可靠？"
+    GTS_BRUH_REACTOR_TITAN_2: "强化生物反应堆"
+    GTS_BRUH_REACTOR_TITAN_2_DESC: "§M(Bruh系列武器)§!\n通过基因强化和改进训练计划，舰娘们的胃酸已经可以轻松消化掉零素材料，舰娘们饿了只要随手抓一把小行星就能充饥。"
+    
+    GTS_BRUH_HYPER_DRIVE_1: "肉身超光速引擎"
+    GTS_BRUH_HYPER_DRIVE_1_DESC: "§M(Bruh系列武器)§!\n作为足以违背物理法则的奇妙存在，舰娘靠肉身进行超空间跃迁也并非难事。不过据调查，当进行肉身超空间折越时，舰娘普遍会同时感到钻入狭窄空间和被异物钻入的奇妙感觉。"
+    GTS_BRUH_HYPER_DRIVE_2: "俺寻思超光速引擎"
+    GTS_BRUH_HYPER_DRIVE_2_DESC: "§M(Bruh系列武器)§!\n这个装置强化了舰娘的精神力，让她们可以在更快进行跃迁的同时避免被幻觉干扰作战，不过也有些舰娘对此略感失落。"
+    
+    GTS_BRUH_SHIP_THRUSTER_1: "裸足"
+    GTS_BRUH_SHIP_THRUSTER_1_DESC: "§M(Bruh系列武器)§!\n裸足能让舰娘们自在地在宇宙中伸展筋骨，而舰娘们裸露的玉足似乎也起到了魅惑敌人的效果，使得舰娘能更轻松的闪避敌人的攻击。"
+    GTS_BRUH_SHIP_THRUSTER_2: "黑丝"
+    GTS_BRUH_SHIP_THRUSTER_2_DESC: "§M(Bruh系列武器)§!\n信奉黑丝性感的舰娘们经常脚上只穿着黑丝进行战斗，在黑丝包裹下的大腿与足变得更加诱人。但也起到了反作用，经常有敌舰不计后果的向舰娘冲来，让舰娘躲闪不及。"
+    GTS_BRUH_SHIP_THRUSTER_3: "白丝"
+    GTS_BRUH_SHIP_THRUSTER_3_DESC: "§M(Bruh系列武器)§!\n信奉白丝可爱的舰娘们经常脚上只穿着白丝进行战斗，在白丝衬托下的小腿与足变得更加可爱。但也起到了反作用，经常有敌舰不计后果的向舰娘冲来，让舰娘躲闪不及。"
+    GTS_BRUH_SHIP_THRUSTER_4: "舰装鞋"
+    GTS_BRUH_SHIP_THRUSTER_4_DESC: "§M(Bruh系列武器)§!\n加装了形似乐福鞋的足部舰装之后，舰娘们的行动变得更快了，但遮住足底让舰娘靠足部魅惑敌人的效果减弱了不少。不过似乎有些人也爱这味？"
+    
+    GTS_BRUH_COMBAT_COMPUTER_TORPEDO: "重樱海军教育"
+    GTS_BRUH_COMBAT_COMPUTER_TORPEDO_DESC: "§M(Bruh系列武器)§!\n我们的舰娘在海军学校重点学习战斗精神。在战斗中，她们一旦发现敌人就会拔出斩舰刀，高呼着第四天灾板载，向敌方发起突击。"
+    GTS_BRUH_COMBAT_COMPUTER_PICKET: "铁血海军教育"
+    GTS_BRUH_COMBAT_COMPUTER_PICKET_DESC: "§M(Bruh系列武器)§!\n我们的舰娘在海军学校重点学习实战战术。在战斗中，她们会如幽灵般摸到敌人近处再如群狼般进行袭击以干扰敌舰指挥，阻滞敌军前进。"
+    GTS_BRUH_COMBAT_COMPUTER_LINE: "皇家海军教育"
+    GTS_BRUH_COMBAT_COMPUTER_LINE_DESC: "§M(Bruh系列武器)§!\n我们的舰娘在海军学校重点学习战斗艺术。在战斗中，充分的教养会使得她们与敌方舰队在适中的距离下冷静地进行堂堂正正的战斗。"
+    GTS_BRUH_COMBAT_COMPUTER_ARTILLERY: "北联海军教育"
+    GTS_BRUH_COMBAT_COMPUTER_ARTILLERY_DESC: "§M(Bruh系列武器)§!\n我们的舰娘在海军学校重点学习武器操作。在战斗中，深知大就是好、多就是美的舰娘们会在安全距离向敌人大量倾泻弹药。"
+    GTS_BRUH_COMBAT_COMPUTER_CARRIER: "白鹰海军教育"
+    GTS_BRUH_COMBAT_COMPUTER_CARRIER_DESC: "§M(Bruh系列武器)§!\n我们的舰娘在海军学校重点学习理论革新，在战斗中，她们会在超远距将实验得出的版本之子直接呼到敌人脸上。"
+    
+    GTS_BRUH_ENERGY_BLANK_1: "真的太阳能板"
+    GTS_BRUH_ENERGY_BLANK_1_DESC: "§M(Bruh系列武器)§!\n真的太阳能板！这东西在被从太空站移除，辗转好多个版本后。莫名其妙的投胎到§R太§!§g空§!§M舰§!§G娘§!上了。"
+    GTS_BRUH_AUTO_REPAIR_1: "自恢复舰体"
+    GTS_BRUH_AUTO_REPAIR_1_DESC: "§M(Bruh系列武器)§!\n怎么，舰娘蹭破了皮难道还要拉回军港维修吗？"
+    GTS_BRUH_AUTO_REPAIR_2: "体表损管队"
+    GTS_BRUH_AUTO_REPAIR_2_DESC: "§M(Bruh系列武器)§!\n由小人或微型机器人多支损管小队会在舰娘的体表游走巡查，并对舰娘体表和舰装严重损坏处进行初步治疗修理，在某些情况下还要负责搜寻并歼灭敌方登陆到舰娘身上的跳帮部队。"
+    GTS_BRUH_BODY_STRENGTHEN: "体能强化"
+    GTS_BRUH_BODY_STRENGTHEN_DESC: "§M(Bruh系列武器)§!\n加强体能训练能让马...舰娘们的行动更加矫健，海军部在和平时期举办的星际舰娘德比已经成为海军部和舰娘的一大收入来源。"
+    GTS_BRUH_MIND_STRENGTHEN: "智慧强化"
+    GTS_BRUH_MIND_STRENGTHEN_DESC: "§M(Bruh系列武器)§!\n对舰娘自主智慧的强化能让舰娘的射击就像开了自瞄外挂一样精准。"
+    GTS_BRUH_BEAUTY: "舰体美化"
+    GTS_BRUH_BEAUTY_DESC: "§M(Bruh系列武器)§!\n对舰娘的外轮廓进行符合银河普遍审美的改造，可以有效提高我军士气和干扰敌方战斗意志。不过为了保持这种形态下维持性能，舰娘的身躯不得不建造得更加高大。"
+    GTS_BRUH_BOMBING: "超高空轰炸策略"
+    GTS_BRUH_BOMBING_DESC: "§M(Bruh系列武器)§!\n按照舰娘的设计方案，舰娘应该避免参与登陆作战，但如果只是用手去破坏城市或者泼洒洪水的话，还是允许的。"
+    
+    GTS_BRUH_SHIP_AURA_SHIELD_DAMPENER: "贪婪之口"
+    GTS_BRUH_SHIP_AURA_QUANTUM_DESTABILIZER: "迷惑之阴"
+    GTS_BRUH_SHIP_AURA_SUBSPACE_SNARE: "吸引之乳"
+    GTS_BRUH_SHIP_AURA_INSPIRING_PRESENCE: "刺激之语"
+    GTS_BRUH_SHIP_AURA_TARGETING_GRID: "引导之目"
+    GTS_BRUH_SHIP_AURA_HYPERLANE: "恢复之菊"
+    
+    ############################################################################################################################################
+	##################################################                 舰载机                 ##################################################
+	############################################################################################################################################
+    
+    GTS_BRUH_STRIKE_CRAFT_HANGAR_1: "海火"
+    GTS_BRUH_STRIKE_CRAFT_HANGAR_1_DESC: "§M(Bruh系列武器)§!"
+    
+    GTS_BRUH_STRIKE_CRAFT_HANGAR_2: "地狱猫"
+    GTS_BRUH_STRIKE_CRAFT_HANGAR_2_DESC: "§M(Bruh系列武器)§!"
+
+    GTS_BRUH_STRIKE_CRAFT_HANGAR_3: "Pe-8"
+    GTS_BRUH_STRIKE_CRAFT_HANGAR_3_DESC: "§M(Bruh系列武器)§!"
+    
+    ############################################################################################################################################
+    ##################################################                 反应堆                 ##################################################
+    ############################################################################################################################################
+    
+    GTS_BRUH_EXTRA_ENERGY_REACTOR_1: "外挂反应堆"
+    GTS_BRUH_EXTRA_ENERGY_REACTOR_1_DESC: "§M(Bruh系列武器)§!\n一开始是研发给俾斯麦的专门配件(虽然其他舰娘也能用就是了)\n可以解决能源不足的问题。\n§R但因为是外挂式的，非常容易被击中并且爆炸。§!\n§R每个减少1%船体值§!"

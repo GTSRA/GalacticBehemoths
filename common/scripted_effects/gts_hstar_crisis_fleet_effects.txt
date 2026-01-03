@@ -1,0 +1,369 @@
+#	Example:
+#
+#	example_effect = {
+#		add_resource = { energy = -100 }
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+############################
+# Prethoryn Scourge Fleets #
+############################
+
+giantess_crisis_vanguanrd = {
+
+	random_list = {
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 34
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 29
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 41
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 14
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 10
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 25
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 48
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 33
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 18
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 45
+				traits = {
+					trait = leader_trait_crisis_assult
+				}
+			}
+		}
+	}
+
+	create_fleet = {
+		name = "NAME_Giantess_crisis_Vanguard"
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_giantess_crisis_Small"
+				graphical_culture = root.owner
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 30
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Small"
+					graphical_culture = root.owner
+				}
+			}
+			set_location = {
+				target = PREVPREV
+				distance = 35
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
+
+giantess_crisis_brood = {
+	random_list = {
+		75 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 11
+			}
+		}
+		25 = {
+			create_leader = {
+				class = commander
+				species = event_target:giantess_crisis_species
+				name = random
+				skill = 3
+				set_age = 11
+				traits = {
+					trait = leader_trait_crisis_hive_affinity
+				}
+			}
+		}
+	}
+	create_fleet = {
+		name = "NAME_giantess_crisis_Star_Brood"
+		effect = {
+			set_owner = event_target:giantess_crisis
+			create_ship = {
+				name = random
+				design = "NAME_giantess_crisis_Queen"
+			
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 10
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Large"
+					graphical_culture = root.owner
+				}
+			}
+			while = {
+				count = 8
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Carrier"
+					graphical_culture = root.owner
+				}
+			}
+			while = {
+				count = 35
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Small"
+					graphical_culture = root.owner
+				}
+			}
+			set_location = event_target:spawn_location
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
+
+giantess_crisis_armies = {
+	create_fleet = {
+		name = "NAME_giantess_crisis_Armies"
+		effect = {
+			set_owner = event_target:giantess_crisis
+			while = {
+				count = 20
+				create_army_transport = {
+					ship_name = "NAME_giantess_crisis_Transport"
+					army_name = "NAME_giantess_crisis_Invaders"
+					army_type = "swarm_army"
+					species = event_target:giantess_crisis_species
+				}
+			}
+			set_location = {
+				target = PREVPREV
+				distance = 20
+				angle = random
+			}
+		}
+	}
+}
+
+##########################
+# Feral Prethoryn Fleets #
+##########################
+
+# Garrisons
+
+feral_giantess_crisis_garrison_1 = {
+	create_fleet = {
+		name = "NAME_feral_giantess_crisis"
+		effect = {
+			set_owner = event_target:feral_giantess_crisis
+			while = {
+				count = 56
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Small"
+					graphical_culture = root.owner
+				}
+			}
+			set_location = {
+				target = prev
+				distance = 35
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+		}
+		settings = {
+			garrison = yes
+		}
+	}
+}
+
+feral_giantess_crisis_garrison_2 = {
+	create_fleet = {
+		name = "NAME_feral_giantess_crisis"
+		effect = {
+			set_owner = event_target:feral_giantess_crisis
+			while = {
+				count = 10
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Large"
+					graphical_culture = root.owner
+				}
+			}
+			while = {
+				count = 8
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Carrier"
+					graphical_culture = root.owner
+				}
+			}
+			while = {
+				count = 35
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Small"
+					graphical_culture = root.owner
+				}
+			}
+			set_location = {
+				target = prev
+				distance = 35
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+		}
+		settings = {
+			garrison = yes
+		}
+	}
+}
+
+# Roaming
+
+feral_giantess_crisis_roaming_1 = {
+	create_fleet = {
+		name = "NAME_feral_giantess_crisis"
+		effect = {
+			set_owner = event_target:feral_giantess_crisis
+			while = {
+				count = 30
+				create_ship = {
+					name = random
+					design = "NAME_giantess_crisis_Small"
+					graphical_culture = root.owner
+				}
+			}
+			set_location = {
+				target = prev
+				distance = 35
+				angle = random
+			}
+			set_fleet_flag = roaming_giantess_crisis_fleet
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+		}
+	}
+}

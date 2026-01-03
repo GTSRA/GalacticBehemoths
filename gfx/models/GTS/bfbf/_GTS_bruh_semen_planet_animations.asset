@@ -1,0 +1,9 @@
+animation = {
+	name = "gts_bruh_semen_planet_idle"
+	file = "GTS_semen_planet_idle.anim"
+}
+
+animation = {
+	name = "gts_xeno_idle"
+	file = "xeno.anim"
+}

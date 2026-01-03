@@ -1,0 +1,222 @@
+namespace = gts_hstar_anomaly
+namespace = gts_hstar_arc_sites_event
+
+ship_event = {
+	id = gts_hstar_anomaly.1
+	title = "gts_hstar_anomaly.1.name"	
+	desc = "gts_hstar_anomaly.1.desc"
+	picture = GFX_evt_hstar_vena_namecard
+	show_sound = event_airlock
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = gts_hstar_anomaly.1.a
+		leader = {
+			add_experience = 200
+		}
+		from = {
+			create_archaeological_site = site_gts_hstar_D
+		}
+	}
+}
+
+fleet_event = {
+	id = gts_hstar_arc_sites_event.1
+	title = gts_hstar_arc_sites_event.1.name
+	desc = gts_hstar_arc_sites_event.1.desc
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_dig_site
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = INTERESTING
+		small_artifact_reward = yes
+		hidden_effect = {
+			from.planet = {
+				change_pc = pc_relic
+				set_planet_size = 30
+				add_deposit = d_city_ruins
+				add_deposit = d_lichen_fields
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = gts_hstar_arc_sites_event.2
+	title = "gts_hstar_arc_sites_event.2.name"
+	desc = "gts_hstar_arc_sites_event.2.desc"
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_dig_site
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = gts_hstar_arc_sites_event.2.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = gts_hstar_arc_sites_event.3
+	title = "gts_hstar_arc_sites_event.3.name"
+	desc = "gts_hstar_arc_sites_event.3.desc"
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_dig_site
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = gts_hstar_arc_sites_event.3.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = gts_hstar_arc_sites_event.4
+	title = "gts_hstar_arc_sites_event.4.name"
+	desc = "gts_hstar_arc_sites_event.4.desc"
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_dig_site
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = INTERESTING
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = gts_hstar_arc_sites_event.5
+	title = "gts_hstar_arc_sites_event.5.name"
+	desc = "gts_hstar_arc_sites_event.5.desc"
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_dig_site
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = gts_hstar_arc_sites_event.5.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = gts_hstar_arc_sites_event.6
+	title = "gts_hstar_arc_sites_event.6.name"
+	desc = "gts_hstar_arc_sites_event.6.desc"
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_dig_site
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = INTERESTING
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = gts_hstar_arc_sites_event.7
+	title = "gts_hstar_arc_sites_event.7.name"
+	desc = "gts_hstar_arc_sites_event.7.desc"
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_dig_site
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = gts_hstar_arc_sites_event.7.a
+		medium_artifact_reward = yes
+		owner ={	
+			country_event ={
+				id = gts_hstar_arc_sites_event.8 days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_hstar_arc_sites_event.8
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = gts_hstar_arc_sites_event.8.name
+	desc = gts_hstar_arc_sites_event.8.desc
+	show_sound = event_gts_masturbate
+
+	picture = GFX_evt_hstar_vena_breasts
+
+	option = {
+		name = gts_hstar_arc_sites_event.8.a
+	}
+	after = {
+		add_modifier = {
+			modifier = "all_for_pardon"
+		}
+	}
+}

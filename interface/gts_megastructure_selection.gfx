@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_lottie_shoes_station_0_build_icon"
+        textureFile = "gfx/interface/icons/technologies/tech_lottie_station.dds"
+    }
+}

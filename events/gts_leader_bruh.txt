@@ -1,0 +1,2498 @@
+namespace = gts_leader_bruh
+
+country_event = {
+	id = gts_leader_bruh.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			ethic_leader_creator = {
+				SPECIES_CLASS = random_non_machine
+				LEADER_PORTRAIT = gts_portrait_bruh
+				CLASS = commander
+				NAME = Bruh
+				LEVEL = 10
+				GENDER = male
+				EVENT_LEADER = no
+				IMMORTAL = yes
+				ETHIC = authoritarian
+				DESC = gts_bruh_ship_leader_desc
+				CATCH_PHRASE = xenophile2_catch_phrase
+			}
+			last_created_leader = {
+				add_trait = {
+					trait = leader_trait_Normal
+					show_message = no
+				}
+				set_age = 114514
+				save_global_event_target_as = gts_bruh_ship_leader
+			}
+			add_resource = {
+				influence = 50
+				mult = value:count_gts_leader_cost_mult
+			}
+			country_event = {
+				id = gts_leader_bruh.2
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gts_leader_bruh.2
+	title = "TRANSMISSION"
+	desc = gts_leader_bruh.2.desc
+	event_window_type = leader_recruit
+	picture = GFX_leader_recruitment_bg_legendary_skrand
+	show_sound = event_gts_bruh_debug_sound
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = event_target:gts_bruh_ship_leader
+		room = "crisis_room"
+	}
+
+	option = {
+		name = gts_leader_bruh.2.a
+		allow = {
+			NOT = {
+				has_global_flag = gts_has_trigger_bruh_destroyer
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			set_global_flag = gts_has_trigger_bruh_destroyer
+			random_system = {
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					max_jumps = 0
+					initializer = "gts_bruh_solar_system_initializers_1"
+					hyperlane = no
+					is_discovered = yes
+				}
+			}
+			country_event = {
+				id = gts_leader_bruh.3
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.2.b
+		allow = {
+			NOT = {
+				has_global_flag = gts_has_trigger_bruh_battleship
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			set_global_flag = gts_has_trigger_bruh_battleship
+			random_system = {
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					max_jumps = 0
+					initializer = "gts_bruh_solar_system_initializers_2"
+					hyperlane = no
+					is_discovered = yes
+				}
+			}
+			country_event = {
+				id = gts_leader_bruh.3
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.2.c
+		allow = {
+			NOT = {
+				has_global_flag = gts_has_trigger_bruh_titan
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			set_global_flag = gts_has_trigger_bruh_titan
+			random_system = {
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					max_jumps = 0
+					initializer = "gts_bruh_solar_system_initializers_3"
+					hyperlane = no
+					is_discovered = yes
+				}
+			}
+			country_event = {
+				id = gts_leader_bruh.3
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.2.d
+		hidden_effect = {
+			country_event = {
+				id = gts_leader_bruh.7
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.2.hire
+		tag = hire_leader
+		hidden_effect = {
+			remove_global_flag = gts_has_trigger_bruh
+		}
+	}
+	option = {
+		name = gts_leader_bruh.2.close
+		tag = dismiss_leader
+		hidden_effect = {
+			remove_global_flag = gts_has_trigger_bruh
+		}
+	}
+}
+
+country_event = {
+	id = gts_leader_bruh.3
+	title = gts_leader_bruh.3.name
+	desc = gts_leader_bruh.3.desc
+	picture = GFX_evt_astral_rift_microverse
+	show_sound = ap_rift_event_12_star_to_gas
+	is_triggered_only = yes
+	location = event_target:gts_bruh_random_spawn_system
+
+	option = {
+		name = gts_leader_bruh.3.a
+		hidden_effect = {
+			remove_global_flag = gts_has_trigger_bruh
+		}
+	}
+}
+
+country_event = {
+	id = gts_leader_bruh.4
+	title = gts_leader_bruh.4.name
+	desc = gts_leader_bruh.4.desc
+	picture = GFX_evt_astral_rift_microverse
+	show_sound = ap_rift_event_12_star_to_gas
+	is_triggered_only = yes
+	location = event_target:gts_bruh_shipgirl_destroyer_fleet
+
+	trigger = {
+		exists = event_target:gts_bruh_shipgirl_destroyer_fleet
+		FromFromFrom.fleet = {
+			is_same_value = event_target:gts_bruh_shipgirl_destroyer_fleet
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.4.a
+		give_technology = {
+			tech = tech_gts_bruh_destroyer_ship
+		}
+	}
+}
+
+country_event = {
+	id = gts_leader_bruh.5
+	title = gts_leader_bruh.5.name
+	desc = gts_leader_bruh.5.desc
+	picture = GFX_evt_astral_rift_microverse
+	show_sound = ap_rift_event_12_star_to_gas
+	is_triggered_only = yes
+	location = event_target:gts_bruh_shipgirl_battleship_fleet
+
+	trigger = {
+		exists = event_target:gts_bruh_shipgirl_battleship_fleet
+		FromFromFrom.fleet = {
+			is_same_value = event_target:gts_bruh_shipgirl_battleship_fleet
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.5.a
+		give_technology = {
+			tech = tech_gts_bruh_battleship_ship
+		}
+	}
+}
+
+country_event = {
+	id = gts_leader_bruh.6
+	title = gts_leader_bruh.6.name
+	desc = gts_leader_bruh.6.desc
+	picture = GFX_evt_astral_rift_microverse
+	show_sound = ap_rift_event_12_star_to_gas
+	is_triggered_only = yes
+	location = event_target:gts_bruh_shipgirl_titan_fleet
+
+	trigger = {
+		exists = event_target:gts_bruh_shipgirl_titan_fleet
+		FromFromFrom.fleet = {
+			is_same_value = event_target:gts_bruh_shipgirl_titan_fleet
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.6.a
+		give_technology = {
+			tech = tech_gts_bruh_titan_ship
+		}
+	}
+}
+
+country_event = {
+	id = gts_leader_bruh.7
+	title = "TRANSMISSION"
+	desc = gts_leader_bruh.7.desc
+	event_window_type = leader_recruit
+	picture = GFX_leader_recruitment_bg_legendary_skrand
+	show_sound = event_gts_bruh_debug_sound
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = event_target:gts_bruh_ship_leader
+		room = "crisis_room"
+	}
+
+	option = {
+		name = gts_leader_bruh.7.a
+		hidden_effect = {
+			country_event = {
+				id = gts_event_bruh_test.2
+			}
+			remove_global_flag = gts_has_trigger_bruh
+		}
+	}
+	option = {
+		name = gts_leader_bruh.7.b
+		hidden_effect = {
+			country_event = {
+				id = gts_event_bruh_test.3
+			}
+			remove_global_flag = gts_has_trigger_bruh
+		}
+	}
+	option = {
+		name = gts_leader_bruh.7.hire
+		tag = hire_leader
+		hidden_effect = {
+			country_event = {
+				id = gts_leader_bruh.2
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.7.close
+		tag = dismiss_leader
+		hidden_effect = {
+			remove_global_flag = gts_has_trigger_bruh
+		}
+	}
+}
+
+# 小人軍隊復活用
+
+country_event = {
+	id = gts_leader_bruh.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		exists = from.species
+		from = {
+			species = {
+				OR = {
+					has_trait = trait_Small
+					has_trait = trait_Tiny
+					has_trait = trait_Micro
+					has_trait = trait_Nano
+					has_trait = trait_tinyunbending
+				}
+			}
+			NOR = {
+				army_type = assault_army
+				has_army_flag = gts_bruh_had_second_chance
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				from = {
+					species = {
+						has_trait = trait_Small
+					}
+				}
+			}
+			random_list = {
+				4 = { }
+				1 = {
+					fromfromfrom = {
+						create_army = {
+							owner = root
+							type = defense_army
+							species = root.from.species
+						}
+					}
+					last_created_army = { set_army_flag = gts_bruh_had_second_chance }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				from = {
+					species = {
+						has_trait = trait_Tiny
+					}
+				}
+			}
+			random_list = {
+				3 = { }
+				2 = {
+					fromfromfrom = {
+						create_army = {
+							owner = root
+							type = defense_army
+							species = root.from.species
+						}
+					}
+					last_created_army = { set_army_flag = gts_bruh_had_second_chance }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				from = {
+					species = {
+						has_trait = trait_Micro
+					}
+				}
+			}
+			random_list = {
+				2 = { }
+				3 = {
+					fromfromfrom = {
+						create_army = {
+							owner = root
+							type = defense_army
+							species = root.from.species
+						}
+					}
+					last_created_army = { set_army_flag = gts_bruh_had_second_chance }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				from = {
+					species = {
+						has_trait = trait_Nano
+					}
+				}
+			}
+			random_list = {
+				1 = { }
+				4 = {
+					fromfromfrom = {
+						create_army = {
+							owner = root
+							type = defense_army
+							species = root.from.species
+						}
+					}
+					last_created_army = { set_army_flag = gts_bruh_had_second_chance }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				from = {
+					species = {
+						has_trait = trait_tinyunbending
+					}
+				}
+			}
+			fromfromfrom = {
+				create_army = {
+					owner = root
+					type = defense_army
+					species = root.from.species
+				}
+			}
+			last_created_army = { set_army_flag = gts_bruh_had_second_chance }
+		}
+	}
+}
+
+# 增加巨娘人口用
+
+# 每個月隨機發生(需要對應的小人人口和巨娘特質才會發生)
+
+country_event = {
+	id = gts_leader_bruh.40
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = gts_bruh_convert_pop_effect_on
+		any_owned_pop_group = {
+			pop_group_size > 1000
+		}
+	}
+
+	immediate = {
+		random_list = {
+			16 = {}
+
+			1 = {
+				modifier = {
+					factor = 0
+					NOR = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1000
+							species = {
+								has_trait = trait_Normal
+							}
+						}
+					}
+				}
+				random_owned_planet = {
+					limit = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1000
+							species = {
+								has_trait = trait_Normal
+							}
+						}
+					}
+					planet_event = {
+						id = gts_leader_bruh.41 days = 7 random = 7
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					NOR = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1300
+							species = {
+								has_trait = trait_Small
+								is_robotic = no
+							}
+						}
+					}
+				}
+				random_owned_planet = {
+					limit = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1300
+							species = {
+								has_trait = trait_Small
+								is_robotic = no
+							}
+						}
+					}
+					planet_event = {
+						id = gts_leader_bruh.42 days = 7 random = 7
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					NOR = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1600
+							species = {
+								has_trait = trait_Tiny
+								is_robotic = no
+							}
+						}
+					}
+				}
+				random_owned_planet = {
+					limit = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1600
+							species = {
+								has_trait = trait_Tiny
+								is_robotic = no
+							}
+						}
+					}
+					planet_event = {
+						id = gts_leader_bruh.43 days = 7 random = 7
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					NOR = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1900
+							species = {
+								has_trait = trait_Micro
+								is_robotic = no
+							}
+						}
+					}
+				}
+				random_owned_planet = {
+					limit = {
+						any_owned_pop_group = {
+							has_trait = trait_gts_ub
+							NOR = {
+								has_citizenship_type = { country = root type = citizenship_assimilation }
+								has_citizenship_type = { country = root type = citizenship_slavery }
+								has_citizenship_type = { country = root type = citizenship_purge }
+							}
+						}
+						any_owned_pop_group = {
+							pop_group_size > 1900
+							species = {
+								has_trait = trait_Micro
+								is_robotic = no
+							}
+						}
+					}
+					planet_event = {
+						id = gts_leader_bruh.44 days = 7 random = 7
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = gts_leader_bruh.41
+	title = "TRANSMISSION"
+	desc = gts_leader_bruh.41.desc
+	diplomatic = yes
+	show_sound = event_swarm_started
+	location = ROOT
+
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = gts_qhai7_room
+	}
+
+	# 體型正常
+
+	# trait_Titan (小人倍率)/0.1*100
+	# trait_Giant (小人倍率)/0.4*100
+	# trait_Tall (小人倍率)/0.7*100
+	# trait_Normal 1
+	# trait_Small 1.3
+	# trait_Tiny 1.6
+	# trait_Micro 1.9
+
+	trigger = {
+		any_owned_pop_group = {
+			pop_group_size > 1000
+			has_trait = trait_Normal
+		}
+	}
+
+	immediate = {
+
+		# 找尋目標巨娘種族
+
+		if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_titan_species
+			}
+			set_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_giant_species
+			}
+			set_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_tall_species
+			}
+			set_planet_flag = gts_bruh_has_ub_tall_species
+		}
+
+		# 找到目標小人種族
+
+		weighted_random_owned_pop_group = {
+			limit = {
+				pop_group_size > 1000
+				species = {
+					has_trait = trait_Normal
+					is_robotic = no
+				}
+			}
+			species = {
+				save_event_target_as = gts_bruh_ubed_normal_species
+			}
+		}
+
+		# 創立新的團體
+
+		create_pop_group = {
+			species = event_target:gts_bruh_ubed_normal_species
+			category = civilian
+			size = 0
+			effect = {
+				save_event_target_as = gts_bruh_ubed_normal_pop_group
+			}
+		}
+
+		# 將目標小人種族轉移至新的團體
+
+		every_owned_pop_group = {
+			limit = {
+				is_same_species = event_target:gts_bruh_ubed_normal_species
+			}
+			transfer_pop_amount = {
+				source = this
+				target = event_target:gts_bruh_ubed_normal_pop_group
+				percentage = 1
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.a
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		create_pop_group = {
+			species = event_target:gts_bruh_ub_titan_species
+			category = civilian
+			size = 100
+		}
+		kill_pop_group = {
+			pop_group = event_target:gts_bruh_ubed_normal_pop_group
+			amount = 1000
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.b
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_giant_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_normal_pop_group
+				amount = 250
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.c
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_tall_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_tall_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_normal_pop_group
+				amount = 145
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.d
+		trigger = {
+			NOR = {
+				has_planet_flag = gts_bruh_has_ub_titan_species
+				has_planet_flag = gts_bruh_has_ub_giant_species
+				has_planet_flag = gts_bruh_has_ub_tall_species
+			}
+		}
+	}
+
+	after = {
+		remove_planet_flag = gts_bruh_has_ub_titan_species
+		remove_planet_flag = gts_bruh_has_ub_giant_species
+		remove_planet_flag = gts_bruh_has_ub_tall_species
+	}
+}
+
+planet_event = {
+	id = gts_leader_bruh.42
+	title = "TRANSMISSION"
+	desc = gts_leader_bruh.41.desc
+	diplomatic = yes
+	show_sound = event_swarm_started
+	location = ROOT
+
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = gts_qhai7_room
+	}
+
+	# 體型矮小
+
+	# trait_Titan (小人倍率)/0.1*100
+	# trait_Giant (小人倍率)/0.4*100
+	# trait_Tall (小人倍率)/0.7*100
+	# trait_Normal 1
+	# trait_Small 1.3
+	# trait_Tiny 1.6
+	# trait_Micro 1.9
+
+	trigger = {
+		any_owned_pop_group = {
+			pop_group_size > 1300
+			has_trait = trait_Small
+		}
+	}
+
+
+	immediate = {
+
+		# 找尋目標巨娘種族
+
+		if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_titan_species
+			}
+			set_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_giant_species
+			}
+			set_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_tall_species
+			}
+			set_planet_flag = gts_bruh_has_ub_tall_species
+		}
+
+		# 找到目標小人種族
+
+		weighted_random_owned_pop_group = {
+			limit = {
+				pop_group_size > 1300
+				species = {
+					has_trait = trait_Small
+					is_robotic = no
+				}
+			}
+			species = {
+				save_event_target_as = gts_bruh_ubed_small_species
+			}
+		}
+
+		# 創立新的團體
+
+		create_pop_group = {
+			species = event_target:gts_bruh_ubed_small_species
+			category = civilian
+			size = 0
+			effect = {
+				save_event_target_as = gts_bruh_ubed_small_pop_group
+			}
+		}
+
+		# 將目標小人種族轉移至新的團體
+
+		every_owned_pop_group = {
+			limit = {
+				is_same_species = event_target:gts_bruh_ubed_small_species
+			}
+			transfer_pop_amount = {
+				source = this
+				target = event_target:gts_bruh_ubed_small_pop_group
+				percentage = 1
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.a
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		create_pop_group = {
+			species = event_target:gts_bruh_ub_titan_species
+			category = civilian
+			size = 100
+		}
+		kill_pop_group = {
+			pop_group = event_target:gts_bruh_ubed_small_pop_group
+			amount = 1300
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.b
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_giant_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_small_pop_group
+				amount = 325
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.c
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_tall_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_tall_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_small_pop_group
+				amount = 185
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.d
+		trigger = {
+			NOR = {
+				has_planet_flag = gts_bruh_has_ub_titan_species
+				has_planet_flag = gts_bruh_has_ub_giant_species
+				has_planet_flag = gts_bruh_has_ub_tall_species
+			}
+		}
+	}
+
+	after = {
+		remove_planet_flag = gts_bruh_has_ub_titan_species
+		remove_planet_flag = gts_bruh_has_ub_giant_species
+		remove_planet_flag = gts_bruh_has_ub_tall_species
+	}
+}
+
+planet_event = {
+	id = gts_leader_bruh.43
+	title = "TRANSMISSION"
+	desc = gts_leader_bruh.41.desc
+	diplomatic = yes
+	show_sound = event_swarm_started
+	location = ROOT
+
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = gts_qhai7_room
+	}
+
+	# 體型微小
+
+	# trait_Titan (小人倍率)/0.1*100
+	# trait_Giant (小人倍率)/0.4*100
+	# trait_Tall (小人倍率)/0.7*100
+	# trait_Normal 1
+	# trait_Small 1.3
+	# trait_Tiny 1.6
+	# trait_Micro 1.9
+
+	trigger = {
+		any_owned_pop_group = {
+			pop_group_size > 1600
+			has_trait = trait_Tiny
+		}
+	}
+
+	immediate = {
+
+		# 找尋目標巨娘種族
+
+		if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_titan_species
+			}
+			set_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_giant_species
+			}
+			set_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_tall_species
+			}
+			set_planet_flag = gts_bruh_has_ub_tall_species
+		}
+
+		# 找到目標小人種族
+
+		weighted_random_owned_pop_group = {
+			limit = {
+				pop_group_size > 1600
+				species = {
+					has_trait = trait_Tiny
+					is_robotic = no
+				}
+			}
+			species = {
+				save_event_target_as = gts_bruh_ubed_tiny_species
+			}
+		}
+
+		# 創立新的團體
+
+		create_pop_group = {
+			species = event_target:gts_bruh_ubed_tiny_species
+			category = civilian
+			size = 0
+			effect = {
+				save_event_target_as = gts_bruh_ubed_tiny_pop_group
+			}
+		}
+
+		# 將目標小人種族轉移至新的團體
+
+		every_owned_pop_group = {
+			limit = {
+				is_same_species = event_target:gts_bruh_ubed_tiny_species
+			}
+			transfer_pop_amount = {
+				source = this
+				target = event_target:gts_bruh_ubed_tiny_pop_group
+				percentage = 1
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.a
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		create_pop_group = {
+			species = event_target:gts_bruh_ub_titan_species
+			category = civilian
+			size = 100
+		}
+		kill_pop_group = {
+			pop_group = event_target:gts_bruh_ubed_tiny_pop_group
+			amount = 1600
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.b
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_giant_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_tiny_pop_group
+				amount = 400
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.c
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_tall_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_tall_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_tiny_pop_group
+				amount = 230
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.d
+		trigger = {
+			NOR = {
+				has_planet_flag = gts_bruh_has_ub_titan_species
+				has_planet_flag = gts_bruh_has_ub_giant_species
+				has_planet_flag = gts_bruh_has_ub_tall_species
+			}
+		}
+	}
+
+	after = {
+		remove_planet_flag = gts_bruh_has_ub_titan_species
+		remove_planet_flag = gts_bruh_has_ub_giant_species
+		remove_planet_flag = gts_bruh_has_ub_tall_species
+	}
+}
+
+planet_event = {
+	id = gts_leader_bruh.44
+	title = "TRANSMISSION"
+	desc = gts_leader_bruh.41.desc
+	diplomatic = yes
+	show_sound = event_swarm_started
+	location = ROOT
+
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = gts_qhai7_room
+	}
+
+	# 微生物
+
+	# trait_Titan (小人倍率)/0.1*100
+	# trait_Giant (小人倍率)/0.4*100
+	# trait_Tall (小人倍率)/0.7*100
+	# trait_Normal 1
+	# trait_Small 1.3
+	# trait_Tiny 1.6
+	# trait_Micro 1.9
+
+	trigger = {
+		any_owned_pop_group = {
+			pop_group_size > 1900
+			has_trait = trait_Micro
+		}
+	}
+
+	immediate = {
+
+		# 找尋目標巨娘種族
+
+		if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Titan
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_titan_species
+			}
+			set_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Giant
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_giant_species
+			}
+			set_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		else_if = {
+			limit = {
+				any_owned_species = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+			}
+			random_owned_species = {
+				limit = {
+					has_trait = trait_gts_ub
+					has_trait = trait_Tall
+					is_robotic = no
+					NOR = {
+						has_citizenship_type = { country = root type = citizenship_assimilation }
+						has_citizenship_type = { country = root type = citizenship_slavery }
+						has_citizenship_type = { country = root type = citizenship_purge }
+					}
+				}
+				save_event_target_as = gts_bruh_ub_tall_species
+			}
+			set_planet_flag = gts_bruh_has_ub_tall_species
+		}
+
+		# 找到目標小人種族
+
+		weighted_random_owned_pop_group = {
+			limit = {
+				pop_group_size > 1900
+				species = {
+					has_trait = trait_Micro
+					is_robotic = no
+				}
+			}
+			species = {
+				save_event_target_as = gts_bruh_ubed_micro_species
+			}
+		}
+
+		# 創立新的團體
+
+		create_pop_group = {
+			species = event_target:gts_bruh_ubed_micro_species
+			category = civilian
+			size = 0
+			effect = {
+				save_event_target_as = gts_bruh_ubed_micro_pop_group
+			}
+		}
+
+		# 將目標小人種族轉移至新的團體
+
+		every_owned_pop_group = {
+			limit = {
+				is_same_species = event_target:gts_bruh_ubed_micro_species
+			}
+			transfer_pop_amount = {
+				source = this
+				target = event_target:gts_bruh_ubed_micro_pop_group
+				percentage = 1
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.a
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_titan_species
+		}
+		create_pop_group = {
+			species = event_target:gts_bruh_ub_titan_species
+			category = civilian
+			size = 100
+		}
+		kill_pop_group = {
+			pop_group = event_target:gts_bruh_ubed_micro_pop_group
+			amount = 1900
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.b
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_giant_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_giant_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_micro_pop_group
+				amount = 475
+			}
+		}
+	}
+	option = {
+		name = gts_leader_bruh.41.c
+		trigger = {
+			has_planet_flag = gts_bruh_has_ub_tall_species
+		}
+		root = {
+			create_pop_group = {
+				species = event_target:gts_bruh_ub_tall_species
+				category = civilian
+				size = 100
+			}
+			kill_pop_group = {
+				pop_group = event_target:gts_bruh_ubed_micro_pop_group
+				amount = 275
+			}
+		}
+	}
+
+	option = {
+		name = gts_leader_bruh.41.d
+		trigger = {
+			NOR = {
+				has_planet_flag = gts_bruh_has_ub_titan_species
+				has_planet_flag = gts_bruh_has_ub_giant_species
+				has_planet_flag = gts_bruh_has_ub_tall_species
+			}
+		}
+	}
+
+	after = {
+		remove_planet_flag = gts_bruh_has_ub_titan_species
+		remove_planet_flag = gts_bruh_has_ub_giant_species
+		remove_planet_flag = gts_bruh_has_ub_tall_species
+	}
+}
+
+# 刪除與體型特質衝突的種族特質
+
+event = {
+
+	# 刪除與體型特質衝突的種族特質(巨娘)
+
+	id = gts_leader_bruh.60
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_galaxy_species = {
+			OR = {
+				has_trait = trait_Ultra
+				has_trait = trait_Titan
+				has_trait = trait_Giant
+				has_trait = trait_Tall
+				AND = {
+					has_trait = trait_gts_begin
+					OR = {
+						has_trait = trait_Normal
+						has_trait = trait_Small
+						has_trait = trait_Tiny
+						has_trait = trait_Micro
+						has_trait = trait_Nano
+					}
+				}
+			}
+			OR = {
+				has_trait = trait_gts_cave_dweller
+				has_trait = trait_gts_under_feet_fungus
+				has_trait = trait_tiny_scaven
+				has_trait = trait_tiny_catalyst
+				has_trait = trait_tinyunbending
+				has_trait = trait_tinyslave
+				has_trait = trait_tiny_reproduce
+				has_trait = trait_love_gts
+				has_trait = trait_fear_gts
+
+				has_trait = trait_tiny_futa
+				has_trait = trait_tiny_milk
+				has_trait = trait_tiny_armpit
+				has_trait = trait_tiny_ub
+				has_trait = trait_tiny_ass
+				has_trait = trait_tiny_vore
+				has_trait = trait_tiny_finger
+				has_trait = trait_tiny_feet
+				has_trait = trait_tiny_butt
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_species = {
+			limit = {
+				OR = {
+					has_trait = trait_Ultra
+					has_trait = trait_Titan
+					has_trait = trait_Giant
+					has_trait = trait_Tall
+				}
+				OR = {
+					has_trait = trait_gts_cave_dweller
+					has_trait = trait_gts_under_feet_fungus
+					has_trait = trait_tiny_scaven
+					has_trait = trait_tiny_catalyst
+					has_trait = trait_tinyunbending
+					has_trait = trait_tinyslave
+					has_trait = trait_tiny_reproduce
+					has_trait = trait_love_gts
+					has_trait = trait_fear_gts
+
+					has_trait = trait_tiny_futa
+					has_trait = trait_tiny_milk
+					has_trait = trait_tiny_armpit
+					has_trait = trait_tiny_ub
+					has_trait = trait_tiny_ass
+					has_trait = trait_tiny_vore
+					has_trait = trait_tiny_finger
+					has_trait = trait_tiny_feet
+					has_trait = trait_tiny_butt
+				}
+			}
+			change_species_characteristics = {
+				remove_trait = trait_gts_cave_dweller
+			}
+			change_species_characteristics = {
+				remove_trait = trait_gts_under_feet_fungus
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_scaven
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_catalyst
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tinyunbending
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tinyslave
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_reproduce
+			}
+			change_species_characteristics = {
+				remove_trait = trait_love_gts
+			}
+			change_species_characteristics = {
+				remove_trait = trait_fear_gts
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_futa
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_milk
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_armpit
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_ub
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_ass
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_vore
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_finger
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_feet
+			}
+			change_species_characteristics = {
+				remove_trait = trait_tiny_butt
+			}
+		}
+	}
+}
+
+event = {
+
+	# 刪除與體型特質衝突的種族特質(小人)
+
+	id = gts_leader_bruh.61
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_galaxy_species = {
+			OR = {
+				has_trait = trait_Normal
+				has_trait = trait_Small
+				has_trait = trait_Tiny
+				has_trait = trait_Micro
+				has_trait = trait_Nano
+			}
+			OR = {
+				has_trait = trait_gts_ub
+				has_trait = trait_gts_ass
+				has_trait = trait_gts_vore
+				has_trait = trait_gts_milk
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_species = {
+			limit = {
+				OR = {
+					has_trait = trait_Normal
+					has_trait = trait_Small
+					has_trait = trait_Tiny
+					has_trait = trait_Micro
+					has_trait = trait_Nano
+				}
+				OR = {
+					has_trait = trait_gts_ub
+					has_trait = trait_gts_ass
+					has_trait = trait_gts_vore
+					has_trait = trait_gts_milk
+					has_trait = trait_gts_breed
+				}
+			}
+			change_species_characteristics = {
+				remove_trait = trait_gts_ub
+			}
+			change_species_characteristics = {
+				remove_trait = trait_gts_ass
+			}
+			change_species_characteristics = {
+				remove_trait = trait_gts_vore
+			}
+			change_species_characteristics = {
+				remove_trait = trait_gts_milk
+			}change_species_characteristics = {
+				remove_trait = trait_gts_breed
+			}
+		}
+	}
+}
+
+# 刪除佔位符特質
+
+event = {
+	id = gts_leader_bruh.62
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_country = {
+			any_owned_leader = {
+				has_trait = leader_trait_gts_bruh_empty
+			}
+		}
+	}
+
+	immediate = {
+		every_country = {
+			every_owned_leader = {
+				limit = {
+					has_trait = leader_trait_gts_bruh_empty
+				}
+				remove_trait = leader_trait_gts_bruh_empty
+			}
+		}
+	}
+}
+
+# 刪除不符合星球類型的首都建築
+
+event = {
+	id = gts_leader_bruh.63
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_galaxy_planet = {
+			exists = owner
+			is_gts_reformed_planet = yes
+			OR = {
+				has_building = building_colony_shelter
+				has_building = building_deployment_post
+
+				has_building = building_capital
+				has_building = building_hive_capital
+				has_building = building_machine_capital
+				has_building = building_resort_capital
+				has_building = building_slave_capital
+				has_building = building_ancient_control_center
+				has_building = building_ancient_palace
+				has_building = building_capital_wilderness
+
+				has_building = building_major_capital
+				has_building = building_hive_major_capital
+				has_building = building_machine_major_capital
+				has_building = building_resort_major_capital
+				has_building = building_slave_major_capital
+				has_building = building_major_capital_wilderness
+
+				has_building = building_system_capital
+				has_building = building_machine_system_capital
+				has_building = building_system_capital_wilderness
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_planet= {
+			limit = {
+				exists = owner
+				is_gts_reformed_planet = yes
+				OR = {
+					has_building = building_colony_shelter
+					has_building = building_deployment_post
+
+					has_building = building_capital
+					has_building = building_hive_capital
+					has_building = building_machine_capital
+					has_building = building_resort_capital
+					has_building = building_slave_capital
+					has_building = building_ancient_control_center
+					has_building = building_ancient_palace
+					has_building = building_capital_wilderness
+
+					has_building = building_major_capital
+					has_building = building_hive_major_capital
+					has_building = building_machine_major_capital
+					has_building = building_resort_major_capital
+					has_building = building_slave_major_capital
+					has_building = building_major_capital_wilderness
+
+					has_building = building_system_capital
+					has_building = building_machine_system_capital
+					has_building = building_system_capital_wilderness
+				}
+			}
+			remove_building = building_colony_shelter
+			remove_building = building_deployment_post
+
+			remove_building = building_capital
+			remove_building = building_hive_capital
+			remove_building = building_machine_capital
+			remove_building = building_resort_capital
+			remove_building = building_slave_capital
+			remove_building = building_ancient_control_center
+			remove_building = building_ancient_palace
+			remove_building = building_capital_wilderness
+
+			remove_building = building_major_capital
+			remove_building = building_hive_major_capital
+			remove_building = building_machine_major_capital
+			remove_building = building_resort_major_capital
+			remove_building = building_slave_major_capital
+			remove_building = building_major_capital_wilderness
+
+			remove_building = building_system_capital
+			remove_building = building_machine_system_capital
+			remove_building = building_system_capital_wilderness
+			if = {
+				limit = {
+					exists = owner
+					OR = {
+						is_planet_class = pc_gts_juice
+						is_planet_class = pc_gts_juice2
+						is_planet_class = pc_gts_juice3
+					}
+					NOR = {
+						has_building = building_gts_bruh_juice_colony_shelter
+						has_building = building_gts_bruh_juice_capital
+						has_building = building_gts_bruh_juice_major_capital
+						has_building = building_gts_bruh_juice_system_capital
+					}
+				}
+				add_building = building_gts_bruh_juice_colony_shelter
+			}
+			else_if = {
+				limit = {
+					exists = owner
+					is_planet_class = pc_gts_milk
+					NOR = {
+						has_building = building_gts_bruh_milk_colony_shelter
+						has_building = building_gts_bruh_milk_capital
+						has_building = building_gts_bruh_milk_major_capital
+						has_building = building_gts_bruh_milk_system_capital
+					}
+				}
+				add_building = building_gts_bruh_milk_colony_shelter
+			}
+			else_if = {
+				limit = {
+					exists = owner
+					is_planet_class = pc_gts_semen
+					NOR = {
+						has_building = building_gts_bruh_semen_colony_shelter
+						has_building = building_gts_bruh_semen_capital
+						has_building = building_gts_bruh_semen_major_capital
+						has_building = building_gts_bruh_semen_system_capital
+					}
+				}
+				add_building = building_gts_bruh_semen_colony_shelter
+			}
+			else_if = {
+				limit = {
+					exists = owner
+					OR = {
+						is_planet_class = pc_gts_dirt0
+						is_planet_class = pc_gts_dirt1
+						is_planet_class = pc_gts_dirt2
+						is_planet_class = pc_gts_dirt3
+						is_planet_class = pc_gts_dirt4
+					}
+					NOR = {
+						has_building = building_gts_bruh_dirt_colony_shelter
+						has_building = building_gts_bruh_dirt_capital
+						has_building = building_gts_bruh_dirt_major_capital
+						has_building = building_gts_bruh_dirt_system_capital
+					}
+				}
+				add_building = building_gts_bruh_dirt_colony_shelter
+			}
+			else_if = {
+				limit = {
+					exists = owner
+					is_planet_class = pc_gts_shit
+					NOR = {
+						has_building = building_gts_bruh_shit_colony_shelter
+						has_building = building_gts_bruh_shit_capital
+						has_building = building_gts_bruh_shit_major_capital
+						has_building = building_gts_bruh_shit_system_capital
+					}
+				}
+				add_building = building_gts_bruh_shit_colony_shelter
+			}
+			else_if = {
+				limit = {
+					exists = owner
+					OR = {
+						is_planet_class = pc_gts_urine
+						is_planet_class = pc_gts_urine2
+					}
+					NOR = {
+						has_building = building_gts_bruh_urine_colony_shelter
+						has_building = building_gts_bruh_urine_capital
+						has_building = building_gts_bruh_urine_major_capital
+						has_building = building_gts_bruh_urine_system_capital
+					}
+				}
+				add_building = building_gts_bruh_urine_colony_shelter
+			}
+		}
+	}
+}
+
+# 計算領袖特質所需的資源
+
+country_event = {
+	id = gts_leader_bruh.64
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		root = {
+
+			# 小人資源
+
+			# 巨娘體液
+			export_resource_income_to_variable = {
+				resource = gts_giantess_fluid
+				variable = gts_bruh_get_gts_giantess_fluid_cost_amount_variable
+			}
+			multiply_variable = {
+				which = gts_bruh_get_gts_giantess_fluid_cost_amount_variable
+				value = -12
+			}
+			change_variable = {
+				which = gts_bruh_get_gts_giantess_fluid_cost_amount_variable
+				value = -10000
+			}
+
+			# 巨娘內衣
+			export_resource_income_to_variable = {
+				resource = gts_giantess_underwear
+				variable = gts_bruh_get_gts_giantess_underwear_cost_amount_variable
+			}
+			multiply_variable = {
+				which = gts_bruh_get_gts_giantess_underwear_cost_amount_variable
+				value = -12
+			}
+			change_variable = {
+				which = gts_bruh_get_gts_giantess_underwear_cost_amount_variable
+				value = -5000
+			}
+
+			# 巨娘之力
+			export_resource_income_to_variable = {
+				resource = gts_giantess_human
+				variable = gts_bruh_get_gts_giantess_human_cost_amount_variable
+			}
+			multiply_variable = {
+				which = gts_bruh_get_gts_giantess_human_cost_amount_variable
+				value = -12
+			}
+			change_variable = {
+				which = gts_bruh_get_gts_giantess_human_cost_amount_variable
+				value = -2500
+			}
+
+			# 巨娘資源
+
+			# 縮小人
+			export_resource_income_to_variable = {
+				resource = gts_micro
+				variable = gts_bruh_get_gts_micro_cost_amount_variable
+			}
+			multiply_variable = {
+				which = gts_bruh_get_gts_micro_cost_amount_variable
+				value = -12
+			}
+			change_variable = {
+				which = gts_bruh_get_gts_micro_cost_amount_variable
+				value = -10000
+			}
+
+			# 縮小城市
+			export_resource_income_to_variable = {
+				resource = gts_micro_city
+				variable = gts_bruh_get_gts_micro_city_cost_amount_variable
+			}
+			multiply_variable = {
+				which = gts_bruh_get_gts_micro_city_cost_amount_variable
+				value = -12
+			}
+			change_variable = {
+				which = gts_bruh_get_gts_micro_city_cost_amount_variable
+				value = -5000
+			}
+
+			# 縮小星球
+			export_resource_income_to_variable = {
+				resource = gts_micro_planet
+				variable = gts_bruh_get_gts_micro_planet_cost_amount_variable
+			}
+			multiply_variable = {
+				which = gts_bruh_get_gts_micro_planet_cost_amount_variable
+				value = -12
+			}
+			change_variable = {
+				which = gts_bruh_get_gts_micro_planet_cost_amount_variable
+				value = -2500
+			}
+		}
+	}
+}
+
+# 移除無人星球上的寰海極宇修正及建築
+
+event = {
+	id = gts_leader_bruh.65
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_galaxy_planet = {
+			has_owner = no
+			OR = {
+				OR = {
+					has_modifier = modifier_gts_ultra_insurance_tongue
+					has_modifier = modifier_gts_ultra_insurance_foot
+					has_modifier = modifier_gts_ultra_insurance_breast
+					has_modifier = modifier_gts_ultra_insurance_virgin
+					has_modifier = modifier_gts_ultra_insurance_flood
+					has_modifier = modifier_gts_ultra_insurance_toy
+					has_modifier = modifier_gts_ultra_insurance_toxic
+					has_modifier = modifier_gts_ultra_insurance_scat
+					has_modifier = modifier_gts_ultra_insurance_exhale
+					has_modifier = modifier_gts_ultra_insurance_futa
+				}
+				OR = {
+					has_building = building_gts_ultra_insurance_tongue
+					has_building = building_gts_ultra_insurance_tongue2
+					has_building = building_gts_ultra_insurance_foot
+					has_building = building_gts_ultra_insurance_breast
+					has_building = building_gts_ultra_insurance_virgin
+					has_building = building_gts_ultra_insurance_toy
+					has_building = building_gts_ultra_insurance_flood
+					has_building = building_gts_ultra_insurance_toxic
+					has_building = building_gts_ultra_insurance_scat
+					has_building = building_gts_ultra_insurance_exhale
+					has_building = building_gts_ultra_insurance_futa
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_planet= {
+			limit = {
+				has_owner = no
+				OR = {
+					OR = {
+						has_modifier = modifier_gts_ultra_insurance_tongue
+						has_modifier = modifier_gts_ultra_insurance_foot
+						has_modifier = modifier_gts_ultra_insurance_breast
+						has_modifier = modifier_gts_ultra_insurance_virgin
+						has_modifier = modifier_gts_ultra_insurance_flood
+						has_modifier = modifier_gts_ultra_insurance_toy
+						has_modifier = modifier_gts_ultra_insurance_toxic
+						has_modifier = modifier_gts_ultra_insurance_scat
+						has_modifier = modifier_gts_ultra_insurance_exhale
+						has_modifier = modifier_gts_ultra_insurance_futa
+					}
+					OR = {
+						has_building = building_gts_ultra_insurance_tongue
+						has_building = building_gts_ultra_insurance_tongue2
+						has_building = building_gts_ultra_insurance_foot
+						has_building = building_gts_ultra_insurance_breast
+						has_building = building_gts_ultra_insurance_virgin
+						has_building = building_gts_ultra_insurance_toy
+						has_building = building_gts_ultra_insurance_flood
+						has_building = building_gts_ultra_insurance_toxic
+						has_building = building_gts_ultra_insurance_scat
+						has_building = building_gts_ultra_insurance_exhale
+						has_building = building_gts_ultra_insurance_futa
+					}
+				}
+			}
+			remove_modifier = modifier_gts_ultra_insurance_tongue
+			remove_modifier = modifier_gts_ultra_insurance_foot
+			remove_modifier = modifier_gts_ultra_insurance_breast
+			remove_modifier = modifier_gts_ultra_insurance_virgin
+			remove_modifier = modifier_gts_ultra_insurance_flood
+			remove_modifier = modifier_gts_ultra_insurance_toy
+			remove_modifier = modifier_gts_ultra_insurance_toxic
+			remove_modifier = modifier_gts_ultra_insurance_scat
+			remove_modifier = modifier_gts_ultra_insurance_exhale
+			remove_modifier = modifier_gts_ultra_insurance_futa
+
+			remove_building = building_gts_ultra_insurance_tongue
+			remove_building = building_gts_ultra_insurance_tongue2
+			remove_building = building_gts_ultra_insurance_foot
+			remove_building = building_gts_ultra_insurance_breast
+			remove_building = building_gts_ultra_insurance_virgin
+			remove_building = building_gts_ultra_insurance_toy
+			remove_building = building_gts_ultra_insurance_flood
+			remove_building = building_gts_ultra_insurance_toxic
+			remove_building = building_gts_ultra_insurance_scat
+			remove_building = building_gts_ultra_insurance_exhale
+			remove_building = building_gts_ultra_insurance_futa
+		}
+	}
+}
+
+# 刪除複數的體型特質
+
+event = {
+
+	# 刪除複數的體型特質(巨娘開局)
+
+	id = gts_leader_bruh.66
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			any_galaxy_species = {
+				has_trait = trait_gts_begin
+				OR = {
+					has_trait = trait_Normal
+					has_trait = trait_Small
+					has_trait = trait_Tiny
+					has_trait = trait_Micro
+					has_trait = trait_Nano
+				}
+			}
+			any_country = {
+				any_owned_leader = {
+					OR = {
+						has_trait = leader_trait_Ultra_start
+						has_trait = leader_trait_Titan_start
+						has_trait = leader_trait_Giant_start
+						has_trait = leader_trait_Tall_start
+					}
+					OR = {
+						has_trait = leader_trait_Ultra
+						has_trait = leader_trait_Titan
+						has_trait = leader_trait_Giant
+						has_trait = leader_trait_Tall
+						has_trait = leader_trait_Normal
+						has_trait = leader_trait_Small
+						has_trait = leader_trait_Tiny
+						has_trait = leader_trait_Micro
+						has_trait = leader_trait_Nano
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_species = {
+			limit = {
+				has_trait = trait_gts_begin
+				OR = {
+					has_trait = trait_Normal
+					has_trait = trait_Small
+					has_trait = trait_Tiny
+					has_trait = trait_Micro
+					has_trait = trait_Nano
+				}
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Normal
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Small
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Tiny
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Micro
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Nano
+			}
+		}
+		every_country = {
+			every_owned_leader = {
+				limit = {
+					OR = {
+						has_trait = leader_trait_Ultra_start
+						has_trait = leader_trait_Titan_start
+						has_trait = leader_trait_Giant_start
+						has_trait = leader_trait_Tall_start
+					}
+					OR = {
+						has_trait = leader_trait_Ultra
+						has_trait = leader_trait_Titan
+						has_trait = leader_trait_Giant
+						has_trait = leader_trait_Tall
+						has_trait = leader_trait_Normal
+						has_trait = leader_trait_Small
+						has_trait = leader_trait_Tiny
+						has_trait = leader_trait_Micro
+						has_trait = leader_trait_Nano
+					}
+				}
+				remove_trait = leader_trait_Ultra
+				remove_trait = leader_trait_Titan
+				remove_trait = leader_trait_Giant
+				remove_trait = leader_trait_Tall
+				remove_trait = leader_trait_Normal
+				remove_trait = leader_trait_Small
+				remove_trait = leader_trait_Tiny
+				remove_trait = leader_trait_Micro
+				remove_trait = leader_trait_Nano
+			}
+		}
+	}
+}
+
+event = {
+
+	# 刪除複數的體型特質(小人開局)
+
+	id = gts_leader_bruh.67
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			any_galaxy_species = {
+				has_trait = trait_tiny_begin
+				OR = {
+					has_trait = trait_Ultra
+					has_trait = trait_Titan
+					has_trait = trait_Giant
+					has_trait = trait_Tall
+				}
+			}
+			any_country = {
+				any_owned_leader = {
+					OR = {
+						has_trait = leader_trait_Normal_start
+						has_trait = leader_trait_Small_start
+						has_trait = leader_trait_Tiny_start
+						has_trait = leader_trait_Micro_start
+						has_trait = leader_trait_Nano_start
+					}
+					OR = {
+						has_trait = leader_trait_Ultra
+						has_trait = leader_trait_Titan
+						has_trait = leader_trait_Giant
+						has_trait = leader_trait_Tall
+						has_trait = leader_trait_Normal
+						has_trait = leader_trait_Small
+						has_trait = leader_trait_Tiny
+						has_trait = leader_trait_Micro
+						has_trait = leader_trait_Nano
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_species = {
+			limit = {
+				has_trait = trait_tiny_begin
+				OR = {
+					has_trait = trait_Ultra
+					has_trait = trait_Titan
+					has_trait = trait_Giant
+					has_trait = trait_Tall
+				}
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Ultra
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Titan
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Giant
+			}
+			change_species_characteristics = {
+				remove_trait = trait_Tall
+			}
+		}
+		every_country = {
+			every_owned_leader = {
+				limit = {
+					OR = {
+						has_trait = leader_trait_Normal_start
+						has_trait = leader_trait_Small_start
+						has_trait = leader_trait_Tiny_start
+						has_trait = leader_trait_Micro_start
+						has_trait = leader_trait_Nano_start
+					}
+					OR = {
+						has_trait = leader_trait_Ultra
+						has_trait = leader_trait_Titan
+						has_trait = leader_trait_Giant
+						has_trait = leader_trait_Tall
+						has_trait = leader_trait_Normal
+						has_trait = leader_trait_Small
+						has_trait = leader_trait_Tiny
+						has_trait = leader_trait_Micro
+						has_trait = leader_trait_Nano
+					}
+				}
+				remove_trait = leader_trait_Ultra
+				remove_trait = leader_trait_Titan
+				remove_trait = leader_trait_Giant
+				remove_trait = leader_trait_Tall
+				remove_trait = leader_trait_Normal
+				remove_trait = leader_trait_Small
+				remove_trait = leader_trait_Tiny
+				remove_trait = leader_trait_Micro
+				remove_trait = leader_trait_Nano
+			}
+		}
+	}
+}
+
+event = {
+
+	# 刪除複數的體型特質(無開局)
+
+	id = gts_leader_bruh.68
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_galaxy_species = {
+			OR = {
+				has_trait = trait_Ultra
+				has_trait = trait_Titan
+				has_trait = trait_Giant
+				has_trait = trait_Tall
+			}
+			OR = {
+				has_trait = trait_Normal
+				has_trait = trait_Small
+				has_trait = trait_Tiny
+				has_trait = trait_Micro
+				has_trait = trait_Nano
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_species = {
+			limit = {
+				OR = {
+					has_trait = trait_Ultra
+					has_trait = trait_Titan
+					has_trait = trait_Giant
+					has_trait = trait_Tall
+				}
+				OR = {
+					has_trait = trait_Normal
+					has_trait = trait_Small
+					has_trait = trait_Tiny
+					has_trait = trait_Micro
+					has_trait = trait_Nano
+				}
+			}
+			random_list = {
+				1 = {
+					change_species_characteristics = {
+						remove_trait = trait_Ultra
+					}
+					change_species_characteristics = {
+						remove_trait = trait_Titan
+					}
+					change_species_characteristics = {
+						remove_trait = trait_Giant
+					}
+					change_species_characteristics = {
+						remove_trait = trait_Tall
+					}
+				}
+				1 = {
+					change_species_characteristics = {
+						remove_trait = trait_Normal
+					}
+					change_species_characteristics = {
+						remove_trait = trait_Small
+					}
+					change_species_characteristics = {
+						remove_trait = trait_Tiny
+					}
+					change_species_characteristics = {
+						remove_trait = trait_Micro
+					}
+					change_species_characteristics = {
+						remove_trait = trait_Nano
+					}
+				}
+			}
+		}
+	}
+}
+
+# 替領袖添加扶她特質
+
+country_event = {
+	id = gts_leader_bruh.69
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			NOT = {
+				has_trait = leader_trait_gts_futa
+			}
+		}
+		from.species = {
+			has_trait = trait_gts_Futa
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				from = {
+					NOT = {
+						has_trait = leader_trait_gts_futa
+					}
+				}
+				from.species = {
+					has_trait = trait_gts_Futa
+				}
+			}
+			from = {
+				add_trait = {
+					trait = leader_trait_gts_futa
+					show_message = no
+				}
+			}
+		}
+	}
+}
+

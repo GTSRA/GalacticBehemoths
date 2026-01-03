@@ -1,0 +1,84 @@
+leader_trait_governor_chenghui = {
+	icon = "gfx/interface/icons/traits/leader_trait_icons/psionic_chosen_one.dds"
+	immortal_leaders = yes
+	planet_modifier = {
+		pop_amenities_usage_mult = -0.3
+		planet_buildings_cost_mult = -0.4
+		planet_building_build_speed_mult = 0.4
+		planet_jobs_energy_produces_mult = 0.1
+		planet_jobs_minerals_produces_mult = 0.1
+		planet_jobs_food_produces_mult = 0.5
+		deposit_blockers_cost_mult = -0.4
+		planet_clear_blocker_speed_mult = 0.4
+	}
+	#leader_trait = { governor }
+	leader_class = {
+		official
+	}
+	initial = no
+	randomized = no
+}
+
+# 伊萊莎
+
+leader_trait_governor_eliza = {
+
+	# 巨型蒸汽智械女僕
+
+	leader_trait_type = destiny
+
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_legendary_leader"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	planet_modifier = {
+		pop_happiness = 0.10
+		planet_crime_mult = -0.10
+		planet_stability_add = 10
+		logistic_growth_mult = 0.05
+	  	bonus_pop_growth_mult = 0.05
+		pop_happiness = 0.15		#幸福度
+		planet_crime_add = -15		#犯罪率
+		planet_stability_add = 10		#稳定度
+
+	}
+
+	leader_class = {
+		official
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+# 空弦
+
+leader_trait_governor_archetto = {
+
+	# 聖女偶像空弦
+
+	leader_trait_type = destiny
+
+	icon = "gfx/interface/icons/traits/leader_traits/archetto_icon.dds"
+
+	councilor_modifier = {
+		pop_happiness = 0.10
+		planet_jobs_trade_produces_mult = 0.20
+		planet_jobs_unity_produces_mult = 0.20
+	}
+
+	leader_class = {
+		official
+	}
+
+	selectable_weight = {
+		weight = 0
+	}
+}
+

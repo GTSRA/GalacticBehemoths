@@ -1,0 +1,10 @@
+default = {
+	ship_of_size_limits = {
+		gts_destroyer_ship_limit
+		gts_battleship_ship_limit
+		gts_titan_ship_limit
+		gts_bruh_destroyer_ship_limit
+		gts_bruh_battleship_ship_limit
+		gts_bruh_titan_ship_limit
+	}
+}

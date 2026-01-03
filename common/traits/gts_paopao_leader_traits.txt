@@ -1,0 +1,97 @@
+gts_trait_leader_paopao_a = {
+    cost = 0
+    inline_script = {
+        script = trait/icon
+        CLASS = commander
+        ICON = "GFX_leader_trait_armorer"
+        RARITY = paragon
+        COUNCIL = no
+        TIER = none
+    }
+    fleet_modifier = {
+        ship_weapon_range_mult = 0.2
+        ship_speed_mult = 0.6
+        ship_emergency_ftl_mult = -0.8
+        ship_fire_rate_mult = 0.2
+    }
+    leader_class = { commander }
+    initial = no
+    randomized = no
+}
+gts_trait_leader_paopao_b = {
+    cost = 0
+    inline_script = {
+        script = trait/icon
+        CLASS = commander
+        ICON = "GFX_leader_trait_armorer"
+        RARITY = paragon
+        COUNCIL = no
+        TIER = none
+    }
+    fleet_modifier = {
+        ship_hull_mult = 1.1
+    }
+    triggered_self_modifier = {
+        leader_commanders_alloys_produces_add = 25
+        leader_commanders_minerals_produces_add = 50
+        leader_commanders_rare_crystals_produces_add = 25
+        leader_commanders_volatile_motes_produces_add = 25
+        leader_commanders_exotic_gases_produces_add = 25
+    }
+
+    leader_class = { commander }
+    initial = no
+    randomized = no
+}
+gts_trait_leader_paopao_c = {
+    inline_script = {
+        script = trait/icon
+        CLASS = commander
+        ICON = "GFX_leader_trait_arrested_development"
+        RARITY = paragon
+        COUNCIL = no
+        TIER = none
+    }
+    triggered_planet_modifier = {
+        potential = {
+            leader_class = commander
+        }
+        planet_stability_add = 20
+        planet_amenities_add = 800
+        planet_crime_add = -40
+        planet_jobs_unity_produces_mult = 1
+
+    }
+    triggered_sector_modifier = {  #星系给的效果
+        potential = {
+            leader_class = commander
+        }
+        planet_stability_add = 5
+        planet_amenities_add = 200
+        planet_crime_add = -10
+        planet_jobs_unity_produces_mult = 0.2
+    }
+    leader_class = { commander }
+    initial = no
+    randomized = no
+}
+gts_trait_leader_paopao_d = {
+    cost = 0
+    inline_script = {
+        script = trait/icon
+        CLASS = commander
+        ICON = "GFX_leader_trait_armorer"
+        RARITY = paragon
+        COUNCIL = no
+        TIER = none
+    }
+    triggered_self_modifier = {
+        leader_commanders_gts_giantess_fluid_produces_add = 90
+        leader_commanders_gts_giantess_underwear_produces_add = 30
+        leader_commanders_consumer_goods_produces_add = 50
+    }
+
+    leader_class = { commander }
+    initial = no
+    randomized = no
+}

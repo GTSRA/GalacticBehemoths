@@ -1,0 +1,176 @@
+#帝国骑士
+panlon_knights = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string =  SPECIALIST_JOB_TRIGGER
+	        building_icon = building_knights_Castle
+		}
+	}
+	tags = { unity research }
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+	country_modifier = {
+		country_naval_cap_add = 20
+	}
+	
+	resources = {
+		category = planet_empireknights 
+		produces = {
+			unity = 20
+			physics_research = 12
+			engineering_research = 12
+			society_research = 12
+		}
+		upkeep = {
+			alloys = 2
+			consumer_goods = 2
+		}
+	}
+		
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		#is_enslaved = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	
+	weight = {
+		weight = 1000	
+	}
+}
+
+#法师
+panlon_wizard = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_Wizards_Tower
+		}
+	}
+	tags = { research }
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+	resources = {
+		category = planet_panlon_Wizard
+		produces = {
+			physics_research = 20
+			engineering_research = 20
+			society_research = 20
+		}
+		upkeep = {
+			consumer_goods = 4
+		}
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	weight = {
+		weight = 1200
+	}
+}
+#魔力石合成师
+aom_magicstones = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_aom_magicstones_factory
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		#is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	tags = {  }
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+
+	possible_precalc = can_fill_specialist_job
+	
+	resources = {
+		category = planet_powerstones
+		produces = {
+			sr_aom_magicstones = 6
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	weight = {
+		weight = 1000
+	}
+}
+#图书管理员
+aom_librarian = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_aom_bottled_restaurant
+		}
+	}
+	tags = { research }
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+	resources = {
+		category = planet_panlon_Wizard
+		produces = {
+			physics_research = 10
+			engineering_research = 10
+			society_research = 10
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	weight = {
+		weight = 1200
+	}
+}

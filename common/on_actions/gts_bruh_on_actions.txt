@@ -1,0 +1,86 @@
+on_game_start = {
+	events = {
+		gts_leader_bruh.60# 刪除與體型特質衝突的種族特質(巨娘)
+		gts_leader_bruh.61# 刪除與體型特質衝突的種族特質(小人)
+		gts_leader_bruh.66# 刪除複數的體型特質(巨娘開局)
+		gts_leader_bruh.67# 刪除複數的體型特質(小人開局)
+		gts_leader_bruh.68# 刪除複數的體型特質(無開局)
+		gts_event_bruh.81# 添加開局建築
+	}
+}
+
+# on_game_start_country = {
+# 	events = {
+		
+# 	}
+# }
+
+on_monthly_pulse_country = {
+	events = {
+		gts_leader_bruh.40# 轉化人口事件
+		gts_aurora.1090# 歐若拉隨機人口事件
+		gts_leader_bruh.64# 計算領袖特質所需的資源
+	}
+}
+
+on_decade_pulse_country = {
+	events = {
+		gts_event_bruh.10 #寵物附庸事件
+		gts_event_bruh.30 #奴隸附庸事件
+		gts_event_bruh.50 #消耗品附庸事件
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		gts_leader_bruh.60# 刪除與體型特質衝突的種族特質(巨娘)
+		gts_leader_bruh.61# 刪除與體型特質衝突的種族特質(小人)
+		gts_leader_bruh.63# 刪除不符合星球類型的首都建築
+		gts_leader_bruh.65# 移除無人星球上的寰海極宇修正及建築
+		gts_leader_bruh.66# 刪除複數的體型特質(巨娘)
+		gts_leader_bruh.67# 刪除複數的體型特質(小人)
+		gts_leader_bruh.68# 刪除複數的體型特質(無開局)
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		gts_leader_bruh.62# 刪除佔位符特質
+	}
+}
+
+on_leader_spawned = {
+	events = {
+		gts_leader_bruh.69# 替領袖添加扶她特質
+	}
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		gts_leader_bruh.4# 鵝事件
+		gts_leader_bruh.5# 鵝事件
+		gts_leader_bruh.6# 鵝事件
+	}
+	random_events = {
+	}
+}
+
+on_army_killed_in_combat = {
+	events = {
+		gts_leader_bruh.20# 小人軍隊復活用
+	}
+}
+
+on_destroy_planet_with_GTS_BRUH_PLANET_KILLER_UB = {
+    events = {
+		gts_event_bruh_shipgirl.1 # 艦娘UB
+        planet_destruction.600 # frag holy world
+        awareness.150 # Planet cracker used OR planet terraformed, chance to gain 20 awareness.
+    }
+}
+
+on_destroy_planet_with_GTS_BRUH_PLANET_KILLER_UB_queued = {
+}
+
+on_destroy_planet_with_GTS_BRUH_PLANET_KILLER_UB_unqueued = {
+}

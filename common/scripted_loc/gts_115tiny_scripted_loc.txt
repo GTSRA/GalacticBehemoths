@@ -1,0 +1,18 @@
+
+defined_text = {
+    name = num_godness_power_worker_chips
+    value = value:num_godness_power_worker_raw
+}
+
+defined_text = {
+    name = num_godness_power_worker_double
+    value = value:num_godness_power_worker_raw_double
+}
+defined_text = {
+    name = num_godness_power_worker_4
+    value = value:num_godness_power_worker_raw_4
+}
+defined_text = {
+    name = num_godness_power_worker_half
+    value = value:num_godness_power_worker_raw_double
+}

@@ -1,0 +1,666 @@
+namespace = gts_skadi_colossus
+#蠢驴奇形怪状的代码
+planet_event = {
+	id = gts_skadi_colossus.100
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {#天灾老三样
+
+		# 天災相關
+
+		# Contingency Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				NOT = { has_planet_flag = machine_lair }
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			planet_event = { id = crisis.2040 }
+		}
+
+		# Contingency Final Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				has_planet_flag = machine_lair
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			from.owner = { save_event_target_as = final_machine_world_destroyer }
+			stop_crisis_sound = yes
+			planet_event = { id = crisis.2046 }
+		}
+
+		# Swarm Situation Log counter
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = swarm }
+			}
+			every_country = {
+				limit = { has_event_chain = "prethoryn_scourge_chain" }
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds"
+					amount = -1
+				}
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds_cleansed"
+					amount = 1
+				}
+			}
+		}
+
+		# 產生威脅度
+
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			if = {
+				limit = {
+					is_colony = yes
+				}
+				add_threat = { who = from.owner amount = 3 }
+				# modifier for allies + those upset by genocide
+				every_country = {
+					limit = {
+						NOR = {
+							is_same_value = from.owner
+							is_same_value = root.owner
+							AND = {
+								has_federation = yes
+								is_in_federation_with = from.owner
+							}
+						}
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							AND = {
+								has_federation = yes
+								is_in_federation_with = root.owner
+							}
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								OR = {
+									is_egalitarian = yes
+									is_xenophile = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				add_threat = { who = from.owner amount = 1 }
+			}
+
+			# modifiers for victim
+			#owner = {
+			#	add_opinion_modifier = {
+			#		modifier = opinion_skadiub_a_planet
+			#		who = from.owner
+			#	}
+			#	if = {
+			#		limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			#		add_modifier = {
+			#			modifier = colossus_victim
+			#			days = 10800 # 30 years
+			#		}
+			#	}
+			#}
+		}
+
+		# 產生倦怠度
+
+		# Add war exhaustion to planet owner
+		if = {
+			limit = {
+				exists = owner
+			}
+			owner = {
+				if = {
+					limit = { #isn't the case when the crisis bombards planets, for instance
+						is_at_war_with = from.fleet.owner
+					}
+					add_static_war_exhaustion = {
+						attacker = from.fleet.owner
+						location = root
+						value_for_planet_destruction = 1.0
+					}
+				}
+			}
+		}
+
+		# 摧毀軌道站
+
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			destroy_fleet = orbital_defence
+		}
+
+		# 拆建築
+
+		remove_all_buildings = yes
+
+		# 拆特殊星球
+
+		# destroy habitats and ringworlds
+		if = {
+			limit = {
+				is_planet_class = pc_habitat
+			}
+			spawn_habitat_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_planet_class = pc_cosmogenesis_world
+			}
+			spawn_lathe_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_ringworld = yes
+			}
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_habitable_damaged
+		}
+
+		# 轉變成愛液星球
+
+		else = {
+			clear_planet_modifiers = yes
+			clear_deposits = yes
+			pc_gts_juice_change = yes
+		}
+
+		# 拆觀測站
+
+		if = {
+			limit = {
+				has_observation_outpost = yes
+			}
+			observation_outpost = {
+				dismantle = yes
+			}
+		}
+
+		# 別人的球
+
+		if = {
+			limit = {
+				exists = owner
+				owner = { NOT = { is_same_value = from.owner } }
+			}
+
+			gts_set_count_kill_pop_effect = yes
+
+			root = {
+				# 計算人口數量
+				export_trigger_value_to_variable = {
+					trigger = pop_amount
+					variable = gts_bruh_get_planet_killed_pop_count
+				}
+				# 計算城市數量
+				export_trigger_value_to_variable = {
+					trigger = pop_amount
+					variable = gts_bruh_get_planet_destroyed_city_count
+				}
+				divide_variable = {
+					which = gts_bruh_get_planet_destroyed_city_count
+					value = 100
+				}
+				round_variable = gts_bruh_get_planet_destroyed_city_count
+				# 計算經驗獲取
+				export_trigger_value_to_variable = {
+					trigger = pop_amount
+					variable = gts_bruh_get_experience_count
+				}
+				divide_variable = {
+					which = gts_bruh_get_experience_count
+					value = 100
+				}
+				round_variable = gts_bruh_get_experience_count
+			}
+			
+			event_target:gts_skadi = {
+				change_variable = {
+					which = gts_ub_kills_logs
+					value = root.gts_bruh_get_planet_killed_pop_count
+				}
+				change_variable = {
+					which = gts_city_kills_logs
+					value = root.gts_bruh_get_planet_destroyed_city_count
+				}
+				change_variable = {
+					which = gts_planet_kills_logs
+					value = 1
+				}
+			}
+			
+			from.owner = {
+				country_event = { id = gts_skadi_colossus.110 }
+			}
+		}
+
+		# 自己的球
+
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_same_value = from.owner }
+			}
+
+			gts_set_count_kill_pop_effect = yes
+
+			root = {
+				# 計算人口數量
+				export_trigger_value_to_variable = {
+					trigger = pop_amount
+					variable = gts_bruh_get_planet_killed_pop_count
+				}
+				# 計算城市數量
+				export_trigger_value_to_variable = {
+					trigger = pop_amount
+					variable = gts_bruh_get_planet_destroyed_city_count
+				}
+				divide_variable = {
+					which = gts_bruh_get_planet_destroyed_city_count
+					value = 100
+				}
+				round_variable = gts_bruh_get_planet_destroyed_city_count
+				# 計算經驗獲取
+				export_trigger_value_to_variable = {
+					trigger = pop_amount
+					variable = gts_bruh_get_experience_count
+				}
+				divide_variable = {
+					which = gts_bruh_get_experience_count
+					value = 100
+				}
+				round_variable = gts_bruh_get_experience_count
+			}
+
+			event_target:gts_skadi = {
+				change_variable = {
+					which = gts_ub_kills_logs
+					value = root.gts_bruh_get_planet_killed_pop_count
+				}
+				change_variable = {
+					which = gts_city_kills_logs
+					value = root.gts_bruh_get_planet_destroyed_city_count
+				}
+				change_variable = {
+					which = gts_planet_kills_logs
+					value = 1
+				}
+			}
+
+			from.owner = {
+				country_event = { id = gts_skadi_colossus.111 }
+			}
+		}
+
+		# 添加冷卻時間
+
+		from.fleet.owner = {
+			set_timed_country_flag = {
+				flag = gts_bruh_colossus_destroy_planet_effect_cool_down
+				years = 1
+			}
+		}
+
+		# 產糧
+
+		#random_list = {
+		#	1 = {
+		#		add_deposit = d_energy_10
+		#		add_deposit = d_minerals_10
+		#		add_deposit = d_food_10
+		#	}
+		#	1 = {
+		#		add_deposit = d_society_10
+		#		add_deposit = d_physics_10
+		#		add_deposit = d_engineering_10
+		#	}
+		#	1 = {
+		#		add_deposit = d_vast_unity_deposit
+		#	}
+		#	1 = {
+		#		add_deposit = d_gts_giantess_fluid_3
+		#	}
+		#}
+	}
+
+	after = {
+
+		# 人口消除
+
+		every_owned_pop_group = {
+			kill_all_pop = yes
+		}
+
+		# 轉成蒂蒂愛液星球
+
+		change_pc = pc_gts_juice2
+		remove_deposit = d_juice_ruin3
+		add_deposit = d_juice_ruin7
+		destroy_colony = yes
+	}
+}
+
+#炸球后弹出事件
+country_event = {
+	id = gts_skadi_colossus.110
+	title = gts_skadi_colossus.110.name
+	desc = gts_skadi_colossus.110.desc
+	picture = GFX_evt_skadi_ub_planet
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = skadi_ubed }
+	}
+	option = {
+		name = gts_skadi_colossus.110a
+	}
+	option = {
+		name = gts_skadi_colossus.110b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_colossus.110c
+		root = {
+			set_country_flag = skadi_ubed	
+		}
+	}
+}
+country_event = {
+	id = gts_skadi_colossus.111
+	title = gts_skadi_colossus.110.name
+	desc = gts_skadi_colossus.111.desc
+	picture = GFX_evt_skadi_ub_planet
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = skadi_ubed }
+	}
+	option = {
+		name = gts_skadi_colossus.111a
+	}
+	option = {
+		name = gts_skadi_colossus.111b
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_colossus.111c
+		root = {
+			set_country_flag = skadi_ubed	
+		}
+	}
+}
+planet_event = { # 转化为爱液星球-拥有斯卡蒂
+	id = gts_skadi_colossus.112
+	title = gts_skadi_colossus.112.name
+	desc = gts_skadi_colossus.112.desc
+	fire_only_once = yes
+	picture = skadi_ubplanet2
+	show_sound = event_mystic_reveal
+	location = root
+	is_triggered_only = yes
+	immediate = {
+		root = {
+
+			# 計算人口數量 (99%)
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_planet_killed_pop_count
+			}
+			multiply_variable = {
+				which = gts_bruh_get_planet_killed_pop_count
+				value = 0.99
+			}
+			round_variable = gts_bruh_get_planet_killed_pop_count
+
+			# 計算城市數量
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_planet_destroyed_city_count
+			}
+			divide_variable = {
+				which = gts_bruh_get_planet_destroyed_city_count
+				value = 100
+			}
+			round_variable = gts_bruh_get_planet_destroyed_city_count
+
+			# 計算經驗獲取
+			export_trigger_value_to_variable = {
+				trigger = pop_amount
+				variable = gts_bruh_get_experience_count
+			}
+			divide_variable = {
+				which = gts_bruh_get_experience_count
+				value = 100
+			}
+			round_variable = gts_bruh_get_experience_count
+		}
+		owner ={
+			random_owned_leader = {
+				limit = {
+					has_leader_flag = gts_skadi
+				}
+				save_event_target_as = gts_bruh_get_destroy_planet_leader
+			}
+			set_country_flag = triggered_skadi_juice_planet
+		}
+	}
+
+	option = {
+		name = gts_skadi_colossus.112.a
+		custom_tooltip = gts_ap_planet.4000.a.tooltip
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 5
+				min = 2500
+			}
+		}
+
+		event_target:gts_bruh_get_destroy_planet_leader = {
+			add_experience = root.gts_bruh_get_experience_count
+
+			change_variable = {
+				which = gts_ub_kills_logs
+				value = root.gts_bruh_get_planet_killed_pop_count
+			}
+			change_variable = {
+				which = gts_city_kills_logs
+				value = root.gts_bruh_get_planet_destroyed_city_count
+			}
+		}
+
+		root ={
+			every_owned_pop_group = {
+				kill_pop_group = {
+					pop_group = this
+					percentage = 0.99
+				}
+			}
+			add_planet_devastation = 100
+		}
+	}
+}
+
+#扶她轰炸事件
+planet_event = { #没随机到
+	id = gts_skadi_colossus.000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		this = {
+			is_colony = yes
+		    NOR = {
+				has_planet_flag = no_futa_bomb
+		    }
+			is_no_eat_planet = no
+		}
+		from.owner = {
+			has_country_flag = can_trigger_futa_content
+		}
+	}
+	immediate = {
+		this = {
+			set_planet_flag = no_futa_bomb
+		}
+	}
+}
+planet_event = {
+	id = gts_skadi_colossus.001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		this = {
+			is_colony = yes
+		    NOR = {
+			    has_planet_flag = no_futa_bomb
+		    }
+			is_no_eat_planet = yes
+		}
+		from.owner = {
+			has_country_flag = can_trigger_futa_content
+		}
+	}
+	immediate = {
+		this = {
+			save_event_target_as = gtsra_random_planet_resist
+		}
+		from.owner = {
+			country_event = {
+				id = gts_skadi_colossus.002
+			}
+		}
+	}
+}
+#扶她轰炸开始
+country_event = {
+	id = gts_skadi_colossus.002
+	title = gts_skadi_colossus.002.name
+	desc = gts_skadi_colossus.002.desc
+	picture = futa_apply
+	show_sound = event_mystic_reveal
+	is_triggered_only = yes
+	location = from
+	option = {
+		name = gts_skadi_colossus.002.a
+		hidden_effect = {
+			event_target:gtsra_random_planet_resist = {
+				destroy_colony = yes
+				clear_deposits = yes
+				add_deposit = d_futa_jyweather
+				add_deposit = d_futa_jylake
+				add_deposit = d_futa_jylake
+				add_deposit = d_futa_jylake
+				add_deposit = d_futa_jylake
+				event_target:gtsra_random_planet_resist.owner = { #加好感度
+					add_opinion_modifier = {
+						modifier = opinion_cracked_my_world
+						who = root
+					}
+					add_static_war_exhaustion = {
+						attacker = root
+						location = event_target:gtsra_random_planet_resist
+						value_for_planet_destruction = 1.0
+					}
+				}
+			}
+			country_event = {
+				id = gts_skadi_colossus.003
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_colossus.002.b
+		trigger = {
+			prev.owner = {
+				has_country_flag = tiny_flag
+			}
+		}
+		hidden_effect = {
+			event_target:gtsra_random_planet_resist = {
+				destroy_colony = yes
+				clear_deposits = yes
+				add_deposit = d_futa_jyweather
+				add_deposit = d_futa_jylake
+				add_deposit = d_futa_jylake
+				add_deposit = d_futa_jylake
+				add_deposit = d_futa_jylake
+				event_target:gtsra_random_planet_resist.owner = { #加好感度
+					add_opinion_modifier = {
+						modifier = opinion_cracked_my_world
+						who = root
+					}
+					add_static_war_exhaustion = {
+						attacker = root
+						location = event_target:gtsra_random_planet_resist
+						value_for_planet_destruction = 1.0
+					}
+				}
+			}
+			country_event = {
+				id = gts_skadi_colossus.003
+			}
+		}
+	}
+	option = {
+		name = gts_skadi_colossus.002.c
+		event_target:gtsra_random_planet_resist = {
+			set_planet_flag = no_futa_bomb
+		}
+	}
+}
+#扶她事件结束
+country_event = {
+	id = gts_skadi_colossus.003
+	title = gts_skadi_colossus.003.name
+	desc = gts_skadi_colossus.003.desc
+	picture = futa_planet_ejection
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	location = fromfrom
+	option = {
+		name = gts_skadi_colossus.003.a
+	}
+}

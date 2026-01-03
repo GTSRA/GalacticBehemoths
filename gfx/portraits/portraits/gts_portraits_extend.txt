@@ -1,0 +1,17 @@
+# Fara
+portraits = {
+	Fara={ texturefile = "gfx/models/portraits/Fara.dds"}
+	fara_illya={ texturefile = "gfx/models/portraits/fara_illya.dds" }
+	Illya={ texturefile = "gfx/models/portraits/Illya.dds" }
+	Illya1={ texturefile = "gfx/models/portraits/Illya1.dds" }
+	Miyu={ texturefile = "gfx/models/portraits/Miyu.dds" }
+	Chloe={ texturefile = "gfx/models/portraits/Chloe.dds" }
+	Altria_Pendragon_Franz={ texturefile = "gfx/models/portraits/Altria_Pendragon_Franz.dds" }
+	Gilgamesh ={ texturefile = "gfx/models/portraits/Gilgamesh.dds" }
+}
+
+# aom
+portraits = {
+	GFX_relic_Ruby={ texturefile = "gfx/interface/icons/relics/relic_Ruby.dds" }
+	GFX_Ruby={ texturefile = "gfx/models/portraits/Ruby.dds" }
+}

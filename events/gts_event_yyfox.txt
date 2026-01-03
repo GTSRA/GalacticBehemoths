@@ -1,0 +1,30 @@
+namespace = gts_event_yyfox
+
+ship_event = {
+    id = gts_event_yyfox.0
+    title = gts_event_yyfox.0.title
+    desc =  gts_event_yyfox.0.desc.a
+    is_triggered_only = yes
+    option = {
+        name = gts_event_yyfox.0.option.a
+        hidden_effect = {
+
+        }
+    }
+
+
+}
+
+ship_event = {
+    id = gts_event_yyfox.1
+    title = gts_event_yyfox.0.title
+    desc =  gts_event_yyfox.0.desc.b
+    is_triggered_only = yes
+    trigger = {
+        is_gts_leader = yes
+    }
+
+    option = {
+        name = gts_event_yyfox.0.option.b
+    }
+}

@@ -1,0 +1,181 @@
+############################################################################################################################################
+##################################################                  魚雷                  ##################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_TORPEDO_1"
+	icon = "GFX_gts_bruh_torpedo_ship_part_1"
+	icon_frame = 1
+}
+
+############################################################################################################################################
+##################################################                  動能                  ##################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_SECONDARY_KINETIC_ARTILLERY"
+	icon = "GFX_gts_bruh_secondary_kinetic_artillery_ship_part"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_DESTROYER_KINETIC_ARTILLERY_LARGE"
+	icon = "GFX_gts_bruh_destroyer_kinetic_artillery_large_ship_part"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_KINETIC_ARTILLERY_EXTRA_LARGE_1"
+	icon = "GFX_gts_bruh_kinetic_artillery_extra_large_ship_part_1"
+	icon_frame = 1
+}
+
+############################################################################################################################################
+#################################################                  斬艦刀                  #################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_KINETIC_SWORD_TITANIC_1"
+	icon = "GFX_gts_bruh_kinetic_sword_titanic_ship_part_1"
+	icon_frame = 1
+}
+
+############################################################################################################################################
+################################################                  裝甲護盾                  ################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_SHIELD_1"
+	icon = "GFX_ARMOR_GTS"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_SHIELD_2"
+	icon = "GFX_DRAGON_ARMOR_GTS"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_SHIELD_3"
+	icon = "GFX_CRYSTAL_ARMOR_GTS"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_ARMOR_1"
+	icon = "GFX_tech_shields_gts_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_ARMOR_2"
+	icon = "GFX_tech_shields_gts_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_ARMOR_3"
+	icon = "GFX_tech_shields_gts_3"
+	icon_frame = 1
+}
+
+############################################################################################################################################
+##################################################                  防空                  ##################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_KINETIC_POINT_DEFENCE_1"
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_ENERGY_POINT_DEFENCE_1"
+	icon = "GFX_gts_bruh_energy_point_defence_ship_part_1"
+	icon_frame = 1
+}
+
+############################################################################################################################################
+##################################################                其他部件                ##################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_ENERGY_BLANK_1"
+	icon = "GFX_gts_bruh_solar_panel_network_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_EXTRA_ENERGY_REACTOR_1"
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_AUTO_REPAIR_1"
+	icon = "GFX_tech_gts_self_repair"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_AUTO_REPAIR_2"
+	icon = "GFX_tech_gts_self_repair"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_BODY_STRENGTHEN"
+	icon = "GFX_tech_gts_body_strengthen"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_MIND_STRENGTHEN"
+	icon = "GFX_tech_gts_body_strengthen"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_BEAUTY"
+	icon = "GFX_tech_gts_beauty"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_BOMBING"
+	icon = "GFX_tech_gts_bombing"
+	icon_frame = 1
+}
+
+############################################################################################################################################
+##################################################                 艦載機                 ##################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_STRIKE_CRAFT_HANGAR_1"
+	icon = "GFX_gts_bruh_strike_craft_ship_part_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_STRIKE_CRAFT_HANGAR_2"
+	icon = "GFX_gts_bruh_strike_craft_ship_part_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GTS_BRUH_STRIKE_CRAFT_HANGAR_3"
+	icon = "GFX_gts_bruh_strike_craft_ship_part_3"
+	icon_frame = 1
+}
+
+############################################################################################################################################
+##################################################                  殲星                  ##################################################
+############################################################################################################################################
+
+component_set = {
+	key = "GTS_BRUH_PLANET_KILLER_UB"
+	icon = "GFX_gts_bruh_planet_killer_ship_part_1"
+	icon_frame = 1
+}
