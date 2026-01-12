@@ -11,7 +11,7 @@ tradition_gts_shrink = {
 	adoption_bonus = "tr_gts_shrink_adopt"
 	finish_bonus = "tr_gts_shrink_finish"
 	potential = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 	traditions = {
 		"tr_gts_shrink_3"
@@ -38,7 +38,7 @@ tradition_gts_survive = {
 	adoption_bonus = "tr_gts_survive_adopt"
 	finish_bonus = "tr_gts_survive_finish"
 	potential = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 	traditions = {
 		"tr_gts_survive_3"

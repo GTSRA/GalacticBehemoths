@@ -58,10 +58,10 @@ country_event = {
 				has_designation = col_habitat_fortress
 			}
 			any_owned_pop_group = {
-				is_gts = yes
+				gts_is_giantess = yes
 			}
 			any_owned_pop_group = {
-				is_tiny = yes
+				gts_is_tiny = yes
 			}
 		}
 	}
@@ -77,10 +77,10 @@ country_event = {
 					has_designation = col_habitat_fortress
 				}
 				any_owned_pop_group = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 				any_owned_pop_group = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			planet_event = {
@@ -169,10 +169,10 @@ country_event = {
 				count > 1000
 			}
 			any_owned_pop_group = {
-				is_gts = yes
+				gts_is_giantess = yes
 			}
 			any_owned_pop_group = {
-				is_tiny = yes
+				gts_is_tiny = yes
 			}
 		}
 	}
@@ -185,10 +185,10 @@ country_event = {
 					count > 1000
 				}
 				any_owned_pop_group = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 				any_owned_pop_group = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			planet_event = {
@@ -224,6 +224,12 @@ planet_event = {
 				}
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_report_a
+				key = gts_random_report_a
+			}
+		}
 		add_modifier = {
 			modifier = gtsra_random_brutal_rule
 			years = 10
@@ -238,7 +244,7 @@ planet_event = {
 				count = 10
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -266,6 +272,12 @@ planet_event = {
 				influence = -100
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_report_b
+				key = gts_random_report_b
+			}
+		}
 	}
 	option = {
 		name = gts_evt_random.010031.c
@@ -278,6 +290,12 @@ planet_event = {
 				}
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_report_a
+				key = gts_random_report_a
+			}
+		}
 		add_modifier = {
 			modifier = gtsra_random_brutal_rule
 			years = 5
@@ -287,7 +305,7 @@ planet_event = {
 				count = 10
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -312,6 +330,12 @@ planet_event = {
 				}
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_report_b
+				key = gts_random_report_b
+			}
+		}
 		add_modifier = {
 			modifier = gtsra_random_moderate_rule
 			years = 5
@@ -326,12 +350,24 @@ planet_event = {
 		name = gts_evt_random.010031.e
 		random_list = {
 			1 = {
+				owner = {
+					give_specimen = {
+						origin = gts_random_report_a
+						key = gts_random_report_a
+					}
+				}
 				add_modifier = {
 					modifier = gtsra_random_brutal_rule
 					years = 5
 				}
 			}
 			1 = {
+				owner = {
+					give_specimen = {
+						origin = gts_random_report_b
+						key = gts_random_report_b
+					}
+				}
 				add_modifier = {
 					modifier = gtsra_random_moderate_rule
 					years = 5
@@ -357,10 +393,10 @@ country_event = {
 				count > 1000
 			}
 			any_owned_pop_group = {
-				is_gts = yes
+				gts_is_giantess = yes
 			}
 			any_owned_pop_group = {
-				is_tiny = yes
+				gts_is_tiny = yes
 			}
 		}
 	}
@@ -372,10 +408,10 @@ country_event = {
 					count > 1000
 				}
 				any_owned_pop_group = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 				any_owned_pop_group = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			planet_event = {
@@ -410,12 +446,18 @@ planet_event = {
 				}
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_record
+				key = gts_random_record
+			}
+		}
 		hidden_effect = {
 			while = {
 				count = 10
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -439,12 +481,18 @@ planet_event = {
 				has_country_flag = gts_flag
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_record
+				key = gts_random_record
+			}
+		}
 		hidden_effect = {
 			while = {
 				count = 10
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -471,12 +519,18 @@ planet_event = {
 				}
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_record
+				key = gts_random_record
+			}
+		}
 		hidden_effect = {
 			while = {
 				count = 3
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -508,6 +562,12 @@ planet_event = {
 			}
 		}
 		owner = {
+			give_specimen = {
+				origin = gts_random_record
+				key = gts_random_record
+			}
+		}
+		owner = {
 			add_resource = {
 				influence = 50
 			}
@@ -517,7 +577,7 @@ planet_event = {
 				count = 5
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -532,12 +592,18 @@ planet_event = {
 				influence = -50
 			}
 		}
+		owner = {
+			give_specimen = {
+				origin = gts_random_record
+				key = gts_random_record
+			}
+		}
 		hidden_effect = {
 			while = {
 				count = 5
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -559,11 +625,7 @@ country_event = {
 	trigger = {
 		is_ai = no
 		any_owned_leader = {
-			OR = {
-				has_trait = leader_trait_Titan
-				has_trait = leader_trait_Titan_start
-				has_trait = leader_trait_Ultra
-			}
+			gts_is_bigger_than_giant = yes
 		}
 		any_owned_planet = {
 			pop_amount > 2000
@@ -750,6 +812,10 @@ planet_event = {
 			add_resource = {
 				unity = 50000
 			}
+			give_specimen = {
+				origin = gts_random_medal
+				key = gts_random_medal
+			}
 		}
 	}
 	option = {
@@ -758,6 +824,10 @@ planet_event = {
 			add_resource = {
 				energy = 50000
 			}
+			give_specimen = {
+				origin = gts_random_medal
+				key = gts_random_medal
+			}
 		}
 	}
 	option = {
@@ -765,6 +835,10 @@ planet_event = {
 		owner = {
 			add_resource = {
 				influence = 500
+			}
+			give_specimen = {
+				origin = gts_random_medal
+				key = gts_random_medal
 			}
 		}
 	}
@@ -864,6 +938,10 @@ country_event = {
 		name = gts_evt_random.010080.d
 		add_resource = {
 			food = 500
+		}
+		give_specimen = {
+			origin = gts_random_milk
+			key = gts_random_milk
 		}
 	}
 }
@@ -1215,7 +1293,7 @@ planet_event = {
 			random_owned_leader = {
 				limit = {
 					leader_class = scientist
-					is_gts_leader = yes
+					gts_is_giantess = yes
 				}
 				save_event_target_as = gtsra_random_event_leader
 			}
@@ -1424,6 +1502,10 @@ country_event = {
 
 	option = {
 		name = gts_evt_random.010250.a
+		give_specimen = {
+			origin = gts_random_pants
+			key = gts_random_pants
+		}
 		event_target:gtsra_random_event_planet = {
 			custom_tooltip = gts_bruh_casualties_300.tooltip
 			add_planet_devastation = 10
@@ -1490,6 +1572,12 @@ planet_event = {
 	option = {
 		name = gts_evt_random.010261.a
 		owner = {
+			give_specimen = {
+				origin = gts_random_audio_tape
+				key = gts_random_audio_tape
+			}
+		}
+		owner = {
 			add_resource = {
 				influence = 75
 			}
@@ -1497,6 +1585,12 @@ planet_event = {
 	}
 	option = {
 		name = gts_evt_random.010261.b
+		owner = {
+			give_specimen = {
+				origin = gts_random_lg
+				key = gts_random_lg
+			}
+		}
 		owner = {
 			add_resource = {
 				influence = 75
@@ -1519,7 +1613,7 @@ planet_event = {
 				has_country_flag = gts_flag
 				has_country_flag = gray_army_active
 				any_owned_leader = {
-					is_gts_leader = yes
+					gts_is_giantess = yes
 				}
 			}
 			NOR = {
@@ -1527,7 +1621,7 @@ planet_event = {
 			}
 		}
 		Root = {
-			is_no_eat_planet = no
+			is_eatable_planet = yes
 		}
 	}
 
@@ -1807,6 +1901,10 @@ country_event = {
 	location = event_target:gtsra_random_planet_resist
 
 	option = {
+		give_specimen = {
+			origin = gts_random_high_heels
+			key = gts_random_high_heels
+		}
 		name = gts_evt_random.020013.a
 		event_target:gtsra_random_planet_resist = {
 			add_modifier = {
@@ -1955,22 +2053,18 @@ planet_event = {
 			is_ai = no
 			has_country_flag = gts_triggered_020010
 			OR = {
-				#has_country_flag = gts_flag
 				has_country_flag = gray_army_active
 				any_owned_leader = {
 					is_ruler = no
-					#is_gts_leader = yes
 					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
+						gts_is_bigger_than_tall = yes
 						has_leader_flag = gts_aplog
 					}
 				}
 			}
 		}
 		Root = {
-			is_no_eat_planet = yes
+			is_eatable_planet = yes
 		}
 	}
 
@@ -2011,11 +2105,7 @@ country_event = {
 							factor = 0
 							NOT = {
 								any_owned_leader = {
-									OR = {
-										has_trait = leader_trait_Ultra
-										has_trait = leader_trait_Titan
-										has_trait = leader_trait_Giant
-									}
+									gts_is_bigger_than_tall = yes
 								}
 							}
 						}
@@ -2029,11 +2119,7 @@ country_event = {
 							factor = 0
 							NOT = {
 								any_owned_leader = {
-									OR = {
-										has_trait = leader_trait_Ultra
-										has_trait = leader_trait_Titan
-										has_trait = leader_trait_Giant
-									}
+									gts_is_bigger_than_tall = yes
 								}
 							}
 						}
@@ -2047,11 +2133,7 @@ country_event = {
 							factor = 0
 							NOT = {
 								any_owned_leader = {
-									OR = {
-										has_trait = leader_trait_Ultra
-										has_trait = leader_trait_Titan
-										has_trait = leader_trait_Giant
-									}
+									gts_is_bigger_than_tall = yes
 								}
 							}
 						}
@@ -2065,11 +2147,7 @@ country_event = {
 							factor = 0
 							NOT = {
 								any_owned_leader = {
-									OR = {
-										has_trait = leader_trait_Ultra
-										has_trait = leader_trait_Titan
-										has_trait = leader_trait_Giant
-									}
+									gts_is_bigger_than_tall = yes
 								}
 							}
 						}
@@ -2083,11 +2161,7 @@ country_event = {
 							factor = 0
 							NOT = {
 								any_owned_leader = {
-									OR = {
-										has_trait = leader_trait_Ultra
-										has_trait = leader_trait_Titan
-										has_trait = leader_trait_Giant
-									}
+									gts_is_bigger_than_tall = yes
 								}
 							}
 						}
@@ -2101,11 +2175,7 @@ country_event = {
 							factor = 0
 							NOT = {
 								any_owned_leader = {
-									OR = {
-										has_trait = leader_trait_Ultra
-										has_trait = leader_trait_Titan
-										has_trait = leader_trait_Giant
-									}
+									gts_is_bigger_than_tall = yes
 								}
 							}
 						}
@@ -2133,11 +2203,7 @@ country_event = {
 							factor = 0
 							NOT = {
 								any_owned_leader = {
-									OR = {
-										has_trait = leader_trait_Ultra
-										has_trait = leader_trait_Titan
-										has_trait = leader_trait_Giant
-									}
+									gts_is_bigger_than_tall = yes
 								}
 							}
 						}
@@ -2146,153 +2212,172 @@ country_event = {
 							days = 7
 						}
 					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								any_owned_leader = {
-									has_leader_flag = gts_erika
-								}
-							}
-						}
-						country_event = {
-							id = gts_erika.1030
-							days = 7
-						}
-						random_list = {
-							9 = {}
-							1 = {
-								country_event = {
-									id = gts_erika.1031
-									days = 7
-								}
-							}
-						}
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.c
+		trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_xinuo
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_xinuo.15
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.d
+		trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_bronya
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_seele.36
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.e
+		trigger = {
+			has_country_flag = seele_fenkai
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_seele.35
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.f
+		trigger = {
+			has_country_flag = seele_yiqi
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_seele.34
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.g
+		trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_allomerus
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_traptrix.2100
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.h
+		trigger = {
+			has_country_flag = gray_army_active
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_evt_graygoo.40
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.i
+		trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_guya_gen
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				1 = {
+					country_event = {
+						id = gts_guya.30
+						days = 7
 					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								any_owned_leader = {
-									has_leader_flag = gts_aplog
-								}
-							}
-						}
-						country_event = {
-							id = gts_aplog.15
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								any_owned_leader = {
-									has_leader_flag = gts_guya_gen
-								}
-							}
-						}
-						country_event = {
-							id = gts_guya.30
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								any_owned_leader = {
-									has_leader_flag = gts_guya_gen
-								}
-							}
-						}
-						country_event = {
-							id = gts_guya.31
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								has_country_flag = gray_army_active
-							}
-						}
-						country_event = {
-							id = gts_evt_graygoo.40
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								any_owned_leader = {
-									has_leader_flag = gts_allomerus
-								}
-							}
-						}
-						country_event = {
-							id = gts_traptrix.2100
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								has_country_flag = seele_yiqi
-							}
-						}
-						country_event = {
-							id = gts_seele.34
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								has_country_flag = seele_fenkai
-							}
-						}
-						country_event = {
-							id = gts_seele.35
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								any_owned_leader = {
-									has_leader_flag = gts_bronya
-								}
-							}
-						}
-						country_event = {
-							id = gts_seele.36
-							days = 7
-						}
-					}
-					1 = {
-						modifier = {
-							factor = 0
-							NOT = {
-								any_owned_leader = {
-									has_leader_flag = gts_xinuo
-								}
-							}
-						}
-						country_event = {
-							id = gts_xinuo.15
-							days = 7
-						}
+				}
+				1 = {
+					country_event = {
+						id = gts_guya.31
+						days = 7
 					}
 				}
 			}
 		}
 	}
+	option = {
+		name = gts_evt_random.020020.g
+		trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_aplog
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_aplog.15
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.k
+		trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_erika
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_erika.1030
+				days = 7
+			}
+			random_list = {
+				4 = {}
+				1 = {
+					country_event = {
+						id = gts_erika.1031
+						days = 7
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_evt_random.020020.l
+		trigger = {
+			any_owned_leader = {
+				has_leader_flag = gts_suxiaobai
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gts_suxiaobai.100
+				days = 7
+			}
+		}
+	}
+	# option = {
+	# 	name = gts_evt_random.020020.m
+	# 	trigger = {
+
+	# 	}
+	# 	hidden_effect = {
+			
+	# 	}
+	# }
 }
 
 country_event = {
@@ -2327,11 +2412,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 			}
 			random_owned_leader = {
@@ -2339,11 +2420,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2353,11 +2430,7 @@ country_event = {
 			random_owned_leader = {
 				limit = {
 					is_ruler = no
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2430,11 +2503,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 			}
 			random_owned_leader = {
@@ -2442,11 +2511,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2456,11 +2521,7 @@ country_event = {
 			random_owned_leader = {
 				limit = {
 					is_ruler = no
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2528,11 +2589,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 			}
 			random_owned_leader = {
@@ -2540,11 +2597,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2554,11 +2607,7 @@ country_event = {
 			random_owned_leader = {
 				limit = {
 					is_ruler = no
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2625,11 +2674,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 			}
 			random_owned_leader = {
@@ -2637,11 +2682,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2651,11 +2692,7 @@ country_event = {
 			random_owned_leader = {
 				limit = {
 					is_ruler = no
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2730,11 +2767,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 			}
 			random_owned_leader = {
@@ -2742,11 +2775,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2756,11 +2785,7 @@ country_event = {
 			random_owned_leader = {
 				limit = {
 					is_ruler = no
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2832,11 +2857,7 @@ country_event = {
 					# 盡量不選滿10級的
 					has_total_skill < 10
 					has_trait = leader_trait_gts_futa
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 			}
 			random_owned_leader = {
@@ -2845,11 +2866,7 @@ country_event = {
 					# 盡量不選滿10級的
 					has_total_skill < 10
 					has_trait = leader_trait_gts_futa
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2860,11 +2877,7 @@ country_event = {
 				limit = {
 					is_ruler = no
 					has_trait = leader_trait_gts_futa
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2941,11 +2954,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 			}
 			random_owned_leader = {
@@ -2953,11 +2962,7 @@ country_event = {
 					is_ruler = no
 					# 盡量不選滿10級的
 					has_total_skill < 10
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -2967,11 +2972,7 @@ country_event = {
 			random_owned_leader = {
 				limit = {
 					is_ruler = no
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-					}
+					gts_is_bigger_than_tall = yes
 				}
 				save_event_target_as = gts_bruh_get_destroy_planet_leader
 			}
@@ -3018,13 +3019,13 @@ country_event = {
 	trigger = {
 		is_ai = no
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
@@ -3044,9 +3045,6 @@ country_event = {
 				remove_trait = leader_trait_Titan
 				remove_trait = leader_trait_Giant
 				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Titan_start
-				remove_trait = leader_trait_Giant_start
-				remove_trait = leader_trait_Tall_start
 				random_list = {
 					1 = {
 						add_trait = {
@@ -3090,7 +3088,7 @@ country_event = {
 	trigger = {
 		is_ai = no
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	option = {
@@ -3228,14 +3226,14 @@ country_event = {
 		is_ai = no
 		any_owned_leader = {
 			leader_class = scientist
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
 		random_owned_leader = {
 			limit = {
 				leader_class = scientist
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
@@ -3279,6 +3277,10 @@ country_event = {
 	}
 	option = {
 		name = gts_evt_random.030031.b
+		give_specimen = {
+			origin = gts_random_mini_lostempire
+			key = gts_random_mini_lostempire
+		}
 		event_target:gtsra_random_event_leader = {
 			add_trait = {
 				trait = leader_trait_resilient
@@ -3319,14 +3321,14 @@ country_event = {
 	trigger = {
 		is_ai = no
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
 		random_owned_leader = {
 			limit = {
 				leader_class = scientist
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
@@ -3399,7 +3401,6 @@ country_event = {
 		years_passed >= 50
 		any_owned_leader = {
 			OR = {
-				#has_trait = leader_trait_Ultra
 				has_trait = leader_trait_Titan
 				has_trait = leader_trait_Giant
 			}
@@ -3408,7 +3409,7 @@ country_event = {
 			count_owned_pop_amount = {
 				count > 3000
 			}
-			is_no_eat_planet = yes
+			is_eatable_planet = yes
 		}
 	}
 
@@ -3416,7 +3417,6 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				OR = {
-					#has_trait = leader_trait_Ultra
 					has_trait = leader_trait_Titan
 					has_trait = leader_trait_Giant
 				}
@@ -3428,7 +3428,7 @@ country_event = {
 				count_owned_pop_amount = {
 					count > 3000
 				}
-				is_no_eat_planet = yes
+				is_eatable_planet = yes
 			}
 			save_event_target_as = gtsra_random_event_planet
 		}
@@ -3527,13 +3527,13 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
@@ -3556,6 +3556,12 @@ country_event = {
 			gts_micro = -6
 		}
 	}
+	after = {
+		give_specimen = {
+			origin = gts_random_medicine
+			key = gts_random_medicine
+		}
+	}
 }
 
 #大富翁
@@ -3569,19 +3575,23 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
 	}
 	option = {
 		name = gts_evt_random.030070.a
+		give_specimen = {
+			origin = gts_random_monopoly
+			key = gts_random_monopoly
+		}
 		add_resource = {
 			influence = 25
 		}
@@ -3599,7 +3609,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 		resource_stockpile_compare = {
 			resource = gts_micro
@@ -3609,7 +3619,7 @@ country_event = {
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
@@ -3638,13 +3648,13 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
@@ -3674,10 +3684,10 @@ country_event = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 		any_owned_pop_group = {
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 		any_owned_pop_group = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 	option = {
@@ -4864,13 +4874,13 @@ country_event = {
 	trigger = {
 		is_ai = no
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gtsra_random_event_leader
 		}
@@ -5216,7 +5226,7 @@ ship_event = {
 			owner = {
 				every_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					modify_species = {
 						species = this
@@ -5225,7 +5235,7 @@ ship_event = {
 				}
 				every_owned_pop_group = {
 					limit = {
-						is_gts = yes
+						gts_is_giantess = yes
 					}
 					modify_species = {
 						species = this
@@ -5256,10 +5266,7 @@ country_event = {
 			has_country_flag = triggered_gtsra_fleet_event
 		}
 		fromfrom.leader = {
-			OR = {
-				has_trait = leader_trait_Ultra
-				has_trait = trait_Titan
-			}
+			gts_is_bigger_than_giant = yes
 		}
 	}
 	immediate = {
@@ -7038,7 +7045,10 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_country_flag = gts_flag
+		gts_is_tiny_empire = yes
+		root.ruler = {
+			gts_is_bigger_than_tall = yes
+		}
 	}
 	immediate = {
 		country_event = {

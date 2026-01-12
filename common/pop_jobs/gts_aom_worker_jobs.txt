@@ -4,9 +4,12 @@
 #专卖店店员
 aom_store_clerk = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_aom_surrounding_stores
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_surrounding_stores
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -17,10 +20,12 @@ aom_store_clerk = {
 
 	resources = {
 		category = planet_clerks
+		produces = {
+			trade = 4
+		}
 	}
 
 	planet_modifier = {
-		trade_value_add = 4
 		planet_amenities_add = 400
 	}
 	weight = {
@@ -30,9 +35,12 @@ aom_store_clerk = {
 #娱乐中心服务员
 aom_recreation_center_attendant = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_aom_Entertainment_Center
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_Entertainment_Center
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -43,10 +51,12 @@ aom_recreation_center_attendant = {
 
 	resources = {
 		category = planet_clerks
+		produces = {
+			trade = 2
+		}
 	}
 
 	planet_modifier = {
-		trade_value_add = 2
 		planet_amenities_add = 800
 	}
 	weight = {
@@ -56,9 +66,12 @@ aom_recreation_center_attendant = {
 #渔夫
 aom_fisherman = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_aom_fishing_grounds
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_fishing_grounds
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -81,9 +94,12 @@ aom_fisherman = {
 #餐厅服务员
 aom_restaurant_waiter = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_aom_bottled_restaurant
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_bottled_restaurant
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -94,11 +110,12 @@ aom_restaurant_waiter = {
 
 	resources = {
 		category = planet_clerks
-
+		produces = {
+			trade = 2
+		}
 	}
 
 	planet_modifier = {
-		trade_value_add = 2
 		planet_amenities_add = 400
 	}
 	weight = {
@@ -107,9 +124,12 @@ aom_restaurant_waiter = {
 }
 aom_cook = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_aom_bottled_restaurant
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_bottled_restaurant
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -123,12 +143,11 @@ aom_cook = {
 		produces = {
 			food = 12
 			consumer_goods = 3
+			trade = 4
 		}
-
 	}
 
 	planet_modifier = {
-		trade_value_add = 4
 		planet_amenities_add = 600
 	}
 	weight = {
@@ -138,9 +157,12 @@ aom_cook = {
 #酒店服务员
 aom_hotel_waiter = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_warhammerfleet_Tap_Room_The_Empire
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_stockings_hotel
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -151,10 +173,12 @@ aom_hotel_waiter = {
 
 	resources = {
 		category = planet_clerks
+		produces = {
+			trade = 4
+		}
 	}
 
 	planet_modifier = {
-		trade_value_add = 2
 		planet_amenities_add = 400
 	}
 	weight = {
@@ -164,9 +188,12 @@ aom_hotel_waiter = {
 #酒店清洁员
 aom_hotel_cleaners = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_warhammerfleet_Tap_Room_The_Empire
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_stockings_hotel
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -176,8 +203,10 @@ aom_hotel_cleaners = {
 	}
 
 	resources = {
-		category = planet_sr_miners	
-		exotic_gases = 4
+		category = planet_miners
+		produces = {
+			exotic_gases = 2
+		}
 	}
 
 	planet_modifier = {
@@ -190,9 +219,12 @@ aom_hotel_cleaners = {
 #魔力矿工
 aom_magic_miner = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_aom_bottled_restaurant
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_aom_giant_mine
+		}
+	}
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -206,7 +238,7 @@ aom_magic_miner = {
 		produces = {
 			minerals = 4
 			rare_crystals = 0.5 
-			sr_aom_magicstones = 0.5 
+			gts_aom_magicstones = 0.5 
 		}
 	}
 	weight = {

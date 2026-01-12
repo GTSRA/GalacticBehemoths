@@ -71,7 +71,7 @@ fleet_event = {
         text = gts_event_qhai.1.desc.a
         trigger = {
             owner_main_species = {
-                is_gts = no
+                gts_is_giantess = no
             }
         }
     }
@@ -79,7 +79,7 @@ fleet_event = {
         text = gts_event_qhai.1.desc.b
         trigger = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
     }
@@ -87,7 +87,7 @@ fleet_event = {
         name = gts_event_qhai.1.option.a
         trigger = {
             owner_main_species = {
-                is_gts = no
+                gts_is_giantess = no
             }
         }
     }
@@ -95,7 +95,7 @@ fleet_event = {
         name = gts_event_qhai.1.option.b
         trigger = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
     }
@@ -125,7 +125,7 @@ fleet_event = {
         text = gts_event_qhai.2.desc.a
         trigger = {
             owner_main_species = {
-                is_gts = no
+                gts_is_giantess = no
             }
         }
     }
@@ -133,7 +133,7 @@ fleet_event = {
         text = gts_event_qhai.2.desc.b
         trigger = {
             owner_main_species = {
-                is_gts = no
+                gts_is_giantess = no
             }
         }
     }
@@ -141,7 +141,7 @@ fleet_event = {
         name = gts_event_qhai.2.option.a
         trigger = {
             owner_main_species = {
-                is_gts = no
+                gts_is_giantess = no
             }
         }
     }
@@ -149,7 +149,7 @@ fleet_event = {
         name = gts_event_qhai.2.option.b
         trigger = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
     }
@@ -179,7 +179,7 @@ fleet_event = {
         text = gts_event_qhai.3.desc.a
         trigger = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
     }
@@ -187,7 +187,7 @@ fleet_event = {
         text = gts_event_qhai.3.desc.b
         trigger = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
     }
@@ -195,7 +195,7 @@ fleet_event = {
         name = gts_event_qhai.3.option.a
         trigger = {
             owner_main_species = {
-                is_gts = no
+                gts_is_giantess = no
             }
         }
     }
@@ -203,7 +203,7 @@ fleet_event = {
         name = gts_event_qhai.3.option.b
         trigger = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
     }
@@ -233,7 +233,7 @@ fleet_event = {
         text = gts_event_qhai.4.desc.a
         trigger = {
             owner_main_species = {
-                is_gts = no
+                gts_is_giantess = no
             }
         }
     }
@@ -241,7 +241,7 @@ fleet_event = {
         text = gts_event_qhai.4.desc.b
         trigger = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
     }
@@ -350,7 +350,7 @@ country_event = {
             AND = {
                 has_country_flag = gts_event_qhai_flag
                 owner_main_species = {
-                    is_gts = no
+                    gts_is_giantess = no
                 }
             }
         }
@@ -370,7 +370,7 @@ country_event = {
             AND = {
                 has_country_flag = gts_event_qhai_flag
                 owner_main_species = {
-                    is_gts = yes
+                    gts_is_giantess = yes
                 }
             }
         }
@@ -441,7 +441,7 @@ country_event = {
             AND = {
                 has_country_flag = gts_event_qhai_flag
                 owner_main_species = {
-                    is_gts = no
+                    gts_is_giantess = no
                 }
             }
         }
@@ -468,7 +468,7 @@ country_event = {
             AND = {
                 has_country_flag = gts_event_qhai_flag
                 owner_main_species = {
-                    is_gts = yes
+                    gts_is_giantess = yes
                 }
             }
         }
@@ -544,7 +544,7 @@ country_event = {
             AND = {
                 has_country_flag = gts_event_qhai_flag
                 owner_main_species = {
-                    is_gts = no
+                    gts_is_giantess = no
                 }
             }
         }
@@ -566,14 +566,14 @@ country_event = {
         trigger = {
             AND = { has_country_flag = gts_event_qhai_flag
                 owner_main_species = {
-                    is_gts = yes
+                    gts_is_giantess = yes
                 }
             }
         }
 
         allow = {
             owner_main_species = {
-                is_gts = yes
+                gts_is_giantess = yes
             }
         }
         add_modifier = {
@@ -631,7 +631,7 @@ country_event = {
             if = {
                 limit = {
                     not = {has_leader_flag = hired_gts_leader}
-                    is_tiny_leader = yes
+                    gts_is_tiny = yes
                     is_ruler = no
                 }
                 kill_leader = {
@@ -828,12 +828,12 @@ country_event = {
             owner = {
                 is_primitive = yes # 星球统治者是土著
                 species = {
-                   is_tiny = yes # 土著种族为小人
+                   gts_is_tiny = yes # 土著种族为小人
                 }
             }
         }
         owner_main_species = {
-            is_gts = yes # 帝国主流种族为巨娘
+            gts_is_giantess = yes # 帝国主流种族为巨娘
         }
     }
     immediate = {
@@ -1237,7 +1237,7 @@ country_event = {
         is_ai = no
         fromfrom = {
             any_owned_pop_group = {
-                is_tiny = yes
+                gts_is_tiny = yes
             }
         }
     }

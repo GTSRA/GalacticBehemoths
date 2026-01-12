@@ -185,4 +185,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/message/message_gts_linfeng.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
+	spriteType = {
+		name = "GFX_message_leader_gts_suxiaobai"
+		texturefile = "gfx/interface/icons/message/message_gts_suxiaobai.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
 }

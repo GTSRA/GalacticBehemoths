@@ -345,7 +345,6 @@ country_event = {
 			TRAIT3 = satori_leader_trait_meikong
 			TRAIT4 = satori_leader_trait_penetration
 			TRAIT5 = satori_leader_trait_sandals
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 	picture_event_data = {

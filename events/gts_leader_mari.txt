@@ -102,7 +102,7 @@ country_event = {
 	show_sound = event_celebration
 	is_triggered_only = yes
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	auto_opens = yes
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_leader_gts_mari"
 	immediate = {
@@ -125,7 +125,6 @@ country_event = {
 			TRAIT3 = gts_trait_leader_mari_b
 			TRAIT4 = gts_trait_leader_mari_c
 			TRAIT5 = gts_trait_leader_mari_d
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 	picture_event_data = {

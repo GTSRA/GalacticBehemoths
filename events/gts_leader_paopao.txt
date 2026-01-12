@@ -70,6 +70,7 @@ country_event  = {
                             upgradable = no
                             effect = {
                                 set_ship_flag = gts_paopao_ship
+                                set_ship_flag = gts_body_ship
                                 save_global_event_target_as = gts_paopao_ship
                                 set_disabled = no
                             }

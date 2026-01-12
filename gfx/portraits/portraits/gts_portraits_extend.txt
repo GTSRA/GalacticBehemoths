@@ -1,17 +1,61 @@
-# Fara
+# 杂项
 portraits = {
-	Fara={ texturefile = "gfx/models/portraits/Fara.dds"}
-	fara_illya={ texturefile = "gfx/models/portraits/fara_illya.dds" }
-	Illya={ texturefile = "gfx/models/portraits/Illya.dds" }
-	Illya1={ texturefile = "gfx/models/portraits/Illya1.dds" }
-	Miyu={ texturefile = "gfx/models/portraits/Miyu.dds" }
-	Chloe={ texturefile = "gfx/models/portraits/Chloe.dds" }
-	Altria_Pendragon_Franz={ texturefile = "gfx/models/portraits/Altria_Pendragon_Franz.dds" }
-	Gilgamesh ={ texturefile = "gfx/models/portraits/Gilgamesh.dds" }
+	GFX_relic_ruby={
+		texturefile = "gfx/interface/icons/relics/relic_ruby.dds"
+	}
+	GFX_ruby={
+		texturefile = "gfx/models/portraits/ruby.dds"
+	}
+}
+# 领袖
+portraits = {
+	fara={
+		texturefile = "gfx/models/portraits/fara.dds"
+	}
+	fara_illya={
+		texturefile = "gfx/models/portraits/fara_illya.dds"
+	}
+	illya={
+		texturefile = "gfx/models/portraits/illya.dds"
+	}
+	illya1={
+		texturefile = "gfx/models/portraits/illya1.dds"
+	}
+	miyu={
+		texturefile = "gfx/models/portraits/miyu.dds"
+	}
+	chloe={
+		texturefile = "gfx/models/portraits/chloe.dds"
+	}
+	altria_pendragon_frian={
+		texturefile = "gfx/models/portraits/altria_pendragon_frian.dds"
+	}
 }
 
-# aom
-portraits = {
-	GFX_relic_Ruby={ texturefile = "gfx/interface/icons/relics/relic_Ruby.dds" }
-	GFX_Ruby={ texturefile = "gfx/models/portraits/Ruby.dds" }
+spriteTypes = {
+	SpriteType = {
+		#红宝石
+		name = "GFX_relic_Ruby"
+		texturefile = "gfx/interface/icons/relics/gtsra_r_lottie_shoes.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/relic_Ruby.dds"
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"			# <- the animated file
+			animationrotation = 90			# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 5			# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"			#add, multiply, overlay
+			animationtype = "pulsing"			#scrolling, rotating, pulsing
+			animationrotationoffset = {
+				x = 0
+				y = 0
+			}
+			animationtexturescale = {
+				x = 1
+				y = 1
+			}
+		}
+		legacy_lazy_load = no
+	}
 }

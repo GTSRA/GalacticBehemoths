@@ -59,4 +59,105 @@ spriteTypes = {
         name = "GFX_specimen_seele_silk"
         texturefile = "gfx/interface/icons/specimens/seele_silk.dds"
     }
+    spriteType = {
+        name = "GFX_specimen_seele_universe"
+        texturefile = "gfx/interface/icons/specimens/seele_universe.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_seele_balance_white"
+        texturefile = "gfx/interface/icons/specimens/seele_balance_white.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_seele_balance_red"
+        texturefile = "gfx/interface/icons/specimens/seele_balance_red.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_seele_balance_level"
+        texturefile = "gfx/interface/icons/specimens/seele_balance_level.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_bronya_edem_star"
+        texturefile = "gfx/interface/icons/specimens/bronya_edem_star.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_bronya_edem_star_own"
+        texturefile = "gfx/interface/icons/specimens/bronya_edem_star_own.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_bronya_construct"
+        texturefile = "gfx/interface/icons/specimens/bronya_construct.dds"
+    }
+
+
+
+
+
+    spriteType = {
+        name = "GFX_specimen_gts_random_lg"
+        texturefile = "gfx/interface/icons/specimens/gts_random_lg.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_audio_tape"
+        texturefile = "gfx/interface/icons/specimens/gts_random_audio_tape.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_report"
+        texturefile = "gfx/interface/icons/specimens/gts_random_report.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_milk"
+        texturefile = "gfx/interface/icons/specimens/gts_random_milk.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_pants"
+        texturefile = "gfx/interface/icons/specimens/gts_random_pants.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_record"
+        texturefile = "gfx/interface/icons/specimens/gts_random_record.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_high_heels"
+        texturefile = "gfx/interface/icons/specimens/gts_random_high_heels.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_mini_lostempire"
+        texturefile = "gfx/interface/icons/specimens/gts_random_mini_lostempire.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_medicine"
+        texturefile = "gfx/interface/icons/specimens/gts_random_medicine.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_monopoly"
+        texturefile = "gfx/interface/icons/specimens/gts_random_monopoly.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_random_medal"
+        texturefile = "gfx/interface/icons/specimens/gts_random_medal.dds"
+    }
+
+
+    spriteType = {
+        name = "GFX_specimen_gts_specimens_display_cabinet"
+        texturefile = "gfx/interface/icons/specimens/gts_specimens_display_cabinet.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_specimens_halo"
+        texturefile = "gfx/interface/icons/specimens/gts_specimens_halo.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_specimens_love_fluid_crystallization"
+        texturefile = "gfx/interface/icons/specimens/gts_specimens_love_fluid_crystallization.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_specimens_love_fluid_qhai"
+        texturefile = "gfx/interface/icons/specimens/gts_specimens_love_fluid_qhai.dds"
+    }
+    spriteType = {
+        name = "GFX_specimen_gts_specimens_litter_box"
+        texturefile = "gfx/interface/icons/specimens/gts_specimens_litter_box.dds"
+    }
+
+
 }

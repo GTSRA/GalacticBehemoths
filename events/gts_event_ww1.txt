@@ -71,6 +71,7 @@ country_event = {
 			GENDER = indeterminable
 			ETHIC = materialist
 			IMMORTAL = yes
+			EVENT_LEADER = no
 			DESC = warform_leader_desc
 			CATCH_PHRASE = gts_eyjafjalla_catch_phrase
 			RANDOMIZE_TRAITS = no
@@ -78,9 +79,6 @@ country_event = {
 			TRAIT1 = leader_trait_governor_eliza
 			TRAIT2 = leader_trait_Giant
 			TRAIT3 = leader_trait_maniacal
-			TRAIT4 = leader_trait_gts_bruh_empty
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		create_species = {
 			name = GTS_LEADER_SPECIES

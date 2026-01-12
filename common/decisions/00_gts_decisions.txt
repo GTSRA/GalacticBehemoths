@@ -636,7 +636,7 @@ gts_decision_egg_nutrition = {
 	}
 
 	potential = {
-		NOT = {is_no_eat_planet = yes}
+		NOT = {is_eatable_planet = no}
 		owner = {
 			any_owned_planet = {
 				has_planet_flag = Luanzi_home_planet
@@ -742,7 +742,7 @@ gts_decision_loli_nutrition = {
 
 	potential = {
 		habitable_planet = yes
-		NOT = {is_no_eat_planet = yes}
+		NOT = {is_eatable_planet = no}
 		owner = {
 			any_owned_planet = {
 				OR = {
@@ -831,9 +831,9 @@ decision_district_use_gts_resource = {
 		NOT = {
 			has_planet_flag = use_gts_resource
 		}
-		is_no_eat_planet = yes
+		has_planet_flag = gts_body_flag
 		owner = {
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 
@@ -865,9 +865,10 @@ decision_district_use_gts_resource_cancel = {
 
 	potential = {
 		has_planet_flag = use_gts_resource
-		is_no_eat_planet = yes
+		has_planet_flag = gts_body_flag
+
 		owner = {
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 
@@ -899,9 +900,9 @@ decision_district_use_tiny_resource = {
 		NOT = {
 			has_planet_flag = use_tiny_resource
 		}
-		is_no_eat_planet = no
+		has_planet_flag = gts_body_flag
 		owner = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 
@@ -933,9 +934,9 @@ decision_district_use_tiny_resource_cancel = {
 
 	potential = {
 		has_planet_flag = use_tiny_resource
-		is_no_eat_planet = no
+		has_planet_flag = gts_body_flag
 		owner = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 
@@ -2668,11 +2669,11 @@ decision_gts_juice_colony_qhai = {
 		}
 		is_capital = no
 		NOR = {
+			is_eatable_planet = no
 			has_modifier = penal_colony
 			has_modifier = slave_colony
 			has_modifier = resort_colony
 			is_planet_class = pc_city
-			is_gts_reformed_planet = yes
 			AND = {
 				is_planet_class = pc_relic
 				NOT = { owner = { is_memorialist_empire = yes } }
@@ -2719,7 +2720,7 @@ decision_gts_godkeeper_devour_planets = {
 		}
 	}
 	potential = {
-		not = {is_no_eat_planet = yes}
+		not = {is_eatable_planet = no}
 		from.owner = {
 			has_tradition = tr_gts_godkeeper_3
 		}

@@ -45,7 +45,6 @@ country_event = {
 			TRAIT3 = linglu_leader_trait_coach
 			TRAIT4 = linglu_leader_trait_science
 			TRAIT5 = leader_trait_Ultra
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 	picture_event_data = {

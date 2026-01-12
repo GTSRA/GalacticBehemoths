@@ -29,7 +29,7 @@ gts_deposit_explorer = {
 		is_sapient = yes
 	}
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 	possible_precalc = can_fill_worker_job
 	resources = {
@@ -194,7 +194,7 @@ gts_godness_power_keeper = {
         is_sapient = yes
     }
     possible = {
-        is_tiny = yes
+        gts_is_tiny = yes
     }
     possible_precalc = can_fill_worker_job
     resources = {
@@ -214,7 +214,7 @@ gts_godness_power_keeper = {
         weight = @worker_job_weight
         modifier = {
             factor = 10
-            is_tiny = yes
+            gts_is_tiny = yes
         }
         modifier = {
             factor = 10

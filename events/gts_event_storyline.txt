@@ -1,0 +1,34 @@
+namespace = gts_story_line
+
+#开局事件
+country_event = {
+    id = gts_story_line.1
+    hide_window = yes is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        create_message = {
+            type = MESSAGE_GTS_STARTUP
+            days = 5
+            localization = MESSAGE_GTS_START_desc
+        }
+        create_message = {
+            type = MESSAGE_GTS_MOD
+            days = 5
+            localization = MESSAGE_GTS_MOD_desc
+        }
+        create_message = {
+            type = MESSAGE_GTS_COM
+            days = 5
+            localization = MESSAGE_GTS_COM_desc
+        }
+        create_message = {
+            type = MESSAGE_GTS_QHAI
+            days = 5
+            localization = MESSAGE_GTS_QHAI_desc
+        }
+
+    }
+}
+

@@ -1,5 +1,0 @@
-specialist_ultracompany_neighbor = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_specialist_prospectorium_neighbor.dds"
-	planet_jobs_trade_produces_mult = 0.15
-	pop_happiness = 0.15
-}

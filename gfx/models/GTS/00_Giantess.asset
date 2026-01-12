@@ -364,3 +364,11 @@ entity = {
 	name = "Specter_the_Unchained_ship_01_entity"
 	pdxmesh = "Specter_the_Unchained_ship_mesh"
 }
+entity = {
+	name = "linfeng_planet_01_entity"
+	pdxmesh = "linfeng_planet_mesh"
+}
+entity = {
+	name = "gts_saratoga_titan_entity"
+	pdxmesh = "saragts_saratoga_titan_mesh"
+}

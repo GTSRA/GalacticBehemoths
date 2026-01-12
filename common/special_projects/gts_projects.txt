@@ -563,6 +563,7 @@ special_project = {
 		}
 	}
 }
+
 special_project = {
 	key = "GTS_SEELE.STABLE"
 	cost = 1000
@@ -576,6 +577,7 @@ special_project = {
 		}
 	}
 }
+
 special_project = {
 	key = "gts_seele_special_project"
 	cost = 0
@@ -590,6 +592,7 @@ special_project = {
 		}
 	}
 }
+
 special_project = {
 	key = "gts_huatian_special_project"
 	cost = 0
@@ -610,6 +613,7 @@ special_project = {
 	on_fail = {
 	}
 }
+
 special_project = {
 	key = "gts_huatian_special_project_2"
 	cost = 0
@@ -629,6 +633,7 @@ special_project = {
 	on_fail = {
 	}
 }
+
 special_project = {
 	key = "gts_huatian_special_project_3"
 	cost = 0
@@ -646,5 +651,292 @@ special_project = {
 		ship_event = { id = gts_huatian.1075 }
 	}
 	on_fail = {
+	}
+}
+
+# 115
+special_project = {
+	key = "gts_115tiny_CRISIS_SPECIAL_PROJECT_1"
+	cost = 3000
+	days_to_research = 0
+	tech_department = society_technology
+	picture = GFX_evt_alien_propaganda
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	event_chain = gts_115tiny_become_the_crisis_chain
+	location = no
+
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		set_country_flag = crisis_special_project_1_complete
+		country_event = { id = 115tiny_crisis.4120 }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "gts_115tiny_CRISIS_SPECIAL_PROJECT_2"
+	cost = 6000
+	days_to_research = 0
+	tech_department = physics_technology
+	picture = GFX_evt_physics_research
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	event_chain = gts_115tiny_become_the_crisis_chain
+	location = no
+
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		set_country_flag = crisis_special_project_2_complete
+		country_event = { id = 115tiny_crisis.4125 }
+	}
+
+	on_fail = {
+	}
+}
+### CRISIS SPECIAL PROJECT 3 - COMPLETION UNLOCKS CRISIS LEVEL 4
+# Regular
+special_project = {
+	key = "gts_115tiny_CRISIS_SPECIAL_PROJECT_3"
+	cost = 12000
+	days_to_research = 0
+	tech_department = society_technology
+	picture = GFX_evt_psionics
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	event_chain = gts_115tiny_become_the_crisis_chain
+	location = no
+
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		set_country_flag = crisis_special_project_3_complete
+		country_event = { id = 115tiny_crisis.4130 }
+	}
+
+	on_fail = {
+	}
+}
+
+### CRISIS SPECIAL PROJECT 4 - COMPLETION UNLOCKS CRISIS LEVEL 5
+# Regular
+special_project = {
+	key = "gts_115tiny_CRISIS_SPECIAL_PROJECT_4"
+	cost = 20000
+	days_to_research = 0
+	tech_department = engineering_technology
+	picture = GFX_evt_planet_beam
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	event_chain = gts_115tiny_become_the_crisis_chain
+	location = no
+
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		set_country_flag = crisis_special_project_4_complete
+		country_event = { id = 115tiny_crisis.4135 }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "gts_115tiny_CRISIS_SPECIAL_PROJECT_yarong"
+	cost = 30000
+	days_to_research = 0
+	tech_department = engineering_technology
+	picture = GFX_evt_think_tank
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	location = no
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		give_technology = { tech = tech_gts_115_PLANET_KILLER_yarong1 }
+		event_target:gts_yarong_fleet = {
+			fleet_event = { id = 115tiny_crisis.9 }
+		}
+		set_country_flag = gts_special_project_yarong_1_complete
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = lizhi_project.01
+	event_scope = ship_event
+	days_to_research = 400
+	picture = GFX_evt_big_landing_ship
+	requirements = {
+		shipclass_constructor = 1
+	}
+	on_success = {
+		ship_event = {
+			id = gts_lizhi.2
+		}
+	}
+}
+
+special_project = {
+	key = lizhi_project.02
+	event_scope = ship_event
+	days_to_research = 100
+	picture = GFX_evt_big_landing_ship
+	requirements = {
+		shipclass_constructor = 1
+	}
+	on_success = {
+		ship_event = {
+			id = gts_lizhi.3
+		}
+	}
+}
+
+special_project = {
+	key = Koharu.recruit
+	event_scope = country_event
+	days_to_research = 90
+	picture = GFX_load_78
+	requirements = {
+	}
+	on_success = {
+		country_event = {
+			id = gts_hehuanpai.4003
+		}
+	}
+}
+
+special_project = {
+	key = Hanako.recruit
+	event_scope = country_event
+	days_to_research = 90
+	picture = GFX_gtsra_load_27
+	requirements = {
+	}
+	on_success = {
+		country_event = {
+			id = gts_hehuanpai.4004
+		}
+	}
+}
+
+special_project = {
+	key = satori.project
+	event_scope = country_event
+	picture = GFX_evt_gts_face_off_in_space
+	cost = 500
+	tech_department = engineering_technology
+	requirements = {
+	}
+	on_success = {
+		country_event = {
+			id = gts_satori.6
+		}
+	}
+}
+
+special_project = {
+	key = satori.project2
+	event_scope = country_event
+	picture = GFX_gtsra_10
+	cost = 2000
+	tech_department = physics_technology
+	requirements = {
+	}
+	on_success = {
+		country_event = {
+			id = gts_satori.10
+		}
+	}
+}
+
+special_project = {
+	key = gts_yarong_colony1
+	event_scope = ship_event
+	picture = GFX_load_90
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 30
+	requirements = {
+		shipclass_colonizer = 1
+	}
+	on_success = {
+		ship_event = {
+			id = gts_god_keeper.124
+		}
+	}
+}
+
+special_project = {
+	key = gts_yarong_battle1
+	event_scope = ship_event
+	picture = GFX_gtsra_city_crash_8
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 30
+	requirements = {
+		shipclass_military = 1
+		leader = commander
+		has_trait = yarong_leader_trait4
+	}
+	on_success = {
+		ship_event = {
+			id = gts_god_keeper.3010
+		}
+	}
+}
+
+special_project = {
+	key = gts_yarong_battle2
+	event_scope = ship_event
+	picture = GFX_gtsra_city_crash_8
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 30
+	requirements = {
+		shipclass_military = 1
+		leader = commander
+		has_trait = yarong_leader_trait4
+	}
+	on_success = {
+		ship_event = {
+			id = gts_god_keeper.3020
+		}
+	}
+}
+
+special_project = {
+	key = gts_saratoga_fleet_exercise
+	event_scope = ship_event
+	picture = GFX_gtsra_city_crash_8
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 7
+	requirements = {
+		shipclass_military = 1
+		leader = commander
+		has_trait = gts_leader_trait_saratoga_d
+	}
+	on_success = {
+		ship_event = {
+			id = gts_saratoga.1001
+		}
 	}
 }

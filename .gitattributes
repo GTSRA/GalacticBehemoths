@@ -8,5 +8,8 @@
 *.mesh binary
 
 # Ignored files on publishing release.
+/README.md export-ignore
 /.idea export-ignore
 /.vscode export-ignore
+/docs export-ignore
+/scripts export-ignore

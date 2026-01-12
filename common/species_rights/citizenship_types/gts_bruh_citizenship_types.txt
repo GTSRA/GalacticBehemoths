@@ -34,7 +34,7 @@ citizenship_inside_body_assimilation = {
 		}
 		custom_tooltip = {
 			fail_text = MUST_NOT_BE_TINY_SPECIES
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 

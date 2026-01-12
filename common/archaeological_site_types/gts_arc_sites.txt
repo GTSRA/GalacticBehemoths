@@ -781,6 +781,7 @@ aurora_digsite = {
 		}
 	}
 }
+
 gts_erika_digsite = {
 	#考古
 	desc = gts_erika_digsite_desc
@@ -886,12 +887,16 @@ gts_huatian_digsite = {
 		}
 	}
 }
+
 gts_huatian_digsite_b = {
 	#考古
 	desc = gts_huatian_digsite_b_desc
 	picture = GFX_gts_huatian_1
 	stages = 4
 	max_instances = 1
+	visible = {
+		default_site_visible_trigger = yes
+	}
 	allow = {
 		owner = {is_ai = no}
 		is_ship_class = shipclass_science_ship
@@ -930,6 +935,7 @@ gts_huatian_digsite_b = {
 		}
 	}
 }
+
 gts_lab_fault_digsite = {
 	#考古
 	desc = gts_lab_fault_digsite_desc
@@ -982,6 +988,7 @@ gts_lab_fault_digsite = {
 		}
 	}
 }
+
 gts_growth_digsite = {
 	# 成长的巨娘考古
 	desc = gts_growth_digsite_desc
@@ -1035,6 +1042,7 @@ gts_growth_digsite = {
 		}
 	}
 }
+
 gts_from_footprint_digsite = {
 	# 始于足下考古
 	desc = gts_from_footprint_digsite_desc
@@ -1093,6 +1101,7 @@ gts_from_footprint_digsite = {
 		}
 	}
 }
+
 site_gts_graygoo = {
 	# 小灰考古站点
 	desc = site_gts_graygoo_intro
@@ -1194,6 +1203,7 @@ site_gts_graygoo = {
 		}
 	}
 }
+
 gts_traptirx_digsite = {
 	desc = gts_traptirx_digsite_desc
 	picture = GFX_gts_traptrix_4
@@ -1393,6 +1403,7 @@ site_skadi_potral ={
 		}
 	}
 }
+
 site_gts_xinuo ={
 	picture = GFX_gts_xinuo_2
 	desc = site_gts_xinuo.desc
@@ -1440,6 +1451,7 @@ site_gts_xinuo ={
 		}
 	}
 }
+
 site_gts_xinuo2 ={
 	picture = GFX_gts_xinuo_2
 	desc = site_gts_xinuo.desc
@@ -1487,6 +1499,7 @@ site_gts_xinuo2 ={
 		}
 	}
 }
+
 site_shentun ={
 	picture = GFX_evt_astral_rift_microverse
 	desc = gts_god_keeper.1000.desc
@@ -1539,6 +1552,7 @@ site_shentun ={
 		}
 	}
 }
+
 gts_bronya_digsite = {
 	# 板鸭考古
 	desc =  gts_bronya_digsite_desc
@@ -1591,47 +1605,6 @@ gts_bronya_digsite = {
 	}
 }
 
-aom_Ruby_digsite = {
-	# 红宝石考古
-	desc = aom_Ruby_digsite_desc
-	picture = GFX_evt_excavation_team
-	stages = 4
-	weight = 0
-	allow = {
-		exists = leader
-		leader = { leader_class = scientist }
-	}
-	visible = {
-		default_site_visible_trigger = yes
-	}
-	stage = {
-		difficulty = 2
-		icon = GFX_archaeology_runes_F1
-		event =  illya.2
-	}
-	stage = {
-		difficulty = 3
-		icon = GFX_archaeology_runes_F2
-		event = illya.3
-	}
-	stage = {
-		difficulty = 3
-		icon = GFX_archaeology_runes_F3
-		event = illya.4
-	}
-	stage = {
-		difficulty = 4
-		icon = GFX_archaeology_runes_F4
-		event = illya.5
-	}
-	on_roll_failed = {
-		from = {
-			standard_archaeological_site_on_roll_failed = {
-				RANDOM_EVENTS = all_random_events
-			}
-		}
-	}
-}
 
 # _digsite = {
 # 	#考古

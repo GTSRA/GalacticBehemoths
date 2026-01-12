@@ -17,7 +17,7 @@ planet_event = {
             owner_main_species={
                 OR = {
                     has_trait = trait_gts_begin
-                    is_gts = yes
+                    gts_is_giantess = yes
                 }
             }
         }

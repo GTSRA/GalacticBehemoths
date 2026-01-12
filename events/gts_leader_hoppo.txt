@@ -161,6 +161,8 @@ country_event = {
 						name = "NAME_hoppo_ship"
 						design = "NAME_hoppo_ship"
 						effect = {
+							set_ship_flag = gts_body_ship
+							set_ship_flag = gts_hoppo_ship
 							save_global_event_target_as = gts_hoppo_ship
 							set_disabled = no
 						}

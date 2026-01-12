@@ -83,3 +83,10 @@ spriteTypes = {
     }
 
 }
+spriteTypes = {
+    spriteType = {
+        name = "GFX_text_gts_update_pic_ad_1"
+        texturefile = "gfx/interface/icons/tooltips/gts_suxiaobai_samll.dds"
+    }
+
+}

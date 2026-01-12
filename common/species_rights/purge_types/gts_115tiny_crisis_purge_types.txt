@@ -38,7 +38,7 @@ purge_godness_power_lathe_resettle = {
             }
         }
         is_sapient = yes
-        is_gts = yes
+        gts_is_giantess = yes
     }
     allow = {
         custom_tooltip = {

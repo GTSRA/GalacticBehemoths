@@ -15,7 +15,7 @@
 #     # Generic
 #     text = {
 #         trigger = {
-#             is_tiny_leader = yes
+#             gts_is_tiny = yes
 #         }
 #         weight = 20
 #         localization_key = tiny_death_reason_generic_1

@@ -828,6 +828,10 @@ country_event = {
 		name = HIRE
 		tag = hire_leader
 		legendary_gts_leader_hire_effect = yes
+		give_specimen = {
+			key = gts_specimens_display_cabinet
+			origin = gts_specimens_display_cabinet
+		}
 		hidden_effect = {
 			country_event = {
 				id = gts_leader_qhai.50
@@ -953,7 +957,7 @@ country_event = {
 		name = gts_leader_qhai.37.option
 		hidden_effect = {
 			event_target:gts_qhai = {
-				increase_gts_size_trait = yes
+				gts_leader_size_increase = yes
 			}
 			country_event = {
 				id = gts_leader_qhai.37
@@ -964,7 +968,7 @@ country_event = {
 		name = gts_leader_qhai.37.option.2
 		hidden_effect = {
 			event_target:gts_qhai = {
-				reduce_gts_size_trait = yes
+				gts_leader_size_reduce = yes
 			}
 			country_event = {
 				id = gts_leader_qhai.37
@@ -977,7 +981,7 @@ country_event = {
 			if = {
 				limit = {
 					event_target:gts_qhai = {
-						is_tiny_leader = yes
+						gts_is_tiny = yes
 					}
 				}
 				event_target:gts_qhai = {
@@ -1525,9 +1529,7 @@ country_event = {
 			random_owned_planet = {
 				limit = {
 					is_capital = no
-					not = {
-						is_no_eat_planet = yes
-					}
+					is_eatable_planet = yes
 				}
 				add_deposit = d_crater
 				add_deposit = d_bomb_crater
@@ -1660,7 +1662,7 @@ country_event = {
 				}
 			}
 			event_target:gts_qhai_av_target = {
-				reduce_gts_size_trait = yes
+				gts_leader_size_reduce = yes
 			}
 			country_event = {
 				id = gts_leader_qhai.69
@@ -1884,7 +1886,7 @@ country_event = {
 
 # 星球改造 星球决议触发
 planet_event = {
-	# 转化为爱液星球-拥有斯卡蒂
+	# 转化为爱液星球-拥有千海
 	id = gts_leader_qhai.301
 	title = gts_leader_qhai.301.title
 	desc = gts_leader_qhai.301.desc
@@ -1916,6 +1918,10 @@ planet_event = {
 					id = gts_leader_qhai.55
 					days = 60
 				}
+			}
+			give_specimen = {
+				key = gts_specimens_love_fluid_qhai
+				origin = gts_specimens_love_fluid_qhai
 			}
 		}
 	}
@@ -1974,9 +1980,7 @@ country_event = {
 	}
 	trigger = {
 		any_owned_planet = {
-			not = {
-				is_no_eat_planet = yes
-			}
+			is_eatable_planet = yes
 		}
 		any_owned_leader = {
 			has_leader_flag = gts_qhai
@@ -1985,9 +1989,7 @@ country_event = {
 	immediate = {
 		random_owned_planet = {
 			limit = {
-				not = {
-					is_no_eat_planet = yes
-				}
+				is_eatable_planet = yes
 			}
 			save_global_event_target_as = gts_qhai_wish_target
 		}
@@ -2826,6 +2828,7 @@ country_event = {
 			ETHIC = materialist
 			DESC = DESC_gts_qhai
 			CATCH_PHRASE = gts_qhai_catch_phrase
+			EVENT_LEADER = yes
 			RANDOMIZE_TRAITS = no
 			TARGET = gts_qhai
 			TRAIT1 = gts_trait_qhai1
@@ -2912,6 +2915,7 @@ country_event = {
 			AGE = 17
 			GENDER = female
 			IMMORTAL = yes
+			EVENT_LEADER = yes
 			ETHIC = materialist
 			DESC = DESC_gts_tensi
 			CATCH_PHRASE = gts_tensi_catch_phrase
@@ -2921,8 +2925,6 @@ country_event = {
 			TRAIT2 = gts_trait_tensi2
 			TRAIT3 = gts_trait_tensi3
 			TRAIT4 = gts_trait_tensi4
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		last_created_leader = {
 			add_trait = {
@@ -3002,17 +3004,19 @@ country_event = {
 			AGE = 17
 			GENDER = female
 			IMMORTAL = yes
+			EVENT_LEADER = yes
 			ETHIC = materialist
 			DESC = DESC_gts_tensi
 			CATCH_PHRASE = gts_tensi_catch_phrase
 			RANDOMIZE_TRAITS = no
+			IS_CRUEL = yes
+			IS_FUTA = yes
+			IS_SCAT = yes
 			TARGET = gts_tensi
 			TRAIT1 = gts_trait_tensi1
 			TRAIT2 = gts_trait_tensi2
 			TRAIT3 = gts_trait_tensi3
 			TRAIT4 = gts_trait_tensi4
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		last_created_leader = {
 			add_trait = {
@@ -3030,6 +3034,7 @@ country_event = {
 					design = "NAME_gts_tensi_ship"
 					effect = {
 						set_ship_flag = gts_tensi_ship
+						set_ship_flag = gts_body_ship
 						save_global_event_target_as = gts_tensi_ship
 						set_disabled = no
 					}
@@ -3045,7 +3050,7 @@ country_event = {
 				set_aggro_range_measure_from = self
 				set_aggro_range = 350
 				set_owner = root
-				assign_leader = event_target:gts_tensi
+				set_leader = event_target:gts_tensi
 			}
 			settings = {
 				spawn_debris = yes
@@ -3533,121 +3538,3 @@ country_event = {
 		custom_tooltip = gts_leader_qhai.2003.tooltip
 	}
 }
-
-# # 仅测试
-# country_event = {
-# 	# 测试事件
-# 	id = gts_leader_qhai.9999
-# 	title = "TRANSMISSION"
-# 	desc = gts_leader_qhai.2000.desc
-# 	is_triggered_only = yes
-# 	diplomatic = yes
-# 	auto_opens = yes
-# 	event_window_type = leader_recruit
-# 	notification_event_icon = "GFX_message_leader_gts_qhai"
-# 	show_sound = event_celebration
-# 	picture = GFX_leader_recruitment_bg_renowned
-# 	immediate = {
-# 		legendary_gts_leader_creator = {
-# 			LEADER_PORTRAIT = gts_yarong5
-# 			CLASS = commander
-# 			NAME = NAME_gts_tensi
-# 			LEVEL = 10
-# 			AGE = 17
-# 			GENDER = female
-# 			ETHIC = materialist
-# 			DESC = DESC_gts_tensi
-# 			CATCH_PHRASE = gts_tensi_catch_phrase
-# 			RANDOMIZE_TRAITS = no
-# 			TARGET = gts_test
-# 		}
-# 		last_created_leader = {
-# 			add_trait = {
-# 				trait = leader_trait_Titan
-# 				show_message = no
-# 			}
-# 			legendary_gts_leader_hire_effect = yes
-# 		}
-# 		create_fleet = {
-# 			name = "NAME_gts_allomerus_ship"
-# 			effect = {
-# 				create_ship = {
-# 					name = "NAME_gts_allomerus_ship"
-# 					design = "NAME_gts_allomerus_ship"
-# 					effect = {
-# 						set_ship_flag = gts_allomerus_ship
-# 						save_global_event_target_as = gts_allomerus_ship
-# 						set_disabled = no
-# 					}
-# 				}
-# 				save_global_event_target_as = gts_allomerus_fleet
-# 				set_location = {
-# 					target = root.capital_scope
-# 					distance = 10
-# 					angle = 90
-# 					direction = in_system
-# 				}
-# 				set_fleet_stance = passive
-# 				set_aggro_range_measure_from = self
-# 				set_aggro_range = 350
-# 				set_owner = root
-# 			}
-# 			settings = {
-# 				spawn_debris = yes
-# 				is_boss = no
-# 				can_change_leader = no
-# 				uses_naval_capacity = no
-# 				can_upgrade = no
-# 				can_disband = no
-# 				can_change_composition = no
-# 			}
-# 		}
-# 		create_fleet = {
-# 			name = "NAME_gts_sera_ship"
-# 			effect = {
-# 				create_ship = {
-# 					name = "NAME_gts_sera_ship"
-# 					design = "NAME_gts_sera_ship"
-# 					effect = {
-# 						set_ship_flag = gts_sera_ship
-# 						save_global_event_target_as = gts_sera_ship
-# 						set_disabled = no
-# 					}
-# 				}
-# 				save_global_event_target_as = gts_sera_fleet
-# 				set_location = {
-# 					target = root.capital_scope
-# 					distance = 10
-# 					angle = 90
-# 					direction = in_system
-# 				}
-# 				set_fleet_stance = passive
-# 				set_aggro_range_measure_from = self
-# 				set_aggro_range = 350
-# 				set_owner = root
-# 			}
-# 			settings = {
-# 				spawn_debris = yes
-# 				is_boss = no
-# 				can_change_leader = no
-# 				uses_naval_capacity = no
-# 				can_upgrade = no
-# 				can_disband = no
-# 				can_change_composition = no
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = DISMISS
-# 		tag = dismiss_leader
-# 		allow = {
-# 			always = no
-# 		}
-# 	}
-# 	option = {
-# 		name = HIRE
-# 		tag = hire_leader
-# 		hidden_effect = {
-# 		}
-# 	}
-# }

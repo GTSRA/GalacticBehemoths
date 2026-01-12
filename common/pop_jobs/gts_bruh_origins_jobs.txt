@@ -112,7 +112,7 @@ gts_ultra_sale_assistant = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -134,7 +134,7 @@ gts_ultra_sale_assistant = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -224,7 +224,7 @@ gts_fallout_radiation_researcher = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -317,7 +317,7 @@ gts_fallout_radiation_usage = {
 		planet = {
 			has_building = gts_fallout_building_radiation_research_lab
 		}
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	resources = {
@@ -334,7 +334,7 @@ gts_fallout_radiation_usage = {
 		weight = 9999
 		modifier = {
 			factor = 9999
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -375,7 +375,7 @@ gts_fallout_resident = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -431,7 +431,7 @@ gts_fallout_resident = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -472,7 +472,7 @@ gts_saintess = {
 	possible_precalc = can_fill_ruler_job
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	resources = {
@@ -554,7 +554,7 @@ gts_nun = {
 	possible_precalc = can_fill_specialist_job
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	resources = {

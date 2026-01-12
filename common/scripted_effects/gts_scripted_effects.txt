@@ -1,8 +1,6 @@
 gts_ra_set_country_flag = {
-
 	#這玩意沒這麼複雜到要用這個
 	#optimize_memory
-
 	# 為小人保護者添加國家標記
 	if = {
 		limit = {
@@ -10,7 +8,6 @@ gts_ra_set_country_flag = {
 		}
 		set_country_flag = gts_servitor_flag
 	}
-
 	# 為小人清除者新增國家標記
 	else_if = {
 		limit = {
@@ -18,7 +15,6 @@ gts_ra_set_country_flag = {
 		}
 		set_country_flag = gts_terminator_flag
 	}
-
 	# 為小人觀測者加上國家標記
 	else_if = {
 		limit = {
@@ -26,7 +22,6 @@ gts_ra_set_country_flag = {
 		}
 		set_country_flag = gts_assimilator_flag
 	}
-
 	# 為巨娘\墮落添加國家標記
 	if = {
 		limit = {
@@ -36,7 +31,7 @@ gts_ra_set_country_flag = {
 				has_valid_civic = civic_gts_assimilator
 				owner_main_species = {
 					OR = {
-						is_gts = yes
+						gts_is_giantess = yes
 						has_trait = trait_gts_begin
 					}
 				}
@@ -44,7 +39,6 @@ gts_ra_set_country_flag = {
 		}
 		set_country_flag = gts_flag
 	}
-
 	# 為小人添加國家標記
 	else = {
 		set_country_flag = tiny_flag
@@ -52,30 +46,15 @@ gts_ra_set_country_flag = {
 }
 
 add_leader_trait_gts = {
-
 	# 將新生成的領袖設定為與來源種族相同的大小特質
-
 	if = {
 		limit = {
 			species = {
-				OR = {
-					has_trait = trait_Ultra
-					has_trait = trait_great_species
-				}
+				has_trait = trait_Ultra
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Micro
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Ultra
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Ultra
 		}
 	}
 	else_if = {
@@ -84,17 +63,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Titan
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Micro
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Titan
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Titan
 		}
 	}
 	else_if = {
@@ -103,17 +73,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Giant
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Micro
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Giant
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Giant
 		}
 	}
 	else_if = {
@@ -122,17 +83,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Tall
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Micro
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Tall
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Tall
 		}
 	}
 	else_if = {
@@ -141,17 +93,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Normal
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Micro
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Normal
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Normal
 		}
 	}
 	else_if = {
@@ -160,17 +103,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Small
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Micro
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Small
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Small
 		}
 	}
 	else_if = {
@@ -179,17 +113,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Tiny
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Micro
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Tiny
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Tiny
 		}
 	}
 	else_if = {
@@ -198,17 +123,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Micro
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Nano
-		add_trait = {
-			trait = leader_trait_Micro
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Micro
 		}
 	}
 	else_if = {
@@ -217,17 +133,8 @@ add_leader_trait_gts = {
 				has_trait = trait_Nano
 			}
 		}
-		remove_trait = leader_trait_Ultra
-		remove_trait = leader_trait_Titan
-		remove_trait = leader_trait_Giant
-		remove_trait = leader_trait_Tall
-		remove_trait = leader_trait_Normal
-		remove_trait = leader_trait_Small
-		remove_trait = leader_trait_Tiny
-		remove_trait = leader_trait_Micro
-		add_trait = {
-			trait = leader_trait_Nano
-			show_message = no
+		gts_leader_size_change_to = {
+			SIZE_TRAIT = leader_trait_Nano
 		}
 	}
 }
@@ -242,7 +149,7 @@ gts_assimilation_pop_effect = {
 		}
 		while = {
 			count = 1
-			random_owned_pop_group ={
+			random_owned_pop_group = {
 				limit = {
 					OR = {
 						has_trait = trait_Titan
@@ -268,7 +175,7 @@ gts_assimilation_pop_effect_A = {
 		}
 		while = {
 			count = 10
-			random_owned_pop_group ={
+			random_owned_pop_group = {
 				limit = {
 					has_trait = trait_Micro
 				}
@@ -277,6 +184,7 @@ gts_assimilation_pop_effect_A = {
 		}
 	}
 }
+
 # gts_eat_planet = {
 # 	# 可以加一个新的星球类型？
 # 	remove_planet = yes
@@ -286,145 +194,204 @@ gts_destroy_planet = {
 	clear_planet_modifiers = yes
 	change_pc = pc_shattered
 }
+
 gts_change_nuked = {
 	clear_deposits = yes
 	clear_planet_modifiers = yes
 	change_pc = pc_nuked
 	reroll_deposits = yes
 }
+
 gts_destroy_colony = {
 	destroy_colony = yes
 	add_planet_devastation = 75
 	# add_deposit = d_bomb_crater
 }
+
 # 取消卡萨贸易协定(蠢驴就是这么写的)
 remove_kasa_trades = {
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_1 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_1
+		}
 		remove_modifier = gts_kasa_trade_micro_1
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_2 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_2
+		}
 		remove_modifier = gts_kasa_trade_micro_2
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_3 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_3
+		}
 		remove_modifier = gts_kasa_trade_micro_3
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_4 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_4
+		}
 		remove_modifier = gts_kasa_trade_micro_4
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_5 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_5
+		}
 		remove_modifier = gts_kasa_trade_micro_5
 	}
-
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_city_1 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_city_1
+		}
 		remove_modifier = gts_kasa_trade_micro_city_1
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_city_2 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_city_2
+		}
 		remove_modifier = gts_kasa_trade_micro_city_2
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_city_3 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_city_3
+		}
 		remove_modifier = gts_kasa_trade_micro_city_3
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_city_4 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_city_4
+		}
 		remove_modifier = gts_kasa_trade_micro_city_4
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_city_5 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_city_5
+		}
 		remove_modifier = gts_kasa_trade_micro_city_5
 	}
-
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_planet_1 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_planet_1
+		}
 		remove_modifier = gts_kasa_trade_micro_planet_1
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_planet_2 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_planet_2
+		}
 		remove_modifier = gts_kasa_trade_micro_planet_2
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_planet_3 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_planet_3
+		}
 		remove_modifier = gts_kasa_trade_micro_planet_3
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_planet_4 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_planet_4
+		}
 		remove_modifier = gts_kasa_trade_micro_planet_4
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_micro_planet_5 }
+		limit = {
+			has_modifier = gts_kasa_trade_micro_planet_5
+		}
 		remove_modifier = gts_kasa_trade_micro_planet_5
 	}
-	
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_fluid_1 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_fluid_1
+		}
 		remove_modifier = gts_kasa_trade_giantess_fluid_1
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_fluid_2 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_fluid_2
+		}
 		remove_modifier = gts_kasa_trade_giantess_fluid_2
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_fluid_3 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_fluid_3
+		}
 		remove_modifier = gts_kasa_trade_giantess_fluid_3
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_fluid_4 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_fluid_4
+		}
 		remove_modifier = gts_kasa_trade_giantess_fluid_4
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_fluid_5 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_fluid_5
+		}
 		remove_modifier = gts_kasa_trade_giantess_fluid_5
 	}
-
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_underwear_1 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_underwear_1
+		}
 		remove_modifier = gts_kasa_trade_giantess_underwear_1
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_underwear_2 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_underwear_2
+		}
 		remove_modifier = gts_kasa_trade_giantess_underwear_2
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_underwear_3 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_underwear_3
+		}
 		remove_modifier = gts_kasa_trade_giantess_underwear_3
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_underwear_4 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_underwear_4
+		}
 		remove_modifier = gts_kasa_trade_giantess_underwear_4
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_underwear_5 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_underwear_5
+		}
 		remove_modifier = gts_kasa_trade_giantess_underwear_5
 	}
-
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_human_1 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_human_1
+		}
 		remove_modifier = gts_kasa_trade_giantess_human_1
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_human_2 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_human_2
+		}
 		remove_modifier = gts_kasa_trade_giantess_human_2
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_human_3 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_human_3
+		}
 		remove_modifier = gts_kasa_trade_giantess_human_3
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_human_4 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_human_4
+		}
 		remove_modifier = gts_kasa_trade_giantess_human_4
 	}
 	if = {
-		limit = { has_modifier = gts_kasa_trade_giantess_human_5 }
+		limit = {
+			has_modifier = gts_kasa_trade_giantess_human_5
+		}
 		remove_modifier = gts_kasa_trade_giantess_human_5
 	}
 }
+
 gts_create_ship = {
 	#创建舰娘
 	create_fleet = {
@@ -434,6 +401,9 @@ gts_create_ship = {
 			create_ship = {
 				name = $name$
 				design = $design$
+				effect = {
+					set_ship_flag = gts_body_ship
+				}
 			}
 			set_location = {
 				target = root.capital_scope
@@ -447,86 +417,114 @@ gts_create_ship = {
 		}
 	}
 }
+
 give_allow_play_effect = {
 	if = {
-		limit = { NOT = { has_technology = tech_exotic_gases } }
+		limit = {
+			NOT = {
+				has_technology = tech_exotic_gases
+			}
+		}
 		add_tech_progress = {
 			tech = tech_exotic_gases
 			progress = 1
-		} 
+		}
 	}
-
 	if = {
-		limit = { NOT = { has_technology = tech_rare_crystals } }
+		limit = {
+			NOT = {
+				has_technology = tech_rare_crystals
+			}
+		}
 		add_tech_progress = {
 			tech = tech_rare_crystals
 			progress = 1
-		} 
+		}
 	}
-
 	if = {
-		limit = { NOT = { has_technology = tech_volatile_motes } }
+		limit = {
+			NOT = {
+				has_technology = tech_volatile_motes
+			}
+		}
 		add_tech_progress = {
 			tech = tech_volatile_motes
 			progress = 1
-		} 
+		}
 	}
-
 	if = {
-		limit = { NOT = { has_technology = tech_mine_rare_crystals } }
+		limit = {
+			NOT = {
+				has_technology = tech_mine_rare_crystals
+			}
+		}
 		add_tech_progress = {
 			tech = tech_mine_rare_crystals
 			progress = 1
-		} 
+		}
 	}
-
 	if = {
-		limit = { NOT = { has_technology = tech_mine_exotic_gases } }
+		limit = {
+			NOT = {
+				has_technology = tech_mine_exotic_gases
+			}
+		}
 		add_tech_progress = {
 			tech = tech_mine_exotic_gases
 			progress = 1
-		} 
+		}
 	}
-
 	if = {
-		limit = { NOT = { has_technology = tech_mine_volatile_motes } }
+		limit = {
+			NOT = {
+				has_technology = tech_mine_volatile_motes
+			}
+		}
 		add_tech_progress = {
 			tech = tech_mine_volatile_motes
 			progress = 1
-		} 
+		}
 	}
 }
+
 # 主人的享乐体
-origin_annihilator_gts_leftfoot_effect = { #左足
+origin_annihilator_gts_leftfoot_effect = {
+	#左足
 	change_pc = pc_gaia
 }
 
-origin_annihilator_gts_rightfoot_effect = { #右足
+origin_annihilator_gts_rightfoot_effect = {
+	#右足
 	change_pc = pc_gaia
 }
 
-origin_annihilator_gts_tummy_effect = { #胃
+origin_annihilator_gts_tummy_effect = {
+	#胃
 	change_pc = pc_gaia
 }
 
-origin_annihilator_gts_anal_effect = { #菊
+origin_annihilator_gts_anal_effect = {
+	#菊
 	change_pc = pc_gaia
 }
 
-origin_annihilator_gts_pussy_effect = { #阴
+origin_annihilator_gts_pussy_effect = {
+	#阴
 	change_pc = pc_gaia
 }
 
-
-origin_annihilator_gts_leftarm_effect = { #左足
+origin_annihilator_gts_leftarm_effect = {
+	#左足
 	change_pc = pc_gaia
 }
 
-origin_annihilator_gts_rightarm_effect = { #左足
+origin_annihilator_gts_rightarm_effect = {
+	#左足
 	change_pc = pc_gaia
 }
 
-origin_annihilator_gts_head_effect = { #头
+origin_annihilator_gts_head_effect = {
+	#头
 	change_pc = pc_gaia
 }
 
@@ -545,13 +543,14 @@ create_master_ship = {
 			save_global_event_target_as = master_warship
 			create_ship = {
 				name = "master"
-				design = "MASTER_body" 
+				design = "MASTER_body"
 				prefix = no
 				upgradable = yes
 			}
 		}
 	}
 }
+
 create_elf_empire_starting_navy = {
 	create_elf_empire_fleet = yes
 	create_elf_empire_fleet = yes
@@ -593,7 +592,6 @@ create_elf_empire_starting_navy = {
 		}
 	}
 }
-
 
 create_elf_empire_fleet = {
 	owner = {
@@ -649,7 +647,9 @@ create_elf_empire_fleet = {
 			}
 		}
 	}
-	last_created_fleet = { assign_leader = last_created_leader }
+	last_created_fleet = {
+		assign_leader = last_created_leader
+	}
 }
 
 create_elf_empire_large_ship = {
@@ -666,11 +666,122 @@ create_elf_empire_small_ship = {
 	}
 }
 
-gts_yarong_rebirth_effect = {
-	while = {
-		count = 10
-		random_owned_pop_group ={
-			kill_all_pop = yes
+can_build_gts_115tiny_crisis_star_eater = {
+	set_country_flag = can_build_crisis_star_eater
+	create_ship_design = {
+		design = "NAME_gts_115tiny_Crisis_Star_Eater"
+	}
+	add_ship_design = last_created_design
+}
+
+gts_set_empire_type = {
+	# 根据主体物种体型设置帝国类型
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_ultra = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_ultra
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_titan = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_titan
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_giant = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_giant
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_tall = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_tall
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_normal = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_normal
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_small = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_small
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_tiny = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_tiny
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_micro = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_micro
+			cooldown = no
+		}
+	}
+	if = {
+		limit = {
+			owner_main_species = {
+				gts_is_equal_to_nano = yes
+			}
+		}
+		set_policy = {
+			policy = gts_empire_type
+			option = gts_empire_type_nano
+			cooldown = no
 		}
 	}
 }

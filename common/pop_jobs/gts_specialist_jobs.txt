@@ -30,7 +30,7 @@ gts_inside_institute_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -61,7 +61,7 @@ gts_inside_institute_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }

@@ -693,8 +693,6 @@ opinion_tongued_a_primitive_world_phile = {
 	}
 }
 
-
-
 opinion_assimilated_a_world = {
 	opinion = {
 		base = -60
@@ -861,6 +859,62 @@ opinion_unbirthed_my_world = {
 	}
 }
 
+opinion_hostile_first_contactgts_planet1 = {
+	opinion = {
+		base = -50
+	}
+
+	accumulative = yes
+
+	min = -1000
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_hostile_first_contactgts_planet2 = {
+	opinion = {
+		base = -200
+	}
+
+	accumulative = yes
+
+	min = -1500
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_hostile_first_contactgts_planet3 = {
+	opinion = {
+		base = -500
+	}
+
+	accumulative = yes
+
+	min = -2000
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_hostile_first_contactgts_planet4 = {
+	opinion = {
+		base = -800
+	}
+
+	accumulative = yes
+
+	min = -2000
+
+	decay = {
+		base = 1
+	}
+}
+
 triggered_tiny_opinion_of_titan_hunter = {
 	trigger = {
 		exists = owner
@@ -939,5 +993,80 @@ opinion_gts_purge = { #屠杀了巨娘
 			add = 3
 			has_ethic = ethic_fanatic_xenophobe
 		}
+	}
+}
+
+opinion_skadiub_a_planet = {
+	opinion = {
+		base = -1000
+	}
+
+	accumulative = yes
+
+	min = -8000
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_skadi_brought = {
+	opinion = {
+		base = -300
+	}
+	accumulative = yes
+}
+
+opinion_skadi_overcome = {
+	opinion = {
+		base = 100
+	}
+	accumulative = yes
+}
+
+opinion_leader_interact_ruler_caught1 = {
+	opinion = {
+		base = -300
+	}
+	decay = {
+		base = -1
+	}
+}
+
+opinion_leader_interact_ruler_caught2 = {
+	opinion = {
+		base = -100
+	}
+	decay = {
+		base = -1
+	}
+}
+
+opinion_leader_interact_ruler_caught3 = {
+	opinion = {
+		base = 100
+	}
+	decay = {
+		base = -1
+	}
+}
+
+triggered_gts_worship_opinion_of_gts = {
+	trigger = {
+		is_country_type = default
+		has_civic = civic_gts_worship
+		FROM = {
+			has_country_flag = gts_flag
+			is_country_type = default
+		}
+	}
+	opinion = {
+		base = 25
+	}
+}
+
+opinion_gts_qhai_bocai = {
+	opinion = {
+		base = -50
 	}
 }

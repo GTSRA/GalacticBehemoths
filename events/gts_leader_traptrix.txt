@@ -240,7 +240,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				or = {
-					is_tiny_leader = yes
+					gts_is_tiny = yes
 					has_trait = leader_trait_Tall
 				}
 			}
@@ -252,7 +252,7 @@ country_event = {
 		trigger = {
 			any_owned_leader = {
 				or = {
-					is_tiny_leader = yes
+					gts_is_tiny = yes
 					has_trait = leader_trait_Tall
 				}
 			}
@@ -429,9 +429,6 @@ country_event = {
 			TRAIT1 = leader_trait_Giant
 			TRAIT2 = gts_trait_leader_sera_a
 			TRAIT3 = gts_trait_leader_sera_b
-			TRAIT4 = leader_trait_gts_bruh_empty
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 	picture_event_data = {
@@ -513,9 +510,6 @@ country_event = {
 			TRAIT1 = gts_trait_leader_sera_a
 			TRAIT2 = gts_trait_leader_sera_b
 			TRAIT3 = gts_trait_leader_sera_c
-			TRAIT4 = leader_trait_gts_bruh_empty
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		last_created_leader = {
 			add_trait = {
@@ -532,6 +526,7 @@ country_event = {
 					design = "NAME_gts_sera_ship"
 					effect = {
 						set_ship_flag = gts_sera_ship
+						set_ship_flag = gts_body_ship
 						save_global_event_target_as = gts_sera_ship
 						set_disabled = no
 					}
@@ -635,9 +630,6 @@ country_event = {
 			TRAIT1 = leader_trait_Giant
 			TRAIT2 = gts_trait_leader_allomerus_a
 			TRAIT3 = gts_trait_leader_allomerus_b
-			TRAIT4 = leader_trait_gts_bruh_empty
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		last_created_leader = {
 		}
@@ -724,10 +716,6 @@ country_event = {
 			TARGET = gts_allomerus
 			TRAIT1 = gts_trait_leader_allomerus_c
 			TRAIT2 = gts_trait_leader_allomerus_d
-			TRAIT3 = leader_trait_gts_bruh_empty
-			TRAIT4 = leader_trait_gts_bruh_empty
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		last_created_leader = {
 			add_trait = {
@@ -751,6 +739,7 @@ country_event = {
 					upgradable = no
 					effect = {
 						set_ship_flag = gts_allomerus_ship
+						set_ship_flag = gts_body_ship
 						save_global_event_target_as = gts_allomerus_ship
 						set_disabled = no
 					}
@@ -1348,6 +1337,7 @@ country_event = {
 							design = "NAME_gts_allomerus_ship"
 							effect = {
 								set_ship_flag = gts_allomerus_emery_ship
+								set_ship_flag = gts_body_ship
 								save_global_event_target_as = gts_allomerus_emery_ship
 								set_disabled = no
 							}
@@ -1386,6 +1376,7 @@ country_event = {
 							design = "NAME_gts_sera_ship"
 							effect = {
 								set_ship_flag = gts_sera_emery_ship
+								set_ship_flag = gts_body_ship
 								save_global_event_target_as = gts_sera_emery_ship
 								set_disabled = no
 							}
@@ -1699,7 +1690,7 @@ planet_event = {
 				random_owned_pop_group = {
 					if = {
 						limit = {
-							is_tiny = yes
+							gts_is_tiny = yes
 						}
 						event_target:gts_sera_destroyed_planet = {
 							change_variable = {
@@ -1730,7 +1721,7 @@ planet_event = {
 					}
 					else_if = {
 						limit = {
-							is_gts = yes
+							gts_is_giantess = yes
 						}
 						event_target:gts_sera_destroyed_planet = {
 							change_variable = {

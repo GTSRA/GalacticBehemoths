@@ -9,7 +9,10 @@ tb_nanites_group = {
 		gts_giantess_fluid
 		gts_giantess_underwear
 		gts_giantess_human
-		
+		gts_aom_magicstones
+		gts_aom_saint_uartz
+		gts_aom_unregistered_spirit_origin
+		gts_aom_Belief
 		#Bruh# 先把這些移出
 		
 		## "688086068	ST: New Horizons"

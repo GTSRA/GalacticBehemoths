@@ -19,7 +19,7 @@ country_event = {
 				is_planet_class = pc_shielded
 				is_planet_class = pc_ringworld_shielded
 				is_planet_class = pc_habitat_shielded
-				is_no_eat_planet = yes
+				is_eatable_planet = no
 			}
 
 		}
@@ -37,7 +37,7 @@ country_event = {
 					is_planet_class = pc_shielded
 					is_planet_class = pc_ringworld_shielded
 					is_planet_class = pc_habitat_shielded
-					is_no_eat_planet = yes
+					is_eatable_planet = no
 				}
 
 			}
@@ -272,7 +272,7 @@ country_event = {
 		custom_tooltip = gts_linfeng.100.a.tooltip
 		random_owned_pop_group = {
 			limit = {
-				is_tiny = yes
+				gts_is_tiny = yes
 			}
 			kill_single_pop = yes
 		}
@@ -290,7 +290,7 @@ country_event = {
 							is_planet_class = pc_shielded
 							is_planet_class = pc_ringworld_shielded
 							is_planet_class = pc_habitat_shielded
-							is_no_eat_planet = yes
+							is_eatable_planet = no
 						}
 					}
 
@@ -406,7 +406,7 @@ country_event = {
 				count = 2
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -450,7 +450,7 @@ country_event = {
 				count = 4
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -494,7 +494,7 @@ country_event = {
 				count = 6
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -537,7 +537,7 @@ country_event = {
 				count = 8
 				random_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					kill_single_pop = yes
 				}
@@ -595,7 +595,7 @@ country_event = {
 							is_planet_class = pc_shielded
 							is_planet_class = pc_ringworld_shielded
 							is_planet_class = pc_habitat_shielded
-							is_no_eat_planet = yes
+							is_eatable_planet = no
 						}
 
 					}
@@ -697,6 +697,7 @@ country_event = {
 				NOR = {
 					has_trait = gts_trait_leader_linfeng_b
 					has_leader_flag = gts_linfeng
+					gts_is_bigger_than_titan = yes
 				}
 			}
 			save_event_target_as = gts_linfeng_target_leader
@@ -752,6 +753,7 @@ country_event = {
 				NOR = {
 					has_trait = gts_trait_leader_linfeng_b
 					has_leader_flag = gts_linfeng
+					gts_is_bigger_than_titan = yes
 				}
 			}
 			save_event_target_as = gts_linfeng_target_leader
@@ -799,7 +801,7 @@ country_event = {
 					is_planet_class = pc_shielded
 					is_planet_class = pc_ringworld_shielded
 					is_planet_class = pc_habitat_shielded
-					is_no_eat_planet = yes
+					is_eatable_planet = no
 				}
 
 			}
@@ -853,7 +855,7 @@ country_event = {
 					is_planet_class = pc_shielded
 					is_planet_class = pc_ringworld_shielded
 					is_planet_class = pc_habitat_shielded
-					is_no_eat_planet = yes
+					is_eatable_planet = no
 				}
 
 			}
@@ -907,7 +909,7 @@ country_event = {
 					is_planet_class = pc_shielded
 					is_planet_class = pc_ringworld_shielded
 					is_planet_class = pc_habitat_shielded
-					is_no_eat_planet = yes
+					is_eatable_planet = no
 				}
 
 			}
@@ -961,7 +963,7 @@ country_event = {
 					is_planet_class = pc_shielded
 					is_planet_class = pc_ringworld_shielded
 					is_planet_class = pc_habitat_shielded
-					is_no_eat_planet = yes
+					is_eatable_planet = no
 				}
 
 			}
@@ -1056,6 +1058,76 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = gts_linfeng.202.a
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier5unityreward
+			min = @tier5unitymin
+			max = @tier5unitymax
+		}
+	}
+}
+
+### 千海联动事件
+country_event = {
+	id = gts_linfeng.210
+	title = gts_linfeng.210.name
+	desc = gts_linfeng.210.desc
+	show_sound = event_gts_masturbate
+	diplomatic = yes
+	custom_gui = "gts_horizontal_event_window"
+	custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = gts_linfeng_10_room
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		any_owned_leader = {
+			has_leader_flag = gts_linfeng
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_qhai
+		}
+	}
+	option = {
+		name = gts_linfeng.210.a
+		hidden_effect = {
+			country_event = {
+				id = gts_linfeng.211
+			}
+		}
+	}
+}
+country_event = {
+	id = gts_linfeng.211
+	title = gts_linfeng.211.name
+	desc = gts_linfeng.211.desc
+	show_sound = event_gts_masturbate
+	diplomatic = yes
+	custom_gui = "gts_horizontal_event_window"
+	custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = gts_linfeng_10_room
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		any_owned_leader = {
+			has_leader_flag = gts_linfeng
+		}
+		any_owned_leader = {
+			has_leader_flag = gts_qhai
+		}
+	}
+	option = {
+		name = gts_linfeng.211.a
+		custom_tooltip = name = gts_linfeng.211.a.tooltip
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier5unityreward
+			min = @tier5unitymin
+			max = @tier5unitymax
+		}
 	}
 }
 

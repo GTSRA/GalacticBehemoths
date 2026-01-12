@@ -2163,298 +2163,273 @@ event = {
 	}
 }
 
-# 刪除複數的體型特質
+# # 刪除複數的體型特質
+# 因为这几个事件每个月会删掉所有领袖体型，暂时没时间研究就先注释掉了
 
-event = {
+# event = {
 
-	# 刪除複數的體型特質(巨娘開局)
+# 	# 刪除複數的體型特質(巨娘開局)
 
-	id = gts_leader_bruh.66
-	is_triggered_only = yes
-	hide_window = yes
+# 	id = gts_leader_bruh.66
+# 	is_triggered_only = yes
+# 	hide_window = yes
 
-	trigger = {
-		OR = {
-			any_galaxy_species = {
-				has_trait = trait_gts_begin
-				OR = {
-					has_trait = trait_Normal
-					has_trait = trait_Small
-					has_trait = trait_Tiny
-					has_trait = trait_Micro
-					has_trait = trait_Nano
-				}
-			}
-			any_country = {
-				any_owned_leader = {
-					OR = {
-						has_trait = leader_trait_Ultra_start
-						has_trait = leader_trait_Titan_start
-						has_trait = leader_trait_Giant_start
-						has_trait = leader_trait_Tall_start
-					}
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-						has_trait = leader_trait_Tall
-						has_trait = leader_trait_Normal
-						has_trait = leader_trait_Small
-						has_trait = leader_trait_Tiny
-						has_trait = leader_trait_Micro
-						has_trait = leader_trait_Nano
-					}
-				}
-			}
-		}
-	}
+# 	trigger = {
+# 		OR = {
+# 			any_galaxy_species = {
+# 				has_trait = trait_gts_begin
+# 				OR = {
+# 					has_trait = trait_Normal
+# 					has_trait = trait_Small
+# 					has_trait = trait_Tiny
+# 					has_trait = trait_Micro
+# 					has_trait = trait_Nano
+# 				}
+# 			}
+# 			any_country = {
+# 				any_owned_leader = {
+# 					OR = {
+# 						has_trait = leader_trait_Ultra
+# 						has_trait = leader_trait_Titan
+# 						has_trait = leader_trait_Giant
+# 						has_trait = leader_trait_Tall
+# 						has_trait = leader_trait_Normal
+# 						has_trait = leader_trait_Small
+# 						has_trait = leader_trait_Tiny
+# 						has_trait = leader_trait_Micro
+# 						has_trait = leader_trait_Nano
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
 
-	immediate = {
-		every_galaxy_species = {
-			limit = {
-				has_trait = trait_gts_begin
-				OR = {
-					has_trait = trait_Normal
-					has_trait = trait_Small
-					has_trait = trait_Tiny
-					has_trait = trait_Micro
-					has_trait = trait_Nano
-				}
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Normal
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Small
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Tiny
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Micro
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Nano
-			}
-		}
-		every_country = {
-			every_owned_leader = {
-				limit = {
-					OR = {
-						has_trait = leader_trait_Ultra_start
-						has_trait = leader_trait_Titan_start
-						has_trait = leader_trait_Giant_start
-						has_trait = leader_trait_Tall_start
-					}
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-						has_trait = leader_trait_Tall
-						has_trait = leader_trait_Normal
-						has_trait = leader_trait_Small
-						has_trait = leader_trait_Tiny
-						has_trait = leader_trait_Micro
-						has_trait = leader_trait_Nano
-					}
-				}
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Tiny
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		every_galaxy_species = {
+# 			limit = {
+# 				has_trait = trait_gts_begin
+# 				OR = {
+# 					has_trait = trait_Normal
+# 					has_trait = trait_Small
+# 					has_trait = trait_Tiny
+# 					has_trait = trait_Micro
+# 					has_trait = trait_Nano
+# 				}
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Normal
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Small
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Tiny
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Micro
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Nano
+# 			}
+# 		}
+# 		every_country = {
+# 			every_owned_leader = {
+# 				limit = {
+# 					OR = {
+# 						has_trait = leader_trait_Ultra
+# 						has_trait = leader_trait_Titan
+# 						has_trait = leader_trait_Giant
+# 						has_trait = leader_trait_Tall
+# 						has_trait = leader_trait_Normal
+# 						has_trait = leader_trait_Small
+# 						has_trait = leader_trait_Tiny
+# 						has_trait = leader_trait_Micro
+# 						has_trait = leader_trait_Nano
+# 					}
+# 				}
+# 				remove_trait = leader_trait_Ultra
+# 				remove_trait = leader_trait_Titan
+# 				remove_trait = leader_trait_Giant
+# 				remove_trait = leader_trait_Tall
+# 				remove_trait = leader_trait_Normal
+# 				remove_trait = leader_trait_Small
+# 				remove_trait = leader_trait_Tiny
+# 				remove_trait = leader_trait_Micro
+# 				remove_trait = leader_trait_Nano
+# 			}
+# 		}
+# 	}
+# }
 
-event = {
+# event = {
 
-	# 刪除複數的體型特質(小人開局)
+# 	# 刪除複數的體型特質(小人開局)
 
-	id = gts_leader_bruh.67
-	is_triggered_only = yes
-	hide_window = yes
+# 	id = gts_leader_bruh.67
+# 	is_triggered_only = yes
+# 	hide_window = yes
 
-	trigger = {
-		OR = {
-			any_galaxy_species = {
-				has_trait = trait_tiny_begin
-				OR = {
-					has_trait = trait_Ultra
-					has_trait = trait_Titan
-					has_trait = trait_Giant
-					has_trait = trait_Tall
-				}
-			}
-			any_country = {
-				any_owned_leader = {
-					OR = {
-						has_trait = leader_trait_Normal_start
-						has_trait = leader_trait_Small_start
-						has_trait = leader_trait_Tiny_start
-						has_trait = leader_trait_Micro_start
-						has_trait = leader_trait_Nano_start
-					}
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-						has_trait = leader_trait_Tall
-						has_trait = leader_trait_Normal
-						has_trait = leader_trait_Small
-						has_trait = leader_trait_Tiny
-						has_trait = leader_trait_Micro
-						has_trait = leader_trait_Nano
-					}
-				}
-			}
-		}
-	}
+# 	trigger = {
+# 		OR = {
+# 			any_galaxy_species = {
+# 				has_trait = trait_tiny_begin
+# 				OR = {
+# 					has_trait = trait_Ultra
+# 					has_trait = trait_Titan
+# 					has_trait = trait_Giant
+# 					has_trait = trait_Tall
+# 				}
+# 			}
+# 			any_country = {
+# 				any_owned_leader = {
+# 					OR = {
+# 						has_trait = leader_trait_Ultra
+# 						has_trait = leader_trait_Titan
+# 						has_trait = leader_trait_Giant
+# 						has_trait = leader_trait_Tall
+# 						has_trait = leader_trait_Normal
+# 						has_trait = leader_trait_Small
+# 						has_trait = leader_trait_Tiny
+# 						has_trait = leader_trait_Micro
+# 						has_trait = leader_trait_Nano
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
 
-	immediate = {
-		every_galaxy_species = {
-			limit = {
-				has_trait = trait_tiny_begin
-				OR = {
-					has_trait = trait_Ultra
-					has_trait = trait_Titan
-					has_trait = trait_Giant
-					has_trait = trait_Tall
-				}
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Ultra
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Titan
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Giant
-			}
-			change_species_characteristics = {
-				remove_trait = trait_Tall
-			}
-		}
-		every_country = {
-			every_owned_leader = {
-				limit = {
-					OR = {
-						has_trait = leader_trait_Normal_start
-						has_trait = leader_trait_Small_start
-						has_trait = leader_trait_Tiny_start
-						has_trait = leader_trait_Micro_start
-						has_trait = leader_trait_Nano_start
-					}
-					OR = {
-						has_trait = leader_trait_Ultra
-						has_trait = leader_trait_Titan
-						has_trait = leader_trait_Giant
-						has_trait = leader_trait_Tall
-						has_trait = leader_trait_Normal
-						has_trait = leader_trait_Small
-						has_trait = leader_trait_Tiny
-						has_trait = leader_trait_Micro
-						has_trait = leader_trait_Nano
-					}
-				}
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Tiny
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		every_galaxy_species = {
+# 			limit = {
+# 				has_trait = trait_tiny_begin
+# 				OR = {
+# 					has_trait = trait_Ultra
+# 					has_trait = trait_Titan
+# 					has_trait = trait_Giant
+# 					has_trait = trait_Tall
+# 				}
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Ultra
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Titan
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Giant
+# 			}
+# 			change_species_characteristics = {
+# 				remove_trait = trait_Tall
+# 			}
+# 		}
+# 		every_country = {
+# 			every_owned_leader = {
+# 				limit = {
+# 					OR = {
+# 						has_trait = leader_trait_Ultra
+# 						has_trait = leader_trait_Titan
+# 						has_trait = leader_trait_Giant
+# 						has_trait = leader_trait_Tall
+# 						has_trait = leader_trait_Normal
+# 						has_trait = leader_trait_Small
+# 						has_trait = leader_trait_Tiny
+# 						has_trait = leader_trait_Micro
+# 						has_trait = leader_trait_Nano
+# 					}
+# 				}
+# 				remove_trait = leader_trait_Ultra
+# 				remove_trait = leader_trait_Titan
+# 				remove_trait = leader_trait_Giant
+# 				remove_trait = leader_trait_Tall
+# 				remove_trait = leader_trait_Normal
+# 				remove_trait = leader_trait_Small
+# 				remove_trait = leader_trait_Tiny
+# 				remove_trait = leader_trait_Micro
+# 				remove_trait = leader_trait_Nano
+# 			}
+# 		}
+# 	}
+# }
 
-event = {
+# event = {
 
-	# 刪除複數的體型特質(無開局)
+# 	# 刪除複數的體型特質(無開局)
 
-	id = gts_leader_bruh.68
-	is_triggered_only = yes
-	hide_window = yes
+# 	id = gts_leader_bruh.68
+# 	is_triggered_only = yes
+# 	hide_window = yes
 
-	trigger = {
-		any_galaxy_species = {
-			OR = {
-				has_trait = trait_Ultra
-				has_trait = trait_Titan
-				has_trait = trait_Giant
-				has_trait = trait_Tall
-			}
-			OR = {
-				has_trait = trait_Normal
-				has_trait = trait_Small
-				has_trait = trait_Tiny
-				has_trait = trait_Micro
-				has_trait = trait_Nano
-			}
-		}
-	}
+# 	trigger = {
+# 		any_galaxy_species = {
+# 			OR = {
+# 				has_trait = trait_Ultra
+# 				has_trait = trait_Titan
+# 				has_trait = trait_Giant
+# 				has_trait = trait_Tall
+# 			}
+# 			OR = {
+# 				has_trait = trait_Normal
+# 				has_trait = trait_Small
+# 				has_trait = trait_Tiny
+# 				has_trait = trait_Micro
+# 				has_trait = trait_Nano
+# 			}
+# 		}
+# 	}
 
-	immediate = {
-		every_galaxy_species = {
-			limit = {
-				OR = {
-					has_trait = trait_Ultra
-					has_trait = trait_Titan
-					has_trait = trait_Giant
-					has_trait = trait_Tall
-				}
-				OR = {
-					has_trait = trait_Normal
-					has_trait = trait_Small
-					has_trait = trait_Tiny
-					has_trait = trait_Micro
-					has_trait = trait_Nano
-				}
-			}
-			random_list = {
-				1 = {
-					change_species_characteristics = {
-						remove_trait = trait_Ultra
-					}
-					change_species_characteristics = {
-						remove_trait = trait_Titan
-					}
-					change_species_characteristics = {
-						remove_trait = trait_Giant
-					}
-					change_species_characteristics = {
-						remove_trait = trait_Tall
-					}
-				}
-				1 = {
-					change_species_characteristics = {
-						remove_trait = trait_Normal
-					}
-					change_species_characteristics = {
-						remove_trait = trait_Small
-					}
-					change_species_characteristics = {
-						remove_trait = trait_Tiny
-					}
-					change_species_characteristics = {
-						remove_trait = trait_Micro
-					}
-					change_species_characteristics = {
-						remove_trait = trait_Nano
-					}
-				}
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		every_galaxy_species = {
+# 			limit = {
+# 				OR = {
+# 					has_trait = trait_Ultra
+# 					has_trait = trait_Titan
+# 					has_trait = trait_Giant
+# 					has_trait = trait_Tall
+# 				}
+# 				OR = {
+# 					has_trait = trait_Normal
+# 					has_trait = trait_Small
+# 					has_trait = trait_Tiny
+# 					has_trait = trait_Micro
+# 					has_trait = trait_Nano
+# 				}
+# 			}
+# 			random_list = {
+# 				1 = {
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Ultra
+# 					}
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Titan
+# 					}
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Giant
+# 					}
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Tall
+# 					}
+# 				}
+# 				1 = {
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Normal
+# 					}
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Small
+# 					}
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Tiny
+# 					}
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Micro
+# 					}
+# 					change_species_characteristics = {
+# 						remove_trait = trait_Nano
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 # 替領袖添加扶她特質
 

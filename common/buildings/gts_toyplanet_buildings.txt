@@ -15,7 +15,7 @@ building_gts_bfbf_habitability_dirt_tiny = {
 	potential = {
 		exists = owner
 		owner = {
-			is_tiny = yes
+			gts_is_tiny = yes
 			has_technology = tech_gts_bfbf_habitability_dirt
 		}
 		planet ={
@@ -47,7 +47,7 @@ building_gts_bfbf_habitability_dirt_tiny = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_tiny = yes
+				gts_is_tiny = yes
 				has_technology = tech_gts_bfbf_habitability_dirt
 			}
 		}
@@ -84,7 +84,7 @@ building_gts_bfbf_habitability_dirt_gts = {
 	potential = {
 		exists = owner
 		owner = {
-			is_gts = yes
+			gts_is_giantess = yes
 			has_technology = tech_gts_bfbf_habitability_dirt
 		}
 		planet = {
@@ -116,7 +116,7 @@ building_gts_bfbf_habitability_dirt_gts = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_gts = yes
+				gts_is_giantess = yes
 				has_technology = tech_gts_bfbf_habitability_dirt
 			}
 		}
@@ -153,7 +153,7 @@ building_gts_bfbf_habitability_juice_tiny = {
 	potential = {
 		exists = owner
 		owner = {
-			is_tiny = yes
+			gts_is_tiny = yes
 			is_spiritualist = yes
 			has_technology = tech_gts_bfbf_habitability_juiceandsemen
 		}
@@ -181,7 +181,7 @@ building_gts_bfbf_habitability_juice_tiny = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_tiny = yes
+				gts_is_tiny = yes
 				has_technology = tech_gts_bfbf_habitability_juiceandsemen
 			}
 		}
@@ -219,7 +219,7 @@ building_gts_bfbf_habitability_juice_gts = {
 	potential = {
 		exists = owner
 		owner = {
-			is_gts = yes
+			gts_is_giantess = yes
 			is_spiritualist = yes
 			has_technology = tech_gts_bfbf_habitability_juiceandsemen
 		}
@@ -247,7 +247,7 @@ building_gts_bfbf_habitability_juice_gts = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_gts = yes
+				gts_is_giantess = yes
 				has_technology = tech_gts_bfbf_habitability_juiceandsemen
 			}
 		}
@@ -284,7 +284,7 @@ building_gts_bfbf_habitability_semen_tiny = {
 	potential = {
 		exists = owner
 		owner = {
-			is_tiny = yes
+			gts_is_tiny = yes
 			is_spiritualist = yes
 			has_technology = tech_gts_bfbf_habitability_juiceandsemen
 		}
@@ -308,7 +308,7 @@ building_gts_bfbf_habitability_semen_tiny = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_tiny = yes
+				gts_is_tiny = yes
 				has_technology = tech_gts_bfbf_habitability_juiceandsemen
 			}
 		}
@@ -345,7 +345,7 @@ building_gts_bfbf_habitability_semen_gts = {
 	potential = {
 		exists = owner
 		owner = {
-			is_gts = yes
+			gts_is_giantess = yes
 			is_spiritualist = yes
 			has_technology = tech_gts_bfbf_habitability_juiceandsemen
 		}
@@ -369,7 +369,7 @@ building_gts_bfbf_habitability_semen_gts = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_gts = yes
+				gts_is_giantess = yes
 				has_technology = tech_gts_bfbf_habitability_juiceandsemen
 			}
 		}
@@ -406,7 +406,7 @@ building_gts_bfbf_habitability_milk_tiny = {
 	potential = {
 		exists = owner
 		owner = {
-			is_tiny = yes
+			gts_is_tiny = yes
 			has_technology = tech_gts_bfbf_habitability_milk
 		}
 		planet ={
@@ -429,7 +429,7 @@ building_gts_bfbf_habitability_milk_tiny = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_tiny = yes
+				gts_is_tiny = yes
 				has_technology = tech_gts_bfbf_habitability_milk
 			}
 		}
@@ -466,7 +466,7 @@ building_gts_bfbf_habitability_milk_gts = {
 	potential = {
 		exists = owner
 		owner = {
-			is_gts = yes
+			gts_is_giantess = yes
 			has_technology = tech_gts_bfbf_habitability_milk
 		}
 		planet ={
@@ -489,7 +489,7 @@ building_gts_bfbf_habitability_milk_gts = {
 		exists = owner
 		NOT = {
 			owner = {
-				is_gts = yes
+				gts_is_giantess = yes
 				has_technology = tech_gts_bfbf_habitability_milk
 			}
 		}

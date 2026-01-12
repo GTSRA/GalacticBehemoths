@@ -38,8 +38,8 @@ country_event = {
 	trigger = {
 		has_civic = civic_gts_terminator
 		any_owned_pop_group = {
-			is_gts = no
-			is_tiny = yes
+			gts_is_giantess = no
+			gts_is_tiny = yes
 			is_being_purged = no
 		}
 	}
@@ -47,8 +47,8 @@ country_event = {
 	immediate = {
 		every_owned_pop_group = {
 			limit = {
-				is_gts = no
-				is_tiny = yes
+				gts_is_giantess = no
+				gts_is_tiny = yes
 				is_being_purged = no
 			}
 			set_citizenship_type = {
@@ -72,8 +72,8 @@ country_event = {
 	immediate = {
 		every_owned_pop_group = {
 			limit = {
-				is_gts = no
-				is_tiny = yes
+				gts_is_giantess = no
+				gts_is_tiny = yes
 				is_being_purged = yes
 			}
 			set_purge_type = {
@@ -97,7 +97,7 @@ country_event = {
 	immediate = {
 		every_owned_pop_group = {
 			limit = {
-				is_tiny = yes
+				gts_is_tiny = yes
 				NOR = {
 					has_citizenship_type = {
 						type = citizenship_organic_trophy
@@ -110,7 +110,7 @@ country_event = {
 		}
 		every_owned_pop_group = {
 			limit = {
-				is_tiny = yes
+				gts_is_tiny = yes
 				NOR = {
 					has_living_standard = {
 						type = living_standard_organic_trophy
@@ -219,7 +219,7 @@ country_event = {
 		owner_main_species = {
 			if = {
 				limit = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 				change_species_characteristics = {
 					add_trait = trait_tiny_ub
@@ -227,7 +227,7 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 				change_species_characteristics = {
 					add_trait = trait_gts_ub
@@ -259,7 +259,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 				modify_species = {
 					add_trait = trait_gts_ub
@@ -267,7 +267,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 				modify_species = {
 					add_trait = trait_tiny_ub
@@ -275,7 +275,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					is_gts = yes
+					gts_is_giantess = yes
 					OR = {
 						has_trait = trait_gts_ass
 						has_trait = trait_gts_vore
@@ -290,7 +290,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					is_tiny = yes
+					gts_is_tiny = yes
 					OR = {
 						has_trait = trait_gts_ass
 						has_trait = trait_tiny_futa

@@ -171,7 +171,7 @@ preset_gts_livestock_subject = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 			is_xenophobe = yes
 			NOR = {
 				is_megacorp = yes
@@ -180,7 +180,7 @@ preset_gts_livestock_subject = {
 			}
 		}
 		root = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -266,7 +266,7 @@ preset_gts_slave_subject = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 			OR = {
 				is_authoritarian = yes
 				is_xenophobe = yes
@@ -278,7 +278,7 @@ preset_gts_slave_subject = {
 			}
 		}
 		root = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -372,7 +372,7 @@ preset_gts_reserve_subject = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 			NOR = {
 				is_megacorp = yes
 				is_xenophobe = yes
@@ -381,7 +381,7 @@ preset_gts_reserve_subject = {
 			}
 		}
 		root = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -456,7 +456,7 @@ preset_gts_pet_subject = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 			NOR = {
 				is_megacorp = yes
 				is_xenophobe = yes
@@ -465,7 +465,7 @@ preset_gts_pet_subject = {
 			}
 		}
 		root = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }

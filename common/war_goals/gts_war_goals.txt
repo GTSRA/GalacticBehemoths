@@ -190,13 +190,13 @@ wg_gts_servitor = {
 			from = {
 				random_owned_species = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					save_event_target_as = raided_tiny_species
 				}
 				every_owned_pop_group = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					random_list = {
 						1 = {

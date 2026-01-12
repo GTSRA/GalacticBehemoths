@@ -9,12 +9,13 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		gts_set_empire_type = yes
 		if = {
 			# 巨娘默认政策
 			limit = {
 				is_same_species = owner_main_species
 				species = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 			}
 			set_country_flag = gts_finish_change_giant_buildings
@@ -348,8 +349,7 @@ country_event = {
 
 	trigger = {
 		any_galaxy_species = {
-			is_gts = no
-			is_tiny = no
+			gts_has_size_trait = no
 		}
 	}
 
@@ -407,7 +407,7 @@ country_event = {
 		else_if = {
 			limit = {
 				owner_main_species = {
-					is_gts = no
+					gts_is_giantess = no
 					has_trait = trait_gts_begin
 				}
 			}
@@ -437,7 +437,7 @@ country_event = {
 		else_if = {
 			limit = {
 				owner_main_species = {
-					is_tiny = no
+					gts_is_tiny = no
 					has_trait = trait_tiny_begin
 				}
 			}
@@ -473,8 +473,8 @@ country_event = {
 			# 其餘的
 			every_galaxy_species = {
 				limit = {
-					is_gts = no
-					is_tiny = no
+					gts_is_giantess = no
+					gts_is_tiny = no
 				}
 				random_list = {
 					1 = {
@@ -573,14 +573,6 @@ country_event = {
 					is_special_leader = yes
 					has_trait = trait_great_species
 					has_trait = leader_trait_Ultra
-					has_trait = leader_trait_Titan_start
-					has_trait = leader_trait_Giant_start
-					has_trait = leader_trait_Tall_start
-					has_trait = leader_trait_Normal_start
-					has_trait = leader_trait_Small_start
-					has_trait = leader_trait_Tiny_start
-					has_trait = leader_trait_Micro_start
-					has_trait = leader_trait_Nano_start
 				}
 			}
 			add_leader_trait_gts = yes # 將新生成的領袖設定為與來源種族相同的大小特質
@@ -607,8 +599,8 @@ leader_event = {
 	hide_window = yes
 
 	trigger = {
-		is_gts_leader = no
-		is_tiny_leader = no
+		gts_is_giantess = no
+		gts_is_tiny = no
 	}
 
 	immediate = {
@@ -618,14 +610,6 @@ leader_event = {
 					is_special_leader = yes
 					has_trait = trait_great_species
 					has_trait = leader_trait_Ultra
-					has_trait = leader_trait_Titan_start
-					has_trait = leader_trait_Giant_start
-					has_trait = leader_trait_Tall_start
-					has_trait = leader_trait_Normal_start
-					has_trait = leader_trait_Small_start
-					has_trait = leader_trait_Tiny_start
-					has_trait = leader_trait_Micro_start
-					has_trait = leader_trait_Nano_start
 				}
 			}
 			add_leader_trait_gts = yes
@@ -908,6 +892,12 @@ country_event = {
 								save_global_event_target_as = gts_linfeng
 							}
 						}
+						gts_suxiaobai = {
+							prev = {
+								set_leader_flag = gts_suxiaobai
+								save_global_event_target_as = gts_suxiaobai
+							}
+						}
 					}
 				}
 				set_variable = {
@@ -1163,6 +1153,96 @@ country_event = {
 					id = gts_doctor.5
 				}
 			}
+		}
+	}
+}
+
+country_event = {
+	# 测试用
+	id = gts_utility.500
+	title = gts_utility.500.name
+	desc = gts_utility.500.desc
+	picture = GFX_gts_event_46
+	show_sound = event_bad_omen
+	is_triggered_only = yes
+
+	option = {
+		name = gts_utility.500.a
+		owner_main_species = {
+			gts_species_size_increase = yes
+		}
+
+	}
+	option = {
+		name = gts_utility.500.b
+		owner_main_species = {
+			gts_species_size_reduce = yes
+		}
+	}
+	option = {
+		name = gts_utility.500.c
+		owner_main_species = {
+			gts_species_size_change_to = {
+				SIZE_TRAIT = trait_Titan
+			}
+		}
+	}
+	option = {
+		name = gts_utility.500.d
+		every_owned_leader = {
+			gts_leader_size_increase = yes
+		}
+	}
+	option = {
+		name = gts_utility.500.e
+		every_owned_leader = {
+			gts_leader_size_reduce = yes
+		}
+	}
+	option = {
+		name = gts_utility.500.f
+		random_owned_leader = {
+			gts_leader_size_change_to = {
+				SIZE_TRAIT = leader_trait_Titan
+			}
+		}
+	}
+	option = {
+		name = gts_utility.500.g
+		random_owned_pop_group = {
+			gts_pop_size_increase = yes
+		}
+	}
+	option = {
+		name = gts_utility.500.h
+		random_owned_pop_group = {
+			gts_pop_size_reduce = yes
+		}
+	}
+	option = {
+		name = gts_utility.500.i
+		random_owned_pop_group = {
+			gts_pop_size_change_to = {
+				SIZE_TRAIT = trait_Titan
+			}
+		}
+	}
+	option = {
+		default_hide_option = yes
+		name = gts_back
+	}
+}
+
+country_event = {
+	# 测试用
+	id = gts_utility.501
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner_main_species = {
+			gts_is_giantess = yes
+			gts_is_tiny = no
 		}
 	}
 }

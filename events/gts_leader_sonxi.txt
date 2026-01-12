@@ -14,7 +14,7 @@ country_event = {
 				is_planet_class = pc_shattered_ring_habitable
 				is_planet_class = pc_ringworld_habitable
 				is_planet_class = pc_habitat
-				is_no_eat_planet = yes
+				is_eatable_planet = no
 			}
 
 		}
@@ -49,7 +49,7 @@ country_event = {
 						is_planet_class = pc_shattered_ring_habitable
 						is_planet_class = pc_ringworld_habitable
 						is_planet_class = pc_habitat
-						is_no_eat_planet = yes
+						is_eatable_planet = no
 					}
 
 				}
@@ -63,7 +63,7 @@ country_event = {
 						is_planet_class = pc_shattered_ring_habitable
 						is_planet_class = pc_ringworld_habitable
 						is_planet_class = pc_habitat
-						is_no_eat_planet = yes
+						is_eatable_planet = no
 					}
 
 				}
@@ -302,7 +302,7 @@ country_event = {
 	show_sound = event_celebration
 	is_triggered_only = yes
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	auto_opens = yes
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_leader_gts_sonxi"
 	immediate = {
@@ -320,7 +320,6 @@ country_event = {
 			CATCH_PHRASE = gts_sonxi_catch_phrase
 			RANDOMIZE_TRAITS = no
 			TARGET = gts_sonxi
-			TRAIT1 = leader_trait_gts_bruh_empty
 			TRAIT2 = leader_trait_Ultra
 			TRAIT3 = gts_trait_leader_sonxi_a
 			TRAIT4 = gts_trait_leader_sonxi_b
@@ -528,7 +527,7 @@ country_event = {
 		event_target:gts_sonxi_next_planet_1 = {
 			if = {
 				limit = {
-					is_no_eat_planet = no
+					is_eatable_planet = yes
 
 				}
 				remove_planet = yes
@@ -537,7 +536,7 @@ country_event = {
 		event_target:gts_sonxi_next_planet_2 = {
 			if = {
 				limit = {
-					is_no_eat_planet = no
+					is_eatable_planet = yes
 				}
 				remove_planet = yes
 			}
@@ -605,7 +604,7 @@ country_event = {
 		event_target:gts_sonxi_next_planet = {
 			if = {
 				limit = {
-					is_no_eat_planet = no
+					is_eatable_planet = yes
 				}
 				remove_planet = yes
 			}
@@ -638,13 +637,13 @@ country_event = {
 				limit = {
 					any_owned_planet = {
 						is_colony = yes
-						is_no_eat_planet = no
+						is_eatable_planet = yes
 					}
 				}
 				random_owned_planet = {
 					limit = {
 						is_colony = yes
-						is_no_eat_planet = no
+						is_eatable_planet = yes
 					}
 					save_event_target_as = gts_sonxi_next_planet
 				}
@@ -653,7 +652,7 @@ country_event = {
 				random_owned_planet = {
 					limit = {
 						is_colony = no
-						is_no_eat_planet = no
+						is_eatable_planet = yes
 					}
 					save_event_target_as = gts_sonxi_next_planet
 				}
@@ -683,7 +682,7 @@ country_event = {
 		event_target:gts_sonxi_next_planet = {
 			if = {
 				limit = {
-					is_no_eat_planet = no
+					is_eatable_planet = yes
 				}
 				remove_planet = yes
 			}

@@ -282,5 +282,16 @@ objectTypes = {
 		scale = 200
 	}
 
+	pdxmesh = {
+		name = "linfeng_planet_mesh"
+		file = "gfx/models/GTS/linfeng_planet.mesh"
+		scale = 200
+	}
+	pdxmesh = {
+		name = "saragts_saratoga_titan_mesh"
+		file = "gfx/models/GTS/saratoga.mesh"
+		scale = 30
+	}
+
 }
 

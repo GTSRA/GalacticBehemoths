@@ -233,7 +233,7 @@ gts_ui_leader_init = {
 		}
 		else_if = {
 			limit = {
-				is_tiny_leader = yes
+				gts_is_tiny = yes
 			}
 			set_variable_to_random_value = {
 				# 吃掉的小人数量：

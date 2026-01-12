@@ -125,21 +125,16 @@ origin_parasitic_robot = {
 }
 
 origin_Luanzi = {
-
 	# 卵子世界
-
 	is_origin = yes
 	advanced_start = yes
 	max_once_global = yes
 	starting_colony = pc_gts_luanzi
-
 	icon = "gfx/interface/icons/origins/origins_one_the_shoulders_of_giant.dds"
 	picture = GFX_origin_Luanzi
-
 	initializers = {
 		Luanzi_sol_system_initializer
 	}
-
 	possible = {
 		authority = {
 			NOT = {
@@ -152,28 +147,21 @@ origin_Luanzi = {
 			}
 		}
 	}
-
 	description = "origin_Luanzi_effect"
-
 	flags = {
 		Luanzi_start_screen
 	}
-
 	random_weight = {
 		base = 5
 	}
 }
 
 origin_Jiju = {
-
 	# A.E.I.O.U.
-
 	is_origin = yes
 	max_once_global = yes
-
 	picture = GFX_origin_Jiju
 	icon = "gfx/interface/icons/origins/origins_one_the_shoulders_of_giant.dds"	#图标
-
 	possible = {
 		#可选条件
 		authority = {
@@ -182,77 +170,59 @@ origin_Jiju = {
 			}
 		}
 	}
-
 	traits = {
 		trait = trait_Jiju
 	}
-
 	description = "origin_Jiju_effect"
-
 	flags = {
 		Jiju_start_screen
 	}
-
 	modifier = {
 		empire_size_mult = -0.2
 	}
-
 	random_weight = {
 		base = 5
 	}
 }
 
 origin_Qianxin = {
-
 	# 虔心崇聖
-
 	is_origin = yes
 	advanced_start = yes
 	max_once_global = yes
-
 	icon = "gfx/interface/icons/origins/origins_one_the_shoulders_of_giant.dds"
 	picture = GFX_origin_Qianxin
-
 	possible = {
 		ethics = {
 			value = ethic_fanatic_spiritualist
 		}
 	}
-
 	modifier = {
-		pop_ethic_spiritualist_attraction_mult = 1.0
+		pop_ethic_spiritualist_attraction_mult = 1
 		planet_researchers_produces_mult = -0.5
 		station_researchers_produces_mult = -0.5
 	}
-
 	traits = {
 		trait = trait_latent_psionic
 		trait = trait_gts_begin
 	}
-
 	description = "origin_Qianxin_effect"
-
 	flags = {
 		Qianxin_start_screen
 	}
-
 	random_weight = {
 		base = 5
 	}
 }
 
 origin_gts_fallout = {
-
 	# 異塵餘生
-
 	is_origin = yes
 	advanced_start = yes
 	max_once_global = yes
 	starting_colony = pc_nuked
-
 	icon = "gfx/interface/icons/origins/origins_one_the_shoulders_of_giant.dds"
 	picture = GFX_origin_gts_fallout
-
 	possible = {
 		ethics = {
 			NOR = {
@@ -272,35 +242,27 @@ origin_gts_fallout = {
 			}
 		}
 	}
-
 	traits = {
 		trait = trait_pc_nuked_preference
 		trait = trait_survivor
 		trait = trait_gts_fallout
 		trait = trait_gts_begin
 	}
-
 	description = "origin_gts_fallout_effect"
-
 	flags = {
 		Fallout_start_screen
 	}
-
 	random_weight = {
 		base = 5
 	}
 }
 
 origin_gts_subterranean = {
-
 	# 靴底人
-
 	is_origin = yes
 	advanced_start = yes
-
 	icon = "gfx/interface/icons/origins/origins_subterranean.dds"
 	picture = GFX_origin_gts_subterranean
-
 	possible = {
 		ethics = {
 			NOT = {
@@ -308,48 +270,38 @@ origin_gts_subterranean = {
 			}
 		}
 	}
-
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.10
-		planet_district_mining_build_speed_mult = 0.10
+		planet_jobs_minerals_produces_mult = 0.1
+		planet_district_mining_build_speed_mult = 0.1
 		mining_district_housing_add = 200
 		planet_orbital_bombardment_damage = -0.75
-		planet_structures_cost_mult = 0.20
-		planet_structures_upkeep_mult = 0.20
-		planet_building_build_speed_mult = -0.20
+		planet_structures_cost_mult = 0.2
+		planet_structures_upkeep_mult = 0.2
+		planet_building_build_speed_mult = -0.2
 		planet_storm_devastation_mult = -0.25
 	}
-
 	traits = {
 		trait = trait_gts_cave_dweller
 	}
-
 	description = "origin_tooltip_gts_subterranean_effects"
-
 	flags = {
 		custom_start_screen
 	}
-
 	random_weight = {
 		base = 5
 	}
 }
 
 origin_Ultra_company = {
-
 	# 寰海極宇
-
 	is_origin = yes
 	max_once_global = yes
 	non_colonizable_planet_class_neighbor = yes
-
 	icon = "gfx/interface/icons/origins/origins_shroud_touched.dds"
 	picture = GFX_origin_Ultra_company
-
 	potential = {
 		always = yes
 	}
-
 	possible = {
 		authority = {
 			value = auth_corporate
@@ -361,62 +313,48 @@ origin_Ultra_company = {
 			}
 		}
 	}
-
 	modifier = {
-		diplomacy_influence_upkeep_mult = -0.50
-		planet_branch_offices_cost_mult = -0.50
+		diplomacy_influence_upkeep_mult = -0.5
+		planet_branch_offices_cost_mult = -0.5
 		job_gts_ultra_sale_add = 5
 	}
-
 	traits = {
 		trait = trait_Ultra
 		trait = trait_great_species
 	}
-
 	description = "origin_tooltip_Ultra_company_effects"
-	negative_description =  "origin_tooltip_Ultra_company_negative_effects"
-
+	negative_description = "origin_tooltip_Ultra_company_negative_effects"
 	flags = {
 		Ultra_company_start_screen
 	}
-
 	random_weight = {
 		base = 5
 	}
 }
 
 origin_god_keeper = {
-
 	# 豢養神明
-
 	is_origin = yes
 	max_once_global = yes
-
 	icon = "gfx/interface/icons/origins/origin_here_be_dragons.dds"
 	picture = GFX_origin_god_keeper
-
 	starting_colony = pc_ocean
-
 	possible = {
-		authority = { 
+		authority = {
 			OR = {
 				value = auth_dictatorial
 				value = auth_imperial
 			}
 		}
 	}
-
 	traits = {
 		trait = trait_perfected_genes
 		trait = trait_tiny_begin
 	}
-
 	description = origin_tooltip_god_keeper_effects
-
 	flags = {
 		custom_start_screen
 	}
-
 	random_weight = {
 		base = 5
 	}
@@ -428,13 +366,11 @@ origin_hstar = {
 	icon = "gfx/interface/icons/origins/origins_hstar.dds"
 	picture = GFX_origin_hstar
 	max_once_global = yes
-	
 	playable = {
 		NOT = {
 			is_ai = yes
 		}
 	}
-
 	possible = {
 		species_class = {
 			NOT = {
@@ -456,17 +392,15 @@ origin_hstar = {
 				value = civic_criminal_heritage
 			}
 		}
-
 	}
-
-	flags = { custom_start_screen }
-
-	traits = { 
+	flags = {
+		custom_start_screen
+	}
+	traits = {
 		trait = trait_hstar
 		trait = trait_Normal
 		trait = trait_very_strong
 	}
-
 	random_weight = {
 		base = 0
 	}
@@ -477,19 +411,18 @@ origin_hstar = {
 	}
 }
 
-origin_hstar_customer = { # AI Only
+origin_hstar_customer = {
+	# AI Only
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_hstar_custom.dds"
 	picture = GFX_origin_hstar_custom
-
 	playable = {
-		always = no # Non-player origin
+		always = no		# Non-player origin
 	}
-
-	possible = {}
-
-	traits = {}
-
+	possible = {
+	}
+	traits = {
+	}
 	random_weight = {
 		base = 0
 	}
@@ -511,7 +444,8 @@ origin_ultra_road = {
 	}
 	flags = {
 		gts_ultra_road_start_screen
-	}	#引起事件
+	}
+	#引起事件
 	random_weight = {
 		#随机权重
 		base = 0
@@ -526,13 +460,15 @@ origin_ultra_road = {
 
 origin_annihilator = {
 	# 灭世天罚
-	is_origin = yes                                                              #是起源
-	icon = "gfx/interface/icons/origins/origins_annihilator.dds"  #图标
-	picture = GFX_origin_annihilator                                                  #贴图
+	is_origin = yes	#是起源
+	icon = "gfx/interface/icons/origins/origins_annihilator.dds"	#图标
+	picture = GFX_origin_annihilator	#贴图
 	max_once_global = yes
-	starting_colony = pc_gaia              #起始星球（新的 毁灭者星球）                                        #最多一个
-
-	initializers = { Annihilator_sol_system_initializer }       #初始化星系
+	starting_colony = pc_gaia	#起始星球（新的 毁灭者星球）                                        #最多一个
+	initializers = {
+		Annihilator_sol_system_initializer
+	}
+	#初始化星系
 	playable = {
 		always = no
 	}
@@ -568,7 +504,8 @@ origin_annihilator = {
 	}
 	flags = {
 		Annihilator_start_screen
-	}	#引起事件
+	}
+	#引起事件
 	random_weight = {
 		#随机权重
 		base = 0
@@ -582,6 +519,38 @@ origin_annihilator = {
 		#ship_military_time_cost_mult = 100000
 	}
 	description = "origin_annihilator_effect"
+	advanced_start = yes
+}
+
+origin_panlon = {
+	is_origin = yes
+	icon = "gfx/event_pictures/origins/origin_sigmaempire_small.dds"
+	picture = GFX_origin_panlon
+	potential = {
+		always = yes
+	}
+	possible = {
+		authority = {
+			OR = {
+				value = auth_hales_panlon
+			}
+		}
+	}
+	traits = {
+		trait = trait_aom_Belief
+	}
+	modifier = {
+		ship_fire_rate_mult = 0.2
+		country_war_exhaustion_mult = -0.2
+		diplo_weight_naval_mult = 1
+	}
+	flags = {
+		panlon_start_screen
+	}
+	random_weight = {
+		base = 100
+	}
+	description = "civic_tooltip_origin_panlon_effects"
 	advanced_start = yes
 }
 

@@ -529,14 +529,14 @@ country_event = {
 			count > 3000
 		}
 		any_owned_leader = {
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gts_humiliate_targert_leader
 		}

@@ -9,11 +9,6 @@ on_game_start = {
 	}
 }
 
-# on_game_start_country = {
-# 	events = {
-		
-# 	}
-# }
 
 on_monthly_pulse_country = {
 	events = {
@@ -45,7 +40,7 @@ on_monthly_pulse = {
 
 on_yearly_pulse = {
 	events = {
-		gts_leader_bruh.62# 刪除佔位符特質
+		# gts_leader_bruh.62# 刪除佔位符特質
 	}
 }
 

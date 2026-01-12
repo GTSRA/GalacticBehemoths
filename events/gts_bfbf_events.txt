@@ -817,10 +817,6 @@ country_event = {
 }
 
 
-
-
-
-
 country_event = {
 	id = gts_bfbf.300
 	title = gts_bfbf.300.name
@@ -2275,11 +2271,7 @@ event = {
 	}
 
 	immediate = {
-		owner = {
-			add_resource = {
 
-			}
-		}
 	}
 }
 event = {
@@ -2296,11 +2288,7 @@ event = {
 	}
 
 	immediate = {
-		owner = {
-			add_resource = {
 
-			}
-		}
 	}
 }
 country_event = {
@@ -2317,11 +2305,7 @@ country_event = {
 	}
 
 	immediate = {
-		owner = {
-			add_resource = {
 
-			}
-		}
 	}
 }
 country_event = {

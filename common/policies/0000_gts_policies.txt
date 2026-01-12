@@ -1211,3 +1211,455 @@ ultracompany_regulation = {
 		}
 	}
 }
+
+gts_empire_type = {
+	# 帝国类型
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = gts_empire_type_ultra
+
+		policy_flags = { gts_empire_type_ultra }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_ultra = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = 0.25
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_ultra
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_ultra = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_titan
+
+		policy_flags = { gts_empire_type_titan }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_titan = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = 0.15
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_titan
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_titan = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_giant
+
+		policy_flags = { gts_empire_type_giant }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_giant = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = 0.1
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_giant
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_giant = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_tall
+
+		policy_flags = { gts_empire_type_tall }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_tall = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = 0.05
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_tall
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_tall = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_normal
+
+		policy_flags = { gts_empire_type_normal }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_normal = yes
+			}
+		}
+
+		# modifier = {
+			
+		# }
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_normal
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_normal = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_small
+
+		policy_flags = { gts_empire_type_small }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_small = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = -0.05
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_small
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_small = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_tiny
+
+		policy_flags = { gts_empire_type_tiny }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_tiny = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = -0.1
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_tiny
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_tiny = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_micro
+
+		policy_flags = { gts_empire_type_micro }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_micro = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = -0.15
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_micro
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_micro = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = gts_empire_type_nano
+
+		policy_flags = { gts_empire_type_nano }
+
+		valid = {
+			owner_main_species = {
+				gts_is_equal_to_nano = yes
+			}
+		}
+
+		modifier = {
+			diplo_weight_mult = -0.25
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_variable = {
+					which = gts_empire_size
+					value = @gts_nano
+				}
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 1
+				owner_main_species = {
+					gts_is_equal_to_nano = yes
+				}
+			}
+		}
+	}
+}
+gts_giantess_treatment = {
+	# 对待巨娘的态度
+	potential = {
+		NOT = {
+			check_variable = {
+				which = gts_empire_size
+				value = @gts_ultra
+			}
+		}
+	}
+
+	option = {
+		name = gts_giantess_treatment_positive
+
+		policy_flags = { gts_giantess_treatment_positive }
+
+		valid = {
+			always = yes
+		}
+
+		modifier = {
+			
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+	option = {
+		name = gts_giantess_treatment_neutral
+
+		policy_flags = { gts_giantess_treatment_neutral }
+
+		valid = {
+			always = yes
+		}
+
+		modifier = {
+			
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+	option = {
+		name = gts_giantess_treatment_hostile
+
+		policy_flags = { gts_giantess_treatment_hostile }
+
+		valid = {
+			always = yes
+		}
+
+		modifier = {
+			
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+}
+gts_tiny_treatment = {
+	# 对待小人的态度
+	potential = {
+		NOT = {
+			check_variable = {
+				which = gts_empire_size
+				value = @gts_nano
+			}
+		}
+	}
+
+	option = {
+		name = gts_tiny_treatment_positive
+
+		policy_flags = { gts_tiny_treatment_positive }
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_gts_terminator
+			}
+		}
+
+		modifier = {
+			
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+	option = {
+		name = gts_tiny_treatment_neutral
+
+		policy_flags = { gts_tiny_treatment_neutral }
+
+		valid = {
+			always = yes
+		}
+
+		modifier = {
+			
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+	option = {
+		name = gts_tiny_treatment_hostile
+
+		policy_flags = { gts_tiny_treatment_hostile }
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_gts_servitor
+			}
+		}
+
+		modifier = {
+			
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+}

@@ -389,6 +389,15 @@ country_event = {
 		}
 		text = gts_intel_avatar_linfeng
 	}
+	desc = {
+		trigger = {
+			check_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_suxiaobai
+			}
+		}
+		text = gts_intel_avatar_suxiaobai
+	}
 	# desc = {
 	# 	trigger = {
 	# 		check_variable = {
@@ -822,6 +831,17 @@ country_event = {
 				}
 				country_event = {
 					id = gts_ui.135
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = gts_ui_intel_avatar
+						value = @gts_suxiaobai
+					}
+				}
+				country_event = {
+					id = gts_ui.136
 				}
 			}
 			# else_if = {
@@ -1788,6 +1808,25 @@ country_event = {
         hidden_effect = {
             country_event = {
                 id = gts_linfeng.900
+            }
+        }
+    }
+}
+country_event = {
+    id = gts_ui.136
+    title = gts_ui.100.name
+    desc = gts_ui.136.desc
+    picture = GFX_gts_event_1
+    show_sound = event_default
+    is_triggered_only = yes
+    immediate = {
+        set_global_flag = gts_has_trigger_suxiaobai
+    }
+    option = {
+        name = gts_perfect
+        hidden_effect = {
+            country_event = {
+                id = gts_suxiaobai.900
             }
         }
     }

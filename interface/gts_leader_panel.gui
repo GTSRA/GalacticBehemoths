@@ -786,6 +786,13 @@ guiTypes = {
 			alwaysTransparent = yes		
 			effect = gts_leader_body_83_effect
 		}
+		effectButtonType = {
+			name = "gts_leader_body_84"
+			spriteType = "GFX_gts_leader_body_84"
+			position = { x = 610 y = 89 }
+			alwaysTransparent = yes		
+			effect = gts_leader_body_84_effect
+		}
 		# effectButtonType = {
 		# 	name = "gts_leader_body_xxx"
 		# 	spriteType = "GFX_gts_leader_body_xxx"

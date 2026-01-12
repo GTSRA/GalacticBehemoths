@@ -67,7 +67,7 @@ country_event = {
 	show_sound = event_celebration
 	is_triggered_only = yes
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	auto_opens = yes
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_leader_gts_tiantiao"
 	immediate = {
@@ -86,11 +86,8 @@ country_event = {
 			RANDOMIZE_TRAITS = no
 			TARGET = gts_tiantiao
 			TRAIT1 = leader_trait_Ultra
-			TRAIT2 = leader_trait_gts_bruh_empty
-			TRAIT3 = gts_trait_leader_tiantiao_a
-			TRAIT4 = gts_trait_leader_tiantiao_b
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
+			TRAIT2 = gts_trait_leader_tiantiao_a
+			TRAIT3 = gts_trait_leader_tiantiao_b
 		}
 	}
 	picture_event_data = {

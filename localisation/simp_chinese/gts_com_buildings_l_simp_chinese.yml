@@ -117,6 +117,7 @@
   job_gts_sojourn_worker_desc: "它们孜孜不倦的穿梭在巨娘内衣的纤维缝隙中，打扫其中的灰尘，维护巨娘体液留下的污渍，为迷失在内衣里的旅客指路\n\n该岗位仅限§Y正常§!及以下特质的人口就职，§Y矮小§!及以下特质的人口会有更高的就职权重"
   mod_job_gts_sojourn_worker_add: "$job_gts_sojourn_worker$岗位"
   job_gts_sojourn_worker_effect_desc: "$job_gts_sojourn_worker$是小人岗位，消耗消耗£gts_giantess_fluid£§Y$gts_giantess_fluid$§!、£gts_giantess_underwear£§Y$gts_giantess_underwear$§!、§Y$r_consumer_goods$§!产出\n§Y$r_unity$§!、£amenities£§Y$amenity$§!\n每100§Y$job_gts_sojourn_worker$§!提升3%星球§Y$mod_planet_jobs_produces_mult$§!"
+  mod_job_gts_sojourn_worker_per_pop:"每$VALUE$個人口提供§G1§!个寄居内衣维护员岗位"
 
   # 三級建築
 
@@ -135,6 +136,7 @@
   job_gts_research_center_worker_desc: "这些研究员都是巨娘学的专家，它们或是曾在巨娘的有意识攻击中幸存，或是在巨娘体内生存了数年之久，它们的智慧能为我们应对巨娘威胁提供很大帮助\n\n该岗位仅限§Y正常§!及以下特质的人口就职，§Y矮小§!及以下特质的人口会有更高的就职权重"
   mod_job_gts_research_center_worker_add: "$job_gts_research_center_worker$岗位"
   job_gts_research_center_worker_effect_desc: "$job_gts_research_center_worker$是小人岗位，消耗£gts_giantess_fluid£§Y$gts_giantess_fluid$§!、£gts_giantess_underwear£§Y$gts_giantess_underwear$§!、£gts_giantess_human£§Y$gts_giantess_human$§!、§Y$r_consumer_goods$§!产出\n£physics£§Y$physics_research$§!\n£society£§Y$society_research$§!\n£engineering£§Y$engineering_research$§!\n每100§Y$job_gts_research_center_worker$§!提升5%星球£mod_planet_army_build_speed_mult£§Y陸軍建造速度§!"
+  mod_job_gts_research_center_worker_per_pop:"每$VALUE$個人口提供§G1§!个巨娘生理研究员岗位"
 
   building_gts_inside_prison: "巨娘活体监狱" #犯罪度＋稳定度
   building_gts_inside_prison_desc: "乐于帮助我们的巨娘为我们低效的传统监狱系统提供了新的可能。现在，经申批通过的巨娘会成为了我们的活体监狱，死刑犯会成为巨娘的食物或一次性玩具，而罪责深重的犯人会在肠胃中终生劳作来帮巨娘促进消化，轻案犯则会在巨娘的阴部或臀部里囚禁数月到数年。据说在帝国的许多监狱中，犯人之间会为了争夺进入活体监狱的名额甚至会大打出手"
@@ -150,7 +152,7 @@
   job_gts_shoe_soldier_worker_desc: "靴内士兵"
   job_gts_shoe_soldier_worker_plural: "$job_gts_shoe_soldier_worker$"
   mod_job_gts_shoe_soldier_worker_add: "$job_gts_shoe_soldier_worker$岗位"
-  job_gts_shoe_soldier_worker_effect_desc: "$job_gts_shoe_soldier_worker$是巨娘岗位，消耗£gts_micro£§Y$gts_micro$§!、§Y$r_alloys$§!\n每100§Y$job_gts_shoe_soldier_worker$§!增加10点£mod_country_naval_cap_add£§Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!、提升3点£stability£§Y$concept_stability$§!、增加1支£defense_army£§Y$MOD_PLANET_DEFENSE_ARMIES_ADD$§!\n每100§Y$job_gts_shoe_soldier_worker$§!提升6%£mod_army_defense_health_mult£§Y$MOD_ARMY_DEFENSE_HEALTH_MULT$§!、4%£mod_army_defense_damage_mult£§Y$MOD_ARMY_DEFENSE_DAMAGE_MULT$§!、4%£mod_army_defense_morale_mult£§Y$MOD_ARMY_DEFENSE_MORALE_MULT$§!"
+  job_gts_shoe_soldier_worker_effect_desc: "$job_gts_shoe_soldier_worker$是小人岗位，消耗£gts_micro£§Y$gts_micro$§!、§Y$r_alloys$§!\n每100§Y$job_gts_shoe_soldier_worker$§!增加10点£mod_country_naval_cap_add£§Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!、提升3点£stability£§Y$concept_stability$§!、增加1支£defense_army£§Y$MOD_PLANET_DEFENSE_ARMIES_ADD$§!\n每100§Y$job_gts_shoe_soldier_worker$§!提升6%£mod_army_defense_health_mult£§Y$MOD_ARMY_DEFENSE_HEALTH_MULT$§!、4%£mod_army_defense_damage_mult£§Y$MOD_ARMY_DEFENSE_DAMAGE_MULT$§!、4%£mod_army_defense_morale_mult£§Y$MOD_ARMY_DEFENSE_MORALE_MULT$§!"
 
   building_gts_inside_rest: "巨娘休息室"
   building_gts_inside_rest_desc: "这座高耸入云的建筑专门为在帝国境内工作的巨娘而建，内部设置了从游戏厅到高级餐厅等各种娱乐场所，同样也包括了能排解性欲的小房间。休息室里络绎不绝的小人侍者在尽力满足巨娘的需求的同时，也留心收集着巨娘遗忘的胖次或遗留的液体"
@@ -276,6 +278,7 @@
   job_micro_teacher_desc: ""如果挂科的代价不是重修，而是被老师穿进高跟鞋里，你就一定会认真学习了"\n\n该岗位仅限§Y正常§!及以上特质的人口就职，§Y高大§!及以上特质的人口会有更高的就职权重"
   mod_job_micro_teacher_add: "$job_micro_teacher$岗位"
   job_micro_teacher_effect_desc: "$job_micro_teacher$是巨娘岗位，消耗£gts_micro£§Y$gts_micro$§!、£gts_micro_city£§Y$gts_micro_city$§!、§Y$r_consumer_goods$§!产出\n£physics_research£§Y$physics_research$§!\n£engineering_research£§Y$engineering_research$§!\n£society_research£§Y$society_research$§!\n每100§Y$job_micro_teacher$§!减少10星球£crime£§Y$concept_crime$§!、增加5%星球£authoritarian£§Y$mod_pop_ethic_authoritarian_attraction_mult$§!"
+  mod_job_micro_teacher_per_pop:"每$VALUE$個人口提供§G1§!个巨娘教师岗位"
 
   # 三級建築
 

@@ -45,7 +45,7 @@ planet_event = {
                 }
                 add_tech_progress = {
                     tech = tech_epigenetic_triggers
-                    progress = 0.05
+                    progress = 0.1
                 }
             }
         }

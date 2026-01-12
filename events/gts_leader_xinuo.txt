@@ -322,7 +322,7 @@ country_event = { # spiritualist 1
     is_triggered_only = yes
 
     picture = GFX_leader_recruitment_bg_legendary_skrand
-    auto_opens = no
+    auto_opens = yes
     event_window_type = leader_recruit
     notification_event_icon = "message_leader_recruitment_xinuo"
 
@@ -345,8 +345,6 @@ country_event = { # spiritualist 1
             TRAIT2 = xinuo_leader_trait_heart
             TRAIT3 = xinuo_leader_trait_twin
             TRAIT4 = leader_trait_Normal
-            TRAIT5 = leader_trait_gts_bruh_empty
-            TRAIT6 = leader_trait_gts_bruh_empty
 
         }
         #add_modifier = {
@@ -618,7 +616,7 @@ planet_event = {
                     count = 10
                     random_owned_pop_group = {
                         if = {
-                            limit = { is_tiny = yes  }
+                            limit = { gts_is_tiny = yes  }
                             event_target:gts_leader_country = {
                                 change_variable = {
                                     which = gts_event_kills_logs
@@ -647,7 +645,7 @@ planet_event = {
                             }
                         }
                         else_if = {
-                            limit = { is_gts = yes }
+                            limit = { gts_is_giantess = yes }
                             event_target:gts_leader_country = {
                                 change_variable = {
                                     which = gts_event_kills_logs

@@ -778,6 +778,7 @@ building_god_keeper_2 = {
 
 	base_buildtime = @b3_time
 	category = unity
+	#empire_limit = 1
 
 	potential = {
 		exists = owner

@@ -78,3 +78,9 @@ giantess_crisis_scourge_chain = {
 
 	}
 }
+# 寻找伊莉雅
+looking_for_illya = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_twin_giantess
+	}
+}

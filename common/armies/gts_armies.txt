@@ -19,7 +19,7 @@ gts_bruh_sperm_army = {
 		cost = {
 			trigger = {
 				owner = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 			}
 			gts_micro = 400
@@ -27,7 +27,7 @@ gts_bruh_sperm_army = {
 		cost = {
 			trigger = {
 				owner = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			gts_giantess_fluid = 200
@@ -36,7 +36,7 @@ gts_bruh_sperm_army = {
 		upkeep = {
 			trigger = {
 				owner = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 			}
 			gts_micro = 4.0
@@ -44,22 +44,22 @@ gts_bruh_sperm_army = {
 		upkeep = {
 			trigger = {
 				owner = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			gts_giantess_fluid = 2.0
 		}
 	}
 
-	#potential_country = {
-	#	is_tiny = yes
-	#}
+	allow = {
+		custom_tooltip = {
+			fail_text = "MUST_HAVE_GTS_BRUH_SEMEN_SYSTEM_CAPITAL"
+			has_building = building_gts_bruh_semen_system_capital
+		}
+	}
 
 	potential = {
-		root = {
-			has_building = building_gts_bruh_semen_system_capital
-			is_planet_class = pc_gts_semen
-		}
+		is_planet_class = pc_gts_semen
 	}
 
 	ai_weight = {
@@ -95,7 +95,7 @@ gts_small_army = {
 
 	potential = {
 		from = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 
@@ -132,7 +132,7 @@ gts_big_army = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 
@@ -161,7 +161,7 @@ tiny_slave_army = {
 		cost = {
 			trigger = {
 				owner = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 			}
 			gts_micro = 100
@@ -169,7 +169,7 @@ tiny_slave_army = {
 		cost = {
 			trigger = {
 				owner = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			gts_giantess_fluid = 50
@@ -178,7 +178,7 @@ tiny_slave_army = {
 		upkeep = {
 			trigger = {
 				owner = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 			}
 			gts_micro = 1.0
@@ -186,7 +186,7 @@ tiny_slave_army = {
 		upkeep = {
 			trigger = {
 				owner = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			gts_giantess_fluid = 0.5
@@ -196,9 +196,9 @@ tiny_slave_army = {
 	potential = {
 		owner = {
 			OR = {
-				is_gts = yes
+				gts_is_giantess = yes
 				AND = {
-					is_tiny = yes
+					gts_is_tiny = yes
 					has_ethic = ethic_authoritarian
 					has_ethic = ethic_fanatic_authoritarian
 					has_ethic = ethic_xenophobe
@@ -207,7 +207,7 @@ tiny_slave_army = {
 			}
 		}
 		from = {
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 
@@ -248,7 +248,7 @@ gts_psionic_army = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 			is_robotic = no
 			OR = {
 				has_trait = trait_latent_psionic
@@ -294,7 +294,7 @@ gts_xenomorph_army = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 			is_robotic = no
 		}
 	}
@@ -334,7 +334,7 @@ gts_radiation_army = {
 
 	potential = {
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 
@@ -375,7 +375,7 @@ gts_crusader_army = {
 			has_ascension_perk = ap_mind_over_matter
 		}
 		from = {
-			is_gts = yes
+			gts_is_giantess = yes
 			is_robotic = no
 			OR = {
 				has_trait = trait_latent_psionic

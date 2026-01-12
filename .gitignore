@@ -9,8 +9,7 @@ build/
 dist/
 
 # 日志文件
-*.log
-*.tmp
+logs/
 
 # 操作系统文件
 .DS_Store

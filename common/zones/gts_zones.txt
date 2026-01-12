@@ -44,8 +44,8 @@ zone_gts_tiny_power = {
     included_building_sets = {
         tiny_power
         generator
+        generator_automation
         fallen_empire_generator
-        automation
     }
 
     district_planet_modifier = {
@@ -93,8 +93,8 @@ zone_gts_tiny_minerals = {
     included_building_sets = {
         tiny_minning
         mining
+        mining_automation
         fallen_empire_mining
-        automation
     }
 
     district_planet_modifier = {
@@ -144,7 +144,7 @@ zone_gts_tiny_food = {
         tiny_food
         farming
         hydroponics
-        automation
+        farming_automation
         fallen_empire_farming
     }
 
@@ -307,8 +307,8 @@ zone_gts_power = {
     included_building_sets = {
         gts_power
         generator
+        generator_automation
         fallen_empire_generator
-        automation
     }
 
     district_planet_modifier = {
@@ -357,8 +357,8 @@ zone_gts_minerals = {
     included_building_sets = {
         gts_minning
         mining
+        mining_automation
         fallen_empire_mining
-        automation
     }
 
     district_planet_modifier = {
@@ -407,7 +407,7 @@ zone_gts_food = {
         gts_food
         farming
         hydroponics
-        automation
+        farming_automation
         fallen_empire_farming
     }
 

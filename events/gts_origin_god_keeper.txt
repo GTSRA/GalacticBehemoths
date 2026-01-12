@@ -36,6 +36,7 @@ country_event = {
 	title = gts_god_keeper.1.title
 	desc = gts_god_keeper.1.desc
 	diplomatic = yes
+	custom_gui = "gts_vertical_event_window"
 	show_sound = event_scanner
 	is_triggered_only = yes
 
@@ -60,11 +61,12 @@ country_event = {
 	title = gts_god_keeper.1.title
 	desc = gts_god_keeper.2.desc
 	diplomatic = yes
+	custom_gui = "gts_vertical_event_window"
 	show_sound = event_default
 	is_triggered_only = yes
 
 	picture_event_data = {
-		room = gts_yarong0_room
+		room = gts_yarong18_room
 	}
 
 	option = {
@@ -82,11 +84,12 @@ country_event = {
 	title = gts_god_keeper.1.title
 	desc = gts_god_keeper.3.desc
 	diplomatic = yes
+	custom_gui = "gts_vertical_event_window"
 	show_sound = event_structural_collapse
 	is_triggered_only = yes
 
 	picture_event_data = {
-		room = gts_yarong0_room
+		room = gts_yarong18_room
 	}
 
 	option = {
@@ -478,8 +481,6 @@ country_event = {
 					TRAIT2 = yarong_leader_trait1
 					TRAIT3 = yarong_leader_trait3
 					TRAIT4 = yarong_leader_trait4
-					TRAIT5 = leader_trait_gts_bruh_empty
-					TRAIT6 = leader_trait_gts_bruh_empty
 				}
 			}
 		}
@@ -515,6 +516,7 @@ country_event = {
 					effect = {
 						set_disabled = no
 						set_ship_flag = gts_yarong_ship
+						set_ship_flag = gts_body_ship
 						save_global_event_target_as = gts_yarong_ship
 					}
 				}
@@ -528,7 +530,7 @@ country_event = {
 				set_fleet_stance = passive
 				set_aggro_range_measure_from = self
 				set_aggro_range = 350
-				assign_leader = event_target:gts_yarong
+				set_leader = event_target:gts_yarong
 				set_event_locked = yes
 				save_global_event_target_as = gts_yarong_fleet
 			}
@@ -559,29 +561,6 @@ country_event = {
 		exists = event_target:gts_yarong
 	}
 
-	immediate = {
-		legendary_gts_leader_creator = {
-			LEADER_PORTRAIT = gts_yarong13
-			CLASS = commander
-			NAME = yarong_leader
-			LEVEL = 1
-			AGE = 18
-			GENDER = female
-			ETHIC = authoritarian
-			IMMORTAL = yes
-			EVENT_LEADER = yes
-			DESC = yarong_leader_desc
-			CATCH_PHRASE = yarong_catch_phrase
-			RANDOMIZE_TRAITS = no
-			TARGET = gts_yarong
-			TRAIT1 = leader_trait_Ultra
-			TRAIT2 = yarong_leader_trait1
-			TRAIT3 = yarong_leader_trait3
-			TRAIT4 = yarong_leader_trait4
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
-		}
-	}
 	picture_event_data = {
 		portrait = event_target:gts_yarong
 		room = "crisis_room"
@@ -656,7 +635,6 @@ country_event = {
 		}
 	}
 }
-
 # 犽戎复活事件
 country_event = {
 	id = gts_god_keeper.98
@@ -688,8 +666,6 @@ country_event = {
 			TRAIT2 = yarong_leader_trait1
 			TRAIT3 = yarong_leader_trait3
 			TRAIT4 = yarong_leader_trait4
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		last_created_leader = {
 			if = {
@@ -731,6 +707,7 @@ country_event = {
 					design = "NAME_gts_yarong_ship"
 					effect = {
 						set_ship_flag = gts_yarong_ship
+						set_ship_flag = gts_body_ship
 						save_global_event_target_as = gts_yarong_ship
 						set_disabled = no
 					}
@@ -802,11 +779,6 @@ country_event = {
 	auto_opens = yes
 	is_triggered_only = yes
 	location = event_target:gts_yarong_fleet
-
-	picture_event_data = {
-		portrait = event_target:gts_yarong
-	}
-
 	immediate = {
 		legendary_gts_leader_creator = {
 			LEADER_PORTRAIT = gts_yarong13
@@ -851,6 +823,9 @@ country_event = {
 				}
 			}
 		}
+	}
+	picture_event_data = {
+		portrait = event_target:gts_yarong
 	}
 
 	option = {
@@ -924,8 +899,6 @@ country_event = {
 				has_country_flag = gts_god_keeper.99.f.done
 			}
 		}
-
-		legendary_gts_leader_hire_effect = yes
 		add_modifier = {
 			modifier = gts_bruh_yarong_upkeep_exemption_display
 			years = 50
@@ -937,9 +910,7 @@ country_event = {
 				modifier = gts_bruh_yarong_upkeep_exemption
 				years = 50
 			}
-
 		}
-
 		hidden_effect = {
 			event_target:gts_yarong_fleet = {
 				remove_modifier = gts_qhai_yarong_punish
@@ -1188,7 +1159,7 @@ country_event = {
 	diplomatic = yes
 	show_sound = event_ship_thrusters
 	picture_event_data = {
-		room = gts_yarong3_room
+		room = gts_yarong16_room
 	}
 	trigger = {
 		exists = event_target:gts_yarong
@@ -1211,7 +1182,7 @@ country_event = {
 	diplomatic = yes
 	show_sound = event_ship_thrusters
 	picture_event_data = {
-		room = gts_yarong3_room
+		room = gts_yarong16_room
 	}
 	trigger = {
 		exists = event_target:gts_yarong
@@ -1234,7 +1205,7 @@ country_event = {
 	diplomatic = yes
 	show_sound = event_red_alert
 	picture_event_data = {
-		room = gts_yarong4_room
+		room = gts_yarong17_room
 	}
 	trigger = {
 		exists = event_target:gts_yarong
@@ -1260,7 +1231,7 @@ country_event = {
 	diplomatic = yes
 	show_sound = event_ship_thrusters
 	picture_event_data = {
-		room = gts_yarong3_room
+		room = gts_yarong16_room
 	}
 	trigger = {
 		exists = event_target:gts_yarong
@@ -3156,6 +3127,7 @@ fleet_event = {
 						effect = {
 							set_disabled = no
 							set_ship_flag = gts_shentun_ship
+							set_ship_flag = gts_body_ship
 							save_global_event_target_as = gts_shentun_ship
 						}
 					}
@@ -3169,7 +3141,7 @@ fleet_event = {
 					set_aggro_range_measure_from = self
 					set_aggro_range = 350
 					set_owner = root
-					assign_leader = event_target:gts_shentun
+					set_leader = event_target:gts_shentun
 					save_global_event_target_as = gts_shentun_fleet
 				}
 			}
@@ -5365,6 +5337,944 @@ country_event = {
 			every_owned_planet = {
 				remove_modifier = gts_yarong_jiandu
 			}
+		}
+	}
+}
+
+namespace = gts_yarong_colossus
+#蠢驴奇形怪状的代码
+# 足底处决
+planet_event = {
+	id = gts_yarong_colossus.100
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = gts_yarong_destroyed_planet
+		gts_set_count_kill_pop_effect = yes
+		event_target:gts_yarong_destroyed_planet = {
+			gts_count_army_killed_pop_effect = yes
+			while = {
+				count = 5
+				random_owned_pop_group = {
+					if = {
+						limit = { gts_is_tiny = yes  }
+						event_target:gts_yarong_destroyed_planet = {
+							change_variable = {
+								which = gts_event_kills_logs
+								value = 2
+							}
+							random_list = {
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 40
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 120
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 200
+									}
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { gts_is_giantess = yes }
+						event_target:gts_yarong_destroyed_planet = {
+							change_variable = {
+								which = gts_event_kills_logs
+								value = 5
+							}
+							random_list = {
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 100
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 300
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 500
+									}
+								}
+							}
+						}
+					}
+					kill_all_pop = yes
+				}
+			}
+		}
+		event_target:gts_yarong = {
+			change_variable = {
+				which = gts_feet_kills_logs
+				value = root.gts_event_kills_logs
+			}
+			change_variable = {
+				which = gts_city_kills_logs
+				value = root.gts_event_city_kills_logs
+			}
+			change_variable = {
+				which = gts_planet_kills_logs
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				planet_is_hostile = yes
+			}
+			from.owner = { country_event = { id = gts_yarong_colossus.110 } }
+		}
+
+		#Dismantle observation post
+		if = {
+			limit = {
+				has_observation_outpost = yes
+			}
+			observation_outpost_owner = {
+				country_event = { id = planet_destruction.1000 days = 1 }
+			}
+		}
+
+		# Contingency Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				NOT = { has_planet_flag = machine_lair }
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			planet_event = { id = crisis.2040 }
+		}
+
+		# Contingency Final Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				has_planet_flag = machine_lair
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			from.owner = { save_event_target_as = final_machine_world_destroyer }
+			stop_crisis_sound = yes
+			planet_event = { id = crisis.2046 }
+		}
+
+		# Swarm Situation Log counter
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = swarm }
+			}
+			every_country = {
+				limit = { has_event_chain = "prethoryn_scourge_chain" }
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds"
+					amount = -1
+				}
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds_cleansed"
+					amount = 1
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_reverence_for_life"
+					is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			from.owner = {
+				set_timed_country_flag = { flag = resolution_breached_fired_cracker days = 3600 }
+			}
+		}
+
+		# Exterminatus Achievement
+		if = {
+			limit = { is_capital = yes }
+			from.owner = { set_country_flag = exterminatus }
+		}
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			if = {
+				limit = {
+					is_colony = yes
+				}
+				add_threat = { who = from.owner amount = 3 }
+				# modifier for allies + those upset by genocide
+				every_country = {
+					limit = {
+						NOR = {
+							is_same_value = from.owner
+							is_same_value = root.owner
+							AND = {
+								has_federation = yes
+								is_in_federation_with = from.owner
+							}
+						}
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							AND = {
+								has_federation = yes
+								is_in_federation_with = root.owner
+							}
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								OR = {
+									is_egalitarian = yes
+									is_xenophile = yes
+								}
+							}
+						}
+					}
+					if = {
+						limit = { root = { is_colony = no } }
+						add_opinion_modifier = {
+							modifier = opinion_cracked_an_uninhabited_world
+							who = from.owner
+						}
+					}
+					else = {
+						add_opinion_modifier = {
+							modifier = opinion_cracked_a_world
+							who = from.owner
+						}
+					}
+				}
+			}
+			else = {
+				add_threat = { who = from.owner amount = 1 }
+			}
+			# modifiers for victim
+			owner = {
+				if = {
+					limit = { root = { is_colony = no } }
+					add_opinion_modifier = {
+						modifier = opinion_cracked_my_uninhabited_world
+						who = from.owner
+					}
+				}
+				else = {
+					add_opinion_modifier = {
+						modifier = opinion_cracked_my_world
+						who = from.owner
+					}
+				}
+				if = {
+					limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+					add_modifier = {
+						modifier = colossus_victim
+						days = 10800 # 30 years
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { is_country_type = primitive }
+				}
+				# modifier for allies + those upset by genocide
+				every_country = {
+					limit = {
+						NOT = { is_same_value = from.owner }
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								NOR = {
+									is_xenophobe = yes
+									is_homicidal = yes
+									is_xenophile = yes
+								}
+							}
+						}
+					}
+					add_opinion_modifier = {
+						modifier = opinion_cracked_a_primitive_world
+						who = from.owner
+					}
+				}
+				every_country = {
+					limit = {
+						NOT = { is_same_value = from.owner }
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								is_xenophile = yes
+							}
+						}
+					}
+					add_opinion_modifier = {
+						modifier = opinion_cracked_a_primitive_world_phile
+						who = from.owner
+					}
+				}
+			}
+		}
+		# Add war exhaustion to planet owner
+		if = {
+			limit = {
+				exists = owner
+			}
+			owner = {
+				if = {
+					limit = { #isn't the case when the crisis bombards planets, for instance
+						is_at_war_with = from.fleet.owner
+					}
+					add_static_war_exhaustion = {
+						attacker = from.fleet.owner
+						location = root
+						value_for_planet_destruction = 1.0
+					}
+				}
+			}
+		}
+		every_owned_pop_group = {
+			kill_all_pop = yes
+		}
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			destroy_fleet = orbital_defence
+		}
+		remove_all_buildings = yes
+		# destroy habitats and ringworlds
+		if = {
+			limit = {
+				is_planet_class = pc_habitat
+			}
+			spawn_habitat_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_planet_class = pc_cosmogenesis_world
+			}
+			spawn_lathe_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_ringworld = yes
+			}
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_habitable_damaged
+		}
+		else_if = {
+			limit = { habitable_planet = yes }
+			set_planet_size = 1
+			change_pc = pc_gts_dirt0
+			clear_deposits = yes
+			random_list = {
+				1 = {
+					add_deposit = d_minerals_10
+					add_deposit = d_minerals_6
+				}
+				1 = {
+					add_deposit = d_minerals_10
+					add_deposit = d_minerals_2
+				}
+				1 = {
+					add_deposit = d_minerals_8
+				}
+				1 = {
+					add_deposit = d_minerals_4
+				}
+			}
+		}
+		else = {
+			set_planet_size = 1
+			change_pc = pc_gts_dirt0
+			clear_deposits = yes
+		}
+		create_ambient_object = {
+			location = this
+			type = habitat_cracker_object
+			duration = 5
+			use_3d_location = yes
+			base_angle_towards = star
+			entity_face_object = star
+			entity_offset = {
+				min = 0
+				max = 0
+			}
+			entity_scale_to_size = yes
+			scale = 0.5
+		}
+	}
+}
+
+# 排泄处决
+planet_event = {
+	id = gts_yarong_colossus.101
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = gts_yarong_destroyed_planet
+		gts_set_count_kill_pop_effect = yes
+		event_target:gts_yarong_destroyed_planet = {
+			gts_count_army_killed_pop_effect = yes
+			while = {
+				count = 5
+				random_owned_pop_group = {
+					if = {
+						limit = { gts_is_tiny = yes  }
+						event_target:gts_yarong_destroyed_planet = {
+							change_variable = {
+								which = gts_event_kills_logs
+								value = 2
+							}
+							random_list = {
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 40
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 120
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 200
+									}
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { gts_is_giantess = yes }
+						event_target:gts_yarong_destroyed_planet = {
+							change_variable = {
+								which = gts_event_kills_logs
+								value = 5
+							}
+							random_list = {
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 100
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 300
+									}
+								}
+								1 = {
+									change_variable = {
+										which = gts_event_city_kills_logs
+										value = 500
+									}
+								}
+							}
+						}
+					}
+					kill_all_pop = yes
+				}
+			}
+		}
+		event_target:gts_yarong = {
+			change_variable = {
+				which = gts_feet_kills_logs
+				value = root.gts_event_kills_logs
+			}
+			change_variable = {
+				which = gts_city_kills_logs
+				value = root.gts_event_city_kills_logs
+			}
+			change_variable = {
+				which = gts_planet_kills_logs
+				value = 1
+			}
+
+		}
+		owner = {
+			save_event_target_as = gts_yarong_destroyed_country
+		}
+		if = {
+			limit = {
+				planet_is_hostile = yes
+			}
+			from.owner = { country_event = { id = gts_yarong_colossus.111 } }
+		}
+
+		#Dismantle observation post
+		if = {
+			limit = {
+				has_observation_outpost = yes
+			}
+			observation_outpost_owner = {
+				country_event = { id = planet_destruction.1000 days = 1 }
+			}
+		}
+
+		# Contingency Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				NOT = { has_planet_flag = machine_lair }
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			planet_event = { id = crisis.2040 }
+		}
+
+		# Contingency Final Machine World
+		if = {
+			limit = {
+				is_planet_class = pc_ai
+				has_planet_flag = machine_lair
+			}
+			set_planet_flag = destroyed_by_colossus
+			set_planet_flag = planet_cracked
+			from.owner = { save_event_target_as = final_machine_world_destroyer }
+			stop_crisis_sound = yes
+			planet_event = { id = crisis.2046 }
+		}
+
+		# Swarm Situation Log counter
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = swarm }
+			}
+			every_country = {
+				limit = { has_event_chain = "prethoryn_scourge_chain" }
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds"
+					amount = -1
+				}
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds_cleansed"
+					amount = 1
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_reverence_for_life"
+					is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			from.owner = {
+				set_timed_country_flag = { flag = resolution_breached_fired_cracker days = 3600 }
+			}
+		}
+
+		# Exterminatus Achievement
+		if = {
+			limit = { is_capital = yes }
+			from.owner = { set_country_flag = exterminatus }
+		}
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			if = {
+				limit = {
+					is_colony = yes
+				}
+				add_threat = { who = from.owner amount = 3 }
+				# modifier for allies + those upset by genocide
+				every_country = {
+					limit = {
+						NOR = {
+							is_same_value = from.owner
+							is_same_value = root.owner
+							AND = {
+								has_federation = yes
+								is_in_federation_with = from.owner
+							}
+						}
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							AND = {
+								has_federation = yes
+								is_in_federation_with = root.owner
+							}
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								OR = {
+									is_egalitarian = yes
+									is_xenophile = yes
+								}
+							}
+						}
+					}
+					if = {
+						limit = { root = { is_colony = no } }
+						add_opinion_modifier = {
+							modifier = opinion_cracked_an_uninhabited_world
+							who = from.owner
+						}
+					}
+					else = {
+						add_opinion_modifier = {
+							modifier = opinion_cracked_a_world
+							who = from.owner
+						}
+					}
+				}
+			}
+			else = {
+				add_threat = { who = from.owner amount = 1 }
+			}
+			# modifiers for victim
+			owner = {
+				if = {
+					limit = { root = { is_colony = no } }
+					add_opinion_modifier = {
+						modifier = opinion_cracked_my_uninhabited_world
+						who = from.owner
+					}
+				}
+				else = {
+					add_opinion_modifier = {
+						modifier = opinion_cracked_my_world
+						who = from.owner
+					}
+				}
+				if = {
+					limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+					add_modifier = {
+						modifier = colossus_victim
+						days = 10800 # 30 years
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { is_country_type = primitive }
+				}
+				# modifier for allies + those upset by genocide
+				every_country = {
+					limit = {
+						NOT = { is_same_value = from.owner }
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								NOR = {
+									is_xenophobe = yes
+									is_homicidal = yes
+									is_xenophile = yes
+								}
+							}
+						}
+					}
+					add_opinion_modifier = {
+						modifier = opinion_cracked_a_primitive_world
+						who = from.owner
+					}
+				}
+				every_country = {
+					limit = {
+						NOT = { is_same_value = from.owner }
+						OR = {
+							has_communications = from.owner
+							has_communications = root.owner
+						}
+						OR = {
+							has_ai_personality = awakened_fallen_empire_xenophile
+							AND = {
+								is_country_type = default
+								is_xenophile = yes
+							}
+						}
+					}
+					add_opinion_modifier = {
+						modifier = opinion_cracked_a_primitive_world_phile
+						who = from.owner
+					}
+				}
+			}
+		}
+		# Add war exhaustion to planet owner
+		if = {
+			limit = {
+				exists = owner
+			}
+			owner = {
+				if = {
+					limit = { #isn't the case when the crisis bombards planets, for instance
+						is_at_war_with = from.fleet.owner
+					}
+					add_static_war_exhaustion = {
+						attacker = from.fleet.owner
+						location = root
+						value_for_planet_destruction = 1.0
+					}
+				}
+			}
+		}
+		every_owned_pop_group = {
+			kill_all_pop = yes
+		}
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			destroy_fleet = orbital_defence
+		}
+		remove_all_buildings = yes
+		# destroy habitats and ringworlds
+		if = {
+			limit = {
+				is_planet_class = pc_habitat
+			}
+			spawn_habitat_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_planet_class = pc_cosmogenesis_world
+			}
+			spawn_lathe_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_ringworld = yes
+			}
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_habitable_damaged
+		}
+		else_if = {
+			limit = { habitable_planet = yes }
+			pc_gts_urine_change_yarong = yes
+
+		}
+		else = {
+			set_planet_size = 1
+			change_pc = pc_gts_urine2
+			clear_deposits = yes
+		}
+		create_ambient_object = {
+			location = this
+			type = habitat_cracker_object
+			duration = 5
+			use_3d_location = yes
+			base_angle_towards = star
+			entity_face_object = star
+			entity_offset = {
+				min = 0
+				max = 0
+			}
+			entity_scale_to_size = yes
+			scale = 0.5
+		}
+	}
+}
+
+#炸球后弹出事件
+country_event = {
+	id = gts_yarong_colossus.110
+	title = gts_yarong_colossus.110.name
+	desc = gts_yarong_colossus.110.desc
+	diplomatic = yes
+	custom_gui = "gts_horizontal_event_window"
+	custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = gts_yarong6_room
+	}
+	show_sound = event_mystic_reveal
+	location = from
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = yarong_destroyed_planet_1 }
+	}
+	option = {
+		name = gts_yarong_colossus.110a
+		root = {
+			set_country_flag = yarong_destroyed_planet_1
+		}
+		add_resource = { gts_micro_planet = 1 }
+		custom_tooltip = gts_yarong_colossus.110.tt
+	}
+}
+country_event = {
+	id = gts_yarong_colossus.111
+	title = gts_yarong_colossus.111.name
+	desc = gts_yarong_colossus.111.desc
+	diplomatic = yes
+	custom_gui = "gts_vertical_event_window"
+	# custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = gts_yarong10_room
+	}
+	show_sound = event_mystic_reveal
+	location = from
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = yarong_destroyed_planet_2 }
+	}
+	option = {
+		name = gts_yarong_colossus.111a
+		country_event = { id = gts_yarong_colossus.112}
+	}
+}
+country_event = {
+	id = gts_yarong_colossus.112
+	title = gts_yarong_colossus.111.name
+	desc = gts_yarong_colossus.112.desc
+	diplomatic = yes
+	custom_gui = "gts_vertical_event_window"
+	# custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = gts_yarong10_room
+	}
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = gts_yarong_colossus.112a
+		country_event = { id = gts_yarong_colossus.113 }
+	}
+}
+country_event = {
+	id = gts_yarong_colossus.113
+	title = gts_yarong_colossus.111.name
+	desc = gts_yarong_colossus.113.desc
+	diplomatic = yes
+	custom_gui = "gts_vertical_event_window"
+	# custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = gts_yarong10_room
+	}
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = gts_yarong_colossus.113a
+		country_event = { id = gts_yarong_colossus.114 }
+	}
+}
+country_event = {
+	id = gts_yarong_colossus.114
+	title = gts_yarong_colossus.111.name
+	desc = gts_yarong_colossus.114.desc
+	diplomatic = yes
+	custom_gui = "gts_vertical_event_window"
+	# custom_gui_option = "gts_horizontal_event_button"
+	picture_event_data = {
+		room = gts_yarong10_room
+	}
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = gts_yarong_colossus.114a
+		root = {
+			set_country_flag = yarong_destroyed_planet_2
+		}
+		add_resource = { gts_micro_planet = 1 }
+		add_resource = { gts_micro = 1 }
+		custom_tooltip = gts_yarong_colossus.111.tt
+	}
+}
+planet_event = {
+	id = gts_yarong_colossus.121
+	hide_window = yes
+	is_triggered_only = yes
+	# location = from
+	trigger = {
+		owner = {
+			has_origin = origin_god_keeper
+		}
+
+	}
+	immediate = {
+		owner = {
+			add_resource = { gts_micro_planet = 1 }
+		}
+	}
+}
+planet_event = {
+	id = gts_yarong_colossus.122
+	hide_window = yes
+	is_triggered_only = yes
+	# location = from
+	trigger = {
+		owner = {
+			has_origin = origin_god_keeper
+		}
+
+	}
+	immediate = {
+		owner = {
+			add_resource = { gts_micro_planet = 1 }
+			add_resource = { gts_micro = 1 }
 		}
 	}
 }

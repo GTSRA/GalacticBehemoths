@@ -323,8 +323,6 @@ country_event = {
 			TRAIT2 = leader_trait_Koharu
 			TRAIT3 = leader_trait_flatbreast
 			TRAIT4 = leader_trait_horny
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 
@@ -399,8 +397,6 @@ country_event = {
 			TRAIT2 = elf_leader_trait_bigbreast
 			TRAIT3 = leader_trait_horny
 			TRAIT4 = leader_trait_Ultra
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 
@@ -468,8 +464,6 @@ country_event = {
 			TRAIT2 = leader_trait_Koharu
 			TRAIT3 = leader_trait_flatbreast
 			TRAIT4 = leader_trait_horny
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 
@@ -517,8 +511,6 @@ country_event = {
 			TRAIT2 = elf_leader_trait_bigbreast
 			TRAIT3 = leader_trait_horny
 			TRAIT4 = leader_trait_Ultra
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 

@@ -1,0 +1,298 @@
+﻿
+l_english:
+  ############################################################################################################################################
+  ##################################################                Shipgirl-Related                ##################################################
+
+  ############################################################################################################################################
+
+  # Event ship naming
+  NAME_gts_bruh_shipgirl_destroyer: "Bruh"
+  NAME_gts_bruh_shipgirl_battleship: "Bruh"
+
+  NAME_gts_bruh_shipgirl_titan: "Bruh"
+
+  # Technology
+  tech_gts_bruh_destroyer_ship: "Bruh Shipgirl - Destroyer"
+  tech_gts_bruh_battleship_ship: "Bruh Shipgirl - Battleship"
+
+  tech_gts_bruh_titan_ship: "Bruh Shipgirl - Titan"
+  tech_gts_bruh_destroyer_ship_desc: "Bruh destroyer shipgirls effectively intercept enemy small craft with excellent mobility"
+  tech_gts_bruh_battleship_ship_desc: "Bruh battleship shipgirls possess powerful firepower, serving as the fleet's backbone"
+
+  tech_gts_bruh_titan_ship_desc: "Bruh titan shipgirls are mobile fortresses with strongest firepower but slow movement"
+  tech_armor_gts_2: "Shipgirl Undergarment Craft - Safety Shorts"
+
+  tech_armor_gts_3: "Shipgirl Undergarment Craft - Lace Panties"
+  tech_armor_gts_2_desc: "Stably supplying comfortable, durable underwear that's easy for logistics teams to clean and maintain for such massive shipgirls remains a key research focus for our military supply department."
+
+  tech_armor_gts_3_desc: "Stably supplying comfortable, durable underwear that's easy for logistics teams to clean and maintain for such massive shipgirls remains a key research focus for our military supply department."
+  ############################################################################################################################################
+  ##################################################               Shipgirl Destroyers               ##################################################
+
+  ############################################################################################################################################
+  gts_bruh_destroyer_ship: "Bruh Shipgirl Destroyer"
+  gts_bruh_destroyer_ship_plural: "Bruh Shipgirl Destroyers"
+
+  gts_bruh_destroyer_ship_cap: "Bruh Shipgirl Destroyer"
+  GTS_AKATSUKI_DESTROYER_BOW: "Akatsuki"
+  GTS_HIBIKI_DESTROYER_BOW: "Hibiki"
+  GTS_AKATSUKI_DESTROYER_STERN: "Akatsuki AA Module"
+
+  GTS_HIBIKI_DESTROYER_STERN: "Hibiki AA Module"
+  ############################################################################################################################################
+  ##################################################               Shipgirl Battleships              ##################################################
+
+  ############################################################################################################################################
+  gts_bruh_battleship_ship: "Bruh Shipgirl Battleship"
+  gts_bruh_battleship_ship_plural: "Bruh Shipgirl Battleships"
+
+  gts_bruh_battleship_ship_cap: "Bruh Shipgirl Battleship"
+  GTS_BELFAST_BATTLESHIP_MID: "Belfast"
+
+  GTS_YAMASHIRO_BATTLESHIP_MID: "Yamashiro"
+  GTS_BELFAST_BATTLESHIP_BOW: "Belfast Artillery Component"
+
+  GTS_BELFAST_BATTLESHIP_STERN: "Belfast AA Component"
+  GTS_YAMASHIRO_BATTLESHIP_BOW: "Yamashiro Carrier Component"
+
+  GTS_YAMASHIRO_BATTLESHIP_STERN: "Yamashiro AA Component"
+  ############################################################################################################################################
+  ##################################################                Shipgirl Titans               ##################################################
+
+  ############################################################################################################################################
+  gts_bruh_titan_ship: "Bruh Shipgirl Titan"
+  gts_bruh_titan_ship_plural: "Bruh Shipgirl Titans"
+
+  gts_bruh_titan_ship_cap: "Bruh Shipgirl Titan"
+  GTS_BISMARCK_TITAN_MID: "Bismarck"
+  GTS_HOOD_TITAN_MID: "Hood"
+
+  GTS_KAKO_TITAN_MID: "Kako"
+  GTS_BISMARCK_TITAN_BOW: "Bismarck AA Component"
+
+  GTS_BISMARCK_TITAN_STERN: "Bismarck Artillery Component"
+  GTS_HOOD_TITAN_BOW: "Hood AA Component"
+
+  GTS_HOOD_TITAN_STERN: "Hood Artillery Component"
+  GTS_KAKO_TITAN_STERN: "Kako AA Component"
+
+  GTS_KAKO_TITAN_BOW: "Kako Carrier Component"
+  ############################################################################################################################################
+  ##################################################                  Torpedoes                 ##################################################
+
+  ############################################################################################################################################
+  GTS_BRUH_TORPEDO_1: "Shipgirl Torpedo"
+
+  GTS_BRUH_TORPEDO_1_DESC: "§M(Bruh series weapon)§!§R\nBig one.§!"
+  GTS_BRUH_TORPEDO_SMALL: "Shipgirl Torpedo"
+
+  GTS_BRUH_TORPEDO_SMALL_DESC: "§M(Bruh series weapon)§!§R\nBig one.§!\nDestroyer size"
+  GTS_BRUH_TORPEDO_MEDIUM: "Shipgirl Torpedo"
+
+  GTS_BRUH_TORPEDO_MEDIUM_DESC: "§M(Bruh series weapon)§!§R\nBig one.§!\nBattleship size"
+  GTS_BRUH_TORPEDO_LARGE: "Shipgirl Torpedo"
+
+  GTS_BRUH_TORPEDO_LARGE_DESC: "§M(Bruh series weapon)§!§R\nBig one.§!\nTitan size"
+  ############################################################################################################################################
+  ##################################################                  Kinetic                 ##################################################
+
+  ############################################################################################################################################
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY: "Shipgirl Kinetic Secondary"
+
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_DESC: "§M(Bruh series weapon)§!\n"
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_SMALL: "Small Shipgirl Kinetic Secondary"
+
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_SMALL_DESC: "§M(Bruh series weapon)§!\n"
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_MEDIUM: "Medium Shipgirl Kinetic Secondary"
+
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_MEDIUM_DESC: "§M(Bruh series weapon)§!\n"
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_LARGE: "Large Shipgirl Kinetic Secondary"
+
+  GTS_BRUH_SECONDARY_KINETIC_ARTILLERY_LARGE_DESC: "§M(Bruh series weapon)§!\nTitan size"
+  GTS_BRUH_DESTROYER_KINETIC_ARTILLERY_LARGE: "Shipgirl Kinetic Main Gun"
+
+  GTS_BRUH_DESTROYER_KINETIC_ARTILLERY_LARGE_DESC: "§M(Bruh series weapon)§!\nDestroyer size"
+  GTS_BRUH_KINETIC_ARTILLERY_EXTRA_LARGE_1: "Shipgirl Kinetic Super Cannon"
+
+  GTS_BRUH_KINETIC_ARTILLERY_EXTRA_LARGE_1_DESC: "§M(Bruh series weapon)§!\n"
+  ############################################################################################################################################
+  ##################################################                  AA Defense                 ##################################################
+
+  ############################################################################################################################################
+  GTS_BRUH_KINETIC_POINT_DEFENCE_1: "Triple AA Gun"
+
+  GTS_BRUH_KINETIC_POINT_DEFENCE_1_DESC: "§M(Bruh series weapon)"
+  GTS_BRUH_KINETIC_POINT_DEFENCE_SMALL: "Small Triple AA Gun"
+
+  GTS_BRUH_KINETIC_POINT_DEFENCE_SMALL_DESC: "§M(Bruh series weapon)"
+  GTS_BRUH_KINETIC_POINT_DEFENCE_MEDIUM: "Medium Triple AA Gun"
+
+  GTS_BRUH_KINETIC_POINT_DEFENCE_MEDIUM_DESC: "§M(Bruh series weapon)"
+  GTS_BRUH_KINETIC_POINT_DEFENCE_LARGE: "Large Triple AA Gun"
+
+  GTS_BRUH_KINETIC_POINT_DEFENCE_LARGE_DESC: "§M(Bruh series weapon)"
+  GTS_BRUH_ENERGY_POINT_DEFENCE_1: "Triple Point Defense"
+
+  GTS_BRUH_ENERGY_POINT_DEFENCE_1_DESC: "§M(Bruh series weapon)"
+  GTS_BRUH_ENERGY_POINT_DEFENCE_SMALL: "Small Triple Point Defense"
+
+  GTS_BRUH_ENERGY_POINT_DEFENCE_SMALL_DESC: "§M(Bruh series weapon)"
+  GTS_BRUH_ENERGY_POINT_DEFENCE_MEDIUM: "Medium Triple Point Defense"
+
+  GTS_BRUH_ENERGY_POINT_DEFENCE_MEDIUM_DESC: "§M(Bruh series weapon)"
+  GTS_BRUH_ENERGY_POINT_DEFENCE_LARGE: "Large Triple Point Defense"
+
+  GTS_BRUH_ENERGY_POINT_DEFENCE_LARGE_DESC: "§M(Bruh series weapon)"
+  ############################################################################################################################################
+  ################################################               Armor & Shields                 ################################################
+
+  ############################################################################################################################################
+  GTS_BRUH_SHIELD_1: "Blue-White Panties"
+  GTS_BRUH_SHIELD_1_DESC: "§M(Bruh series weapon)§!\nThe most classic underwear choice for most shipgirls, often carrying multiple pairs for quick changes after battles."
+  GTS_BRUH_SMALL_SHIELD_1: "Small Blue-White Panties"
+  GTS_BRUH_MEDIUM_SHIELD_1: "Medium Blue-White Panties"
+
+  GTS_BRUH_LARGE_SHIELD_1: "Large Blue-White Panties"
+  GTS_BRUH_SHIELD_2: "Safety Shorts"
+  GTS_BRUH_SHIELD_2_DESC: "§M(Bruh series weapon)§!\nSome shy or etiquette-conscious shipgirls prefer safety shorts to avoid exposure during naval combat (though theoretically tiny ships could enter anywhere)."
+  GTS_BRUH_SMALL_SHIELD_2: "Small Safety Shorts"
+  GTS_BRUH_MEDIUM_SHIELD_2: "Medium Safety Shorts"
+
+  GTS_BRUH_LARGE_SHIELD_2: "Large Safety Shorts"
+  GTS_BRUH_SHIELD_3: "Lace Panties"
+  GTS_BRUH_SHIELD_3_DESC: "§M(Bruh series weapon)§!\nSome lustful or daring shipgirls choose more provocative options like lace panties. Legend says some stuff captured ships and crews inside for stimulation."
+  GTS_BRUH_SMALL_SHIELD_3: "Small Lace Panties"
+  GTS_BRUH_MEDIUM_SHIELD_3: "Medium Lace Panties"
+
+  GTS_BRUH_LARGE_SHIELD_3: "Large Lace Panties"
+  GTS_BRUH_ARMOR_1: "School Sailor Uniform"
+  GTS_BRUH_ARMOR_1_DESC: "§M(Bruh series weapon)§!\nSchool uniforms worn by newly graduated shipgirls, radiating youthful fragrance inside and out."
+  GTS_BRUH_SMALL_ARMOR_1: "Small Sailor Uniform"
+  GTS_BRUH_MEDIUM_ARMOR_1: "Medium Sailor Uniform"
+
+  GTS_BRUH_LARGE_ARMOR_1: "Large Sailor Uniform"
+  GTS_BRUH_ARMOR_2: "Officer Dress Uniform"
+  GTS_BRUH_ARMOR_2_DESC: "§M(Bruh series weapon)§!\nFormal wear for shipgirls at victory banquets, adorned with enemy wreckage representing their combat achievements."
+  GTS_BRUH_SMALL_ARMOR_2: "Small Dress Uniform"
+  GTS_BRUH_MEDIUM_ARMOR_2: "Medium Dress Uniform"
+
+  GTS_BRUH_LARGE_ARMOR_2: "Large Dress Uniform"
+  GTS_BRUH_ARMOR_3: "Wedding Dress"
+  GTS_BRUH_ARMOR_3_DESC: "§M(Bruh series weapon)§!\nWedding dresses worn when pledging to their beloved. Size and species differences don't hinder love - in this moment, they're no different from ordinary girls."
+  GTS_BRUH_SMALL_ARMOR_3: "Small Wedding Dress"
+  GTS_BRUH_MEDIUM_ARMOR_3: "Medium Wedding Dress"
+
+
+  GTS_BRUH_LARGE_ARMOR_3: "Large Wedding Dress"
+  ############################################################################################################################################
+  ####################################################               Components               ####################################################
+  ############################################################################################################################################
+  GTS_BRUH_SENSOR_1: "Biological Detection System"
+  GTS_BRUH_SENSOR_1_DESC: "§M(Bruh series weapon)§!\nShipgirls can see and hear in all directions. Even fleet movements light-years away are detected through their近乎恐怖般的直觉."
+  GTS_BRUH_SENSOR_2: "Auxiliary Recon Squadron"
+
+  GTS_BRUH_SENSOR_2_DESC: "§M(Bruh series weapon)§!\nAfter installing comm systems, shipgirls can exchange recon data with auxiliary squadrons on their bodies, improving detection efficiency (Note:禁止利用通讯系统调戏舰上人员)"
+  GTS_BRUH_REACTOR_DESTROYER_1: "Biological Reactor"
+  GTS_BRUH_REACTOR_DESTROYER_1_DESC: "§M(Bruh series weapon)§!\nWhat reactor could be safer and more reliable than a shipgirl's digestive system?"
+  GTS_BRUH_REACTOR_DESTROYER_2: "Enhanced Biological Reactor"
+
+  GTS_BRUH_REACTOR_DESTROYER_2_DESC: "§M(Bruh series weapon)§!\nThrough genetic enhancement and improved training, shipgirls' gastric acid can now easily digest zero-point materials. They can just grab asteroids to satisfy hunger."
+  GTS_BRUH_REACTOR_BATTLESHIP_1: "Biological Reactor"
+  GTS_BRUH_REACTOR_BATTLESHIP_1_DESC: "§M(Bruh series weapon)§!\nWhat reactor could be safer and more reliable than a shipgirl's digestive system?"
+  GTS_BRUH_REACTOR_BATTLESHIP_2: "Enhanced Biological Reactor"
+
+  GTS_BRUH_REACTOR_BATTLESHIP_2_DESC: "§M(Bruh series weapon)§!\nThrough genetic enhancement and improved training, shipgirls' gastric acid can now easily digest zero-point materials. They can just grab asteroids to satisfy hunger."
+  GTS_BRUH_REACTOR_TITAN_1: "Biological Reactor"
+  GTS_BRUH_REACTOR_TITAN_1_DESC: "§M(Bruh series weapon)§!\nWhat reactor could be safer and more reliable than a shipgirl's digestive system?"
+  GTS_BRUH_REACTOR_TITAN_2: "Enhanced Biological Reactor"
+
+  GTS_BRUH_REACTOR_TITAN_2_DESC: "§M(Bruh series weapon)§!\nThrough genetic enhancement and improved training, shipgirls' gastric acid can now easily digest zero-point materials. They can just grab asteroids to satisfy hunger."
+  GTS_BRUH_HYPER_DRIVE_1: "Biological FTL Drive"
+  GTS_BRUH_HYPER_DRIVE_1_DESC: "§M(Bruh series weapon)§!\nAs beings capable of defying physical laws, hyperspace jumps come naturally to shipgirls. However, surveys indicate they experience both entering narrow spaces and being entered during jumps."
+  GTS_BRUH_HYPER_DRIVE_2: "I Reckon FTL Drive"
+
+  GTS_BRUH_HYPER_DRIVE_2_DESC: "§M(Bruh series weapon)§!\nThis device enhances shipgirls' mental power for faster jumps without hallucination interference, though some feel slightly disappointed."
+  GTS_BRUH_SHIP_THRUSTER_1: "Bare Feet"
+  GTS_BRUH_SHIP_THRUSTER_1_DESC: "§M(Bruh series weapon)§!\nBare feet allow shipgirls to freely stretch in space, while their exposed jade feet seem to charm enemies, making evasion easier."
+  GTS_BRUH_SHIP_THRUSTER_2: "Black Stockings"
+  GTS_BRUH_SHIP_THRUSTER_2_DESC: "§M(Bruh series weapon)§!\nBlack stocking believers often fight wearing only them, making their thighs and feet more alluring. However, this backfires as enemies recklessly charge, making evasion difficult."
+  GTS_BRUH_SHIP_THRUSTER_3: "White Stockings"
+  GTS_BRUH_SHIP_THRUSTER_3_DESC: "§M(Bruh series weapon)§!\nWhite stocking believers often fight wearing only them, making their calves and feet more adorable. However, this backfires as enemies recklessly charge, making evasion difficult."
+  GTS_BRUH_SHIP_THRUSTER_4: "Ship Shoes"
+
+  GTS_BRUH_SHIP_THRUSTER_4_DESC: "§M(Bruh series weapon)§!\nAfter installing loafer-like foot equipment, shipgirls move faster but foot-based charming is reduced. Though some seem to prefer this?"
+  GTS_BRUH_COMBAT_COMPUTER_TORPEDO: "Sakura Empire Naval Education"
+  GTS_BRUH_COMBAT_COMPUTER_TORPEDO_DESC: "§M(Bruh series weapon)§!\nOur shipgirls focus on combat spirit in naval school. In battle, they draw their ship-cutting blades, shout 'Fourth Heavenly Disaster Banzai!' and charge."
+  GTS_BRUH_COMBAT_COMPUTER_PICKET: "Iron Blood Naval Education"
+  GTS_BRUH_COMBAT_COMPUTER_PICKET_DESC: "§M(Bruh series weapon)§!\nOur shipgirls focus on practical tactics in naval school. In battle, they ghost close then attack like wolves to disrupt enemy command and halt advance."
+  GTS_BRUH_COMBAT_COMPUTER_LINE: "Royal Navy Education"
+  GTS_BRUH_COMBAT_COMPUTER_LINE_DESC: "§M(Bruh series weapon)§!\nOur shipgirls focus on combat art in naval school. In battle, proper upbringing enables calm, honorable combat at appropriate distances."
+  GTS_BRUH_COMBAT_COMPUTER_ARTILLERY: "Northern Parliament Naval Education"
+  GTS_BRUH_COMBAT_COMPUTER_ARTILLERY_DESC: "§M(Bruh series weapon)§!\nOur shipgirls focus on weapon operation in naval school. In battle, knowing 'bigger is better, more is beautiful,' they unleash massive ammunition volleys from safe distances."
+  GTS_BRUH_COMBAT_COMPUTER_CARRIER: "Eagle Union Naval Education"
+
+  GTS_BRUH_COMBAT_COMPUTER_CARRIER_DESC: "§M(Bruh series weapon)§!\nOur shipgirls focus on theoretical innovation in naval school. In battle, they call experimental meta-champions directly onto enemy faces from extreme range."
+  GTS_BRUH_ENERGY_BLANK_1: "Real Solar Panels"
+  GTS_BRUH_ENERGY_BLANK_1_DESC: "§M(Bruh series weapon)§!\nReal solar panels! After being removed from space stations and passing through many versions, they莫名其妙地投胎到§R太§!§g空§!§M舰§!§G娘§!上了."
+  GTS_BRUH_AUTO_REPAIR_1: "Self-Repairing Hull"
+  GTS_BRUH_AUTO_REPAIR_1_DESC: "§M(Bruh series weapon)§!\nWhat, should shipgirls return to port for scratched skin repairs?"
+  GTS_BRUH_AUTO_REPAIR_2: "Surface Damage Control Teams"
+  GTS_BRUH_AUTO_REPAIR_2_DESC: "§M(Bruh series weapon)§!\nMultiple damage control teams (tiny humans or micro-robots) patrol shipgirls' surfaces, providing initial treatment for severe damage, and sometimes搜寻并歼灭敌方登陆部队."
+  GTS_BRUH_BODY_STRENGTHEN: "Physical Enhancement"
+  GTS_BRUH_BODY_STRENGTHEN_DESC: "§M(Bruh series weapon)§!\nEnhanced physical training makes hor... shipgirls more agile. The naval department's interstellar shipgirl derby during peacetime has become a major income source."
+  GTS_BRUH_MIND_STRENGTHEN: "Intelligence Enhancement"
+  GTS_BRUH_MIND_STRENGTHEN_DESC: "§M(Bruh series weapon)§!\nEnhancing shipgirls' autonomous intelligence makes their shooting as accurate as aimbots."
+  GTS_BRUH_BEAUTY: "Hull Beautification"
+  GTS_BRUH_BEAUTY_DESC: "§M(Bruh series weapon)§!\nModifying shipgirls' contours to match galactic aesthetics boosts morale and disrupts enemy will. However, maintaining performance requires larger builds."
+  GTS_BRUH_BOMBING: "Ultra-High Altitude Bombing Strategy"
+
+  GTS_BRUH_BOMBING_DESC: "§M(Bruh series weapon)§!\nAccording to design, shipgirls should avoid landing operations, but manually destroying cities or flooding areas is permitted."
+  GTS_BRUH_SHIP_AURA_SHIELD_DAMPENER: "Greedy Mouth"
+  GTS_BRUH_SHIP_AURA_QUANTUM_DESTABILIZER: "Bewildering Yin"
+  GTS_BRUH_SHIP_AURA_SUBSPACE_SNARE: "Alluring Breasts"
+  GTS_BRUH_SHIP_AURA_INSPIRING_PRESENCE: "Stimulating Words"
+  GTS_BRUH_SHIP_AURA_TARGETING_GRID: "Guiding Eyes"
+
+  GTS_BRUH_SHIP_AURA_HYPERLANE: "Restoring Anus"
+  ############################################################################################################################################
+  ##################################################                 Carrier Craft                ##################################################
+
+  ############################################################################################################################################
+  GTS_BRUH_STRIKE_CRAFT_HANGAR_1: "Seafire"
+
+  GTS_BRUH_STRIKE_CRAFT_HANGAR_1_DESC: "§M(Bruh series weapon)§!"
+  GTS_BRUH_STRIKE_CRAFT_HANGAR_2: "Hellcat"
+
+  GTS_BRUH_STRIKE_CRAFT_HANGAR_2_DESC: "§M(Bruh series weapon)§!"
+  GTS_BRUH_STRIKE_CRAFT_HANGAR_3: "Pe-8"
+
+  GTS_BRUH_STRIKE_CRAFT_HANGAR_3_DESC: "§M(Bruh series weapon)§!"
+  ############################################################################################################################################
+  ##################################################                 Reactors                ##################################################
+
+  ############################################################################################################################################
+  GTS_BRUH_EXTRA_ENERGY_REACTOR_1: "External Reactor"
+
+  GTS_BRUH_EXTRA_ENERGY_REACTOR_1_DESC: "§M(Bruh series weapon)§!\nInitially developed as Bismarck's special equipment (though other shipgirls can use it)\nSolves energy shortage issues.\n§RBeing external, it's easily hit and explodes.§!\n§REach reduces hull by 1%§!"
+ # Original: §Y这颗星球是特殊星球§!
+ gts_bruh_is_gts_mod_planet:0 "§YThis planet is a special planet§!"
+ # Original: §Y用歼星武器转变星球的一年冷却还未到§!
+ gts_bruh_colossus_destroy_planet_cool_down:0 "§YPlanet transformation cooldown of 1 year not yet reached§!"
+ # Original: 破产保护
+ gts_bruh_god_keeper_country_modifiers_2:0 "Bankruptcy Protection"
+ # Original: §M(龙开专用)§!\n鹅的友情赞助\n减少犽戎的维护费50年(建议每月产量达到5000食物+600矿)\n§R(别再讨价还价了)§!
+ gts_bruh_god_keeper_country_modifiers_2_desc:0 "§M(Dragon Start Only)§!\nGoose's friendship sponsorship\nReduce Yharon's upkeep for 50 years (Recommended monthly production reaches 5000 food + 600 minerals)\n§R(Stop bargaining)§!"
+ # Original: 塞入小穴
+ GTS_BRUH_PLANET_KILLER_UB:0 "Insert into Pussy"
+ # Original: 塞入
+ GTS_BRUH_PLANET_KILLER_UB_ACTION:0 "Insert"
+ # Original: 将目标星球塞入小穴转变成爱液星球§R(将会摧毁殖民地)§!
+ GTS_BRUH_PLANET_KILLER_UB_DESC:0 "Insert the target planet into the pussy to transform it into a Love Fluid Planet §R(Will destroy the colony)§!"
+ # Original: 正在前往目标
+ FLEETORDER_DESTROY_PLANET_WITH_GTS_BRUH_PLANET_KILLER_UB:0 "Heading to target"
+ # Original: §W成为了爱液星球§!
+ MESSAGE_DESC_FOR_GTS_BRUH_PLANET_KILLER_UB:0 "§WBecame a Love Fluid Planet§!"
+ # Original: 舰娘斩舰刀
+ GTS_BRUH_KINETIC_SWORD_TITANIC_1:0 "Shipgirl Anti-Ship Sword"
+ # Original: §M(Bruh系列武器)§!\n
+ GTS_BRUH_KINETIC_SWORD_TITANIC_1_DESC:0 "§M(Bruh Series Weapon)§!\n"

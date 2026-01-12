@@ -107,9 +107,6 @@ country_event = {
 			TRAIT1 = leader_trait_governor_archetto
 			TRAIT2 = leader_trait_chosen
 			TRAIT3 = leader_trait_Giant
-			TRAIT4 = leader_trait_gts_bruh_empty
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 	}
 

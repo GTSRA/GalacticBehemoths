@@ -20,7 +20,6 @@ weapon_component_template = {
 	firing_arc = 25.0
 	min_range = 0
 	static_rotation = yes
-	use_ship_kill_target = no
 
 	component_set = "ENERGY_LANCE_2"
 	projectile_gfx = "illya_lance"
@@ -83,11 +82,11 @@ weapon_component_template = {
 	}
 	hidden = yes
 }
-
+#散弹
 weapon_component_template = {
 	key = "ILLYA_point_defence_gun"
 	size = point_defence
-	
+	type = instant
 	icon = "GFX_ship_part_point_defense_3"
 	icon_frame = 1
 	
@@ -109,8 +108,6 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 15
-			sr_kancolle_material = 0.5
-			sr_kancolle_renovate = 0.25
 		}
 		upkeep = {
 			energy = 0.2

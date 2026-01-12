@@ -36,14 +36,8 @@ planet_event = {
 					limit = {
 						has_trait = leader_trait_gts_fiefdom_noble
 					}
-					remove_trait = leader_trait_Tall
-					remove_trait = leader_trait_Normal
-					remove_trait = leader_trait_Small
-					remove_trait = leader_trait_Tiny
-					remove_trait = leader_trait_Micro
-					add_trait = {
-						trait = leader_trait_Giant
-						show_message = no
+					gts_leader_size_change_to = {
+						SIZE_TRAIT = leader_trait_Giant
 					}
 				}
 				last_created_leader = {
@@ -114,14 +108,8 @@ planet_event = {
 					limit = {
 						has_trait = leader_trait_gts_fiefdom_noble
 					}
-					remove_trait = leader_trait_Tall
-					remove_trait = leader_trait_Normal
-					remove_trait = leader_trait_Small
-					remove_trait = leader_trait_Tiny
-					remove_trait = leader_trait_Micro
-					add_trait = {
-						trait = leader_trait_Giant
-						show_message = no
+					gts_leader_size_change_to = {
+						SIZE_TRAIT = leader_trait_Giant
 					}
 				}
 				last_created_leader = {
@@ -191,14 +179,8 @@ planet_event = {
 					limit = {
 						has_trait = leader_trait_gts_fiefdom_noble
 					}
-					remove_trait = leader_trait_Tall
-					remove_trait = leader_trait_Normal
-					remove_trait = leader_trait_Small
-					remove_trait = leader_trait_Tiny
-					remove_trait = leader_trait_Micro
-					add_trait = {
-						trait = leader_trait_Giant
-						show_message = no
+					gts_leader_size_change_to = {
+						SIZE_TRAIT = leader_trait_Giant
 					}
 				}
 				last_created_leader = {

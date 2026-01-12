@@ -469,6 +469,12 @@ guiTypes = {
 			effect = gts_intel_avatar_linfeng_effect
 		}
 		#第五页的
+		effectButtonType = {
+			name = "gts_intel_avatar_suxiaobai"
+			spriteType = "GFX_gts_intel_avatar_suxiaobai"
+			position = { x = @gts_intel_x_1 y = @gts_intel_y_1 }
+			effect = gts_intel_avatar_suxiaobai_effect
+		}
 		# effectButtonType = {
 		# 	name = "xxx"
 		# 	spriteType = "GFX_xxx"
@@ -815,6 +821,14 @@ guiTypes = {
 			position = { x = @gts_intel_x_4 y = @gts_intel_y_3 }
 			alwaysTransparent = yes
 			effect = gts_intel_avatar_linfeng_owned_effect
+		}
+		### 第五页招募标记 ###
+		effectButtonType = {
+			name = "gts_intel_avatar_suxiaobai_owned"
+			spriteType = "GFX_gts_intel_owned"
+			position = { x = @gts_intel_x_1 y = @gts_intel_y_1 }
+			alwaysTransparent = yes		
+			effect = gts_intel_avatar_suxiaobai_owned_effect
 		}
 		# effectButtonType = {
 		# 	name = "xxx_owned"

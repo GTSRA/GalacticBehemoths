@@ -395,7 +395,10 @@ gts_leader_body_13_effect = {
 }
 gts_leader_body_14_effect = {
 	potential = {
-		always = no
+		check_variable = {
+			which = gts_ui_intel_avatar
+			value = @gts_archetto
+		}
 	}
 	allow = {
 		always = yes
@@ -484,7 +487,7 @@ gts_leader_body_22_effect = {
 	potential = {
 		check_variable = {
 			which = gts_ui_intel_avatar
-			value = @gts_archetto
+			value = @gts_cys
 		}
 	}
 	allow = {
@@ -1137,15 +1140,18 @@ gts_leader_body_83_effect = {
 	}
 	effect = {}
 }
-# gts_leader_body_xxx_effect = {
-# 	potential = {
-# 		always = no
-# 	}
-# 	allow = {
-# 		always = yes
-# 	}
-# 	effect = {}
-# }
+gts_leader_body_84_effect = {
+	potential = {
+		check_variable = {
+			which = gts_ui_intel_avatar
+			value = @gts_suxiaobai
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {}
+}
 # gts_leader_body_xxx_effect = {
 # 	potential = {
 # 		always = no

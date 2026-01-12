@@ -18,6 +18,8 @@ building_Wizards_Tower = {
 
     building_sets = {
         gts_tier2
+        government
+        urban
     }
 
     destroy_trigger = {
@@ -34,9 +36,6 @@ building_Wizards_Tower = {
         }
     }
 
-    planet_modifier = {
-        planet_panlon_Wizard_produces_mult = 0.1
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -51,11 +50,11 @@ building_Wizards_Tower = {
         category = planet_buildings
         cost = {
             minerals = 2250
-            sr_aom_magicstones = 100
+            gts_aom_magicstones = 100
         }
         upkeep = {
             energy = 22.5
-            sr_aom_magicstones = 2
+            gts_aom_magicstones = 2
         }
     }
 
@@ -87,6 +86,8 @@ building_knights_Castle = {
 
     building_sets = {
         gts_tier2
+        government
+        urban
     }
 
     destroy_trigger = {
@@ -127,6 +128,68 @@ building_knights_Castle = {
     }
 }
 
+################################
+# 行星建筑·资源类
+################################
+
+#温泉疗养所
+building_aom_magichotspring_sanatorium = {
+    base_buildtime = 360
+    icon = "building_warhammerfleet_powerstones_factory"
+
+    category = manufacturing
+
+    potential = {
+        exists = owner
+        OR = {
+            owner = { is_ai = no }
+        }
+        owner = {
+            is_regular_empire = yes
+            has_origin = origin_panlon
+        }
+        NOT = { has_modifier = slave_colony }
+    }
+
+    building_sets = {
+        gts_tier2
+        government
+        urban
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                NOT = {
+                    has_origin = origin_panlon
+                }
+            }
+            owner = {
+                is_regular_empire = no
+            }
+        }
+    }
+
+    planet_modifier = {
+        job_aom_magictherapist_add = 2
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+
+    triggered_desc = {	#自定义描述文本
+        text = job_aom_magicstones_effect_desc
+    }
+}
+
 #皇家周边专卖店
 building_aom_surrounding_stores = {
     base_buildtime = 360
@@ -144,7 +207,7 @@ building_aom_surrounding_stores = {
 
     planet_modifier = {
         branch_office_value_mult = 0.25
-        trade_value_add = 50
+        planet_miners_trade_produces_add = 0.05
         job_aom_store_clerk_add = 200
     }
 
@@ -161,7 +224,6 @@ building_aom_surrounding_stores = {
         }
     }
 }
-
 #乐福鞋娱乐中心
 building_aom_Entertainment_Center = {
     base_buildtime = 360
@@ -197,7 +259,6 @@ building_aom_Entertainment_Center = {
         }
     }
 }
-
 #贝雷帽渔场
 building_aom_fishing_grounds = {
     base_buildtime = 360
@@ -231,7 +292,6 @@ building_aom_fishing_grounds = {
         }
     }
 }
-
 #丝袜酒店
 building_aom_stockings_hotel = {
     base_buildtime = 360
@@ -249,7 +309,7 @@ building_aom_stockings_hotel = {
 
     planet_modifier = {
         job_aom_hotel_waiter_add = 200
-        job_aom_hotel_cleaner_add = 50
+        job_aom_hotel_cleaners_add = 50
         planet_housing_add = 1000
 
     }
@@ -268,7 +328,6 @@ building_aom_stockings_hotel = {
         }
     }
 }
-
 #瓶装餐厅
 building_aom_bottled_restaurant = {
     base_buildtime = 360
@@ -303,7 +362,6 @@ building_aom_bottled_restaurant = {
         }
     }
 }
-
 #巨型矿井
 building_aom_giant_mine = {
     base_buildtime = 360
@@ -331,14 +389,48 @@ building_aom_giant_mine = {
         produces = {
             minerals = 100
             rare_crystals = 4
-            sr_aom_magicstones = 4
+            gts_aom_magicstones = 4
         }
         upkeep = {
             energy = 20
         }
     }
 }
+#大图书馆
+building_aom_library = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    owner_type = corporate
 
+    potential = {
+        has_branch_office = yes
+        branch_office_owner = {
+            is_criminal_syndicate = no
+            has_authority = auth_hales_panlon
+            NOT = { is_ai = yes }
+        }
+    }
+
+    planet_modifier = {
+        job_aom_librarian_add = 200
+    }
+
+    resources = {
+        category = planet_branch_office_buildings
+        cost = {
+            minerals = 500
+        }
+        produces = {
+            physics_research = 100
+            engineering_research = 100
+            society_research = 100
+            unity = 50
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+}
 #能量石合成厂
 building_aom_magicstones_factory = {
     base_buildtime = 360

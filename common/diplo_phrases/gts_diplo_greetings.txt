@@ -19,14 +19,7 @@ greetings = {
 			}
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -43,14 +36,7 @@ greetings = {
 			}
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -59,14 +45,7 @@ greetings = {
 
 	HOSTILE_GREETING_GTS_TO_H_01 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			OR = {
 				is_hostile_to = FROM
 				is_domineering_to = FROM
@@ -80,14 +59,7 @@ greetings = {
 
 	HOSTILE_GREETING_GTS_TO_H_02 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			OR = {
 				is_hostile_to = FROM
 				is_domineering_to = FROM
@@ -107,14 +79,7 @@ greetings = {
 			has_origin = origin_hstar
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -130,14 +95,7 @@ greetings = {
 			has_origin = origin_hstar
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -150,14 +108,7 @@ greetings = {
 	# Neutral Generic 3
 	NEUTRAL_GREETING_GTS_TO_H_01 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			FROM = {
 				has_origin = origin_hstar
 			}
@@ -170,14 +121,7 @@ greetings = {
 	# Neutral Generic Same Species
 	NEUTRAL_GREETING_GTS_TO_H_02 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			FROM = {
 				has_origin = origin_hstar
 			}
@@ -196,14 +140,7 @@ greetings = {
 			has_origin = origin_hstar
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -220,14 +157,7 @@ greetings = {
 			has_origin = origin_hstar
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -241,14 +171,7 @@ greetings = {
 	# Friendly Generic 3
 	FRIENDLY_GREETING_GTS_TO_H_01 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			FROM = {
 				has_origin = origin_hstar
 			}
@@ -262,14 +185,7 @@ greetings = {
 	# Friendly Generic Same Species
 	FRIENDLY_GREETING_GTS_TO_H_02 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			FROM = {
 				has_origin = origin_hstar
 			}
@@ -288,14 +204,7 @@ greetings = {
 			has_origin = origin_hstar
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -308,14 +217,7 @@ greetings = {
 			has_origin = origin_hstar
 			FROM = {
 				OR = {
-					owner_main_species = {
-						OR = {
-							has_trait = trait_Tall
-							has_trait = trait_Giant
-							has_trait = trait_Titan
-							has_trait = trait_Ultra
-						}
-					}
+					gts_is_giantess_empire = yes
 					has_country_flag = giantess_crisis
 				}
 			}
@@ -325,14 +227,7 @@ greetings = {
 
 	WAR_GREETING_GTS_TO_H_01 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			FROM = {
 				has_origin = origin_hstar
 			}
@@ -342,14 +237,7 @@ greetings = {
 
 	WAR_GREETING_GTS_TO_H_02 = {
 		trigger = {
-			owner_main_species = {
-				OR = {
-					has_trait = trait_Tall
-					has_trait = trait_Giant
-					has_trait = trait_Titan
-					has_trait = trait_Ultra
-				}
-			}
+			gts_is_giantess_empire = yes
 			FROM = {
 				has_origin = origin_hstar
 			}

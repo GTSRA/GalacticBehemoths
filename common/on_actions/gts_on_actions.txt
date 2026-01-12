@@ -28,27 +28,36 @@ on_game_start_country = {
 		gts_utility.101 # 检测更新变量
 		gts_utility.102 # 添加开局加成
 		gts_utility.103 # 巨娘动态加成
+
 		gts_egg.0 # 卵子起源开局
 		gts_fallout.0 # 异尘起源开局
 		gts_subterranean.0 # 鞋底人起源开局
 		gts_hamony.0 # 和谐起源开局
 		gts_god_keeper.0  # 豢养神明开局
 		gts_ultra_company.0 # 保险开
+
 		gts_civ_common.50 # 入陰禮 - 添加人口特質
 		gts_civ_common.90 # 小人同化者 - 開局人口設定
 		gts_civ_common.92 # 小人保護者 - 開局人口設定
+
 		gts_evt_ancient.1
 		gts_aya.10
 		gts_aya.11
 		gts_aya.12
 		gts_chenghui.4000
 		gts_chenghui.4003
+
 		gts_ultra_road.1
 		gts_annihilator_origin.1
 		gts_annihilator_origin.2
+
 		gts_hstar_origin.1
 		gts_hstar_origin.2
 		gts_hstar.99
+
+		gts_o_action.0011# 开局调整人口数
+		gts_guide_qhai.1000# 千海通讯
+		gts_story_line.1
 	}
 }
 on_monthly_pulse = {
@@ -129,6 +138,8 @@ on_yearly_pulse_country = {
 		gts_civ_common.60 			#妹汁本味
 		gts_civ_common.70 			#小人本味
 		gts_linfeng.200				#林凤与艾普露联动事件
+		gts_linfeng.210				#林凤与千海联动事件
+		gts_suxiaobai.200			#林凤与苏小白联动事件
 	}
 }
 
@@ -144,6 +155,7 @@ on_five_year_pulse_country = {
 		gts_leader_qhai.400 		#千海的随机事件
 		gts_linfeng.100				#林凤的要求（小人）
 		gts_linfeng.110				#林凤的要求（巨娘）
+		gts_saratoga.1002
 		# gts_utility.303           #没有（或者没做完）招募前事件的Mod领袖抽奖
 	}
 	# 无特殊trigger的随机事件
@@ -208,6 +220,7 @@ on_custom_diplomacy = {
 		gts_chenghui.5
 		gts_hstar_crisis.30
 		gts_hstar_crisis.55
+		gts_guide_qhai.5001
 
 	}
 }
@@ -231,6 +244,7 @@ on_space_battle_won = {
 		10 = 0
 		1 = gts_guya.32		#咕丫-无心的玩弄
 		1 = gts_guya.33		#咕丫-捕食
+		1 = gts_suxiaobai.110	#苏小白舰队胜利事件
 	}
 }
 
@@ -296,9 +310,16 @@ on_becoming_subject = {
 on_planet_attackers_win = {
 	events = {
 		gts_spiritualist.2
-		gts_luodi_site.1801
+		gts_lottie_site.1801
 		gts_hstar_crisis.201		# (Hidden) Prethoryn invades; purge begins
 		gts_hstar_crisis.219
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		gts_subterranean.2	# 添加失去聯繫
+		gts_subterranean.4	# 移除失去联系
 	}
 }
 
@@ -312,7 +333,6 @@ on_planet_occupied = {
 on_planet_conquer = {
 	events = {
 		115tiny_crisis.5010 # Crisis Menace Objective: Conquer a Colony
-		gts_subterranean.2	# 添加失去聯繫
 	}
 }
 
@@ -345,14 +365,14 @@ on_planet_attackers_lose = {
 on_planet_defenders_win = {
 	events = {
 		gts_spiritualist.2
-		gts_luodi_site.18
+		gts_lottie_site.18
 	}
 }
 
 on_planet_defenders_lose = {
 	events = {
 		gts_spiritualist.1
-		gts_luodi_site.17
+		gts_lottie_site.17
 	}
 }
 
@@ -390,28 +410,19 @@ on_fleet_auto_move_arrival = {
 		5 = gts_evt_random.040140		#擦拭足汗的舰娘
 	}
 }
+
 on_ship_disabled = {
 	events = {
 		gts_sonxi.5		# 颂汐被攻击后消失
 	}
 }
-on_survey = {
+
+on_survey_planet = {
 	random_events = {
 		99 = 0
 		1 = gts_eyjafjalla.100
 	}
 }
-
-# A ship has surveyed a planet.
-# Scope = Ship
-# From = Planet
-# on_survey_planet = {
-# 	events = {
-		
-# 	}
-# 	random_events = {
-# 	}
-# }
 
 on_colony_yearly_pulse = {
 	events = {
@@ -438,6 +449,7 @@ on_colonized = {
 		gts_god_keeper.5602# 殖民完成后触发犽戎的体内事件
 		gts_civ_gts_worship.1000 #巨娘崇拜给岗位
 		gts_hstar_crisis.203
+		gts_o_action.0012
 	}
 }
 
@@ -453,9 +465,18 @@ on_colony_2_year_old = {
 }
 
 on_colony_3_year_old = {
+	events = {
+		gts_anti_scat.1
+	}
 	random_events = {
 		4 = 0
         1 = gts_god_keeper.401
+	}
+}
+
+on_colony_5_years_old={
+	events = {
+		gts_icecream.4
 	}
 }
 

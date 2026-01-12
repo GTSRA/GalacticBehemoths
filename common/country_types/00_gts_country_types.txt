@@ -1,3 +1,4 @@
+###成惠
 chenghui = {
 	show_in_contacts_list = yes
 	minimalist_contacts_list_profile = yes
@@ -28,6 +29,31 @@ chenghui = {
 	}
 }
 
+###颂汐
+sonxi = {
+	is_space_critter = yes
+	destroys_starbases = no
+	#blocks_pirate = yes
+	observable = no
+	government = no
+	ai = {
+		enabled = no
+	}
+	faction = {
+		neutral = yes
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+		auto_delete = no
+	}
+	modules = {
+		exclusive_diplomacy_module = { contact_rule = on_action_only } # Nothing is allowed, but we need this for relationships.
+		basic_technology_module = {}
+		standard_event_module = {}
+	}
+}
+
+### 巨企
 gts_ultra_origin = {
 	has_difficulty_bonuses = yes
 	counts_for_victory = yes
@@ -158,28 +184,7 @@ gts_ultra_origin = {
 	}
 }
 
-sonxi = {
-	is_space_critter = yes
-	destroys_starbases = no
-	#blocks_pirate = yes
-	observable = no
-	government = no
-	ai = {
-		enabled = no
-	}
-	faction = {
-		neutral = yes
-		needs_border_access = no
-		generate_borders = no
-		needs_colony = no
-		auto_delete = no
-	}
-	modules = {
-		exclusive_diplomacy_module = { contact_rule = on_action_only } # Nothing is allowed, but we need this for relationships.
-		basic_technology_module = {}
-		standard_event_module = {}
-	}
-}
+
 
 gts_tli_comm = {
 	show_in_contacts_list = yes
@@ -207,6 +212,7 @@ gts_tli_comm = {
 	}
 }
 
+### 巨娘堕落帝国
 gts_fallen_empire = {
 	scaled_difficulty_bonuses = 1.0	# scales to setting
 	counts_for_victory = yes
@@ -295,6 +301,63 @@ gts_fallen_empire = {
 			gts_micro_city = 100
 			gts_micro_planet = 10
 
+		}
+	}
+}
+
+#默认的飞地country_type，不会就不要动，对于内部参数有些简单注释。有需要可以试着新建。
+tiny_enclave = {
+	blocks_piracy = yes
+	show_in_contacts_list = yes
+	can_have_their_comms_shared = yes
+	government = yes	#是否有政府，你可能懒得写政府，那就改成no
+	is_enclave = yes	#是飞地吗？
+	observable = no
+	ai = {	#飞地不需要AI
+		enabled = no
+	}
+	faction = {
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+	}
+	custom_diplomacy = yes	#自定义外交，用于触发外交事件
+	custom_opinion = yes	#自定义好感，用于事件调整国家好感
+	modules = {
+		basic_technology_module = {}
+		standard_event_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = on_action_only
+		}
+		# Nothing is allowed, but we need this for relationships.
+		#basic_technology_module = {}
+	}
+}
+
+###千海通讯
+gts_qhai_commnunicate = {
+	show_in_contacts_list = yes
+	minimalist_contacts_list_profile = yes
+	share_communications = no
+	default_ships = no
+	government = no
+	uses_origins = no
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+		auto_delete = no
+	}
+	custom_diplomacy = yes
+	modules = {
+		basic_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = on_action_only
 		}
 	}
 }

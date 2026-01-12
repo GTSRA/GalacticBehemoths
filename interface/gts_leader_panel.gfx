@@ -366,6 +366,10 @@ spriteTypes = {
 		name = "GFX_gts_leader_body_83"
 		texturefile = "gfx/interface/gts_leader_panel/gts_leader_body_83.dds"
 	}
+	spriteType = {
+		name = "GFX_gts_leader_body_84"
+		texturefile = "gfx/interface/gts_leader_panel/gts_leader_body_84.dds"
+	}
 	# spriteType = {
 	# 	name = "GFX_gts_leader_body_xxx"
 	# 	texturefile = "gfx/interface/gts_leader_panel/gts_leader_body_xxx.dds"

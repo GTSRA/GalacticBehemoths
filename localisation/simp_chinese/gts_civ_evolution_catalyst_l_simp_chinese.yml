@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  civic_evolution_catalyst: "进化触媒"
- civic_evolution_catalyst_effects: "这个国家的主体物种是一种特殊基因病毒的携带者\n这让它们不受病毒影响的同时，不断将当地动物感染并在短时间内转化为拥有初等智能的巨大兽娘\n尽管他们还没有意识到这一点，但这无疑会在它们探索新世界时带来一些额外的麻烦"
+ civic_evolution_catalyst_desc: "这个国家的主体物种是一种特殊基因病毒的携带者\n这让它们不受病毒影响的同时，不断将当地动物感染并在短时间内转化为拥有初等智能的巨大兽娘\n尽管他们还没有意识到这一点，但这无疑会在它们探索新世界时带来一些额外的麻烦"
  policy_gts_evolution_catalyst_enlightenment_policy:0 "对开化兽娘的态度"
  policy_gts_evolution_catalyst_enlightenment_policy_desc:0 "这些巨大兽娘一经开智，我们就不可能再像对待野生动物一样应对她们了，合适的政策可以让这群懵懂无知的兽娘更好的为我们服务。"
 
@@ -63,6 +63,7 @@ gts_evolution_catalyst_event.14.b: "或许更进一步我们可以完全驯服�
  gts_evolution_catalyst_event.300.a:0 "好大的马娘！"
 
  gts_evolution_catalyst_kemono:0 "兽娘远征军团"
+ gts_evolution_catalyst_kemono_plural:0 "兽娘远征军团"
  gts_evolution_catalyst_kemono_desc:0 "来自不同星球、不同生态区的兽娘军团，生来的使命就是在无尽的星海间征战、毁灭世界和涩涩。"
 
  councilor_gts_kemono_placement:0 "兽娘安置委员"

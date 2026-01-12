@@ -1,5 +1,0 @@
-opinion_gts_qhai_bocai = {
-    opinion = {
-        base = -50
-    }
-}

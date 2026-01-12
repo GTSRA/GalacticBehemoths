@@ -17,7 +17,7 @@ citizenship_organic_trophy = {
 				AND = {
 					has_civic = civic_gts_servitor
 					root = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 				}
 			}

@@ -170,16 +170,19 @@ fleet_event = {
 	desc = {
 		text = gts_aplog.902.tiny.desc
 		trigger = {
-			owner = {
-				has_country_flag = tiny_flag
+			this.leader = {
+				OR = {
+					gts_is_smaller_than_tall =  yes
+					gts_is_equal_to_tall = yes
+				}
 			}
 		}
 	}
 	desc = {
 		text = gts_aplog.902.gts.desc
 		trigger = {
-			owner = {
-				has_country_flag = gts_flag
+			this.leader = {
+				gts_is_bigger_than_tall = yes
 			}
 		}
 	}
@@ -237,16 +240,19 @@ fleet_event = {
 	desc = {
 		text = gts_aplog.903.tiny.desc
 		trigger = {
-			owner = {
-				has_country_flag = tiny_flag
+			this.leader = {
+				OR = {
+					gts_is_smaller_than_tall =  yes
+					gts_is_equal_to_tall = yes
+				}
 			}
 		}
 	}
 	desc = {
 		text = gts_aplog.903.gts.desc
 		trigger = {
-			owner = {
-				has_country_flag = gts_flag
+			this.leader = {
+				gts_is_bigger_than_tall = yes
 			}
 		}
 	}
@@ -371,16 +377,19 @@ fleet_event = {
 	desc = {
 		text = gts_aplog.905.tiny.desc
 		trigger = {
-			owner = {
-				has_country_flag = tiny_flag
+			this.leader = {
+				OR = {
+					gts_is_smaller_than_tall =  yes
+					gts_is_equal_to_tall = yes
+				}
 			}
 		}
 	}
 	desc = {
 		text = gts_aplog.905.gts.desc
 		trigger = {
-			owner = {
-				has_country_flag = gts_flag
+			this.leader = {
+				gts_is_bigger_than_tall = yes
 			}
 		}
 	}
@@ -449,7 +458,7 @@ country_event = {
 	show_sound = ffxiv_lvup
 	is_triggered_only = yes
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	auto_opens = yes
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_leader_gts_aplog"
 	immediate = {
@@ -626,11 +635,7 @@ country_event = {
 		text = gts_aplog.4.c
 		trigger = {
 			owner_main_species = {
-				OR = {
-					has_trait = trait_Tiny
-					has_trait = trait_Micro
-					has_trait = trait_Nano
-				}
+				gts_is_smaller_than_normal = yes
 			}
 		}
 	}
@@ -654,11 +659,7 @@ country_event = {
 		picture = GFX_load_62
 		trigger = {
 			owner_main_species = {
-				OR = {
-					has_trait = trait_Tiny
-					has_trait = trait_Micro
-					has_trait = trait_Nano
-				}
+				gts_is_smaller_than_normal = yes
 			}
 		}
 	}
@@ -694,11 +695,7 @@ country_event = {
 		text = gts_aplog.10.c
 		trigger = {
 			owner_main_species = {
-				OR = {
-					has_trait = trait_Tiny
-					has_trait = trait_Micro
-					has_trait = trait_Nano
-				}
+				gts_is_smaller_than_normal = yes
 			}
 		}
 	}
@@ -722,11 +719,7 @@ country_event = {
 		picture = GFX_gts_event_43
 		trigger = {
 			owner_main_species = {
-				OR = {
-					has_trait = trait_Tiny
-					has_trait = trait_Micro
-					has_trait = trait_Nano
-				}
+				gts_is_smaller_than_normal = yes
 			}
 		}
 	}
@@ -1073,16 +1066,8 @@ country_event = {
 			limit = {
 				has_leader_flag = gts_aplog
 			}
-			remove_trait = leader_trait_Titan
-			remove_trait = leader_trait_Giant
-			remove_trait = leader_trait_Tall
-			remove_trait = leader_trait_Normal
-			remove_trait = leader_trait_Small
-			remove_trait = leader_trait_Tiny
-			remove_trait = leader_trait_Micro
-			add_trait = {
-				trait = leader_trait_Tall
-				show_message = no
+			gts_leader_size_change_to = {
+				SIZE_TRAIT = leader_trait_Tall
 			}
 		}
 	}
@@ -1193,6 +1178,12 @@ country_event = {
 			}
 			1 = {
 				add_relic = r_surveyor
+			}
+			1 = {
+				give_specimen = {
+					key = gts_specimens_halo
+					origin = gts_specimens_halo
+				}
 			}
 		}
 	}
@@ -1517,9 +1508,8 @@ country_event = {
 			NOR = {
 				has_leader_flag = gts_aplog
 				has_trait = leader_trait_Tall
-				has_trait = leader_trait_Tall_start
 			}
-			is_gts_leader = yes
+			gts_is_giantess = yes
 		}
 	}
 	immediate = {
@@ -1528,9 +1518,8 @@ country_event = {
 				NOR = {
 					has_leader_flag = gts_aplog
 					has_trait = leader_trait_Tall
-					has_trait = leader_trait_Tall_start
 				}
-				is_gts_leader = yes
+				gts_is_giantess = yes
 			}
 			save_event_target_as = gts_leader_bigger_than_aplog
 		}

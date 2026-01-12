@@ -1,0 +1,200 @@
+namespace = gts_guide_qhai
+
+# 通讯主界面
+country_event = {
+    id = gts_guide_qhai.1
+    is_triggered_only = yes
+    title = gts_guide_qhai.1.name
+    desc = gts_guide_qhai.1.desc.1
+    #desc = gts_guide_qhai.1.desc.2
+    #desc = gts_guide_qhai.1.desc.3
+    diplomatic_title = gts_guide_qhai.1.name
+    diplomatic = yes
+    picture_event_data = {
+        portrait = gts_portrait_qhai4
+        room = gts_qhai0_room
+    }
+    immediate = {
+        set_country_flag = gts_qhai_country_communicate
+    }
+    option = {
+        name = gts_guide_qhai.1.option
+        country_event = {
+            id = azur_central_office.1
+        }
+    }
+    # # option = { #委托
+    # # 	name = azur_central_office.0.bb
+    # # 	hidden_effect = {
+    # # 		country_event = {
+    # # 			id = azur_entrust.0
+    # # 		}
+    # # 	}
+    # # }
+    # option = { #红尖尖
+    #     name = azur_central_office.0.cc
+    #     hidden_effect = {
+    #         country_event = {
+    #             id = azur_red_diamond.0
+    #         }
+    #     }
+    # }
+    # # option = { #传统
+    # # 	name = azur_central_office.0.dd
+    # # 	hidden_effect = {
+    #
+    # # 	}
+    # # }
+    # option = { #偶像
+    #     name = azur_central_office.0.ff
+    #     allow = {
+    #         custom_tooltip = {
+    #             fail_text = azur_idol_start_tooltip
+    #             has_global_flag = azur_expand_μ_leader
+    #         }
+    #     }
+    #     hidden_effect = {
+    #         country_event = {
+    #             id = azur_central_office.5000
+    #         }
+    #     }
+    # }
+    # option = { #外域赛博空间
+    #     name = azur_central_office.0.gg
+    #     trigger = {
+    #         NOT = {
+    #             has_country_flag = ki_help_begin_fail
+    #         }
+    #     }
+    #     allow = {
+    #         custom_tooltip = {
+    #             fail_text = azur_help_start_tooltip
+    #             has_country_flag = ki_help_begin
+    #         }
+    #     }
+    #     hidden_effect = {
+    #         if = {
+    #             limit = {
+    #                 has_country_flag = star_oath_project_has_used
+    #                 has_country_flag = ki_ruler_empire
+    #             }
+    #             country_event = {
+    #                 id = azur_ki.101
+    #             }
+    #             change_variable = {
+    #                 which = coun_ki_favor_degree
+    #                 value = 1
+    #             }
+    #         }
+    #         else = {
+    #             country_event = {
+    #                 id = azur_ki.100
+    #             }
+    #             change_variable = {
+    #                 which = coun_ki_favor_degree
+    #                 value = 1
+    #             }
+    #         }
+    #     }
+    # }
+    option = { #退出
+        name = gts_guide_qhai.1.option.quit
+        hidden_effect = {
+            remove_country_flag = gts_qhai_country_communicate
+        }
+        default_hide_option = yes
+    }
+}
+# 创建千海通讯国家
+country_event = {
+    id = gts_guide_qhai.1000
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        is_ai = no
+
+    }
+    immediate = {
+        create_country = {
+            name = "NAME_qhai_communicate"
+            type = gts_qhai_commnunicate
+            flag = {
+                icon={
+                    category="gts_country_flag"
+                    file="flag_gts_qhai_B1.dds"
+                }
+                background={
+                    category="backgrounds"
+                    file="pattern_01.dds"
+                }
+                colors={
+                    "dark_blue"
+                    "black"
+                    "null"
+                    "null"
+                }
+            }
+        }
+        last_created_country = {
+            set_country_flag = protected_from_queen_storm
+            establish_communications_no_message = root
+            save_global_event_target_as = gts_qhai_commnunicate
+        }
+    }
+
+}
+country_event = {
+    id = gts_guide_qhai.1001
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        is_ai = no
+
+    }
+    immediate = {
+        create_country = {
+            name = "NAME_qhai_communicate"
+            type = gts_qhai_commnunicate
+            flag = {
+                icon={
+                    category="gts_country_flag"
+                    file="flag_gts_qhai_B1.dds"
+                }
+                background={
+                    category="backgrounds"
+                    file="pattern_01.dds"
+                }
+                colors={
+                    "dark_blue"
+                    "black"
+                    "null"
+                    "null"
+                }
+            }
+        }
+        last_created_country = {
+            set_country_flag = protected_from_queen_storm
+            establish_communications_no_message = root
+            save_global_event_target_as = gts_qhai_commnunicate
+        }
+    }
+
+}
+# 用于外交中触发点击事件
+country_event = {
+    id =  gts_guide_qhai.5001
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = gts_qhai_commnunicate
+        }
+    }
+
+    immediate = {
+        country_event = {
+            id =  gts_guide_qhai.1
+        }
+    }
+}

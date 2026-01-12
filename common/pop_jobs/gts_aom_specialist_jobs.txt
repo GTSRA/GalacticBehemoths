@@ -23,7 +23,6 @@ panlon_knights = {
 	}
 	
 	resources = {
-		category = planet_empireknights 
 		produces = {
 			unity = 20
 			physics_research = 12
@@ -71,7 +70,6 @@ panlon_wizard = {
 		}
 	}
 	resources = {
-		category = planet_panlon_Wizard
 		produces = {
 			physics_research = 20
 			engineering_research = 20
@@ -88,13 +86,13 @@ panlon_wizard = {
 		weight = 1200
 	}
 }
-#魔力石合成师
-aom_magicstones = {
+#温泉疗养师
+aom_magictherapist = {
 	category = specialist
 	swappable_data = {
 		default = {
 			condition_string = SPECIALIST_JOB_TRIGGER
-			building_icon = building_aom_magicstones_factory
+			building_icon = building_aom_magichotspring_sanatorium
 		}
 	}
 	possible_pre_triggers = {
@@ -103,7 +101,6 @@ aom_magicstones = {
 		is_being_purged = no
 		is_being_assimilated = no
 	}
-	tags = {  }
 
 	promotion = {
 		time = @standard_promotion_time
@@ -116,19 +113,20 @@ aom_magicstones = {
 	}
 
 	possible_precalc = can_fill_specialist_job
-	possible = {
-	}
 
-	possible_precalc = can_fill_specialist_job
+	planet_modifier = {
+		planet_amenities_add = 1200
+	}
 	
 	resources = {
-		category = planet_powerstones
+		category = planet_clerks
 		produces = {
-			sr_aom_magicstones = 6
+			gts_aom_magicstones = 6
+			trade = 8
 		}
 
 		upkeep = {
-			energy = 20
+			consumer_goods = 2
 		}
 	}
 
@@ -157,7 +155,7 @@ aom_librarian = {
 		}
 	}
 	resources = {
-		category = planet_panlon_Wizard
+		category = planet_researchers
 		produces = {
 			physics_research = 10
 			engineering_research = 10

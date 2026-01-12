@@ -48,7 +48,7 @@ gts_overlord_nun = {
 	possible_precalc = can_fill_specialist_job
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	resources = {
@@ -120,7 +120,7 @@ overlord_tinypropagandist = {
 	possible_precalc = can_fill_specialist_job
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	resources = {
@@ -187,7 +187,7 @@ overlord_tinypropagandist_drone = {
 
 	possible = {
 		can_think = yes
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	resources = {
@@ -252,7 +252,7 @@ overlord_gts_servitor = {
 	possible_precalc = can_fill_ruler_job
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	resources = {
@@ -320,7 +320,7 @@ overlord_gts_servitor_drone = {
 
 	possible = {
 		can_think = yes
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	resources = {

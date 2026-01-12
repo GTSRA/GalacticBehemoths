@@ -7,8 +7,7 @@
 ################################
 
 #这部分是具体事件的界面
-namespace = first_contact
-namespace = first_contactgts
+
 namespace = first_contacttiny
 
 ##第一阶段-开始
@@ -72,6 +71,7 @@ first_contact_event = {
 	}
 }
 ###第一阶段-开始
+namespace = first_contactgts
 #巨娘版
 first_contact_event = {
 	id = first_contactgts.1
@@ -171,6 +171,8 @@ first_contact_event = {
 		gts_set_first_contact_starting_stage = yes
 	}
 }
+
+
 
 ###第二阶段-接触
 #巨娘版
@@ -2450,10 +2452,8 @@ first_contact_event = {
 			}
 		}
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = first_contactgts.331
-				}
+			first_contact_event = {
+				id = first_contactgts.331
 			}
 			contact_country = {
 				add_opinion_modifier = {
@@ -3185,10 +3185,8 @@ first_contact_event = {
 			}
 		}
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = first_contactgts.331
-				}
+			first_contact_event = {
+				id = first_contactgts.331
 			}
 			contact_country = {
 				add_opinion_modifier = {
@@ -3680,10 +3678,8 @@ first_contact_event = {
 
 		}
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = first_contactgts.331
-				}
+			first_contact_event = {
+				id = first_contactgts.331
 			}
 			contact_country = {
 				add_opinion_modifier = {
@@ -3807,10 +3803,8 @@ first_contact_event = {
 			}
 		}
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = first_contactgts.331
-				}
+			first_contact_event = {
+				id = first_contactgts.331
 			}
 			contact_country = {
 				add_opinion_modifier = {
@@ -3934,10 +3928,8 @@ first_contact_event = {
 			}
 		}
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = first_contactgts.331
-				}
+			first_contact_event = {
+				id = first_contactgts.331
 			}
 			contact_country = {
 				add_opinion_modifier = {

@@ -458,6 +458,11 @@ concept_leader_gts_skill_commander_three_03 = {
 	alias = { concept_leader_gts_skill_commander_three_03 }
 	#icon = ""
 }
+concept_gts_version = {
+	alias = { concept_gts_version }
+	icon = "gfx/interface/icons/resources/intel_decryption.dds"
+}
+
 
 
 

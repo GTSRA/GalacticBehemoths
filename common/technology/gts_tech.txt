@@ -2016,7 +2016,7 @@ tech_gts_purge_secret = { #私人玩具
 	weight =  1000
 	potential = {
 		any_owned_pop_group = {
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 

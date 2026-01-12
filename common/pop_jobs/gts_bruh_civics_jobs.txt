@@ -48,7 +48,7 @@ gts_maid = {
 	possible_precalc = can_fill_specialist_job
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	resources = {
@@ -113,7 +113,7 @@ gts_maid_leader = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_ruler_job
@@ -139,7 +139,7 @@ gts_maid_leader = {
 		weight = @ruler_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -323,7 +323,7 @@ stocking_crushed_purge = {
 				has_country_flag = allow_stocking_crushed
 			}
 		}
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	resources = {
@@ -340,7 +340,7 @@ stocking_crushed_purge = {
 		weight = 9999
 		modifier = {
 			factor = 9999
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 
@@ -394,7 +394,7 @@ gts_bio_trophy = {
 
 	possible = {
 		has_citizenship_type = { type = citizenship_organic_trophy country = owner }
-		is_tiny = yes
+		gts_is_tiny = yes
 		planet = { NOT = { is_planet_class = pc_cosmogenesis_world } }
 	}
 
@@ -447,7 +447,7 @@ gts_head_nurse = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_ruler_job

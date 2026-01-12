@@ -9,7 +9,7 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_leader_recruitment_bg_legendary_keides
-	auto_opens = no	#自动启动
+	auto_opens = yes	#自动启动
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_leader_trait_gts_saratoga_event"	#事件小图
 	immediate = {
@@ -30,12 +30,9 @@ country_event = {
 			TRAIT1 = leader_trait_Titan
 			TRAIT2 = gts_leader_trait_saratoga_a
 			TRAIT3 = gts_leader_trait_saratoga_b
-			TRAIT4 = leader_trait_gts_bruh_empty
-			TRAIT5 = leader_trait_gts_bruh_empty
-			TRAIT6 = leader_trait_gts_bruh_empty
 		}
 		last_created_leader = {
-			
+
 		}
 	}
 	picture_event_data = {
@@ -69,7 +66,9 @@ country_event = {
 		tag = hire_leader
 		custom_tooltip = gts_saratoga.1.hire_custom_tooltip
 		hidden_effect = {
-			legendary_gts_leader_hire_effect = yes
+			hidden_effect = {
+				legendary_gts_leader_hire_effect = yes
+			}
 			owner = {
 				country_event = {
 					id = gts_saratoga.2 #周年事件
@@ -83,17 +82,18 @@ country_event = {
                 			design = "NAME_gts_saratoga_titan"
                 			effect = {
                 				set_ship_flag = gts_saratoga_titan
+								set_ship_flag = gts_body_ship
                 				save_global_event_target_as = gts_saratoga_titan
                 				set_disabled = no
                 			}
                 		}
                 		save_global_event_target_as = gts_saratoga_titan_fleet
 						set_location = root.capital_scope
-						assign_leader = event_target:gts_saratoga
 						set_fleet_stance = passive
 						set_aggro_range_measure_from = self
 						set_aggro_range = 350
                 		set_owner = root
+						set_leader = event_target:gts_saratoga
                 	}
                 	settings = {
                 		spawn_debris = no
@@ -359,7 +359,7 @@ country_event = { #萨拉星球演习事件
 			NOR = {
 				has_planet_flag = saratoga_exercise_finished
 			}
-			is_no_eat_planet = no
+			is_eatable_planet = yes
 		}
 	}
 	immediate = {
@@ -369,7 +369,7 @@ country_event = { #萨拉星球演习事件
 			    NOR = {
 				    has_planet_flag = saratoga_exercise_finished
 			    }
-				is_no_eat_planet = no
+				is_eatable_planet = yes
 			}
 			save_event_target_as = saratoga_exercise_planet
 		}
@@ -434,7 +434,7 @@ country_event = { #萨拉星球演习事件
 			NOR = {
 				has_planet_flag = saratoga_exercise_finished
 			}
-			is_no_eat_planet = no
+			is_eatable_planet = yes
 		}
 	}
 	immediate = {
@@ -444,7 +444,7 @@ country_event = { #萨拉星球演习事件
 			    NOR = {
 				    has_planet_flag = saratoga_exercise_finished
 			    }
-				is_no_eat_planet = no
+				is_eatable_planet = yes
 			}
 			save_event_target_as = saratoga_exercise_planet
 		}

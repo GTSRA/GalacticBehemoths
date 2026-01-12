@@ -10,6 +10,10 @@ tb_compact_ui_others_modded_only_group = {
 		gts_giantess_underwear
 		gts_giantess_human
 		gts_hstar_lingruzhe
+		gts_aom_magicstones
+		gts_aom_saint_uartz
+		gts_aom_unregistered_spirit_origin
+		gts_aom_Belief
 		#Bruh# 先把這些移出
 		
 		#gts_hstar_lingruzhe

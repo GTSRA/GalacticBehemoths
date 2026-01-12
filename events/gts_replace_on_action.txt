@@ -3914,7 +3914,7 @@ planet_event = {
 					}
 				}
 				FROMFROM = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			every_country = {
@@ -3943,7 +3943,7 @@ planet_event = {
 					}
 				}
 				FROMFROM = {
-					is_tiny = yes
+					gts_is_tiny = yes
 				}
 			}
 			every_country = {
@@ -3969,7 +3969,7 @@ planet_event = {
 					}
 				}
 				FROMFROM = {
-					is_gts = yes
+					gts_is_giantess = yes
 				}
 			}
 			every_country = {

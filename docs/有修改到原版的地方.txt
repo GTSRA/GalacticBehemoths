@@ -1,0 +1,5 @@
+# (common\species_rights\citizenship_types\gts_citizenship_types.txt)
+
+# (common\species_rights\colonization_controls\gts_bruh_00_species_controls_colonization.txt)
+
+# (common\species_rights\living_standards\gts_living_standards.txt)

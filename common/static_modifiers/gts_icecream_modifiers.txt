@@ -1,6 +1,0 @@
-gts_icecream_planet.1={
-    #雪巢星地貌
-    icon = gfx/interface/icons/pm_asteroid_impacts.dds
-    pop_happiness = 0.2
-    pop_amenities_usage_add = 0.4
-}

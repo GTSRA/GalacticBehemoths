@@ -685,13 +685,7 @@ gts_intel_avatar_sonxi_effect = {
 				}
 				num_owned_planets > 2
 				any_owned_planet = {
-					NOR = {
-						is_planet_class = pc_shattered_ring_habitable
-						is_planet_class = pc_ringworld_habitable
-						is_planet_class = pc_habitat
-						is_no_eat_planet = yes
-					}
-
+					is_eatable_planet = yes
 				}
 			}
 			hidden_trigger = {
@@ -2393,23 +2387,26 @@ gts_intel_avatar_linfeng_effect = {
 		}
 	}
 	allow = {
+		custom_tooltip = gts_intel_avatar_linfeng_limit.tooltip
 		gts_ui_intel_panel_lock = yes
 		OR = {
-			AND = {
-				NOT = {
-					has_global_flag = gts_has_trigger_linfeng
-				}
-				any_owned_planet = {
-					pop_amount <= 400
-					has_anomaly = no
+			hidden_trigger = {
+				AND = {
 					NOT = {
-						exists = archaeological_site
+						has_global_flag = gts_has_trigger_linfeng
 					}
-					NOR = {
-						is_planet_class = pc_shielded
-						is_planet_class = pc_ringworld_shielded
-						is_planet_class = pc_habitat_shielded
-						is_no_eat_planet = yes
+					any_owned_planet = {
+						pop_amount <= 400
+						has_anomaly = no
+						NOT = {
+							exists = archaeological_site
+						}
+						NOR = {
+							is_planet_class = pc_shielded
+							is_planet_class = pc_ringworld_shielded
+							is_planet_class = pc_habitat_shielded
+							is_eatable_planet = no
+						}
 					}
 				}
 			}
@@ -2448,6 +2445,75 @@ gts_intel_avatar_linfeng_effect = {
 		}
 	}
 }
+
+gts_intel_avatar_suxiaobai_effect = {
+	# 苏小白
+	potential = {
+		gts_ui_intel_display = {
+			PAGE = 5
+		}
+	}
+	allow = {
+		custom_tooltip = gts_intel_avatar_suxiaobai_limit.tooltip
+		gts_ui_intel_panel_lock = yes
+		OR = {
+			hidden_trigger = {
+				AND = {
+					NOT = {
+						has_global_flag = gts_has_trigger_suxiaobai
+					}
+					num_owned_planets >= 5
+					any_owned_planet = {
+						pop_amount >= 400
+						has_anomaly = no
+						NOT = {
+							exists = archaeological_site
+						}
+						NOR = {
+							is_planet_class = pc_shielded
+							is_planet_class = pc_ringworld_shielded
+							is_planet_class = pc_habitat_shielded
+							is_eatable_planet = no
+						}
+					}
+				}
+			}
+			hidden_trigger = {
+				any_owned_leader = {
+					has_leader_flag = gts_suxiaobai
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = gts_intel_avatar_suxiaobai.tooltip
+		hidden_effect = {
+			set_variable = {
+				which = gts_ui_intel_avatar
+				value = @gts_suxiaobai
+			}
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_leader_flag = gts_suxiaobai
+					}
+				}
+				event_target:gts_suxiaobai = {
+					save_global_event_target_as = current_gts_leader
+				}
+				country_event = {
+					id = gts_ui.7
+				}
+			}
+			else = {
+				country_event = {
+					id = gts_ui.6
+				}
+			}
+		}
+	}
+}
+
 
 # 没有领袖的effect:
 # xxx_effect = {
@@ -3310,6 +3376,21 @@ gts_intel_avatar_linfeng_owned_effect = {
 		gts_ui_intel_display = { PAGE = 4 }
 		any_owned_leader = {
 			has_leader_flag = gts_linfeng
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+	}
+}
+
+gts_intel_avatar_suxiaobai_owned_effect = {
+	# 苏小白
+	potential = {
+		gts_ui_intel_display = { PAGE = 5 }
+		any_owned_leader = {
+			has_leader_flag = gts_suxiaobai
 		}
 	}
 	allow = {

@@ -2,47 +2,43 @@
 ### aom Advanced Resources  ###
 ###########################
 	
-sr_aom_magicstones = {
-	is_rare = yes
-	AI_category = strategic_resource
-	is_planet_local = no
-	is_global = yes
+gts_aom_magicstones = {
 	tradable = no
+	category = rare
+
+	visibility_prerequisite = { has_origin = origin_panlon }
 	
-	deficit_modifier = sr_aom_magicstones_deficit
+	deficit_modifier = gts_aom_magicstones_deficit
 		
 	ai_weight = {
 		weight = 100
 	}
 }
-sr_aom_saint_uartz = {
-	is_rare = yes
-	AI_category = strategic_resource
-	is_planet_local = no
-	is_global = yes
+gts_aom_saint_uartz = {
 	tradable = no
+	category = rare
+
+	visibility_prerequisite = { has_origin = origin_panlon }
 
 	ai_weight = {
 		weight = 100
 	}
 }
-sr_aom_unregistered_spirit_origin = {
-	is_rare = yes
-	AI_category = strategic_resource
-	is_planet_local = no
-	is_global = yes
+gts_aom_unregistered_spirit_origin = {
 	tradable = no
+	category = rare
+
+	visibility_prerequisite = { has_origin = origin_panlon }
 
 	ai_weight = {
 		weight = 100
 	}
 }
-sr_aom_Belief = {
-	is_rare = yes
-	AI_category = strategic_resource
-	is_planet_local = no
-	is_global = yes
+gts_aom_Belief = {
 	tradable = no
+	category = rare
+
+	visibility_prerequisite = { has_origin = origin_panlon }
 
 	ai_weight = {
 		weight = 100

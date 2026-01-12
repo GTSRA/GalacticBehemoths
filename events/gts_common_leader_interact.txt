@@ -575,7 +575,7 @@ country_event = {
 				random_owned_pop_group = {
 					if = {
 						limit = {
-							is_tiny = yes
+							gts_is_tiny = yes
 						}
 						event_target:gts_leader_country = {
 							change_variable = {
@@ -606,7 +606,7 @@ country_event = {
 					}
 					else_if = {
 						limit = {
-							is_gts = yes
+							gts_is_giantess = yes
 						}
 						event_target:gts_leader_country = {
 							change_variable = {

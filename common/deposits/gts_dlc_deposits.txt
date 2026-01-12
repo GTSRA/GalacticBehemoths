@@ -13,7 +13,7 @@ d_caldea = {
 	resources = {
 	    category = planet_deposits
 		produces = {
-				sr_aom_saint_uartz = 20
+				gts_aom_saint_uartz = 20
 		}
 	}
 	

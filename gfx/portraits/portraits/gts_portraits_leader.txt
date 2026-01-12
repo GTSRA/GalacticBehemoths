@@ -48,6 +48,7 @@ portraits = {
 	gts_portrait_qhai = {textureFile = "gfx/models/portraits/gts_qhai.dds"}
 	gts_portrait_qhai2 = {textureFile = "gfx/models/portraits/gts_qhai2.dds"}
 	gts_portrait_qhai3 = {textureFile = "gfx/models/portraits/gts_qhai3.dds"}
+	gts_portrait_qhai4 = {textureFile = "gfx/models/portraits/gts_qhai4.dds"}
 	gts_portrait_tensi = {textureFile = "gfx/models/portraits/gts_tensi.dds"}
 	gts_portrait_seele_1 = {texturefile = "gfx/models/portraits/gts_seele_1.dds"  }
 	gts_portrait_seele_2 = {texturefile = "gfx/models/portraits/gts_seele_2.dds"  }
@@ -94,6 +95,8 @@ portraits = {
 	gts_portrait_linfeng_4 = {texturefile = "gfx/models/portraits/gts_linfeng_4.dds"  }
 	gts_portrait_linfeng_5 = {texturefile = "gfx/models/portraits/gts_linfeng_5.dds"  }
 	gts_portrait_linfeng_6 = {texturefile = "gfx/models/portraits/gts_linfeng_6.dds"  }
+	gts_portrait_suxiaobai = {texturefile = "gfx/models/portraits/gts_suxiaobai.dds"  }
+	gts_portrait_suxiaobai_2 = {texturefile = "gfx/models/portraits/gts_suxiaobai_2.dds"  }
 	# gts_portrait_xxx = {texturefile = "gfx/models/portraits/gts_xxx.dds"  }
 }
 

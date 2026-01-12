@@ -450,14 +450,14 @@ country_event = {
 			}
 		}
 	}
-	# option = {
-	# 	name = gts_setting.4.e
-	# 	hidden_effect = {
-	# 		country_event = {
-	# 			id = gts_setting.105
-	# 		}
-	# 	}
-	# }
+	option = {
+		name = gts_setting.4.e
+		hidden_effect = {
+			country_event = {
+				id = gts_setting.105
+			}
+		}
+	}
 	option = {
 		name = gts_thanks
 		default_hide_option = yes
@@ -472,12 +472,12 @@ country_event = {
 	# 新版本更新了什么？
 	id = gts_setting.5
 	title = gts_setting.5.name
-	desc = gts_update.4.1.1
+	desc = gts_update.4.2.0
 	diplomatic = yes
 	custom_gui = "gts_horizontal_event_window"
 	custom_gui_option = "gts_horizontal_event_button"
 	picture_event_data = {
-		room = gts_linfeng_7_room
+		room = gts_suxiaobai_11_room
 	}
 	is_triggered_only = yes
 	
@@ -988,11 +988,11 @@ country_event = {
 	}
 	is_triggered_only = yes
 	
-	# option = {
-	# 	name = gts_setting.105.1
-	# 	is_dialog_only = yes
-	# 	response_text = gts_setting.105.1a
-	# }
+	option = {
+		name = gts_setting.105.1
+		is_dialog_only = yes
+		response_text = gts_setting.105.1a
+	}
 	# option = {
 	# 	name = gts_setting.105.2
 	# 	is_dialog_only = yes

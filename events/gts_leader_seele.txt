@@ -114,10 +114,14 @@ country_event = {
 	desc = gts_seele.2.desc
 	is_triggered_only = yes
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	auto_opens = yes
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_leader_gts_seele_1"
 	immediate = {
+		give_specimen = {
+			origin = seele_universe
+			key = seele_universe
+		}
 		country_event = {
 			id = gts_seele.12
 			days = 90
@@ -226,6 +230,10 @@ country_event = {
 		}
 	}
 	option = {
+		give_specimen = {
+			key = seele_balance_white
+			origin = seele_balance_white
+		}
 		name = gts_seele.6.a		#一体
 		hidden_effect = {
 			country_event = {
@@ -234,6 +242,10 @@ country_event = {
 		}
 	}
 	option = {
+		give_specimen = {
+			key = seele_balance_red
+			origin = seele_balance_red
+		}
 		name = gts_seele.6.b		#分开
 		hidden_effect = {
 			country_event = {
@@ -297,7 +309,7 @@ country_event = {
 	desc = gts_seele.8.desc
 	is_triggered_only = yes
 	location = event_target:gts_seele
-	auto_opens = no
+	auto_opens = yes
 	notification_event_icon = "GFX_message_leader_gts_seele_2"
 	event_window_type = leader_recruit
 	immediate = {
@@ -749,6 +761,10 @@ country_event = {
 		hidden_effect = {
 			legendary_gts_leader_hire_effect = yes
 		}
+		give_specimen = {
+			key = bronya_edem_star
+			origin = bronya_edem_star
+		}
 	}
 	after = {
 		set_country_flag = hire_bronya
@@ -808,6 +824,11 @@ country_event = {
 	}
 	option = {
 		name = gts_seele.19.a
+		give_specimen = {
+			key = bronya_edem_star_own
+			origin = bronya_edem_star_own
+		}
+		remove_specimen = bronya_edem_star
 		hidden_effect = {
 			event_target:gts_bronya = {
 				# if = {
@@ -1004,6 +1025,7 @@ country_event = {
 							design = "NAME_gts_bronya"
 							effect = {
 								set_ship_flag = gts_seele_fail_ship
+								set_ship_flag = gts_body_ship
 								save_global_event_target_as = gts_seele_fail_ship
 								set_disabled = no
 							}
@@ -1650,7 +1672,7 @@ country_event = {
 	desc = gts_seele.37.desc
 	is_triggered_only = yes
 	location = event_target:gts_seele
-	auto_opens = no
+	auto_opens = yes
 	notification_event_icon = "GFX_message_leader_gts_seele_2"
 	event_window_type = leader_recruit
 	immediate = {
@@ -2905,7 +2927,7 @@ country_event = {
 	}
 	is_triggered_only = yes
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	auto_opens = yes
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_leader_gts_seele_7"
 	immediate = {
@@ -3042,16 +3064,41 @@ country_event = {
 			}
 		}
 	}
-	#option = {
+	option = {
+		allow = {
+			hidden_trigger = {
+				not = {
+					has_specimen = seele_balance_level
+				}
+			}
+			custom_tooltip =  gts_seele.61.balance_custom
+			event_target:gts_seele = {
+				has_total_skill > 9
+			}
+			event_target:gts_seele_li = {
+				has_total_skill > 9
+			}
+		}
+		name = gts_seele.61.balance
+		is_dialog_only = yes
+		response_text = gts_seele.61.balance_text
+		remove_specimen = seele_balance_white
+		remove_specimen = seele_balance_red
+		give_specimen = {
+			key = seele_balance_level
+			origin = seele_balance_level
+		}
+	}
+	# option = {
 	#    name = gts_seele.61.4
 	#    is_dialog_only = yes
 	#    response_text = gts_seele.61.4
 	#    hidden_effect = {
-	#country_event = {
+	# country_event = {
 	#    id = gts_seele.73
-	#}
+	# }
 	#    }
-	#}
+	# }
 	option = {
 		name = gts_seele.60.4
 		default_hide_option = yes
@@ -3277,6 +3324,23 @@ country_event = {
 		}
 	}
 	option = {
+		allow = {
+			event_target:gts_bronya = {
+				check_variable = {
+					which = gts_love_logs
+					value > 25
+				}
+			}
+		}
+		name = gts_seele.61.specimens
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = gts_seele.222
+			}
+		}
+	}
+	option = {
 		name = gts_seele.61.6
 		default_hide_option = yes
 		hidden_effect = {
@@ -3326,17 +3390,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Ultra
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Ultra
 				}
 			}
 		}
@@ -3352,17 +3407,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Titan
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Titan
 				}
 			}
 		}
@@ -3378,17 +3424,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Giant
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Giant
 				}
 			}
 		}
@@ -3404,17 +3441,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Tall
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Tall
 				}
 			}
 		}
@@ -3430,17 +3458,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Normal
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Normal
 				}
 			}
 		}
@@ -3456,17 +3475,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Small
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Small
 				}
 			}
 		}
@@ -3482,17 +3492,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Micro
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Micro
 				}
 			}
 		}
@@ -3508,16 +3509,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Nano
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Nano
 				}
 			}
 		}
@@ -3557,17 +3550,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Ultra
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Ultra
 				}
 			}
 		}
@@ -3583,17 +3567,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Titan
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Titan
 				}
 			}
 		}
@@ -3609,17 +3584,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Giant
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Giant
 				}
 			}
 		}
@@ -3635,17 +3601,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Tall
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Tall
 				}
 			}
 		}
@@ -3661,17 +3618,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Normal
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Normal
 				}
 			}
 		}
@@ -3687,17 +3635,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Small
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Small
 				}
 			}
 		}
@@ -3713,17 +3652,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Micro
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Micro
 				}
 			}
 		}
@@ -3739,17 +3669,9 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_seele_li = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-                add_trait = {
-                    trait = leader_trait_Nano
-                }
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Nano
+				}
 			}
 		}
 	}
@@ -3788,17 +3710,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Ultra
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Ultra
 				}
 			}
 		}
@@ -3814,17 +3727,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Titan
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Titan
 				}
 			}
 		}
@@ -3840,17 +3744,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Giant
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Giant
 				}
 			}
 		}
@@ -3866,17 +3761,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Tall
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Tall
 				}
 			}
 		}
@@ -3892,17 +3778,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Normal
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Normal
 				}
 			}
 		}
@@ -3918,17 +3795,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Small
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Small
 				}
 			}
 		}
@@ -3944,17 +3812,8 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Micro
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Micro
 				}
 			}
 		}
@@ -3970,17 +3829,9 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:gts_bronya = {
-				remove_trait = leader_trait_Ultra
-				remove_trait = leader_trait_Titan
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-                    trait = leader_trait_Nano
-                }
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Nano
+				}
 			}
 		}
 	}
@@ -4769,7 +4620,7 @@ country_event = {
 	title = gts_seele.73.name
 	desc = gts_seele.73.desc
 	is_triggered_only = yes
-	auto_opens = no
+	auto_opens = yes
 	diplomatic = yes
 	notification_event_icon = "gts_seele_73_icon"
 	picture_event_data = {
@@ -7738,6 +7589,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_ship_global
 									save_event_target_as = gts_seele_ship_target
 								}
@@ -7776,6 +7628,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_ship_global
 									save_event_target_as = gts_seele_ship_target
 								}
@@ -7821,6 +7674,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_ship_global
 									save_event_target_as = gts_seele_ship_target
 								}
@@ -7859,6 +7713,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_ship_global
 									save_event_target_as = gts_seele_ship_target
 								}
@@ -7927,6 +7782,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_li_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_li_ship_global
 									save_event_target_as = gts_seele_li_ship_target
 								}
@@ -7965,6 +7821,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_li_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_li_ship_global
 									save_event_target_as = gts_seele_li_ship_target
 								}
@@ -8010,6 +7867,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_li_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_li_ship_global
 									save_event_target_as = gts_seele_li_ship_target
 								}
@@ -8048,6 +7906,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_seele_li_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_seele_li_ship_global
 									save_event_target_as = gts_seele_li_ship_target
 								}
@@ -8116,6 +7975,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_bronya_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_bronya_ship_global
 									save_event_target_as = gts_bronya_ship_target
 								}
@@ -8154,6 +8014,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_bronya_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_bronya_ship_global
 									save_event_target_as = gts_bronya_ship_target
 								}
@@ -8199,6 +8060,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_bronya_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_bronya_ship_global
 									save_event_target_as = gts_bronya_ship_target
 								}
@@ -8237,6 +8099,7 @@ country_event = {
 								upgradable = yes
 								effect = {
 									set_ship_flag = gts_bronya_ship
+									set_ship_flag = gts_body_ship
 									save_global_event_target_as = gts_bronya_ship_global
 									save_event_target_as = gts_bronya_ship_target
 								}
@@ -8265,7 +8128,27 @@ country_event = {
 
 
 
-
+country_event = {
+	id = gts_seele.222
+	title = gts_seele.222.name
+	desc = gts_seele.222.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	picture_event_data = {
+		room = shroud_room
+	}
+	option = {
+		name = gts_seele.give_specimens
+		give_specimen = {
+			key = bronya_construct
+			origin = bronya_construct
+		}
+		default_hide_option = yes
+		hidden_effect = {
+		}
+	}
+}
 # country_event = {
 # 	#希儿扣扣希儿
 # 	id = gts_seele.222
@@ -8443,3 +8326,12 @@ fleet_event = {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+

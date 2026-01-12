@@ -453,6 +453,10 @@ tradition_gts_toy_planets_2 = {
 		}
 		on_enabled = {
 			add_tech_progress = {
+				tech = tech_gts_bruh_gts_planet_adaption
+				progress = 0.1
+			}
+			add_tech_progress = {
 				tech = tech_gts_bfbf_habitability
 				progress = 0.5
 			}

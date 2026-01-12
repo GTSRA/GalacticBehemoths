@@ -51,6 +51,7 @@
 @gts_bruh = 49
 @gts_seele_li = 50
 @gts_linfeng = 51
+@gts_suxiaobai = 52
 
 
 ## 身体部位
@@ -100,3 +101,15 @@
 @gts_leader_item_i_archive = 215
 @gts_leader_item_i_Furnace = 216
 @gts_leader_item_i_Swarm = 217
+
+
+### 体型
+@gts_nano = 1
+@gts_micro = 2
+@gts_tiny = 3
+@gts_small = 4
+@gts_normal = 5
+@gts_tall = 6
+@gts_giant = 7
+@gts_titan = 8
+@gts_ultra = 9

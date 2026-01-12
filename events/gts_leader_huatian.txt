@@ -274,7 +274,7 @@ country_event = {
 	show_sound = event_celebration
 	is_triggered_only = yes
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	auto_opens = yes
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_leader_gts_huatian"
 	immediate = {
@@ -1727,12 +1727,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_leader = {
 				limit = {
-					or = {
-						has_trait = leader_trait_Normal
-						has_trait = leader_trait_Small
-						has_trait = leader_trait_Micro
-						has_trait = leader_trait_Nano
-					}
+					gts_is_tiny = yes
 				}
 				save_event_target_as = gts_huatian_growth
 			}
@@ -1789,15 +1784,8 @@ country_event = {
 		name = gts_huatian.1080.a
 		hidden_effect = {
 			event_target:gts_huatian_growth = {
-				remove_trait = leader_trait_Giant
-				remove_trait = leader_trait_Tall
-				remove_trait = leader_trait_Normal
-				remove_trait = leader_trait_Small
-				remove_trait = leader_trait_Micro
-				remove_trait = leader_trait_Nano
-				add_trait = {
-					trait = leader_trait_Titan
-					show_message = no
+				gts_leader_size_change_to = {
+					SIZE_TRAIT = leader_trait_Titan
 				}
 				add_trait = {
 					trait = gts_trait_leader_huatian_i
@@ -1940,6 +1928,7 @@ country_event = {
 						upgradable = yes
 						effect = {
 							set_ship_flag = gts_huatian_ship
+							set_ship_flag = gts_body_ship
 							save_global_event_target_as = gts_huatian_ship
 						}
 					}

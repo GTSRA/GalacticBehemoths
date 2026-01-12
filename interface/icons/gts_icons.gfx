@@ -75,6 +75,14 @@ spriteTypes = {
 		name = "GFX_gts_bruh_planet_type_white_hole"
 		textureFile = "gfx/interface/icons/concepts/planet_classes/pc_white_hole.dds"
 	}
+	spriteType = {
+		name = "GFX_message_gts_notice"
+		texturefile = "gfx/interface/icons/message/message_gts_notice.dds"
+	}
+	spriteType = {
+		name = "GFX_message_gts_qhai_notice"
+		texturefile = "gfx/interface/icons/message/message_gts_qhai_notice.dds"
+	}
 }
 # AOM
 spriteTypes = {
@@ -111,12 +119,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/army/Missile_cavalry_rifle.dds"
 	}
 	spriteType = {
-		name = "GFX_Cannon"
-		texturefile = "gfx/interface/icons/army/Cannon.dds"
-	}
-	spriteType = {
 		name = "GFX_Emp_rocket_battery"
 		texturefile = "gfx/interface/icons/army/Emp_rocket_battery.dds"
+	}
+	spriteType = {
+		name = "GFX_Cannon"
+		texturefile = "gfx/interface/icons/army/Cannon.dds"
 	}
 	spriteType = {
 		name = "GFX_Missile_chariot"

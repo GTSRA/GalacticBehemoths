@@ -45,7 +45,7 @@ redlight_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -68,7 +68,7 @@ redlight_worker = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -108,7 +108,7 @@ micro_food_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -130,7 +130,7 @@ micro_food_worker = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -170,7 +170,7 @@ micro_miner = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -192,7 +192,7 @@ micro_miner = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -240,7 +240,7 @@ sock_park_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -276,7 +276,7 @@ sock_park_worker = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -324,7 +324,7 @@ gts_bathhouse_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -347,7 +347,7 @@ gts_bathhouse_worker = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -387,7 +387,7 @@ gts_food_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -409,7 +409,7 @@ gts_food_worker = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -449,7 +449,7 @@ gts_miner = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -471,7 +471,7 @@ gts_miner = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -519,7 +519,7 @@ gts_tiny_beggar = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -539,7 +539,7 @@ gts_tiny_beggar = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -579,7 +579,7 @@ gts_extreme_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_worker_job
@@ -615,7 +615,7 @@ gts_extreme_worker = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }

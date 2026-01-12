@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+ MESSAGE_GTS_START:"微缩宇宙已进入"
+ MESSAGE_GTS_START_desc: "§H欢迎游玩微缩宇宙！§!本MOD是§Y完全免费§!的GTS向MOD，你可以通过以下三种方式获得§Y最新版§!的MOD！\n§Y1.§!gw论坛：§Sgtswaltz.org§!\n§Y2.§!gn论坛：§Sgiantessnight.com§!\n§Y3.§!QQ群：§S636280246§!（加入需要gw或者gn账号）。"
+ MESSAGE_GTS_MOD:"§H$concept_gts_version$§!"
+ MESSAGE_GTS_MOD_desc: "$concept_gts_update_content$$MESSAGE_GTS_MOD_desc_ad_pic$"
+ MESSAGE_GTS_MOD_desc_ad_pic: "\n\n\n\n\n\n\n\n\n£gts_update_pic_ad_1£\n\n\n\n\n\n\n\n\n"
+ MESSAGE_GTS_COM: "§H银白通讯器已加入你的帝国遗珍§!"
+ MESSAGE_GTS_COM_desc: "你可以在左侧的§R发现§!界面中点至遗珍，找到通讯器并尝试与巨娘们建立联系。"
+ MESSAGE_GTS_QHAI:"§H千海的联系方式已添加至帝国外交§!\n"
+ MESSAGE_GTS_QHAI_desc: "你可以在左侧的§R外交§!界面中找到千海的通讯方式，并获取一些帮助。"

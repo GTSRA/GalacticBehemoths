@@ -3,12 +3,7 @@ action_declare_war = {
 		WAR_DECLEAR_01 = {
 			trigger = {
 				owner_main_species = {
-					OR = {
-						has_trait = trait_Tall
-						has_trait = trait_Giant
-						has_trait = trait_Titan
-						has_trait = trait_Ultra
-					}
+					gts_is_giantess = yes
 				}
 				FROM = {
 					has_origin = origin_hstar
@@ -19,13 +14,7 @@ action_declare_war = {
 		WAR_DECLEAR_02 = {
 			trigger = {
 				owner_main_species = {
-					OR = {
-						has_trait = trait_Normal
-						has_trait = trait_Small
-						has_trait = trait_Tiny
-						has_trait = trait_Micro
-						has_trait = trait_Nano
-					}
+					gts_is_tiny = yes
 				}
 				FROM = {
 					has_country_flag = giantess_crisis

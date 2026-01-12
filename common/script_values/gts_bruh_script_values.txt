@@ -18,7 +18,7 @@ gts_bruh_counter_is_tiny_pop = {
 		trigger = count_owned_pop_amount
 		parameters = {
 			limit = {
-				is_tiny = yes
+				gts_is_tiny = yes
 				pop_has_happiness = yes
 			}
 		}
@@ -33,7 +33,7 @@ gts_bruh_counter_is_gts_pop = {
 		trigger = count_owned_pop_amount
 		parameters = {
 			limit = {
-				is_gts = yes
+				gts_is_giantess = yes
 				pop_has_happiness = yes
 			}
 		}

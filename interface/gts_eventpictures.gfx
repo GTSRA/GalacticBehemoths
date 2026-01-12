@@ -3313,6 +3313,19 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	# 苏小白
+	spriteType = {
+		name = "GFX_gts_suxiaobai_1"
+		texturefile = "gfx/event_pictures/gts_suxiaobai_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_gts_suxiaobai_2"
+		texturefile = "gfx/event_pictures/gts_suxiaobai_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	#流萤
 	spriteType = {
 		name = "GFX_gts_firefly_1"
@@ -3641,7 +3654,6 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/origins/origin_hstar_custom.dds"
 		alwaystransparent = yes
 	}
-}
 	spriteType = {
 		name = GFX_evt_heel_on_land
 		texturefile = "gfx/event_pictures/gts_hstar_heel_on_land.dds"
@@ -3728,7 +3740,7 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-
+}
 spriteTypes = {
 	#泡泡
 	spriteType = {
@@ -3773,12 +3785,12 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_event_fara_feet_1"
-		texturefile = "gfx/event_pictures/fara_feet_1.dds"
+		texturefile = "gfx/portraits/city_sets/fara_feet_1.dds"
 		alwaystransparent = yes
 	}
 	spriteType = {
 		name = "GFX_event_fara_feet_2"
-		texturefile = "gfx/event_pictures/fara_feet_2.dds"
+		texturefile = "gfx/portraits/city_sets/fara_feet_2.dds"
 		alwaystransparent = yes
 	}
 	spriteType = {
@@ -3899,11 +3911,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_aom_servant_joins"
 		texturefile = "gfx/event_pictures/servant_joins.dds"
-		alwaystransparent = yes
-	}
-	spriteType = {
-		name = "GFX_origin_panlon"
-		texturefile = "gfx/event_pictures/origins/origin_panlon.dds"
 		alwaystransparent = yes
 	}
 }

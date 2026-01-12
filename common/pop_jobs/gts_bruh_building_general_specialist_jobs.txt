@@ -43,7 +43,7 @@ shrink_pop_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -65,7 +65,7 @@ shrink_pop_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -103,7 +103,7 @@ shrink_city_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -126,7 +126,7 @@ shrink_city_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -164,7 +164,7 @@ shrink_planet_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -188,7 +188,7 @@ shrink_planet_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -236,7 +236,7 @@ transmutation_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -259,7 +259,7 @@ transmutation_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -324,7 +324,7 @@ microcity_foundry_worker = {
 		weight = @worker_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -363,7 +363,7 @@ micro_refinery_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -388,7 +388,7 @@ micro_refinery_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -428,7 +428,7 @@ micro_teacher = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -458,7 +458,7 @@ micro_teacher = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -499,7 +499,7 @@ gts_bruh_megaclerk = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -530,7 +530,7 @@ gts_bruh_megaclerk = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -578,7 +578,7 @@ micro_researcher = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -604,7 +604,7 @@ micro_researcher = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -644,7 +644,7 @@ micro_shop_keeper = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -672,7 +672,7 @@ micro_shop_keeper = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -710,7 +710,7 @@ sock_prision_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -736,7 +736,7 @@ sock_prision_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -810,7 +810,7 @@ micro_commander = {
 		weight = @soldier_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 		modifier = {
 			factor = 10
@@ -912,7 +912,7 @@ micro_machinist = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -936,7 +936,7 @@ micro_machinist = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -976,7 +976,7 @@ micro_conservation_worker = {
 	}
 
 	possible = {
-		is_gts = yes
+		gts_is_giantess = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1005,7 +1005,7 @@ micro_conservation_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_gts = yes
+			gts_is_giantess = yes
 		}
 	}
 }
@@ -1051,7 +1051,7 @@ gts_giantess_fluid_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1073,7 +1073,7 @@ gts_giantess_fluid_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1111,7 +1111,7 @@ gts_giantess_underwear_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1134,7 +1134,7 @@ gts_giantess_underwear_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1172,7 +1172,7 @@ gts_giantess_human_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1196,7 +1196,7 @@ gts_giantess_human_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1243,7 +1243,7 @@ gts_art_college_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1269,7 +1269,7 @@ gts_art_college_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1309,7 +1309,7 @@ gts_transmutation_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1332,7 +1332,7 @@ gts_transmutation_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1370,7 +1370,7 @@ gts_high_transmutation_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1395,7 +1395,7 @@ gts_high_transmutation_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1435,7 +1435,7 @@ gts_sojourn_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1468,7 +1468,7 @@ gts_sojourn_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1516,7 +1516,7 @@ gts_exhibition_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1544,7 +1544,7 @@ gts_exhibition_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1584,7 +1584,7 @@ gts_research_center_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1614,7 +1614,7 @@ gts_research_center_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1652,7 +1652,7 @@ gts_inside_prison_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1678,7 +1678,7 @@ gts_inside_prison_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }
@@ -1753,7 +1753,7 @@ gts_shoe_soldier_worker = {
 		weight = @soldier_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 		modifier = {
 			factor = 10
@@ -1857,7 +1857,7 @@ gts_inside_rest_worker = {
 	}
 
 	possible = {
-		is_tiny = yes
+		gts_is_tiny = yes
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -1885,7 +1885,7 @@ gts_inside_rest_worker = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 10
-			is_tiny = yes
+			gts_is_tiny = yes
 		}
 	}
 }

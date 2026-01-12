@@ -1,5 +1,0 @@
-### RESOURCE DEFICITS
-
-sr_aom_magicstones_deficit = {
-	all_technology_research_speed = -0.5
-}

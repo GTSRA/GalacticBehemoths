@@ -11,7 +11,7 @@ country_event = {
 			every_owned_pop_group = {
 				if = {
 					limit = {
-						is_gts = yes
+						gts_is_giantess = yes
 					}
 					add_modifier = {
 						modifier = gts_be_apartheid
@@ -20,7 +20,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					add_modifier = {
 						modifier = gts_apartheid_a
@@ -44,7 +44,7 @@ country_event = {
 			every_owned_pop_group = {
 				if = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					add_modifier = {
 						modifier = gts_be_apartheid
@@ -53,7 +53,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_gts = yes
+						gts_is_giantess = yes
 					}
 					add_modifier = {
 						modifier = gts_apartheid_a
@@ -77,7 +77,7 @@ country_event = {
 			every_owned_pop_group = {
 				if = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					add_modifier = {
 						modifier = tinys_goods_policy_1
@@ -101,7 +101,7 @@ country_event = {
 			every_owned_pop_group = {
 				if = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					add_modifier = {
 						modifier = tinys_goods_policy_3
@@ -125,7 +125,7 @@ country_event = {
 			every_owned_pop_group = {
 				if = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					add_modifier = {
 						modifier = tinys_goods_policy_4
@@ -149,7 +149,7 @@ country_event = {
 			every_owned_pop_group = {
 				if = {
 					limit = {
-						is_tiny = yes
+						gts_is_tiny = yes
 					}
 					add_modifier = {
 						modifier = tinys_goods_policy_5
